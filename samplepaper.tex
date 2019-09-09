@@ -4,7 +4,7 @@
 %
 \documentclass[runningheads]{llncs}
 %
-usepackage{amsmath}
+\usepackage{amsmath}
 \usepackage{booktabs} % For pretty tables
 \usepackage{caption} % For caption spacing
 \usepackage{graphicx}
@@ -15,7 +15,6 @@ usepackage{amsmath}
 \usetikzlibrary{er,positioning,bayesnet}
 \usepackage{multicol}
 \usepackage{algpseudocode,algorithm,algorithmicx}
-\usepackage{minted}
 \usepackage{hyperref}
 \usepackage[inline]{enumitem} % Horizontal lists
 % Used for displaying a sample figure. If possible, figure files should
@@ -66,7 +65,13 @@ usepackage{amsmath}
 %
 %
 \section{Introduction}
-There are now several studies supporting the central role of mechanical stimulus in tissue morphogenesis and homeostasis, alongside with biochemical signalling. \texit{In vitro} studies have shown that ECM rigidity and shear stresses can alone promote the transition to malignant phenotype of normal cells and consequently the growth of malignant masses. 
+There are now several studies supporting the central role of mechanical stimulus in tissue morphogenesis and homeostasis, alongside with biochemical signalling. \textit{In vitro} studies have shown that ECM rigidity and shear stresses can alone promote the transition to malignant phenotype of normal cells and consequently the growth of a tumour mass. Despite the well-known link between cell behaviour and mechanical stimuli, the lack of quantitative measurement has delayed our understanding of such phenomena. The development of new nanotechnology has now open to the possibility of measuring mechanical stresses by the use of external devices. Meanwhile, new techniques such as Atomic Force Microscopy (AFM) have been developed to measure the local mechanical properties of tissue, with atomic precision. Combining such information can boost our understanding and the development of a solid mathematical framework to describe tumour growth and exploit mechanics to improve and revolutionise current therapy against cancer. 
+
+The aim of coupling micro-environment and cell behaviours requires a clear understanding of both and the investigation of phenomena occurring at different time and spacial scales. In this work we focus on the Extracellular Matrix (ECM), the external network of polymers supporting cells in tissues. Its mechanical properties, in particular its stiffness, contribute to determine the response of tissues to external mechanical stimuli. By controlling the composition of the matrix, its properties can be tuned to meet the function of a specific tissues. 
+
+Experiments have shown that tumour development is associated to a stiffening of the tissue compared to the surrounding healthy one, despite the fact that tumour cells themselves are usually softer than normal ones. Such contradiction is just apparent, as ECM can account for such resistance to mechanical stimuli. As a result, cells are exposed to higher compressive stresses which can select for more aggressive and invasive phenotype of cancer cells, as well as favour the collapse of blood vessels and impede the diffusion of substances in the extra-cellular environment ultimately decreasing the efficacy of numerous therapies.
+
+Usually approach to the modelling of solid tumour is the use of multi-phase theory, according to which tumour are equivalent to material consisting of a solid matrix of cells and ECM, and an interstitial fluid phase. Besides involving the use of fundamental laws such as conservation of mass and momentum, the formulation of the model requires the use of several constitutive equation for each of the phase considered. These dictate the macroscopic behaviour of the system and thus heavily affect the prediction of the model, and are usually based on experimental result and have thus a limited range of applicability. Having a more fundamental description of the system requires instead deriving such properties based on the microscopic behaviour of the system.   As mentioned before, there is little understanding on the properties of the fundamental components of the ECM. 
 \bibliographystyle{splncs04}
 \bibliography{biblio}
 %
