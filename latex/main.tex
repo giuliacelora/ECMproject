@@ -14,6 +14,7 @@
 \newcommand{\F}{\ensuremath{\mathbb{F}}}
 \newcommand{\B}{\ensuremath{\mathbb{B}}}
 \newcommand{\LL}{\ensuremath{\mathbb{L}}}
+\newcommand{\Me}{\ensuremath{\mathbb{M}_e^{\text{eff}}}}
 \title{Non-equilibrium thermodynamics of a viscoelastic solid.}
 \author{}
 
@@ -123,45 +124,65 @@ Consequently the full time derivative is given by:
 \end{equation}
 Similar to above, we exploit the decomposition of the tensor $\F$ to and the definition of $\bar{\LL}_v= \dot{\bar{\F}}_v\F_v^{-1}$, to rewrite the above equation as:
 \begin{equation}
-\dot{\psi}_{strain}=\left(\frac{\partial \psi_A}{\partial \bar{\F}}+  \left.\frac{\partial \psi_B}{\partial \bar{\F}_e}\right|_{\bar{\F}\bar{\F}_v^{-1}}\bar{\F}_v^{-T}\right):\dot{\bar{\F}}-\bar{\F}_v^{-T}\bar{\F}^T\left.\frac{\partial \psi_B}{\partial \bar{\F}_e}\right|_{\bar{\F}\bar{\F}_v^{-1}}:\bar{\LL}_v + \frac{\partial \psi_{vol}}{\partial J} \dot{J}.
+\scriptsize
+\dot{\psi}_{strain}=\left(\frac{\partial \psi_A}{\partial \bar{\F}}+  \left.\frac{\partial \psi_B}{\partial \bar{\F}_e}\right|_{\bar{\F}\bar{\F}_v^{-1}}\bar{\F}_v^{-T}\right):\dot{\bar{\F}}-\bar{\F}_v^{-T}\bar{\F}^T\left.\frac{\partial \psi_B}{\partial \bar{\F}_e}\right|_{\bar{\F}\bar{\F}_v^{-1}}:\bar{\LL}_v + \frac{\partial \psi_{vol}}{\partial J} \dot{J}. \label{eq4}
+\end{equation}
+
+We can now reduce the number of independent variables, by expressing $\dot{\bar{\F}}$ and $\dot{J}$ in terms of the deformation tensor $\LL$:
+\begin{gather}
+\dot{J} = J (\mathbb{I}:\LL),\\
+\dot{\bar{\F}} = J^{-1/3} \LL \F - \frac{1}{3} J^{-1/3} (\mathbb{I}:\LL) \F 
+\end{gather}
+We can thus rewrite Equation~(\ref{eq4}) as:
+\begin{equation}
+\scriptsize
+\dot{\psi}_{strain} = \left( \text{DEV} \left[J^{-1/3}\frac{\partial \psi_A}{\partial \bar{\F}}\F^T+ \frac{\partial \psi_B}{\partial \bar{\F}_e}\bar{\F}_e^{T}\right]+\frac{\partial \psi_{vol}}{\partial J} J\right) : \LL -\bar{\F}_v^{-T}\bar{\F}^T\frac{\partial \psi_B}{\partial \bar{\F}_e}:\bar{\LL}_v
 \end{equation}
 Following the same approach as in (Sarah's article), the energy imbalance inequalities leads to:
 
 \begin{equation}
 \begin{aligned}
 \left(\frac{\partial \psi}{\partial \nabla_0 C}-\boldsymbol{\xi}\right)\cdot \nabla_0 \dot{C} + \left(\frac{\partial \psi}{\partial C}-\mu-\nabla_0\cdot\boldsymbol{\xi}+ p v\right) \dot{C}+ \nabla_0 \mu \cdot \mathbf{j}_0 \\
-+\left(\frac{\partial \psi}{\partial \F} + \frac{\partial W_B}{\partial \F_e}\F_v^{-T}- \mathbb{S} - p J \F^{-T}\right):\dot{\F}- \left(\F_v^{-T}\F^T \frac{\partial W_B}{\partial \F_e}+p_v  \mathbb{I}\right):\LL_v \leq 0
++\left(\frac{\partial \psi}{\partial \F}\F^T + \frac{\partial \psi}{\partial \F_e}\F_e^{T}- \mathbb{S}\F^T - p J \mathbb{I}\right):\LL- \left(\F_v^{-T}\F^T \frac{\partial \psi}{\partial \F_e}+p_v  \mathbb{I}\right):\LL_v \leq 0
 \end{aligned}
 \label{dis}
 \end{equation}
 
 In the second case instead, the inequalities has the following form:
-
-We here consider $C$, $\nabla_0 C$, $\F$, $\F_v$, $\mu$, $\nabla_0 \mu$ and $\mathbf{j}_0$ to be the variables defining the thermodynamic state of the system. Note that this can be split into two groups: \textbf{external} and \textbf{internal} variables. The first includes $C$, $\nabla_0 C$, $\F$,  $\mu$ and $\nabla_0 \mu$, which are measurable and controllable quantities. In other words, this can manipulated to choose the form of their time derivative arbitrarily. Therefore, in order for~(\ref{dis}) to be valid, we have that the terms linear in $\nabla_0 \dot{C}$, $\dot{C}$, $\dot{\F}$ of Equation~(\ref{dis}) must be zero:
+\begin{equation}
+\begin{aligned}
+\left(\frac{\partial \psi}{\partial \nabla_0 C}-\boldsymbol{\xi}\right)\cdot \nabla_0 \dot{C} + \left(\frac{\partial \psi}{\partial C}-\mu-\nabla_0\cdot\boldsymbol{\xi}+ p v\right) \dot{C}+ \nabla_0 \mu \cdot \mathbf{j}_0 \\
++\left(\text{DEV}\left[J^{-1/3}\frac{\partial \psi}{\partial \bar{\F}}\F^T + \frac{\partial \psi}{\partial \bar{\F}_e}\bar{\F}_e^{T}\right]- \mathbb{S}\F^T +J\left(\frac{\partial \psi_{vol}}{\partial J} - p\right)\mathbb{I}\right):\LL\\
+- \left(\bar{\F}_v^{-T}\bar{\F}^T \frac{\partial \psi}{\partial \bar{\F}_e}+p_v  \mathbb{I}\right):\bar{\LL}_v \leq 0
+\end{aligned}
+\end{equation}
+We here consider $C$, $\nabla_0 C$, $\F$, $\F_v$, $\mu$, $\nabla_0 \mu$ and $\mathbf{j}_0$ to be the variables defining the thermodynamic state of the system. Note that this can be split into two groups: \textbf{external} and \textbf{internal} variables. The first includes $C$, $\nabla_0 C$, $\F$,  $\mu$ and $\nabla_0 \mu$, which are measurable and controllable quantities. In other words, this can manipulated to choose the form of their time derivative arbitrarily. Therefore, in order for~(\ref{dis}) to be valid, we have that the terms linear in $\nabla_0 \dot{C}$, $\dot{C}$, $\LL$ of Equation~(\ref{dis}) must be zero:
 
 \begin{eqnarray}
-	\mathbf{\xi}&=&\frac{\partial \psi}{\partial \nabla_0 C},\\
-	\mu &=& \frac{\partial \psi}{\partial C} - \nabla_0\cdot\boldsymbol{\xi}+ p v,\\
-	S &=& \frac{\partial \psi}{\partial \F} + \frac{\partial \psi}{\partial \F_e}\F_v^{-T}- p J \F^{-T}
+	\mathbf{\xi}&=&\frac{\partial \psi}{\partial \nabla_0 C},\\[2mm]
+	\mu &=& \frac{\partial \psi}{\partial C} - \nabla_0\cdot\boldsymbol{\xi}+ p v,\\[2mm]
+	\mathbb{S} &=& \begin{cases} \frac{\partial \psi}{\partial \F} + \frac{\partial \psi}{\partial \F_e}\F_v^{-T}- p J \F^{-T}\\[3mm]
+	\text{DEV}\left[J^{-1/3}\frac{\partial \psi}{\partial \bar{\F}}\F^T+\frac{\partial \psi}{\partial \bar{\F}_e}\bar{\F}_e^T\right]\F^{-T} + \left(\frac{\partial \psi}{\partial J}- p \right)J \F^{-T}
+	\end{cases}
 \end{eqnarray}
 
-On the other hand $F_v$ and $\mathbf{j}_0$ are internal variables, which describes the dissipative behaviour of the material. Since these can not be manipulated the argument used above does not apply, and~(\ref{dis}), this reduces to:
+On the other hand $\F_v$ and $\mathbf{j}_0$ are internal variables, which describes the dissipative behaviour of the material. Since these can not be manipulated the argument used above does not apply, and~(\ref{dis}), this reduces to:
 \begin{equation}
-\mathcal{D}=\underbrace{\left(\F_v^{-T}\F^{T} \frac{\partial \psi}{\partial F_e}+p_v \mathbb{I}\right)}_{ M^{eff}_e}:\LL_v - \nabla_v \mu \cdot \mathbf{j}_v \geq 0,
+\mathcal{D}=\underbrace{\left(\F_v^{-T}\F^{T} \frac{\partial \psi}{\partial \F_e}+p_v \mathbb{I}\right)}_{\Me}:\LL_v - \nabla_v \mu \cdot \mathbf{j}_v \geq 0,
 \end{equation}
-where $\mathcal{D}$ represents the energy dissipated in the system per unit volume of the natural configuration $\mathcal{B}$, $M^{eff}_e$ is the effective Mandel stress in the natural configuration, $\mathbf{j}_v = \F_v \,\mathbf{j}_0$ and $\nabla_v \mu= \nabla_0 \mu\, \F_v^{-1}$.
+where $\mathcal{D}$ represents the energy dissipated in the system per unit volume of the natural configuration $\mathcal{B}_v$, $\Me$ is the effective Mandel stress in the natural configuration, $\mathbf{j}_v = \F_v \,\mathbf{j}_0$ and $\nabla_v \mu= \nabla_0 \mu\, \F_v^{-1}$.
 The first term is associated with the viscous response of the dashpot in branch B; physically this is associated with the energy dissipated in the breaking and forming of crosslinks in the network, which increase the conformational entropy of the system. On the other hand, the second term is related to the relative diffusion of the water molecules, hence the dependency on $\nabla_v \mu$. 
 
 As shown in \cite{Article2},the most general form for $L_v$ and $\mathbf{j}_0$ would be:
 
 \begin{eqnarray}
-L_v &=& A(\boldsymbol{\Lambda}_v, \nabla_v \mu, M^{eff}_e)\, M^{eff}_e + B(\boldsymbol{\Lambda}_v,\nabla_v \mu, M^{eff}_e)\, \nabla_v \mu,\\
-\mathbf{j}_0 &=& -K(\boldsymbol{\Lambda}_v, \nabla_v \mu, M^{eff}_e) \, M^{eff}_e - D(\boldsymbol{\Lambda}_v, \nabla_v \mu, M^{eff}_e) \, \nabla_v \mu,
+L_v &=& A(\boldsymbol{\Lambda}_v, \nabla_v \mu, \Me)\, \Me + B(\boldsymbol{\Lambda}_v,\nabla_v \mu, \Me)\, \nabla_v \mu,\\
+\mathbf{j}_0 &=& -K(\boldsymbol{\Lambda}_v, \nabla_v \mu, \Me) \, \Me - D(\boldsymbol{\Lambda}_v, \nabla_v \mu, \Me) \, \nabla_v \mu,
 \end{eqnarray}
-where $\boldsymbol{\Lambda}_v=\left\{\F,\F_v,C,\nabla_v C, \mu\right\}$, $A$ is a forth order, $B$ and $K$ third order, $D$ a second order tensors. Assuming to be in a linear non-equilibrium regime, we have that all coefficients are independent of $\nabla_0 \mu$ and $M_e$. Having also considered isotropic materials, \textit{Curie's law} implies that $K\equiv0$ and $\B\equiv 0$, so that $\mathcal{D}$ reduces to:
+where $\boldsymbol{\Lambda}_v=\left\{\F,\F_v,C,\nabla_v C, \mu\right\}$, $A$ is a forth order, $B$ and $K$ third order, $D$ a second order tensors. Assuming to be in a linear non-equilibrium regime, we have that all coefficients are independent of $\nabla_0 \mu$ and $\Me$. Having also considered isotropic materials, \textit{Curie's law} implies that $K\equiv0$ and $\B\equiv 0$, so that $\mathcal{D}$ reduces to:
 
 \begin{equation*}
-\mathcal{D}= A(\boldsymbol{\Lambda}_v) M^{eff}_e : M^{eff}_e  + D(\boldsymbol{\Lambda}_v)\nabla_v \mu\cdot\nabla_v \mu\geq 0 .
+\mathcal{D}= A(\boldsymbol{\Lambda}_v) \Me : \Me  + D(\boldsymbol{\Lambda}_v)\nabla_v \mu\cdot\nabla_v \mu\geq 0 .
 \end{equation*}
 
 Based on Onsager reciprocal relation, which assumes microscale reversibility, the parameter $D(\boldsymbol{\Lambda}_v)$, the diffusion coefficient, is positive and the tensor $A$ must be symmetric and positive semi-definite. In our example we consider it to be $A=\eta^{-1}(\boldsymbol{\Lambda}_v) \mathbb{I}$, where $\mathbb{I}$ is the identity tensor and $\eta$ is the viscosity. Consequently the dynamical equation for the system are:
