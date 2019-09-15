@@ -1,0 +1,39 @@
+\begin{thebibliography}{1}
+
+\bibitem{Article2}
+Morton~E. Gurtin.
+\newblock Generalized ginzburg-landau and cahn-hilliard equations based on a
+  microforce balance.
+\newblock {\em Physica D: Nonlinear Phenomena}, 92(3):178 -- 192, 1996.
+
+\bibitem{reviewpolyel}
+Wei Hong.
+\newblock {\em Continuum Models of Stimuli-responsive Gels}, pages 165--196.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2012.
+
+\bibitem{bookbiophys}
+A.~Katzir-Katchalsky and P.F. Curran.
+\newblock {\em Nonequilibrium thermodynamics in biophysics}.
+\newblock Books in Biophysics. Harvard University Press, 1965.
+
+\bibitem{chargedensity}
+Patrick Mesquida, Dominik Kohl, Orestis Andriotis, Philipp Thurner, Melinda
+  Duer, Sneha Bansode, and Georg Schitter.
+\newblock Evaluation of surface charge shift of collagen fibrils exposed to
+  glutaraldehyde.
+\newblock {\em Scientific Reports}, 8, 12 2018.
+
+\bibitem{ecm}
+Shi-Lei Xue, Bo~Li, Xi-Qiao Feng, and Huajian Gao.
+\newblock A non-equilibrium thermodynamic model for tumor extracellular matrix
+  with enzymatic degradation.
+\newblock {\em Journal of the Mechanics and Physics of Solids}, 104:32 -- 56,
+  2017.
+
+\bibitem{swell2}
+Yalin Yu, Chad~M. Landis, and Rui Huang.
+\newblock {Salt-Induced Swelling and Volume Phase Transition of Polyelectrolyte
+  Gels}.
+\newblock {\em Journal of Applied Mechanics}, 84(5), 03 2017.
+
+\end{thebibliography}
