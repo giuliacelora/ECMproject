@@ -1,0 +1,71 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'model1.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1184.12859098bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.47839252)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{images/model1.pdf}}%
+    \put(0.04947143,0.25681131){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.20677621\unitlength}\raggedright $\F$\end{minipage}}}%
+    \put(0.22642998,0.20346679){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21409574\unitlength}\raggedright $\F_e$\end{minipage}}}%
+    \put(0.22959683,0.28942699){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28180123\unitlength}\raggedright $\F_v$\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{images/model1.pdf}}%
+    \put(0.47553257,0.31472366){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29461042\unitlength}\raggedright $\mathcal{B}_0$\end{minipage}}}%
+    \put(0.66157971,0.10935719){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29461042\unitlength}\raggedright $\mathcal{B}_{v}$\end{minipage}}}%
+    \put(0.75268048,0.35254183){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29461042\unitlength}\raggedright $\mathcal{B}$\end{minipage}}}%
+    \put(0.47999289,0.16371888){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29461042\unitlength}\raggedright $\F_v$\end{minipage}}}%
+    \put(0.61690509,0.44344868){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29461042\unitlength}\raggedright $\F$\end{minipage}}}%
+    \put(0.83642599,0.17044331){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29461042\unitlength}\raggedright $\F_e$\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{images/model1.pdf}}%
+    \put(0.09518587,0.41233659){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08110317\unitlength}\raggedright $\mathbf{A}$\end{minipage}}}%
+    \put(0.19314121,0.41233659){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08110317\unitlength}\raggedright $\mathbf{B}$\end{minipage}}}%
+  \end{picture}%
+\endgroup%
