@@ -54,18 +54,20 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{images/secondm.pdf}}%
-    \put(0.10852171,0.29020134){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14499697\unitlength}\raggedright $\F_{vol}$\end{minipage}}}%
-    \put(0.13779996,0.17058125){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.15754478\unitlength}\raggedright $\bar{\F}$\end{minipage}}}%
-    \put(-0.00262022,0.21347677){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.16312159\unitlength}\raggedright $\bar{\F}_e$\end{minipage}}}%
-    \put(-0.00512186,0.1248372){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21470706\unitlength}\raggedright $\bar{\F}_v$\end{minipage}}}%
+    \put(0.15901253,0.29399853){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.13911818\unitlength}\raggedright $\F_{vol}$\end{minipage}}}%
+    \put(0.05670483,0.17470742){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.15115724\unitlength}\raggedright $\bar{\F}$\end{minipage}}}%
+    \put(0.1822326,0.13175086){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.20600192\unitlength}\raggedright $\bar{\F}_v$\end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{images/secondm.pdf}}%
-    \put(0.34018519,0.26204094){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.2244665\unitlength}\raggedright $\mathcal{B}_0$\end{minipage}}}%
-    \put(0.53931927,0.22579235){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.2244665\unitlength}\raggedright $\mathcal{\bar{B}}_0$\end{minipage}}}%
-    \put(0.67107037,0.06527673){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.2244665\unitlength}\raggedright $\mathcal{\bar{B}}_{v}$\end{minipage}}}%
-    \put(0.74048092,0.24330455){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.2244665\unitlength}\raggedright $\mathcal{B}$\end{minipage}}}%
-    \put(0.42614835,0.31498368){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.2244665\unitlength}\raggedright $\F_{vol}$\end{minipage}}}%
-    \put(0.53271764,0.0956485){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.2244665\unitlength}\raggedright $\bar{\F}_v$\end{minipage}}}%
-    \put(0.62272358,0.31618419){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.2244665\unitlength}\raggedright $\bar{\F}$\end{minipage}}}%
-	    \put(0.80628742,0.10069398){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.2244665\unitlength}\raggedright $\bar{\F}_e$\end{minipage}}}%
+    \put(0.36503977,0.26652617){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21639395\unitlength}\raggedright $\mathcal{B}_0$\end{minipage}}}%
+    \put(0.55041345,0.21963556){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21639395\unitlength}\raggedright $\bar{\mathcal{B}}$\end{minipage}}}%
+    \put(0.6914789,0.07079201){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21639395\unitlength}\raggedright $\mathcal{\bar{B}}_{v}$\end{minipage}}}%
+    \put(0.73999076,0.2416546){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21639395\unitlength}\raggedright $\mathcal{B}$\end{minipage}}}%
+    \put(0.44677726,0.31499202){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21639395\unitlength}\raggedright $\F_{vol}$\end{minipage}}}%
+    \put(0.54951397,0.10564527){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21639395\unitlength}\raggedright $\bar{\F}_v$\end{minipage}}}%
+    \put(0.64933899,0.31147119){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21639395\unitlength}\raggedright $\bar{\F}$\end{minipage}}}%
+    \put(0.81131722,0.11569214){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21639395\unitlength}\raggedright $\bar{\F}_e$\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{images/secondm.pdf}}%
+    \put(0.18084574,0.22438125){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.15650795\unitlength}\raggedright $\bar{\F}_e$\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{images/secondm.pdf}}%
   \end{picture}%
 \endgroup%
