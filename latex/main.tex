@@ -11,10 +11,19 @@
 \usepackage{mhchem}
 
 \usepackage[dvipsnames]{xcolor}
+
+\usepackage{stackengine,scalerel}
+\stackMath
+\newcommand\qfrac[3][1pt]{\frac{%
+		\ThisStyle{\addstackgap[#1]{\SavedStyle#2}}}{%
+		\ThisStyle{\addstackgap[#1]{\SavedStyle#3}}%
+}}
 \newcommand{\F}{\ensuremath{\mathbb{F}}}
 \newcommand{\B}{\ensuremath{\mathbb{B}}}
 \newcommand{\LL}{\ensuremath{\mathbb{L}}}
 \newcommand{\Me}{\ensuremath{\mathbb{M}_e^{\text{eff}}}}
+\newcommand{\D}{\ensuremath{\text{D}}}
+\renewcommand{\d}{\ensuremath{\text{d}}}
 \title{Non-equilibrium thermodynamics of a viscoelastic solid.}
 \author{}
 
@@ -25,46 +34,84 @@ Crosslinks play an important role in determining the properties of an hydrogel. 
 
 While we considering in the model the changes in the water molecules from being free to being neighbouring a polymer, we miss in the model the conformational entropy of the network. This result in internal micro-stresses which are not captured in the model.  
 
-\newpage
-
-The deformation of the system can be decomposed into a plastic(viscous) and an elastic term. In particular we have $\mathcal{B}_0$ which is the initial conformation, $\mathcal{B}_V$ the natural configuration and $\mathcal{B}$ which is the current configuration. Note that the initial configuration here corresponds to the dry stage of the hydrogel. This is possible because the deformation can be virtually decomposed into the deformation from $\mathcal{B}_0$ to $\mathcal{B}_V$ and an instantaneous deformation from $\mathcal{B}_V$ to $\mathcal{B}$:
+\section{Non Equilibrium Thermodynamics.}
+While equilibrium thermodynamics successfully apply to the description of ideal process, real processes are irreversible. In this cases, the change in entropy $\d S$ can result from the reversible exchange of energy and matter with the external environment, $\d_eS$ or the internal dissipation od energy during the process, $\d_iS$ \cite{NET}:
 \begin{equation}
-    \F=\F_e\F_v.
+\d S = \d_eS + \d_iS, \hspace{5mm} \d_eS= \frac{\d Q}{T},
+\end{equation}
+where $Q$ is the amount of energy added to the environment and $T$ is the temperature. 
+According to the second law of thermodynamics, which applies universally to any system or subsystem, $\d S_i\ge 0$.
+
+For the purpose of this study, we will focus on isothermal process, i.e. $T=const$. Under this assumption, as derived by Gurtin in \cite{GURTIN}, the second law of thermodynamics is equivalent to the following \textit{energy imbalance inequality}:
+\begin{equation}
+\frac{\d}{\d t} \left\{\int_R \psi \right\}\leq W(R) + M(R) \label{energyin}
+\end{equation}
+where $R$ is a arbitrary control volume of the system, $\psi$ is the Helmholtz free energy, $W(R)$ is the rate at which the environment does work on $R$ and $M(R)$ is the inflow of mass due to transport. It is important to note that the energy inequality~(\ref{energyin}) holds for any isothermal process, independently of the specific physical system involved. Consequently, there is a constraint on the form the function $\psi$ can assume and how this can depend on the thermodynamic variables describing the system. 
+
+The major focus of non-equilibrium thermodynamics is in defining the precise form of $\d_i S$, which, unlike $\d_e S$ is not a state function, but depends on the specific transformation applied to the system. This is introduced in the theory with the concepts of \textit{thermodynamic forces} $F_m$ (cause) and \textit{thermodynamic fluxes} $J_m$ (effect) has been introduced, so that $\d_iS$ has the form:
+
+\begin{equation}
+\d_iS = \sum_m F_m J_m.
+\label{2law}
 \end{equation}
 
-\begin{figure}[h!]
-	\begin{subfigure}{0.48\textwidth}
-		\centering
-		\def\svgwidth{1\linewidth}
-		\input{images/systempdf.pdf_tex}
-		\caption{}
-		\label{fig1}
-	\end{subfigure}
-\hspace{5mm}
-	\begin{subfigure}{0.48\textwidth}
+Different relation between forces and fluxes have been proposed in the literature giving rise to a variety of theory, each with its specific domain of applicability \cite{NET}. In our study we will focus on \textquotedblleft Classical Irreversible Thermodynamics'' (CIT) which was pioneered by Onsager \cite{onsager} and Prigogine \cite{prigogine} in the first half of the 20th century. This is built on three major assumptions:
+\begin{itemize}
+	\item[1.] \textit{Local Equilibrium Hypothesis}: thermodynamic variables are locally well-defined;
+	\item[2.] \textit{Linear Relation between forces $F$ and fluxes $J$}:
+	\begin{equation}
+		 J_m = \sum_k L_{mk} F_k,\label{lin}
+	\end{equation}
+	where the constant $L_{mk}$ are referred to as \textbf{phenomenological coefficients};
+	\item[3.] \textit{Microscopic Reversibility}: time reversibility of processes at the micro-scale. 
+\end{itemize}
+
+Despite the wide range of applicability of such theory, this does not apply to the domain of far-from equilibrium thermodynamics, for the linear approximation breaks down. It is still under debate which range of physical phenomena lie in the domain of applicability of CIT, particularly in the novel realm of active matter, where experimental validation of theories still lacks.
+\section{Extracellular Matrix Composition.}  
+Despite the tissue-specific nature of Extracellular Matrix (ECM), this is mainly composed of a network of collagen fibrils entangled with charged chains of glycosaminoglycans (GAGs). While collagen is mainly responsible for the mechanical behaviour of the tissue, GAGs can imbibe water, giving ECM the ability to swell while maintaining its structural integrity. As a result, the ECM behave as a polyelectrolyte gel \cite{ecm,ecm2}. Besides being largely present in the natural world, synthetic polyelectrolytes are currently employed for a wide range of applications, such as drug delivery, biomedical devices, scaffolds for tissue engineering and soft robotics [ADD CITATIONS].  
+\newpage
+\begin{figure}
 	\centering
-	\def\svgwidth{1.2\linewidth}
-	\input{images/body.pdf_tex}
-	\caption{}
-	\end{subfigure}	
-\caption{Kr\"{o}ner decomposition of the deformation gradient.}
+\includegraphics[scale=0.325]{images/visco_poro}
+\caption{Illustration of the molecular processes which account for a gel deformation: viscosity is related to change in the conformation of the network which results in short-range movement of fluid relative to the polymers; poro-elasticity is instead responsible for the long-range diffusion of solvent molecules in the gel/tissue. Reproduced from \cite{viscoporo}.}
+\end{figure}
+The theory is based on the multiplicative decomposition of the stress tensor, which have been successfully applied in the study of soft materials, such as hydrogels, rubbers and tissues \cite{Article1, multdec,vol,magneto}. This is particularly powerful in the framework of non-equilibrium thermodynamics, which we will be using to derive our model. 
+
+We here propose two different decompositions, which will result in two different constitutive model to describe the same physical system: the extracellular matrix.
+
+In the first case, following the standard Kr\"{o}ner decomposition \cite{kro}, we decompose the deformation tensor, $\F$, into a viscous, or dissipative, component, $\F_v$, and an elastic one $\F_e$:
+\begin{equation}
+\F=\F_e\F_v.
+\end{equation}
+
+As shown in Figure \ref{fig1}, this is equivalent to introducing a virtual configuration $\mathcal{B}_v$ between the initial configuration $\mathcal{B}_0$ and the current one, $\mathcal{B}$. For simplicity we assume that the initial configuration corresponds to the dry stage of the hydrogel. $\mathcal{B}_v$ is referred to as natural or relaxed configuration which correspond to the conformation the system would have if instantaneously elastically unload.
+
+\begin{figure}[h!]
+	\hspace{10mm}
+\def\svgwidth{0.85\linewidth}
+\input{images/model1.pdf_tex}
+\caption{Rheological model 1 and corresponding deformation decomposition.}
+\label{fig1}
 \end{figure}
 
-An alternative approach consist in separating also the volumetric and isochoric contribution to the deformation. The corresponding rheological diagram would be as illustrated in Figure \ref{Model2}, which is equivalent to the following decomposition:
+An alternative approach consists in further separating the volumetric and isochoric contribution of the deformation \cite{magneto,NGUYEN,Jeru}. As shown in Figure \ref{fig2}, the first is assumed to be purely elastic, while the isochoric part of the deformation can dissipate energy due to the microscopic rearrangement of the network. 
 
 \begin{equation}
 \F= \bar{\F} \F_{vol}= J^{1/3} \bar{\F}_e \bar{\F}_v,
 \end{equation}
-where we have used the fact that $F_{vol}=J^{1/3}\mathbb{I}$, with $J=\det \F$. Such decomposition introduce in the model an additional virtual configuration of the system $\bar{\mathcal{B}}$, which has the same shape as the reference configuration but different volume. 
+where we have used the fact that $\F_{vol}=J^{1/3}\mathbb{I}$, with $J=\det \F$. Such decomposition introduce in the model an additional virtual configuration of the system $\bar{\mathcal{B}}$, which has the same shape as the reference configuration but different volume. 
 
 \begin{figure}[h!]
-	\hspace{10mm}
+	\hspace{5mm}
 	\def\svgwidth{1\linewidth}
 	\input{images/secondm.pdf_tex}
-	\caption{Kr\"{o}ner decomposition of the deformation gradient.}
+	\caption{Rheological model 2 and corresponding deformation decomposition.}
 	\label{Model2}
 \end{figure}
 
+Note that both models assume that the viscous deformation $\F_v$ and $\bar{\F}_v$ respectively preserve the volume of the body while changing its shape. 
+
+For the purpose of this study, the visco-elastic nature of collagen at the micro-scale is constitutively prescribed, supported by the result of rheological tests reported in the literature. However, there has been attempt to directly relate this behaviour to the nano-mechanism involving single polymers chain \cite{BERGSTROM1998931}. Besides the
 Every configuration is characterized by a set of macro and micro variables, where the latter are responsible for changes in the atomic configuration. In the particular case considered, these are associated with the interface energy: the energy of water molecules is different when these are close to the polymer network or surrounded by other water molecules. 
 
 The system is characterised by the following primitive physical fields: 
@@ -78,7 +125,7 @@ The system is characterised by the following primitive physical fields:
 	\item $\mathbb{S}$ : first Piola-Kirchoff gradient,
 	\item $\boldsymbol{\xi}$: internal micro-stresses,
 	\item $\mathbf{j}_0$: water mass flux,
-	\item $\LL_v=\dot{F}_vF^{-1}_v$: plastic velocity gradient.
+	\item $\LL_v=\dot{\F}_v\F^{-1}_v$: viscous velocity gradient.
 \end{itemize} 
 
 The Helmholtz free energy per unit volume of the system is given by:
@@ -98,7 +145,7 @@ using the decomposition of the deformation tensor, we have that:
 \begin{equation}
 \dot{\F}=\dot{\F}_e\F_v+\F_e\dot{\F}_v \Longrightarrow \dot{\F}_e=\dot{\F}\F_v^{-1}-\F_e \LL_v,
 \end{equation}
-where $\LL_v=\dot{F}_vF_v^{-1}$ is the velocity gradient tensor of the dashpot element in the branch B of Figure \ref{fig1}. Based on this we can rewrite equation~(\ref{strain}) as:
+where $\LL_v=\dot{\F}_v\F_v^{-1}$ is the velocity gradient tensor of the dashpot element in the branch B of Figure \ref{fig1}. Based on this we can rewrite equation~(\ref{strain}) as:
 
 \begin{equation}
 \begin{aligned}
@@ -156,63 +203,66 @@ In the second case instead, the inequalities has the following form:
 - \left(\bar{\F}_v^{-T}\bar{\F}^T \frac{\partial \psi}{\partial \bar{\F}_e}+p_v  \mathbb{I}\right):\bar{\LL}_v \leq 0
 \end{aligned}
 \end{equation}
-We here consider $C$, $\nabla_0 C$, $\F$, $\F_v$, $\mu$, $\nabla_0 \mu$ and $\mathbf{j}_0$ to be the variables defining the thermodynamic state of the system. Note that this can be split into two groups: \textbf{external} and \textbf{internal} variables. The first includes $C$, $\nabla_0 C$, $\F$,  $\mu$ and $\nabla_0 \mu$, which are measurable and controllable quantities. In other words, this can manipulated to choose the form of their time derivative arbitrarily. Therefore, in order for~(\ref{dis}) to be valid, we have that the terms linear in $\nabla_0 \dot{C}$, $\dot{C}$, $\LL$ of Equation~(\ref{dis}) must be zero:
+We here consider $C$, $\nabla_0 C$, $\F$, $\F_v$, $\mu$, $\nabla_0 \mu$ and $\mathbf{j}_0$ to be the variables defining the thermodynamic state of the system. Note that this can be split into two groups: \textbf{external} and \textbf{internal} ( Which means that, in practice, these variables
+are measurable but not controllable, i.e., they cannot a priori be adjusted to a prescribed
+value through a direct action via surface or body "forces") variables. The first includes $C$, $\nabla_0 C$, $\F$,  $\mu$ and $\nabla_0 \mu$, which are measurable and controllable quantities. In other words, this can manipulated to choose the form of their time derivative arbitrarily. Therefore, in order for~(\ref{dis}) to be valid, we have that the terms linear in $\nabla_0 \dot{C}$, $\dot{C}$, $\LL$ of Equation~(\ref{dis}) must be zero:
 
 \begin{eqnarray}
 	\mathbf{\xi}&=&\frac{\partial \psi}{\partial \nabla_0 C},\\[2mm]
 	\mu &=& \frac{\partial \psi}{\partial C} - \nabla_0\cdot\boldsymbol{\xi}+ p v,\\[2mm]
-	\mathbb{S} &=& \begin{cases} \frac{\partial \psi}{\partial \F} + \frac{\partial \psi}{\partial \F_e}\F_v^{-T}- p J \F^{-T}\\[3mm]
-	\text{DEV}\left[J^{-1/3}\frac{\partial \psi}{\partial \bar{\F}}\F^T+\frac{\partial \psi}{\partial \bar{\F}_e}\bar{\F}_e^T\right]\F^{-T} + \left(\frac{\partial \psi}{\partial J}- p \right)J \F^{-T}
+	\mathbb{S} &=& \begin{cases} \dfrac{\partial \psi}{\partial \F} + \dfrac{\partial \psi}{\partial \F_e}\F_v^{-T}- p J \F^{-T}\\[3.5mm]
+	\displaystyle
+	\text{DEV}\left[\qfrac[1pt]{\partial \psi}{\partial \bar{\F}}\bar{\F}^T+\qfrac[1pt]{\partial \psi}{\partial \bar{\F}_e}\bar{\F}_e^T\right]\F^{-T} + \left(\frac{\partial \psi}{\partial J}- p \right)J \F^{-T}
 	\end{cases}
 \end{eqnarray}
 
-On the other hand $\F_v$ and $\mathbf{j}_0$ are internal variables, which describes the dissipative behaviour of the material. Since these can not be manipulated the argument used above does not apply, and~(\ref{dis}), this reduces to:
+On the other hand $\F_v$ and $\mathbf{j}_0$ are internal variables, which describes the dissipative behaviour of the material. Since these can not be manipulated the argument used above does not apply, and~(\ref{dis}) reduces to:
 \begin{equation}
-\mathcal{D}=\underbrace{\left(\F_v^{-T}\F^{T} \frac{\partial \psi}{\partial \F_e}+p_v \mathbb{I}\right)}_{\Me}:\LL_v - \nabla_v \mu \cdot \mathbf{j}_v \geq 0,
+\mathcal{D}=\underbrace{\left(\F_v^{-T}\F^{T} \frac{\partial \psi}{\partial \F_e}+p_v \mathbb{I}\right)}_{\Me}:\LL_v - \nabla_0 \mu \cdot \mathbf{j}_0 \geq 0,
 \end{equation}
-where $\mathcal{D}$ represents the energy dissipated in the system per unit volume of the natural configuration $\mathcal{B}_v$, $\Me$ is the effective Mandel stress in the natural configuration, $\mathbf{j}_v = \F_v \,\mathbf{j}_0$ and $\nabla_v \mu= \nabla_0 \mu\, \F_v^{-1}$.
-The first term is associated with the viscous response of the dashpot in branch B; physically this is associated with the energy dissipated in the breaking and forming of crosslinks in the network, which increase the conformational entropy of the system. On the other hand, the second term is related to the relative diffusion of the water molecules, hence the dependency on $\nabla_v \mu$. 
+where $\mathcal{D}$ represents the energy dissipated in the system per unit volume of the natural configuration $\mathcal{B}_v$, $\Me$ is the effective Mandel stress in the natural configuration.
+The first term is associated with the viscous response of the dashpot in branch B; physically this is associated with the energy dissipated in the breaking and forming of crosslinks in the network, which increase the conformational entropy of the system. On the other hand, the second term is related to the relative diffusion of the water molecules, hence the dependency on $\nabla_0 \mu$. 
 
-As shown in \cite{Article2},the most general form for $L_v$ and $\mathbf{j}_0$ would be:
+As shown in \cite{Article2},the most general form for $\LL_v$ and $\mathbf{j}_0$ would be:
 
 \begin{eqnarray}
-L_v &=& A(\boldsymbol{\Lambda}_v, \nabla_v \mu, \Me)\, \Me + B(\boldsymbol{\Lambda}_v,\nabla_v \mu, \Me)\, \nabla_v \mu,\\
-\mathbf{j}_0 &=& -K(\boldsymbol{\Lambda}_v, \nabla_v \mu, \Me) \, \Me - D(\boldsymbol{\Lambda}_v, \nabla_v \mu, \Me) \, \nabla_v \mu,
+\LL_v &=& A(\boldsymbol{\Lambda}_0, \nabla_0 \mu, \Me)\, \Me + B(\boldsymbol{\Lambda}_0,\nabla_0 \mu, \Me)\, \nabla_0 \mu,\\
+\mathbf{j}_0 &=& -K(\boldsymbol{\Lambda}_0, \nabla_0 \mu, \Me) \, \Me - D(\boldsymbol{\Lambda}_0, \nabla_0 \mu, \Me) \, \nabla_0 \mu,
 \end{eqnarray}
-where $\boldsymbol{\Lambda}_v=\left\{\F,\F_v,C,\nabla_v C, \mu\right\}$, $A$ is a forth order, $B$ and $K$ third order, $D$ a second order tensors. Assuming to be in a linear non-equilibrium regime, we have that all coefficients are independent of $\nabla_0 \mu$ and $\Me$. Having also considered isotropic materials, \textit{Curie's law} implies that $K\equiv0$ and $\B\equiv 0$, so that $\mathcal{D}$ reduces to:
+where $\boldsymbol{\Lambda}_0=\left\{\F,\F_v,C,\nabla_0 C, \mu\right\}$, $A$ is a forth order, $B$ and $K$ third order, $D$ a second order tensors. Assuming to be in a linear non-equilibrium regime, we have that all coefficients are independent of $\nabla_0 \mu$ and $\Me$. Having also considered isotropic materials, \textit{Curie's law} implies that $K\equiv0$ and $\B\equiv 0$, so that $\mathcal{D}$ reduces to:
 
 \begin{equation*}
-\mathcal{D}= A(\boldsymbol{\Lambda}_v) \Me : \Me  + D(\boldsymbol{\Lambda}_v)\nabla_v \mu\cdot\nabla_v \mu\geq 0 .
+\mathcal{D}= A(\boldsymbol{\Lambda}_0) \Me : \Me  + D(\boldsymbol{\Lambda}_0)\nabla_0 \mu\cdot\nabla_0 \mu\geq 0 .
 \end{equation*}
 
-Based on Onsager reciprocal relation, which assumes microscale reversibility, the parameter $D(\boldsymbol{\Lambda}_v)$, the diffusion coefficient, is positive and the tensor $A$ must be symmetric and positive semi-definite. In our example we consider it to be $A=\eta^{-1}(\boldsymbol{\Lambda}_v) \mathbb{I}$, where $\mathbb{I}$ is the identity tensor and $\eta$ is the viscosity. Consequently the dynamical equation for the system are:
+Based on Onsager reciprocal relation, which assumes microscale reversibility, the parameter $D(\boldsymbol{\Lambda}_0)$, the diffusion coefficient, is positive and the tensor $A$ must be symmetric and positive semi-definite. In our example we consider it to be $A=\eta^{-1}(\boldsymbol{\Lambda}_0) \mathbb{I}$, where $\mathbb{I}$ is the identity tensor and $\eta$ is the viscosity. Consequently the dynamical equation for the system are:
 
 \begin{eqnarray}
-\eta(\boldsymbol{\Lambda}_v)\LL_v= \left(\F_v^{-T}\F^{T} \frac{\partial \psi}{\partial \F_e}+p_v\mathbb{I}\right)\\
-\mathbf{j}_v = -D(\boldsymbol{\Lambda}_v) \nabla_v \mu
+\eta(\boldsymbol{\Lambda}_0)\LL_v= \left(\F_v^{-T}\F^{T} \frac{\partial \psi}{\partial \F_e}+p_v\mathbb{I}\right)\\
+\mathbf{j}_0 = -D(\boldsymbol{\Lambda}_0) \nabla_0 \mu
 \end{eqnarray}
-where the diffusion coefficient $D(\boldsymbol{\Lambda}_v)=D_v$ is defined as:
+where the diffusion coefficient $D(\boldsymbol{\Lambda}_0)$ is defined as:
 \begin{equation}
-D_v= \frac{DC}{k_BT} \F_e^{-1}\F_e^{-T}
+D_0= \frac{DC}{k_BT}\, \F^{-1}\F^{-T}
 \end{equation}
 
 with $D$ being the diffusion coefficient in the current configuration $\mathcal{B}$.
 To complete the model we need to specify the form of the free energy. For what concerns the strain energy, we assume both springs to behave as a neo-Hookean material, so that:
 \begin{equation}
 \begin{aligned}
-W_A(\F) = \frac{G_A}{2} \left[(I_\B-3)-\ln III_\B\right],\\
-W_B(\F_e) = \frac{G_B}{2} \left[(I_{\B_e}-3)-\ln III_{\B_e}\right],
+\psi_A(\F) = \frac{G_A}{2} \left[(I_\B-3)-\ln III_\B\right],\\
+\psi_B(\F_e) = \frac{G_B}{2} \left[(I_{\B_e}-3)-\ln III_{\B_e}\right],
 \end{aligned}
 \end{equation}
-where $B=\F\F^T$, $B_e=\F_e\F_e^T$ and $I$ and $III$ are their first and third invariants.
+where $\B=\F\F^T$, $\B_e=\F_e\F_e^T$ and $I$ and $III$ are their first and third invariants.
 
 Consequently, we have that:
 \begin{equation}
 \begin{aligned}
-\frac{\partial \psi}{\partial \F_e}&=\frac{\partial W_B}{\partial \F_e}= G_B (\F_e-\F_e^{-T})\\%= G_B(FF_v^{-1}-F^{-T}F_v^T)\\
+\frac{\partial \psi}{\partial \F_e}&=\frac{\partial \psi_B}{\partial \F_e}= G_B (\F_e-\F_e^{-T})\\%= G_B(FF_v^{-1}-F^{-T}F_v^T)\\
 &\Longrightarrow
-\eta(\boldsymbol{\Lambda}_v)\LL_v=G_B \left[\left(\mathbb{C}_e-\mathbb{I}\right)+\tilde{p}_v\mathbb{I}\right]\\
-&\Longrightarrow \LL_v= \tau_R^{-1}(\boldsymbol{\Lambda}_v) \left[\mathbb{C}_e+(\tilde{p}_v-1)\mathbb{I}\right]
+\eta(\boldsymbol{\Lambda}_0)\LL_v=G_B \left[\left(\mathbb{C}_e-\mathbb{I}\right)+\tilde{p}_v\mathbb{I}\right]\\
+&\Longrightarrow \LL_v= \frac{\left[\mathbb{C}_e+(\tilde{p}_v-1)\mathbb{I}\right]}{ 2\tau_R(\boldsymbol{\Lambda}_0)}
 \end{aligned}
 \label{eq2}
 \end{equation} 
@@ -232,20 +282,50 @@ where $\mathbb{B}_e=\F_e\F_e^T$; if we consider its time derivative we have that
 \begin{equation}
 \begin{aligned}
 \dot{\mathbb{B}}_e &= \LL \mathbb{B}_e + \mathbb{B}_e \LL^T - 2 \F_e d_v \F_e^{T} \\
-&= \LL\mathbb{B}_e + \mathbb{B}_e \LL^T - \frac{2}{\tau_R(\boldsymbol{\Lambda}_v)} \F_e\left[\mathbb{C}_e-\frac{1}{3}tr(\mathbb{B}_e)\mathbb{I}\right]\F_e^T\\
-&= \LL\mathbb{B}_e + \mathbb{B}_e \LL^T - \frac{2}{\tau_R(\boldsymbol{\Lambda}_v)} \,\mathbb{B}_e\underbrace{\left[\mathbb{B}_e-\frac{1}{3}tr(\mathbb{B}_e)\mathbb{I}\right]}_{\text{DEV}[\mathbb{B}_e]}.
+&= \LL\mathbb{B}_e + \mathbb{B}_e \LL^T - \frac{1}{\tau_R(\boldsymbol{\Lambda}_0)} \F_e\left[\mathbb{C}_e-\frac{1}{3}tr(\mathbb{B}_e)\mathbb{I}\right]\F_e^T\\
+&= \LL\mathbb{B}_e + \mathbb{B}_e \LL^T - \frac{1}{\tau_R(\boldsymbol{\Lambda}_0)} \,\mathbb{B}_e\underbrace{\left[\mathbb{B}_e-\frac{1}{3}tr(\mathbb{B}_e)\mathbb{I}\right]}_{\text{DEV}[\mathbb{B}_e]}.
 \end{aligned}
 \end{equation}
-Specifying also the other form of energy as in the paper, we obtain:
-\begin{equation}
-\begin{aligned}
-\mu = \mu_0 + p v - \gamma J\nabla^2 C + kT\left[\ln \frac{Cv}{1+Cv} + \frac{1}{1+Cv} +\frac{\chi}{(1+Cv)^2}\right],\\
-\mathbb{T} = J^{-1} SF^T = -p \mathbb{I} +\mathbb{T}_A +\mathbb{T}_B + \gamma\left[\frac{1}{2} |\nabla C|^2\mathbb{I}-\nabla C \otimes \nabla C\right],\\
-\mathbb{T}_A=\frac{G_1}{1+Cv}(\mathbb{B}-\mathbb{I}),\\
-\mathbb{T}_B=\frac{G_2}{1+Cv}(\mathbb{B}_e-\mathbb{I});
-\end{aligned} 
-\end{equation}
 
+In the second case the argument holds as before, with a different definition of the viscous dissipation:
+\begin{equation}
+\bar{\LL}_v = \bar{\F}_e^T \qfrac[1pt]{\partial \psi_B}{\partial \bar{\F}_e} + p_v \mathbb{I}
+\end{equation}
+where $\psi_B$ is now defined as:
+\begin{equation}
+	\psi_B = \frac{G_B}{2} (I_{\bar{\B}_e}-3).
+\end{equation}
+Consequently we obtain that:
+\begin{equation}
+\bar{\LL}_v =  \, \frac{\text{DEV}\left[\bar{\mathbb{C}}_e\right]}{2\tau_R(\boldsymbol{\Lambda}_0)} 
+\end{equation}
+Using the fact that the viscous deformation has zero spin, we can derive the following ODE for $\bar{\B}_e$:
+\begin{equation}
+\dot{\bar{\B}}_e = \bar{\B}_e \LL^T +\LL \bar{\B}_e - \frac{2}{3} \, tr(\LL) \bar{\B}_e -\frac{1}{\tau_R} \bar{\B}_e \text{DEV}\left[\bar{\B}_e\right]
+\end{equation}
+Finally, the second approach requires to specify the strain energy related to the volumetric deformation. As discussed in \cite{vol}, different formulation can be used to capture the real behaviour of the system. To be consistent with the previous model we will again use a logarithmic strain energy:
+\begin{equation}
+\psi_{vol}(J) = \frac{\kappa}{2} \ln J^2,
+\end{equation}
+where $\kappa$ is the bulk modulus of the system. Note that the above formulation present several limitation in the description of large deformation \cite{vol}. Despite this, it remains one of the most common form used and just recently researchers has been focusing on developing more accurate and consistent model. Given that, and the other terms in the energy, we obtain:
+
+\begin{gather}
+\mu = \mu_0 + p v - \gamma J\nabla^2 C + kT\left[\ln \frac{Cv}{1+Cv} + \frac{1}{1+Cv} +\frac{\chi}{(1+Cv)^2}\right],\\
+\mathbb{T} = \begin{cases}
+-p \mathbb{I} +\mathbb{T}_A +\mathbb{T}_B + \gamma\left[\frac{1}{2} |\nabla C|^2\mathbb{I}-\nabla C \otimes \nabla C\right],\\[2mm]
+\left(\frac{\kappa}{1+Cv}-p\right) \mathbb{I} +\mathbb{T}_A +\mathbb{T}_B + \gamma\left[\frac{1}{2} |\nabla C|^2\mathbb{I}-\nabla C \otimes \nabla C\right],
+\end{cases}\\
+\mathbb{T}_A=\begin{cases}
+\frac{G_1}{1+Cv}(\mathbb{B}-\mathbb{I}),\\[2mm]
+\frac{G_1}{1+Cv} \bar{\B}^\D,
+\end{cases}
+\qquad
+\mathbb{T}_B=\begin{cases}
+\frac{G_2}{1+Cv}(\mathbb{B}_e-\mathbb{I}),\\[2mm]
+\frac{G_2}{1+Cv} \bar{\B}^\D_e
+\end{cases}
+\end{gather}
+where the Cauchy stress is given by $\mathbb{T}=J^{-1} \mathbb{S}\F^T $, and the apices $\D$ is a shortening for the deviatoric part of the tensor.
 \section{Spinodal Decomposition}
 The governing equation of the system are:
 \begin{gather}
@@ -257,7 +337,7 @@ J=\det F=1+Cv,\\
 \left.- \frac{\gamma C}{k_BT}\nabla[(1+Cv)\nabla^2 C]\right],
 \end{aligned}\\[5mm]
 \nabla \cdot \mathbb{T} = \mathbf{0},\\[5mm]
-\mathbb{T} = J^{-1} SF^T = -p \mathbb{I} +\mathbb{T}_A +\mathbb{T}_B + \gamma\left[\frac{1}{2} |\nabla C|^2\mathbb{I}-\nabla C \otimes \nabla C\right],\\[5mm]
+\mathbb{T}= -p \mathbb{I} +\mathbb{T}_A +\mathbb{T}_B + \gamma\left[\frac{1}{2} |\nabla C|^2\mathbb{I}-\nabla C \otimes \nabla C\right],\\[5mm]
 \mathbb{T}_A=\frac{G_1}{1+Cv}(\B-\mathbb{I}),\\
 \mathbb{T}_B=\frac{G_2}{1+Cv}(\B_e-\mathbb{I}),\\[5mm]
 \dot{\B}_e= L \B_e +\B_e L^T - \frac{2}{\tau_R(\boldsymbol{\Gamma})} \B_e \,\text{DEV}[\B_E].
@@ -1038,6 +1118,36 @@ Combining the two equation, we recover naturally the condition for the Donnan eq
 \begin{equation}
 \left(C_{\ce{H+}}+C_+\right)C_- = (C_s v c^0_-)^2
 \end{equation}
+\appendix
+\section{Korteweg stress terms.}
+The Korteweg stress is the part of the mechanical stress which is related to the interfacial free energy. We here report the result related to the second model. This will have a contribution from the both the derivative with respect to $\bar{F}$ and $J$:
+\begin{equation}
+	\mathbb{T}^{korg} = \text{DEV}\left[J^{-1}\frac{\partial \psi_{int}}{\partial \bar{F}}\bar{F}^T\right] + \frac{\partial \psi_{int}}{\partial J} \mathbb{I}
+\end{equation}
+where the interface energy is given by:
+\begin{equation}
+\psi_{int}(J,\bar{F}) = \frac{\gamma}{2} J^{1/3} \bar{F}^{-1}\bar{F}^{-T} \left|\nabla_0 C\right|^2.
+\end{equation}
+Using the properties of the deformation tensor $\bar{F}$, it can be shown that:
+\begin{equation}
+\frac{\partial }{\partial \bar{\F}} \left(\bar{\F}^{-1} \bar{\F}^{-T} \left|\nabla_0 C\right|^2\right) \bar{\F}^T = -2 J^{2/3} \,\nabla C \otimes \nabla C,
+\end{equation} 
+so that the Korteweg stress is given by:
+\begin{equation}
+		\mathbb{T}^{korg} = - \gamma \text{DEV} \left[ \nabla C \otimes \nabla C\right] + \frac{\gamma}{6} \left|\nabla C\right|^2 \mathbb{I}.
+		\label{kor}
+\end{equation}
+If we now explicitly evaluate the deviatoric component we have:
+\begin{equation*}
+\begin{aligned}
+tr(\nabla C \otimes \nabla C) = \left|\nabla C\right|^2 \\ \text{DEV}\left[\nabla C \otimes \nabla C\right] = \nabla C \otimes \nabla C -\frac{\left|\nabla C\right|^2}{3} \mathbb{I}.
+\end{aligned}
+\end{equation*}
+Substituting now the expressions back in Equation~(\ref{kor}), we obtain:
+\begin{equation}
+\mathbb{T}^{korg} = \gamma \left[\frac{1}{2} \left|\nabla C\right|^2 \mathbb{I} - \nabla C \otimes \nabla C\right],
+\end{equation}
+which is equivalent to result obtained for the first model.
 \bibliographystyle{plain}
 \bibliography{ref}
 \end{document}
