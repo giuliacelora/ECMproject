@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.8)  15 SEP 2019 19:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.8)  17 SEP 2019 23:16
 entering extended mode
 **./main.tex
 (main.tex
@@ -417,34 +417,72 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\dvipsnam.def"
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-)) (main.aux)
+))
+("C:\Program Files\MiKTeX 2.9\tex/latex/stackengine\stackengine.sty"
+Package: stackengine 2017/02/13 v4.01\ Stacking text and objects in convenient 
+ways
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.sty"
+Package: etoolbox 2019/09/09 v2.5g e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count274
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/listofitems\listofitems.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/listofitems\listofitems.tex"
+\loi_cnt_foreach_nest=\count275
+\loi_nestcnt=\count276
+)
+Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified 
+sep char (CT)
+)
+\c@@stackindex=\count277
+\@boxshift=\skip67
+\stack@tmplength=\skip68
+\temp@stkl=\skip69
+\@stackedboxwidth=\skip70
+\@addedbox=\box48
+\@anchorbox=\box49
+\stackedbox=\box50
+\@centerbox=\box51
+\c@ROWcellindex@=\count278
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/scalerel\scalerel.sty"
+Package: scalerel 2016/12/29 v1.8 Routines for constrained scaling and stretchi
+ng of objects, relative to a reference object or in absolute terms
+\thesrwidth=\skip71
+\thesrheight=\skip72
+\srblobheight=\skip73
+\srblobdepth=\skip74
+\mnxsrwidth=\skip75
+\LMex=\skip76
+\LMpt=\skip77
+) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 
 ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count274
+\scratchcounter=\count279
 \scratchdimen=\dimen174
-\scratchbox=\box48
-\nofMPsegments=\count275
-\nofMParguments=\count276
+\scratchbox=\box52
+\nofMPsegments=\count280
+\nofMParguments=\count281
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count277
+\MPscratchCnt=\count282
 \MPscratchDim=\dimen175
-\MPnumerator=\count278
-\makeMPintoPDFobject=\count279
+\MPnumerator=\count283
+\makeMPintoPDFobject=\count284
 \everyMPtoPDFconversion=\toks23
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -496,249 +534,264 @@ G,.JBIG2,.JB2,.eps]
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-Package chemgreek Info: Activating mapping `default' on line 21.
+Package chemgreek Info: Activating mapping `default' on line 30.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 23.
+LaTeX Font Info:    Try loading font information for U+msa on input line 32.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 23.
+LaTeX Font Info:    Try loading font information for U+msb on input line 32.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/celor/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (images/sys
-tempdf.pdf_tex
-<images/systempdf.pdf, id=9, page=1, 791.19307pt x 578.5424pt>
-File: images/systempdf.pdf Graphic file (type pdf)
-<use images/systempdf.pdf, page 1>
-Package pdftex.def Info: images/systempdf.pdf , page1 used on input line 56.
-(pdftex.def)             Requested size: 187.19833pt x 136.8844pt.
-<images/systempdf.pdf, id=10, page=2, 791.19307pt x 578.5424pt>
-File: images/systempdf.pdf Graphic file (type pdf)
-<use images/systempdf.pdf, page 2>
-Package pdftex.def Info: images/systempdf.pdf , page2 used on input line 59.
-(pdftex.def)             Requested size: 187.19833pt x 136.8844pt.
-)
-(images/body.pdf_tex
-<images/body.pdf, id=11, page=1, 1105.5037pt x 567.5966pt>
-File: images/body.pdf Graphic file (type pdf)
-<use images/body.pdf, page 1>
-Package pdftex.def Info: images/body.pdf , page1 used on input line 56.
-(pdftex.def)             Requested size: 224.63742pt x 115.32741pt.
-<images/body.pdf, id=12, page=2, 1105.5037pt x 567.5966pt>
-File: images/body.pdf Graphic file (type pdf)
-<use images/body.pdf, page 2>
-Package pdftex.def Info: images/body.pdf , page2 used on input line 60.
-(pdftex.def)             Requested size: 224.63742pt x 115.32741pt.
-
-Overfull \hbox (37.43909pt too wide) in paragraph at lines 64--65
- [][] 
+{C:/Users/celor/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (2.49469pt too wide) in paragraph at lines 60--61
+[]\OT1/cmr/m/it/12 Local Equi-lib-rium Hy-poth-e-sis\OT1/cmr/m/n/12 : ther-mo-d
+y-namic vari-ables are lo-cally well-
  []
 
+[2]
+<images/visco_poro.png, id=16, 617.30624pt x 348.30125pt>
+File: images/visco_poro.png Graphic file (type png)
+<use images/visco_poro.png>
+Package pdftex.def Info: images/visco_poro.png  used on input line 77.
+(pdftex.def)             Requested size: 200.62215pt x 113.19656pt.
+ [3] (images/model1.pdf_tex
+<images/model1.pdf, id=21, page=1, 1188.56902pt x 568.60257pt>
+File: images/model1.pdf Graphic file (type pdf)
+<use images/model1.pdf, page 1>
+Package pdftex.def Info: images/model1.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 331.50238pt x 158.58295pt.
+<images/model1.pdf, id=22, page=2, 1188.56902pt x 568.60257pt>
+File: images/model1.pdf Graphic file (type pdf)
+<use images/model1.pdf, page 2>
+Package pdftex.def Info: images/model1.pdf , page2 used on input line 60.
+(pdftex.def)             Requested size: 331.50238pt x 158.58295pt.
+<images/model1.pdf, id=23, page=3, 1188.56902pt x 568.60257pt>
+File: images/model1.pdf Graphic file (type pdf)
+<use images/model1.pdf, page 3>
+Package pdftex.def Info: images/model1.pdf , page3 used on input line 67.
+(pdftex.def)             Requested size: 331.50238pt x 158.58295pt.
 )
-Overfull \hbox (3.8452pt too wide) in paragraph at lines 36--50
-[]$[]$   $[]$ 
- []
 
-(images/secondm.pdf_tex
-<images/secondm.pdf, id=13, page=1, 1681.16191pt x 571.98pt>
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4 <./images/visco_poro.png>] (images/secondm.pdf_tex
+<images/secondm.pdf, id=31, page=1, 1681.16191pt x 571.98pt>
 File: images/secondm.pdf Graphic file (type pdf)
 <use images/secondm.pdf, page 1>
 Package pdftex.def Info: images/secondm.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 390.0pt x 132.68723pt.
-<images/secondm.pdf, id=14, page=2, 1681.16191pt x 571.98pt>
+<images/secondm.pdf, id=32, page=2, 1681.16191pt x 571.98pt>
 File: images/secondm.pdf Graphic file (type pdf)
 <use images/secondm.pdf, page 2>
-Package pdftex.def Info: images/secondm.pdf , page2 used on input line 61.
+Package pdftex.def Info: images/secondm.pdf , page2 used on input line 60.
+(pdftex.def)             Requested size: 390.0pt x 132.68723pt.
+<images/secondm.pdf, id=33, page=3, 1681.16191pt x 571.98pt>
+File: images/secondm.pdf Graphic file (type pdf)
+<use images/secondm.pdf, page 3>
+Package pdftex.def Info: images/secondm.pdf , page3 used on input line 69.
+(pdftex.def)             Requested size: 390.0pt x 132.68723pt.
+<images/secondm.pdf, id=34, page=4, 1681.16191pt x 571.98pt>
+File: images/secondm.pdf Graphic file (type pdf)
+<use images/secondm.pdf, page 4>
+Package pdftex.def Info: images/secondm.pdf , page4 used on input line 71.
 (pdftex.def)             Requested size: 390.0pt x 132.68723pt.
 )
-Overfull \hbox (33.67491pt too wide) in paragraph at lines 61--64
+Overfull \hbox (19.44853pt too wide) in paragraph at lines 111--114
 []   [] 
  []
 
+[5 <./images/model1.pdf> <./images/model1.pdf
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+pdfTeX warning: pdflatex.exe (file ./images/model1.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./images/model1.pdf
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 72.
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\omscmr.fd"
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 72.
- [2 <./images/systempdf.pdf> <./images/systempdf.pdf
+pdfTeX warning: pdflatex.exe (file ./images/model1.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./images/secondm.pdf
 
-pdfTeX warning: pdflatex.exe (file ./images/systempdf.pdf): PDF inclusion: mult
-iple pdfs with page group included in a single page
-> <./images/body.pdf
+pdfTeX warning: pdflatex.exe (file ./images/secondm.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+> <./images/secondm.pdf
 
-pdfTeX warning: pdflatex.exe (file ./images/body.pdf): PDF inclusion: multiple 
-pdfs with page group included in a single page
-> <./images/body.pdf
+pdfTeX warning: pdflatex.exe (file ./images/secondm.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+> <./images/secondm.pdf
 
-pdfTeX warning: pdflatex.exe (file ./images/body.pdf): PDF inclusion: multiple 
-pdfs with page group included in a single page
->] [3 <./images/secondm.pdf> <./images/secondm.pdf
+pdfTeX warning: pdflatex.exe (file ./images/secondm.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+> <./images/secondm.pdf
 
 pdfTeX warning: pdflatex.exe (file ./images/secondm.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
 >]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 125.
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 127.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 125.
+ [6]
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 180.
 
 
-LaTeX Font Info:    Calculating math sizes for size <> on input line 129.
+LaTeX Font Info:    Calculating math sizes for size <> on input line 182.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 129.
+(Font)              size <5> substituted on input line 182.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 129.
+(Font)              size <5> substituted on input line 182.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 129.
+(Font)              size <5> substituted on input line 182.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 129.
+(Font)              size <5> substituted on input line 182.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 129.
+(Font)              size <5> substituted on input line 182.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 129.
+(Font)              size <5> substituted on input line 182.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 129.
+(Font)              size <5> substituted on input line 182.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 129.
+(Font)              size <5> substituted on input line 182.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 129.
+(Font)              size <5> substituted on input line 182.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <> not available
-(Font)              size <5> substituted on input line 129.
+(Font)              size <5> substituted on input line 182.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 129.
+(Font)              size <5> substituted on input line 182.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 129.
+(Font)              size <5> substituted on input line 182.
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 138.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 191.
 
 
-[4] [5]
-Overfull \hbox (0.25706pt too wide) in paragraph at lines 188--189
+[7] [8]
+Overfull \hbox (0.25706pt too wide) in paragraph at lines 244--245
 []\OT1/cmr/m/n/12 Based on On-sager re-cip-ro-cal re-la-tion, which as-sumes mi
 -croscale re-versibil-
  []
 
-[6] [7]
-Overfull \hbox (19.23463pt too wide) in paragraph at lines 266--268
+[9] [10] [11] [12]
+Overfull \hbox (19.23463pt too wide) in paragraph at lines 352--354
 []\OT1/cmr/m/n/12 with the ini-tial con-di-tion $\U/msb/m/n/12 B[]\OT1/cmr/m/n/
 12 (\OT1/cmr/bx/n/12 X\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0) = \U/msb/m/n/12 B\O
 T1/cmr/m/n/12 (\OT1/cmr/bx/n/12 X\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0)$. We can
  now non-dimensionalise
  []
 
-[8] [9] [10]
-<images/trial3.png, id=100, 579.16376pt x 559.08875pt>
+[13] [14] [15]
+<images/trial3.png, id=110, 579.16376pt x 559.08875pt>
 File: images/trial3.png Graphic file (type png)
 <use images/trial3.png>
-Package pdftex.def Info: images/trial3.png  used on input line 357.
+Package pdftex.def Info: images/trial3.png  used on input line 443.
 (pdftex.def)             Requested size: 214.28723pt x 206.85959pt.
 
-Overfull \hbox (11.56981pt too wide) in paragraph at lines 356--358
+Overfull \hbox (11.56981pt too wide) in paragraph at lines 442--444
 []  [] 
  []
 
-<images/trial2.png, id=101, 652.4375pt x 559.08875pt>
+<images/trial2.png, id=111, 652.4375pt x 559.08875pt>
 File: images/trial2.png Graphic file (type png)
 <use images/trial2.png>
-Package pdftex.def Info: images/trial2.png  used on input line 361.
+Package pdftex.def Info: images/trial2.png  used on input line 447.
 (pdftex.def)             Requested size: 241.39809pt x 206.85959pt.
 
-Overfull \hbox (50.29594pt too wide) in paragraph at lines 361--362
+Overfull \hbox (50.29594pt too wide) in paragraph at lines 447--448
 [][] 
  []
 
-<images/trial4.png, id=102, 716.6775pt x 559.08875pt>
+<images/trial4.png, id=112, 716.6775pt x 559.08875pt>
 File: images/trial4.png Graphic file (type png)
 <use images/trial4.png>
-Package pdftex.def Info: images/trial4.png  used on input line 367.
+Package pdftex.def Info: images/trial4.png  used on input line 453.
 (pdftex.def)             Requested size: 265.16652pt x 206.85959pt.
-[11] [12 <./images/trial3.png (PNG copy)> <./images/trial2.png (PNG copy)> <./i
+[16] [17 <./images/trial3.png (PNG copy)> <./images/trial2.png (PNG copy)> <./i
 mages/trial4.png (PNG copy)>]
-Overfull \hbox (24.74101pt too wide) detected at line 414
+Overfull \hbox (24.74101pt too wide) detected at line 500
 []
  []
 
-[13]
-<images/stab1.png, id=113, 652.4375pt x 559.08875pt>
+[18]
+<images/stab1.png, id=123, 652.4375pt x 559.08875pt>
 File: images/stab1.png Graphic file (type png)
 <use images/stab1.png>
-Package pdftex.def Info: images/stab1.png  used on input line 434.
+Package pdftex.def Info: images/stab1.png  used on input line 520.
 (pdftex.def)             Requested size: 260.97037pt x 223.63153pt.
 
-Overfull \hbox (36.86769pt too wide) in paragraph at lines 433--435
+Overfull \hbox (36.86769pt too wide) in paragraph at lines 519--521
 []  [] 
  []
 
-<images/stab2.png, id=114, 749.80125pt x 579.16376pt>
+<images/stab2.png, id=124, 749.80125pt x 579.16376pt>
 File: images/stab2.png Graphic file (type png)
 <use images/stab2.png>
-Package pdftex.def Info: images/stab2.png  used on input line 440.
+Package pdftex.def Info: images/stab2.png  used on input line 526.
 (pdftex.def)             Requested size: 299.91519pt x 231.66139pt.
 
-Overfull \hbox (44.6118pt too wide) in paragraph at lines 439--441
+Overfull \hbox (44.6118pt too wide) in paragraph at lines 525--527
 []  [] 
  []
 
 
-Overfull \hbox (40.09962pt too wide) in paragraph at lines 432--443
+Overfull \hbox (40.09962pt too wide) in paragraph at lines 518--529
 []$[]$   $[]$ 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/stab3.png, id=115, 699.61375pt x 629.35126pt>
+<images/stab3.png, id=125, 699.61375pt x 629.35126pt>
 File: images/stab3.png Graphic file (type png)
 <use images/stab3.png>
-Package pdftex.def Info: images/stab3.png  used on input line 452.
+Package pdftex.def Info: images/stab3.png  used on input line 538.
 (pdftex.def)             Requested size: 251.86075pt x 226.56627pt.
 
-Overfull \hbox (50.52028pt too wide) in paragraph at lines 451--453
+Overfull \hbox (50.52028pt too wide) in paragraph at lines 537--539
 []  [] 
  []
 
-<images/stab4.png, id=116, 699.61375pt x 629.35126pt>
+<images/stab4.png, id=126, 699.61375pt x 629.35126pt>
 File: images/stab4.png Graphic file (type png)
 <use images/stab4.png>
-Package pdftex.def Info: images/stab4.png  used on input line 458.
+Package pdftex.def Info: images/stab4.png  used on input line 544.
 (pdftex.def)             Requested size: 265.85599pt x 239.15596pt.
 
-Overfull \hbox (4.86205pt too wide) in paragraph at lines 457--459
+Overfull \hbox (4.86205pt too wide) in paragraph at lines 543--545
 []  [] 
  []
 
 (images/stab5.pdf_tex
-<images/stab5.pdf, id=117, page=1, 524.71031pt x 472.01344pt>
+<images/stab5.pdf, id=127, page=1, 524.71031pt x 472.01344pt>
 File: images/stab5.pdf Graphic file (type pdf)
 <use images/stab5.pdf, page 1>
 Package pdftex.def Info: images/stab5.pdf , page1 used on input line 56.
@@ -751,14 +804,14 @@ LaTeX Font Warning: Command \large invalid in math mode on input line 57.
 LaTeX Font Warning: Command \large invalid in math mode on input line 58.
 
 )
-Overfull \hbox (42.71072pt too wide) in paragraph at lines 449--467
+Overfull \hbox (42.71072pt too wide) in paragraph at lines 535--553
 []  $[]$   $[]$
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14]
+[19]
 Package epstopdf Info: Source file: <images/seriestau1e-5.eps>
 (epstopdf)                    date: 2019-09-15 17:39:42
 (epstopdf)                    size: 52221 bytes
@@ -768,20 +821,20 @@ Package epstopdf Info: Source file: <images/seriestau1e-5.eps>
 (epstopdf)                    size: 18285 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/seriestau1e-5-eps-co
 nverted-to.pdf images/seriestau1e-5.eps>
-(epstopdf)             \includegraphics on input line 483.
+(epstopdf)             \includegraphics on input line 569.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./images/seriestau1e-5-eps-converted-to.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/seriestau1e-5-eps-converted-to.pdf, id=121, 566.115pt x 456.70625pt>
+<images/seriestau1e-5-eps-converted-to.pdf, id=132, 566.115pt x 456.70625pt>
 File: images/seriestau1e-5-eps-converted-to.pdf Graphic file (type pdf)
 <use images/seriestau1e-5-eps-converted-to.pdf>
 Package pdftex.def Info: images/seriestau1e-5-eps-converted-to.pdf  used on inp
-ut line 483.
+ut line 569.
 (pdftex.def)             Requested size: 96.23827pt x 77.63902pt.
 
-Overfull \hbox (2.63612pt too wide) in paragraph at lines 483--484
+Overfull \hbox (2.63612pt too wide) in paragraph at lines 569--570
 [][] 
  []
 
@@ -794,20 +847,20 @@ f>
 (epstopdf)                    size: 17996 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/series1tau0_001-eps-
 converted-to.pdf images/series1tau0_001.eps>
-(epstopdf)             \includegraphics on input line 488.
+(epstopdf)             \includegraphics on input line 574.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./images/series1tau0_001-eps-converted-to.pd
 f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/series1tau0_001-eps-converted-to.pdf, id=122, 566.115pt x 417.56pt>
+<images/series1tau0_001-eps-converted-to.pdf, id=133, 566.115pt x 417.56pt>
 File: images/series1tau0_001-eps-converted-to.pdf Graphic file (type pdf)
 <use images/series1tau0_001-eps-converted-to.pdf>
 Package pdftex.def Info: images/series1tau0_001-eps-converted-to.pdf  used on i
-nput line 488.
+nput line 574.
 (pdftex.def)             Requested size: 101.8963pt x 75.15755pt.
 
-Overfull \hbox (8.29416pt too wide) in paragraph at lines 488--489
+Overfull \hbox (8.29416pt too wide) in paragraph at lines 574--575
 [][] 
  []
 
@@ -819,20 +872,20 @@ Package epstopdf Info: Source file: <images/series1tau1.eps>
 (epstopdf)                    size: 16354 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/series1tau1-eps-conv
 erted-to.pdf images/series1tau1.eps>
-(epstopdf)             \includegraphics on input line 493.
+(epstopdf)             \includegraphics on input line 579.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./images/series1tau1-eps-converted-to.pdf): 
 PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/series1tau1-eps-converted-to.pdf, id=123, 572.1375pt x 420.57124pt>
+<images/series1tau1-eps-converted-to.pdf, id=134, 572.1375pt x 420.57124pt>
 File: images/series1tau1-eps-converted-to.pdf Graphic file (type pdf)
 <use images/series1tau1-eps-converted-to.pdf>
 Package pdftex.def Info: images/series1tau1-eps-converted-to.pdf  used on input
- line 493.
+ line 579.
 (pdftex.def)             Requested size: 108.70724pt x 79.90936pt.
 
-Overfull \hbox (15.1051pt too wide) in paragraph at lines 493--494
+Overfull \hbox (15.1051pt too wide) in paragraph at lines 579--580
 [][] 
  []
 
@@ -845,28 +898,28 @@ Package epstopdf Info: Source file: <images/series1tau100.eps>
 (epstopdf)                    size: 16391 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/series1tau100-eps-co
 nverted-to.pdf images/series1tau100.eps>
-(epstopdf)             \includegraphics on input line 498.
+(epstopdf)             \includegraphics on input line 584.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./images/series1tau100-eps-converted-to.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/series1tau100-eps-converted-to.pdf, id=124, 572.1375pt x 420.57124pt>
+<images/series1tau100-eps-converted-to.pdf, id=135, 572.1375pt x 420.57124pt>
 File: images/series1tau100-eps-converted-to.pdf Graphic file (type pdf)
 <use images/series1tau100-eps-converted-to.pdf>
 Package pdftex.def Info: images/series1tau100-eps-converted-to.pdf  used on inp
-ut line 498.
+ut line 584.
 (pdftex.def)             Requested size: 102.9803pt x 75.69955pt.
 
-Overfull \hbox (9.37816pt too wide) in paragraph at lines 498--499
+Overfull \hbox (9.37816pt too wide) in paragraph at lines 584--585
 [][] 
  []
 
-[15 <./images/stab1.png (PNG copy)> <./images/stab2.png (PNG copy)>]
+[20 <./images/stab1.png (PNG copy)> <./images/stab2.png (PNG copy)>]
 
-LaTeX Warning: Text page 16 contains only floats.
+LaTeX Warning: Text page 21 contains only floats.
 
-[16 <./images/stab3.png (PNG copy)> <./images/stab4.png (PNG copy)> <./images/s
+[21 <./images/stab3.png (PNG copy)> <./images/stab4.png (PNG copy)> <./images/s
 tab5.pdf>]
 Package epstopdf Info: Source file: <images/phasetau.eps>
 (epstopdf)                    date: 2019-09-15 17:39:42
@@ -876,25 +929,25 @@ Package epstopdf Info: Source file: <images/phasetau.eps>
 (epstopdf)                    size: 166950 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/phasetau-eps-convert
 ed-to.pdf images/phasetau.eps>
-(epstopdf)             \includegraphics on input line 526.
+(epstopdf)             \includegraphics on input line 612.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./images/phasetau-eps-converted-to.pdf): PDF
  inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/phasetau-eps-converted-to.pdf, id=141, 486.81876pt x 372.39125pt>
+<images/phasetau-eps-converted-to.pdf, id=152, 486.81876pt x 372.39125pt>
 File: images/phasetau-eps-converted-to.pdf Graphic file (type pdf)
 <use images/phasetau-eps-converted-to.pdf>
 Package pdftex.def Info: images/phasetau-eps-converted-to.pdf  used on input li
-ne 526.
+ne 612.
 (pdftex.def)             Requested size: 146.04675pt x 111.71823pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 525--527
+Underfull \hbox (badness 10000) in paragraph at lines 611--613
 []
  []
 
 
-Overfull \hbox (21.2439pt too wide) in paragraph at lines 525--527
+Overfull \hbox (21.2439pt too wide) in paragraph at lines 611--613
 [] 
  []
 
@@ -907,25 +960,25 @@ f>
 (epstopdf)                    size: 56405 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/transient_flux4-eps-
 converted-to.pdf images/transient_flux4.eps>
-(epstopdf)             \includegraphics on input line 532.
+(epstopdf)             \includegraphics on input line 618.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./images/transient_flux4-eps-converted-to.pd
 f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/transient_flux4-eps-converted-to.pdf, id=142, 516.93124pt x 389.455pt>
+<images/transient_flux4-eps-converted-to.pdf, id=153, 516.93124pt x 389.455pt>
 File: images/transient_flux4-eps-converted-to.pdf Graphic file (type pdf)
 <use images/transient_flux4-eps-converted-to.pdf>
 Package pdftex.def Info: images/transient_flux4-eps-converted-to.pdf  used on i
-nput line 532.
+nput line 618.
 (pdftex.def)             Requested size: 144.73976pt x 109.04665pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 531--533
+Underfull \hbox (badness 10000) in paragraph at lines 617--619
 []
  []
 
 
-Overfull \hbox (19.9369pt too wide) in paragraph at lines 531--533
+Overfull \hbox (19.9369pt too wide) in paragraph at lines 617--619
 [] 
  []
 
@@ -938,32 +991,32 @@ Package epstopdf Info: Source file: <images/transient_flux.eps>
 (epstopdf)                    size: 61454 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/transient_flux-eps-c
 onverted-to.pdf images/transient_flux.eps>
-(epstopdf)             \includegraphics on input line 538.
+(epstopdf)             \includegraphics on input line 624.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./images/transient_flux-eps-converted-to.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/transient_flux-eps-converted-to.pdf, id=143, 516.93124pt x 389.455pt>
+<images/transient_flux-eps-converted-to.pdf, id=154, 516.93124pt x 389.455pt>
 File: images/transient_flux-eps-converted-to.pdf Graphic file (type pdf)
 <use images/transient_flux-eps-converted-to.pdf>
 Package pdftex.def Info: images/transient_flux-eps-converted-to.pdf  used on in
-put line 538.
+put line 624.
 (pdftex.def)             Requested size: 144.73976pt x 109.04665pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 537--539
+Underfull \hbox (badness 10000) in paragraph at lines 623--625
 []
  []
 
 
-Overfull \hbox (19.9369pt too wide) in paragraph at lines 537--539
+Overfull \hbox (19.9369pt too wide) in paragraph at lines 623--625
 [] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[17 <./images/seriestau1e-5-eps-converted-to.pdf> <./images/series1tau0_001-eps
+[22 <./images/seriestau1e-5-eps-converted-to.pdf> <./images/series1tau0_001-eps
 -converted-to.pdf> <./images/series1tau1-eps-converted-to.pdf> <./images/series
 1tau100-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/transient_flux3.eps>
@@ -975,20 +1028,20 @@ f>
 (epstopdf)                    size: 18308 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/transient_flux3-eps-
 converted-to.pdf images/transient_flux3.eps>
-(epstopdf)             \includegraphics on input line 551.
+(epstopdf)             \includegraphics on input line 637.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./images/transient_flux3-eps-converted-to.pd
 f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/transient_flux3-eps-converted-to.pdf, id=167, 566.115pt x 417.56pt>
+<images/transient_flux3-eps-converted-to.pdf, id=178, 566.115pt x 417.56pt>
 File: images/transient_flux3-eps-converted-to.pdf Graphic file (type pdf)
 <use images/transient_flux3-eps-converted-to.pdf>
 Package pdftex.def Info: images/transient_flux3-eps-converted-to.pdf  used on i
-nput line 551.
+nput line 637.
 (pdftex.def)             Requested size: 181.16049pt x 133.62192pt.
 
-Overfull \hbox (1.20525pt too wide) in paragraph at lines 550--552
+Overfull \hbox (1.20525pt too wide) in paragraph at lines 636--638
 []  [] 
  []
 
@@ -1001,85 +1054,96 @@ f>
 (epstopdf)                    size: 16437 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/transient_flux2-eps-
 converted-to.pdf images/transient_flux2.eps>
-(epstopdf)             \includegraphics on input line 556.
+(epstopdf)             \includegraphics on input line 642.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./images/transient_flux2-eps-converted-to.pd
 f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/transient_flux2-eps-converted-to.pdf, id=168, 566.115pt x 417.56pt>
+<images/transient_flux2-eps-converted-to.pdf, id=179, 566.115pt x 417.56pt>
 File: images/transient_flux2-eps-converted-to.pdf Graphic file (type pdf)
 <use images/transient_flux2-eps-converted-to.pdf>
 Package pdftex.def Info: images/transient_flux2-eps-converted-to.pdf  used on i
-nput line 556.
+nput line 642.
 (pdftex.def)             Requested size: 181.16049pt x 133.62192pt.
 
-Overfull \hbox (14.26392pt too wide) in paragraph at lines 548--559
+Overfull \hbox (14.26392pt too wide) in paragraph at lines 634--645
 []  $[]$   $[]$ 
  []
 
-[18 <./images/phasetau-eps-converted-to.pdf> <./images/transient_flux4-eps-conv
+[23 <./images/phasetau-eps-converted-to.pdf> <./images/transient_flux4-eps-conv
 erted-to.pdf> <./images/transient_flux-eps-converted-to.pdf> <./images/transien
 t_flux3-eps-converted-to.pdf> <./images/transient_flux2-eps-converted-to.pdf>]
-[19] [20] [21] [22] [23] [24] (images/gel.pdf_tex
-<images/gel.pdf, id=218, page=1, 506.8157pt x 186.5873pt>
+[24] [25] [26] [27] [28] [29] (images/gel.pdf_tex
+<images/gel.pdf, id=229, page=1, 506.8157pt x 186.5873pt>
 File: images/gel.pdf Graphic file (type pdf)
 <use images/gel.pdf, page 1>
 Package pdftex.def Info: images/gel.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 350.99762pt x 129.22083pt.
-<images/gel.pdf, id=219, page=2, 506.8157pt x 186.5873pt>
+<images/gel.pdf, id=230, page=2, 506.8157pt x 186.5873pt>
 File: images/gel.pdf Graphic file (type pdf)
 <use images/gel.pdf, page 2>
 Package pdftex.def Info: images/gel.pdf , page2 used on input line 60.
 (pdftex.def)             Requested size: 350.99762pt x 129.22083pt.
-) [25 <./images/gel.pdf> <./images/gel.pdf
+) [30 <./images/gel.pdf> <./images/gel.pdf
 
 pdfTeX warning: pdflatex.exe (file ./images/gel.pdf): PDF inclusion: multiple p
 dfs with page group included in a single page
->] [26] [27] [28] [29] [30]
-Overfull \hbox (4.67726pt too wide) detected at line 957
+>] [31] [32] [33] [34] [35]
+Overfull \hbox (4.67726pt too wide) detected at line 1043
 [][]
  []
 
-[31] [32]
+[36] [37]
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1010
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1096
 .
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1010
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1096
 .
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1010
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1096
 .
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1010
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1096
 .
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1010
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1096
 .
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1010
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 1096
 .
 
-[33] [34] (main.bbl) [35] (main.aux)
+[38] [39] (main.bbl [40]
+Underfull \hbox (badness 1292) in paragraph at lines 17--22
+[]\OT1/cmr/m/n/12 D. Garcia-Gonzalez and A. Jerusalem.  En-ergy based mechano-
+ []
+
+
+Underfull \hbox (badness 2469) in paragraph at lines 24--28
+[]\OT1/cmr/m/n/12 Daniel Garcia-Gonzalez.  Magneto-visco-hyperelasticity for ha
+rd-
+ []
+
+[41]) [42] (main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 15553 strings out of 492895
- 290089 string characters out of 3133480
- 343273 words of memory out of 3000000
- 19312 multiletter control sequences out of 15000+200000
- 548664 words of font info for 87 fonts, out of 3000000 for 9000
+ 16215 strings out of 492895
+ 298706 string characters out of 3133480
+ 358543 words of memory out of 3000000
+ 19957 multiletter control sequences out of 15000+200000
+ 547417 words of font info for 82 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,23n,63p,1000b,537s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,23n,63p,1000b,486s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX
@@ -1100,9 +1164,9 @@ s/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
 /Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program
  Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (35 pages, 1057990 bytes).
+Output written on main.pdf (42 pages, 1173314 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
+ 344 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
