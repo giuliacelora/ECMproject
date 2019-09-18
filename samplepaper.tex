@@ -5,6 +5,7 @@
 \documentclass[runningheads]{llncs}
 %
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{booktabs} % For pretty tables
 \usepackage{caption} % For caption spacing
 \usepackage{graphicx}
@@ -26,7 +27,18 @@
 
 \newcommand{\card}[1]{\left\vert{#1}\right\vert}
 \newcommand*\Let[2]{\State #1 $\gets$ #2}
+\newcommand\qfrac[3][1pt]{\frac{%
+		\ThisStyle{\addstackgap[#1]{\SavedStyle#2}}}{%
+		\ThisStyle{\addstackgap[#1]{\SavedStyle#3}}%
+}}
 
+
+\newcommand{\F}{\ensuremath{\mathbb{F}}}
+\newcommand{\B}{\ensuremath{\mathbb{B}}}
+\newcommand{\LL}{\ensuremath{\mathbb{L}}}
+\newcommand{\Me}{\ensuremath{\mathbb{M}_e^{\text{eff}}}}
+\newcommand{\D}{\ensuremath{\text{D}}}
+\renewcommand{\d}{\ensuremath{\text{d}}}
 \pgfplotsset{compat=1.14}
 
 \renewcommand{\topfraction}{0.85}
@@ -84,12 +96,36 @@ There is now compelling evidence that the relaxation of stress in polymer gels, 
 	\caption{Illustration of the molecular processes which account for a gel deformation: viscosity is related to change in the conformation of the network which results in short-range movement of fluid relative to the polymers; poro-elasticity is instead responsible for the long-range diffusion of solvent molecules in the gel/tissue. Reproduced from \cite{viscoporo}.}
 \end{figure}
 
+\section{Model Development}
+\subsection{Conservation Law.}
+
 The ECM is here considered as a three-phase medium composed of a solid polymer network with fixed charges, a solvent (i.e. water molecules) and solutes (freely moving charges).
-\subsection{Balance Laws.}
 
-Denote by $C_s$ the solvent concentration and by $C_i$ the concentration of mobile ions, $i=1,\ldots,N$. We assume that the only mechanism for the change in gel volume is the transport of solution, so that the molecular incompressibility condition must hold:
+We here assume that the deformation of the ECM corresponds to the one of the solid network. As the tissue deform, the material element originally located at $\mathbf{X}$ in the initial configuration $\mathcal{B}_0$ is displaced to the point $\mathbf{x}$ in the current configuration $\mathcal{B}$. Such transformation is described by the deformation gradient $\F= \partial \mathbf{x}/\partial \mathbf{X}$, while the information about its change in the ECM volume due to swelling is encoded in $J= \det \F$. Since we assume the solid phase to be incompressible, any change in the volume can only be related to the migration of solvent and solutes molecules, whose nominal concentrations will be denoted by $C_s$ and $C_i$ respectively, $i=1,\ldots,N$ with $N$ number of free ion species. This lead to the molecular incompressibility condition:
 
+\begin{equation}
+ J= 1 + v_s C_s +\sum\limits_{i=1}^{N} v_i C_i
+ \label{comp}
+\end{equation}
+where $v_m$ are the characteristic molecular volume of each species. As common in tissue modelling, we will here assume that the contribution of ions to the volume is negligible so that Equation~(\ref{comp}) reduces to:
+\begin{equation}
+J=1+v_s C_s.
+\end{equation} 
 
+The volume fractions of fluid $\phi_f$ and solid $\phi_n$ phases in the gel are thus be defined as:
+\begin{equation}
+\phi_f -= \frac{v_sC_s}{1+v_sC_s}, \qquad \phi_n = \frac{1}{1+v_sC_s}.
+\end{equation}
+While $C_m$ denote the number of each phase molecule per unit volume in the initial configuration, the actual concentration in the current state is denoted by $c_m=C_m/J$. Note that throughout this work we will be using $i=1,\ldots,N$ for denote only the concentration of ionic species, while $m\in\left\{s,1,\ldots,N\right\}$ to refer to both the solvent and solutes.
+
+Mass conservation must apply to all mobile species and in the initial configuration these read:
+\begin{equation}
+\dot{C}_m + \nabla_0 \, \mathbf{J}_m = 0, 
+\end{equation}
+where $\mathbf{J}_m$ is the nominal flux per unit area in the dry state and $\nabla_0$ denote the gradient in the Lagrangian coordinate $\mathbf{X}$. Their counterparts in the actual configuration are denoted by $\mathbf{j}_m$ and $\nabla$ and are defined by the flow rule:
+\begin{equation}
+\mathbf{J}_m = J \F^{-1} \mathbf{j}_m, \qquad \nabla_0 (\cdot) = \F^{T} \nabla(\cdot).
+\end{equation}
 
 \bibliographystyle{splncs04}
 \bibliography{biblio}
