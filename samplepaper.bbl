@@ -3,11 +3,32 @@
 \providecommand{\urlprefix}{URL }
 \providecommand{\doi}[1]{https://doi.org/#1}
 
+\bibitem{Plasto}
+Anand, L.: A thermo-mechanically-coupled theory accounting for hydrogen
+  diffusion and large elastic–viscoplastic deformations of metals.
+  International Journal of Solids and Structures  \textbf{48}(6),  962 -- 971
+  (2011). \doi{https://doi.org/10.1016/j.ijsolstr.2010.11.029},
+  \url{http://www.sciencedirect.com/science/article/pii/S0020768310004361}
+
 \bibitem{Article1}
 Caccavo, D., Cascone, S., Lamberti, G., Barba, A.A.: Hydrogels: experimental
   characterization and mathematical modelling of their mechanical and diffusive
   behaviour. Chem. Soc. Rev.  \textbf{47},  2357--2373 (2018).
   \doi{10.1039/C7CS00638A}, \url{http://dx.doi.org/10.1039/C7CS00638A}
+
+\bibitem{CACCAVO2}
+Caccavo, D., Vietri, A., Lamberti, G., Barba, A.A., Larsson, A.: Modeling the
+  mechanics and the transport phenomena in hydrogels. In: Manca, D. (ed.)
+  Quantitative Systems Pharmacology, Computer Aided Chemical Engineering,
+  vol.~42, chap.~12, pp. 357 -- 383. Elsevier (2018).
+  \doi{https://doi.org/10.1016/B978-0-444-63964-6.00012-X},
+  \url{http://www.sciencedirect.com/science/article/pii/B978044463964600012X}
+
+\bibitem{magneto}
+Garcia-Gonzalez, D.: Magneto-visco-hyperelasticity for hard-magnetic soft
+  materials: theory and numerical applications. Smart Materials and Structures
+  \textbf{28}(8),  085020 (jul 2019). \doi{10.1088/1361-665x/ab2b05},
+  \url{https://doi.org/10.1088%2F1361-665x%2Fab2b05}
 
 \bibitem{GURTIN}
 Gurtin, M.E.: Generalized ginzburg-landau and cahn-hilliard equations based on
@@ -18,7 +39,7 @@ Gurtin, M.E.: Generalized ginzburg-landau and cahn-hilliard equations based on
 \bibitem{Reviewpolyel}
 Hong, W.: Continuum Models of Stimuli-responsive Gels, pp. 165--196. Springer
   Berlin Heidelberg, Berlin, Heidelberg (2012).
-  \doi{10.1007/978-3-642-19373-6_6},
+  \doi{10.1007/978-3-642-19373-6},
   \url{https://doi.org/10.1007/978-3-642-19373-6_6}
 
 \bibitem{viscoporo}
@@ -32,6 +53,18 @@ Kondepudi, D., Prigogine, I.: Modern Thermodynamics: From Heat Engines to
   Dissipative Structures. CourseSmart, John Wiley \& Sons (2014),
   \url{https://books.google.co.uk/books?id=SPU8BQAAQBAJ}
 
+\bibitem{kro}
+{Kr{\"o}ner}, E.: {Allgemeine Kontinuumstheorie der Versetzungen und
+  Eigenspannungen}. Archive for Rational Mechanics and Analysis  \textbf{4},
+  273--334 (Jan 1959). \doi{10.1007/BF00281393}
+
+\bibitem{NGUYEN}
+N’Guyen, T., Lejeunes, S., Eyheramendy, D., Boukamel, A.: A thermodynamical
+  framework for the thermo-chemo-mechanical couplings in soft materials at
+  finite strain. Mechanics of Materials  \textbf{95},  158 -- 171 (2016).
+  \doi{https://doi.org/10.1016/j.mechmat.2016.01.008},
+  \url{http://www.sciencedirect.com/science/article/pii/S016766361600017X}
+
 \bibitem{onsager}
 Onsager, L.: Reciprocal relations in irreversible processes. i. Phys. Rev.
   \textbf{37},  405--426 (Feb 1931). \doi{10.1103/PhysRev.37.405},
@@ -42,12 +75,12 @@ Prigogine, I.: Introduction to thermodynamics of irreversible processes.
   Interscience Publishers (1968),
   \url{https://books.google.co.uk/books?id=G3peAAAAIAAJ}
 
-\bibitem{ecm}
-Xue, S.L., Li, B., Feng, X.Q., Gao, H.: A non-equilibrium thermodynamic model
-  for tumor extracellular matrix with enzymatic degradation. Journal of the
-  Mechanics and Physics of Solids  \textbf{104},  32 -- 56 (2017).
-  \doi{https://doi.org/10.1016/j.jmps.2017.04.002},
-  \url{http://www.sciencedirect.com/science/article/pii/S0022509617300698}
+\bibitem{growthtum}
+Xue, S.L., Li, B., Feng, X.Q., Gao, H.: Biochemomechanical poroelastic theory
+  of avascular tumor growth. Journal of the Mechanics and Physics of Solids
+  \textbf{94},  409 -- 432 (2016).
+  \doi{https://doi.org/10.1016/j.jmps.2016.05.011},
+  \url{http://www.sciencedirect.com/science/article/pii/S0022509616302162}
 
 \bibitem{ecm2}
 Xue, S.L., Lin, S.Z., Li, B., Feng, X.Q.: A nonlinear poroelastic theory of
@@ -55,11 +88,5 @@ Xue, S.L., Lin, S.Z., Li, B., Feng, X.Q.: A nonlinear poroelastic theory of
   \textbf{433},  49 -- 56 (2017).
   \doi{https://doi.org/10.1016/j.jtbi.2017.08.021},
   \url{http://www.sciencedirect.com/science/article/pii/S0022519317303958}
-
-\bibitem{swell2}
-Yu, Y., Landis, C.M., Huang, R.: {Salt-Induced Swelling and Volume Phase
-  Transition of Polyelectrolyte Gels}. Journal of Applied Mechanics
-  \textbf{84}(5) (03 2017). \doi{10.1115/1.4036113},
-  \url{https://doi.org/10.1115/1.4036113}
 
 \end{thebibliography}

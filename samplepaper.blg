@@ -1,3 +1,48 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: samplepaper.aux
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: samplepaper.aux
 The style file: splncs04.bst
 Database file #1: latex/ref.bib
+Warning--I didn't find a database entry for "ecm"
+You've used 14 entries,
+            2850 wiz_defined-function locations,
+            729 strings with 8104 characters,
+and the built_in function-call counts, 8763 in all, are:
+= -- 757
+> -- 192
+< -- 24
++ -- 82
+- -- 65
+* -- 593
+:= -- 1076
+add.period$ -- 27
+call.type$ -- 14
+change.case$ -- 73
+chr.to.int$ -- 0
+cite$ -- 14
+duplicate$ -- 774
+empty$ -- 798
+format.name$ -- 72
+if$ -- 1975
+int.to.chr$ -- 0
+int.to.str$ -- 14
+missing$ -- 143
+newline$ -- 48
+num.names$ -- 30
+pop$ -- 208
+preamble$ -- 1
+purify$ -- 60
+quote$ -- 0
+skip$ -- 293
+stack$ -- 0
+substring$ -- 613
+swap$ -- 475
+text.length$ -- 24
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 50
+warning$ -- 0
+while$ -- 69
+width$ -- 16
+write$ -- 183
+(There was 1 warning)

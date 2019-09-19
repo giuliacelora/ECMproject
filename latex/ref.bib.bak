@@ -14,20 +14,6 @@
   url       = {http://dx.doi.org/10.1039/C7CS00638A},
 }
 
-@Article{Article2,
-  author   = {Morton E. Gurtin},
-  title    = {Generalized Ginzburg-Landau and Cahn-Hilliard equations based on a microforce balance},
-  journal  = {Physica D: Nonlinear Phenomena},
-  year     = {1996},
-  volume   = {92},
-  number   = {3},
-  pages    = {178 - 192},
-  issn     = {0167-2789},
-  abstract = {A unified framework for equations of Ginzburg-Landau and Cahn-Hilliard type is developed using, as a basis, a balance law for microforces in conjunction with constitutive equations consistent with a mechanical version of the second law.},
-  doi      = {https://doi.org/10.1016/0167-2789(95)00173-5},
-  url      = {http://www.sciencedirect.com/science/article/pii/0167278995001735},
-}
-
 @Article{chargedensity,
   author  = {Mesquida, Patrick and Kohl, Dominik and Andriotis, Orestis and Thurner, Philipp and Duer, Melinda and Bansode, Sneha and Schitter, Georg},
   title   = {Evaluation of surface charge shift of collagen fibrils exposed to glutaraldehyde},
@@ -46,24 +32,9 @@
   author    = {Hong, Wei},
   address   = {Berlin, Heidelberg},
   isbn      = {978-3-642-19373-6},
-  abstract  = {Immersed in a solution of small molecules and ions, a network of long-chain polymers may imbibe the solution and swell, resulting in a polymeric gel. Depending on the molecular structure of the polymers, the amount of swelling can be regulated by moisture, mechanical forces, ionic strength, electric field, pH value, and many other types of stimuli. Starting from the basic principles of non-equilibrium thermodynamics, this chapter formulates a field theory of the coupled large deformation and mass transportation in a neutral polymeric gel. The theory is then extended to study polyelectrolyte gels with charge-carrying networks by accounting for the electromechanical coupling and migration of solute ions. While the theoretical framework is adaptable to various types of material models, some representative ones are described through specific free-energy functions and kinetic laws. A specific material law for pH-sensitive gels---a special type of polyelectrolyte gels---is introduced as an example of incorporating chemical reactions in modeling stimuli-responsive gels. Finally, a simplified theory for the equilibrium but inhomogeneous swelling of a polymeric gel is deduced. The theory and the specific material models are illustrated through several examples.},
   booktitle = {Advances in Soft Matter Mechanics},
-  doi       = {10.1007/978-3-642-19373-6_6},
+  doi       = {10.1007/978-3-642-19373-6},
   url       = {https://doi.org/10.1007/978-3-642-19373-6_6},
-}
-
-@Article{ecm,
-  author   = {Shi-Lei Xue and Bo Li and Xi-Qiao Feng and Huajian Gao},
-  title    = {A non-equilibrium thermodynamic model for tumor extracellular matrix with enzymatic degradation},
-  journal  = {Journal of the Mechanics and Physics of Solids},
-  year     = {2017},
-  volume   = {104},
-  pages    = {32 - 56},
-  issn     = {0022-5096},
-  abstract = {The extracellular matrix (ECM) of a solid tumor not only affords scaffolding to support tumor architecture and integrity but also plays an essential role in tumor growth, invasion, metastasis, and therapeutics. In this paper, a non-equilibrium thermodynamic theory is established to study the chemo-mechanical behaviors of tumor ECM, which is modeled as a poroelastic polyelectrolyte consisting of a collagen network and proteoglycans. By using the principle of maximum energy dissipation rate, we deduce a set of governing equations for drug transport and mechanosensitive enzymatic degradation in ECM. The results reveal that osmosis is primarily responsible for the compression resistance of ECM. It is suggested that a well-designed ECM degradation can effectively modify the tumor microenvironment for improved efficiency of cancer therapy. The theoretical predictions show a good agreement with relevant experimental observations. This study aimed to deepen our understanding of tumor ECM may be conducive to novel anticancer strategies.},
-  doi      = {https://doi.org/10.1016/j.jmps.2017.04.002},
-  keywords = {Tumor, Mechanobiology, Extracellular matrix, Chemo-mechanical coupling, Transport, Enzymatic degradation},
-  url      = {http://www.sciencedirect.com/science/article/pii/S0022509617300698},
 }
 
 @Book{bookbiophys,
@@ -266,6 +237,39 @@
   doi      = {https://doi.org/10.1016/j.jtbi.2017.08.021},
   keywords = {Tumor mechanobiology, Mechanical property, Poroelasticity, Compression resistance, Glycosaminoglycan swelling},
   url      = {http://www.sciencedirect.com/science/article/pii/S0022519317303958},
+}
+
+@InCollection{CACCAVO2,
+  author    = {Diego Caccavo and Antonella Vietri and Gaetano Lamberti and Anna Angela Barba and Anette Larsson},
+  title     = {Modeling the mechanics and the transport phenomena in hydrogels},
+  booktitle = {Quantitative Systems Pharmacology},
+  publisher = {Elsevier},
+  year      = {2018},
+  editor    = {Davide Manca},
+  volume    = {42},
+  series    = {Computer Aided Chemical Engineering},
+  chapter   = {12},
+  pages     = {357 - 383},
+  abstract  = {Hydrogels are polymeric materials widely used in pharmaceutical and biomedical applications. Their uses can be improved by modeling their behavior, in particular the mechanical phenomena and the transport phenomena. The scope of this chapter is to propose a model, simple enough and with a limited number of parameters to be determined, able to capture the full behavior of a swelling hydrogel, with the aim of describing the drug release process as well as—in principle—any other application of hydrogels. The model was derived recalling the basics of the continuum mechanics, the possible approaches to estimate the Helmholtz free energy, and then writing the transport and constitutive equations for a poroelastic material, and for a more realistic poroviscoelastic material (by adding the standard linear solid model as the rheological model). A full extension to multicomponent systems, to describe the drug release phenomenon, is proposed along with a sensitivity analysis (free-swelling simulation by changing the model parameters).},
+  doi       = {https://doi.org/10.1016/B978-0-444-63964-6.00012-X},
+  issn      = {1570-7946},
+  keywords  = {Modeling, Hydrogels, Viscoelasticity, Poroviscoelasticity, Drug release, Mechanics, Transport phenomena},
+  url       = {http://www.sciencedirect.com/science/article/pii/B978044463964600012X},
+}
+
+@Article{Plasto,
+  author   = {Lallit Anand},
+  title    = {A thermo-mechanically-coupled theory accounting for hydrogen diffusion and large elastic–viscoplastic deformations of metals},
+  journal  = {International Journal of Solids and Structures},
+  year     = {2011},
+  volume   = {48},
+  number   = {6},
+  pages    = {962 - 971},
+  issn     = {0020-7683},
+  abstract = {In this paper we develop a thermodynamically-consistent coupled-theory which accounts for diffusion of hydrogen, diffusion of heat, and large elastic–viscoplastic deformations of metals. The theory should be of utility in the analysis of hydrogen diffusion in elastic–plastically-deforming solids, an analysis which is an essential prerequisite for theoretical and numerical efforts aimed at modeling the integrity of structural components used for hydrogen gas storage and distribution.},
+  doi      = {https://doi.org/10.1016/j.ijsolstr.2010.11.029},
+  keywords = {Continuum mechanics, Continuum thermodynamics, Transient hydrogen diffusion, Transient heat diffusion, Elastic–viscoplastic deformation, Coupled-theory},
+  url      = {http://www.sciencedirect.com/science/article/pii/S0020768310004361},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
