@@ -54,16 +54,16 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{images/model1.pdf}}%
-    \put(0.04947143,0.25681131){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.20677621\unitlength}\raggedright $\F$\end{minipage}}}%
-    \put(0.22642998,0.20346679){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21409574\unitlength}\raggedright $\F_e$\end{minipage}}}%
-    \put(0.22959683,0.28942699){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28180123\unitlength}\raggedright $\F_v$\end{minipage}}}%
+    \put(0.05547143,0.25681131){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.20677621\unitlength}\raggedright \Large$\F$\end{minipage}}}%
+    \put(0.23642998,0.20346679){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21409574\unitlength}\raggedright \Large$\F_e$\end{minipage}}}%
+    \put(0.23959683,0.28942699){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28180123\unitlength}\raggedright \Large$\F_v$\end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{images/model1.pdf}}%
-    \put(0.47553257,0.31472366){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29461042\unitlength}\raggedright $\mathcal{B}_0$\end{minipage}}}%
-    \put(0.66157971,0.10935719){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29461042\unitlength}\raggedright $\mathcal{B}_{v}$\end{minipage}}}%
-    \put(0.75268048,0.35254183){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29461042\unitlength}\raggedright $\mathcal{B}$\end{minipage}}}%
-    \put(0.47999289,0.16371888){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29461042\unitlength}\raggedright $\F_v$\end{minipage}}}%
-    \put(0.61690509,0.44344868){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29461042\unitlength}\raggedright $\F$\end{minipage}}}%
-    \put(0.83642599,0.17044331){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29461042\unitlength}\raggedright $\F_e$\end{minipage}}}%
+    \put(0.47553257,0.31472366){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29461042\unitlength}\raggedright \Large$\mathcal{B}_0$\end{minipage}}}%
+    \put(0.66157971,0.10935719){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29461042\unitlength}\raggedright \Large $\mathcal{B}_{v}$\end{minipage}}}%
+    \put(0.75268048,0.35254183){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29461042\unitlength}\raggedright \Large $\mathcal{B}$\end{minipage}}}%
+    \put(0.46999289,0.15371888){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29461042\unitlength}\raggedright \Large $\F_v$\end{minipage}}}%
+    \put(0.61690509,0.44344868){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29461042\unitlength}\raggedright \Large$\F$\end{minipage}}}%
+    \put(0.83942599,0.16044331){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29461042\unitlength}\raggedright \Large$\F_e$\end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{images/model1.pdf}}%
     \put(0.09518587,0.41233659){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08110317\unitlength}\raggedright $\mathbf{A}$\end{minipage}}}%
     \put(0.19314121,0.41233659){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08110317\unitlength}\raggedright $\mathbf{B}$\end{minipage}}}%
