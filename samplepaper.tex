@@ -198,24 +198,33 @@ We are here interested in the coupling of this two phenomena and how information
 
 As pointed out by Hu et~al. \cite{viscoporo}, AFM measurements with nano-scale beads allow to capture the viscoelastic relaxation dynamics. But given the short length scale considered in the experiment, poroelastic relaxation is too fast to be captured. On the other hand, when considering larger time and spatial scale, such in standard compression test, the situation is reversed and what can be measure is the poroelastic dynamics. In this regime, the system can be well approximated by a poro-hyperelastic model \cite{Reviewpolyel,ecm2}. However, we are here interested in understanding how this two aspect interplay in determining the behaviour of the tissue. In the realm of soft matter, models have been proposed that either explicitly decouple the volumetric and isochoric deformation of the system \cite{magneto,NGUYEN}, see Figure \ref{Model2}, or not \cite{Article1,CACCAVO2}, see Figure \ref{fig1}. We here consider both constitutive models with the aim of comparing their predictions and identify any difference that would allow us to predict experimentally which of the two better describe the system under study. To avoid any confusion, we will denote them as model A and model B respectively. As an explanatory example of the non-equilibrium thermodynamics framework, we will here fully derive only the first model, see Figure \ref{fig1}. The details on the derivation of the second model can instead be found in Appendix [Need to add the name]. 
 \begin{figure}[h!]
-	\begin{subfigure}{1\textwidth}
+	\begin{subfigure}{0.49\textwidth}
 		\centering
-	\def\svgwidth{0.95\linewidth}
-	\input{latex/images/model1.pdf_tex}
-	\caption*{\textbf{(A)}}
-	\label{fig1}
+	\def\svgwidth{0.78\linewidth}
+	\input{latex/images/modelA1.pdf_tex}
+	\caption*{\textbf{(A1)}}
+	\label{fig1A}
 	\end{subfigure}
+	\begin{subfigure}{0.49\textwidth}
+	\centering
+	\def\svgwidth{0.78\linewidth}
+	\input{latex/images/modelB1.pdf_tex}
+	\caption*{\textbf{(B1)}}
+	\label{fig1B}
+\end{subfigure}
 
-\vspace{5mm}
-	\begin{subfigure}{1\textwidth}
-		\hspace{-10mm}
-		\def\svgwidth{1.3\linewidth}
-		\input{latex/images/secondm.pdf_tex}
-		\caption*{\textbf{(B)}}
-		\label{Model2}
-	\end{subfigure}
+
+\begin{subfigure}{1\textwidth}
+	\centering
+	\LARGE
+	\def\svgwidth{0.75\linewidth}
+	\input{latex/images/modelA2.pdf_tex}
+	\caption*{\textbf{(A2)}}
+	\label{Model2}
+\end{subfigure}
 \vspace{5mm}
 \caption{(left) Rheological model; (right) visual description of the multiplicative decomposition in Equations (A)-(B) respectively.}
+\label{figmode}
 \end{figure}
 Following a common approach in the large-deformation theory \cite{Article1,CACCAVO2,Plasto,magneto,NGUYEN,growthtum}, we base our derivation on a multiplicative decomposition of the deformation tensor $\F$, approach first proposed by Kr\"{o}ner in 1960 \cite{kro}:
 
@@ -224,7 +233,7 @@ Following a common approach in the large-deformation theory \cite{Article1,CACCA
 \F= \bar{\F} \F_{vol}= J^{1/3} \bar{\F}_e \bar{\F}_v.\tag{B}
 \end{gather}
 
-As shown in Figure \ref{fig1}, $\F_e$ is the elastic contribution to the deformation, with $J_e=\det \F_e>0$. On the other hand, the other term $\F_v$ accounts for the viscous part of the deformation, which arise from the local rearrangement of molecules. Equation~(\ref{dec1}) can be intuitively understood in terms of configurations. As shown on the right hand side of Figure \ref{fig1}, this is equivalent to introducing an intermediate virtual configuration $\mathcal{B}_v$, also called natural configuration, between $\mathcal{B}_0$ and $\mathcal{B}$, which correspond to the state the system would be in if it was instantaneously elastically unload. 
+As shown in Figure \ref{figmode}(A1), $\F_e$ is the elastic contribution to the deformation, with $J_e=\det \F_e>0$. On the other hand, the other term $\F_v$ accounts for the viscous part of the deformation, which arise from the local rearrangement of molecules. Equation~(\ref{dec1}) can be intuitively understood in terms of configurations. As shown on the right hand side of Figure \ref{fig1}, this is equivalent to introducing an intermediate virtual configuration $\mathcal{B}_v$, also called natural configuration, between $\mathcal{B}_0$ and $\mathcal{B}$, which correspond to the state the system would be in if it was instantaneously elastically unload. 
 
 As mentioned before, this term does not contribute to change in the volume of the tissue, so that $J_v=\det \F_v= 1$. Since this constraint is not considered in the work of Caccavo et~al. \cite{Article1,CACCAVO2}, our model would differ. Nonetheless, the authors mentioned that the viscous contribution is isochoric, despite not including this aspect in their mathematical formulation. 
 

@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'model1.pdf' (pdf, eps, ps)
+%% Accompanies image file 'model12.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{595.27559055bp}%
+    \setlength{\unitlength}{1152.63554611bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,15 +50,17 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,1.41428571)%
+  \begin{picture}(1,0.51946551)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{images/model1.pdf}}%
-    \put(0.51758864,1.026514){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.39142611\unitlength}\raggedright $\F_{vol}$\end{minipage}}}%
-    \put(0.17346087,0.69087377){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.4252995\unitlength}\raggedright $\bar{\F}_{iso}$\end{minipage}}}%
-    \put(0.58292112,0.57001017){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.57961175\unitlength}\raggedright $\bar{\F}_v$\end{minipage}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{images/model1.pdf}}%
-    \put(0.57901902,0.83063722){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.44035437\unitlength}\raggedright $\bar{\F}_e$\end{minipage}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{images/model1.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{images/modelB2.pdf}}%
+    \put(0.08206616,0.41036452){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31743942\unitlength}\raggedright $\mathcal{B}_0$\end{minipage}}}%
+    \put(0.36573597,0.34157828){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31743942\unitlength}\raggedright $\mathcal{B}_{iso}$\end{minipage}}}%
+    \put(0.55360174,0.123232){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31743942\unitlength}\raggedright $\mathcal{\bar{B}}_{v}$\end{minipage}}}%
+    \put(0.62476632,0.37387913){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31743942\unitlength}\raggedright $\mathcal{B}$\end{minipage}}}%
+    \put(0.19463634,0.48146157){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31743942\unitlength}\raggedright $\F_{vol}$\end{minipage}}}%
+    \put(0.34534612,0.17436005){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31743942\unitlength}\raggedright $\bar{\F}_v$\end{minipage}}}%
+    \put(0.49178457,0.47629668){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31743942\unitlength}\raggedright $\bar{\F}$\end{minipage}}}%
+    \put(0.72939876,0.2111026){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31743942\unitlength}\raggedright $\bar{\F}_e$\end{minipage}}}%
   \end{picture}%
 \endgroup%
