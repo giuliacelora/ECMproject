@@ -3,46 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: samplepaper.aux
 The style file: splncs04.bst
 Database file #1: latex/ref.bib
-Warning--I didn't find a database entry for "ecm"
-You've used 14 entries,
+You've used 22 entries,
             2850 wiz_defined-function locations,
-            729 strings with 8104 characters,
-and the built_in function-call counts, 8763 in all, are:
-= -- 757
-> -- 192
-< -- 24
-+ -- 82
-- -- 65
-* -- 593
-:= -- 1076
-add.period$ -- 27
-call.type$ -- 14
-change.case$ -- 73
+            796 strings with 10128 characters,
+and the built_in function-call counts, 13906 in all, are:
+= -- 1209
+> -- 303
+< -- 40
++ -- 132
+- -- 103
+* -- 948
+:= -- 1698
+add.period$ -- 43
+call.type$ -- 22
+change.case$ -- 116
 chr.to.int$ -- 0
-cite$ -- 14
-duplicate$ -- 774
-empty$ -- 798
-format.name$ -- 72
-if$ -- 1975
+cite$ -- 22
+duplicate$ -- 1227
+empty$ -- 1247
+format.name$ -- 115
+if$ -- 3136
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 143
-newline$ -- 48
-num.names$ -- 30
-pop$ -- 208
+int.to.str$ -- 22
+missing$ -- 226
+newline$ -- 72
+num.names$ -- 46
+pop$ -- 318
 preamble$ -- 1
-purify$ -- 60
+purify$ -- 95
 quote$ -- 0
-skip$ -- 293
+skip$ -- 473
 stack$ -- 0
-substring$ -- 613
-swap$ -- 475
-text.length$ -- 24
+substring$ -- 977
+swap$ -- 773
+text.length$ -- 40
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 50
+type$ -- 82
 warning$ -- 0
-while$ -- 69
-width$ -- 16
-write$ -- 183
-(There was 1 warning)
+while$ -- 109
+width$ -- 24
+write$ -- 287

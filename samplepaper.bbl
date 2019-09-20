@@ -24,6 +24,25 @@ Caccavo, D., Vietri, A., Lamberti, G., Barba, A.A., Larsson, A.: Modeling the
   \doi{https://doi.org/10.1016/B978-0-444-63964-6.00012-X},
   \url{http://www.sciencedirect.com/science/article/pii/B978044463964600012X}
 
+\bibitem{DROZDOV+}
+Drozdov, A.: Swelling of ph-responsive cationic gels: Constitutive modeling and
+  structure–property relations. International Journal of Solids and
+  Structures  \textbf{64-65},  176 -- 190 (2015).
+  \doi{https://doi.org/10.1016/j.ijsolstr.2015.03.023},
+  \url{http://www.sciencedirect.com/science/article/pii/S0020768315001389}
+
+\bibitem{DROZDOVph}
+Drozdov, A.D., deClaville Christiansen, J., Sanporean, C.G.: Inhomogeneous
+  swelling of ph-responsive gels. International Journal of Solids and
+  Structures  \textbf{87},  11 -- 25 (2016).
+  \doi{https://doi.org/10.1016/j.ijsolstr.2016.02.037},
+  \url{http://www.sciencedirect.com/science/article/pii/S0020768316001050}
+
+\bibitem{flory}
+Flory, P.J.: Thermodynamics of high polymer solutions. The Journal of Chemical
+  Physics  \textbf{10}(1),  51--61 (1942). \doi{10.1063/1.1723621},
+  \url{https://doi.org/10.1063/1.1723621}
+
 \bibitem{magneto}
 Garcia-Gonzalez, D.: Magneto-visco-hyperelasticity for hard-magnetic soft
   materials: theory and numerical applications. Smart Materials and Structures
@@ -42,11 +61,23 @@ Hong, W.: Continuum Models of Stimuli-responsive Gels, pp. 165--196. Springer
   \doi{10.1007/978-3-642-19373-6},
   \url{https://doi.org/10.1007/978-3-642-19373-6_6}
 
+\bibitem{Interface}
+Hong, W., Wang, X.: A phase-field model for systems with coupled large
+  deformation and mass transport. Journal of the Mechanics and Physics of
+  Solids  \textbf{61}(6),  1281 -- 1294 (2013).
+  \doi{https://doi.org/10.1016/j.jmps.2013.03.001},
+  \url{http://www.sciencedirect.com/science/article/pii/S0022509613000550}
+
 \bibitem{viscoporo}
 Hu, Y., Suo, Z.: Viscoelasticity and poroelasticity in elastomeric gels. Acta
   Mechanica Solida Sinica  \textbf{25}(5),  441 -- 458 (2012).
   \doi{https://doi.org/10.1016/S0894-9166(12)60039-1},
   \url{http://www.sciencedirect.com/science/article/pii/S0894916612600391}
+
+\bibitem{hug}
+Huggins, M.L.: Some properties of solutions of long-chain compounds. The
+  Journal of Physical Chemistry  \textbf{46}(1),  151--158 (1942).
+  \doi{10.1021/j150415a018}, \url{https://doi.org/10.1021/j150415a018}
 
 \bibitem{NET}
 Kondepudi, D., Prigogine, I.: Modern Thermodynamics: From Heat Engines to
@@ -57,6 +88,12 @@ Kondepudi, D., Prigogine, I.: Modern Thermodynamics: From Heat Engines to
 {Kr{\"o}ner}, E.: {Allgemeine Kontinuumstheorie der Versetzungen und
   Eigenspannungen}. Archive for Rational Mechanics and Analysis  \textbf{4},
   273--334 (Jan 1959). \doi{10.1007/BF00281393}
+
+\bibitem{microstress}
+Larché, F., Cahn, J.: The interactions of composition and stress in
+  crystalline solids. Acta Metallurgica  \textbf{33}(3),  331 -- 357 (1985).
+  \doi{https://doi.org/10.1016/0001-6160(85)90077-X},
+  \url{http://www.sciencedirect.com/science/article/pii/000161608590077X}
 
 \bibitem{NGUYEN}
 N’Guyen, T., Lejeunes, S., Eyheramendy, D., Boukamel, A.: A thermodynamical
@@ -75,12 +112,27 @@ Prigogine, I.: Introduction to thermodynamics of irreversible processes.
   Interscience Publishers (1968),
   \url{https://books.google.co.uk/books?id=G3peAAAAIAAJ}
 
+\bibitem{pictureECM}
+Sun, D.N., Gu, W.Y., Guo, X.E., Lai, W.M., Mow, V.C.: A mixed finite element
+  formulation of triphasic mechano-electrochemical theory for charged, hydrated
+  biological soft tissues. International Journal for Numerical Methods in
+  Engineering  \textbf{45}(10),  1375--1402 (1999).
+  \doi{10.1002/(SICI)1097-0207(19990810)45:10<1375::AID-NME635>3.0.CO;2-7},
+  \url{https://onlinelibrary.wiley.com/doi/abs/10.1002/%28SICI%291097-0207%2819990810%2945%3A10%3C1375%3A%3AAID-NME635%3E3.0.CO%3B2-7}
+
 \bibitem{growthtum}
 Xue, S.L., Li, B., Feng, X.Q., Gao, H.: Biochemomechanical poroelastic theory
   of avascular tumor growth. Journal of the Mechanics and Physics of Solids
   \textbf{94},  409 -- 432 (2016).
   \doi{https://doi.org/10.1016/j.jmps.2016.05.011},
   \url{http://www.sciencedirect.com/science/article/pii/S0022509616302162}
+
+\bibitem{ecm1}
+Xue, S.L., Li, B., Feng, X.Q., Gao, H.: A non-equilibrium thermodynamic model
+  for tumor extracellular matrix with enzymatic degradation. Journal of the
+  Mechanics and Physics of Solids  \textbf{104},  32 -- 56 (2017).
+  \doi{https://doi.org/10.1016/j.jmps.2017.04.002},
+  \url{http://www.sciencedirect.com/science/article/pii/S0022509617300698}
 
 \bibitem{ecm2}
 Xue, S.L., Lin, S.Z., Li, B., Feng, X.Q.: A nonlinear poroelastic theory of

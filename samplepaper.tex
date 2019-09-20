@@ -19,6 +19,7 @@
 \usepackage{algpseudocode,algorithm,algorithmicx}
 \usepackage{hyperref}
 \usepackage[inline]{enumitem} % Horizontal lists
+\newcommand{\indentitem}{\setlength\itemindent{20pt}}
 
 \graphicspath{{latex/}}
 \newcommand{\card}[1]{\left\vert{#1}\right\vert}
@@ -117,7 +118,22 @@ Different relation between forces and fluxes have been proposed in the literatur
 Despite the wide range of applicability of such theory, this does not apply to the domain of far-from equilibrium thermodynamics, for the linear approximation breaks down. It is still under debate which range of physical phenomena lie in the domain of applicability of CIT, particularly in the novel realm of active matter, where experimental validation of theories still lacks.
 
 \section{Extracellular Matrix.}
-Despite the tissue-specific nature of Extracellular Matrix (ECM), this is mainly composed of a network of collagen fibrils entangled with charged chains of glycosaminoglycans (GAGs). While collagen is mainly responsible for the mechanical behaviour of the tissue, GAGs can imbibe water, giving ECM the ability to swell while maintaining its structural integrity. As a result, the ECM behave as a polyelectrolyte gel \cite{ecm,ecm2}. Besides being largely present in the natural world, synthetic polyelectrolytes are currently employed for a wide range of applications, such as drug delivery, biomedical devices, scaffolds for tissue engineering and soft robotics [ADD CITATIONS]. The increasing popularity of such material has boost the development of mathematical model of such systems, in particular focusing particularly on the their swelling and plastic behaviours [ADD CITATIONS].
+\label{ECMcomp}
+Despite the tissue-specific nature of Extracellular Matrix (ECM), this is mainly composed of a network of collagen fibrils entangled with charged chains of glycosaminoglycans (GAGs). While collagen is mainly responsible for the mechanical behaviour of the tissue, GAGs can imbibe water, giving ECM the ability to swell while maintaining its structural integrity. As a result, the ECM behave as a polyelectrolyte gel \cite{ecm1,ecm2}. Besides being largely present in the natural world, synthetic polyelectrolytes are currently employed for a wide range of applications, such as drug delivery, biomedical devices, scaffolds for tissue engineering and soft robotics [ADD CITATIONS]. The increasing popularity of such material has boost the development of mathematical model of such systems, in particular focusing particularly on the their swelling and plastic behaviours [ADD CITATIONS].
+
+\begin{figure}
+	\begin{subfigure}{0.49\textwidth}
+	\centering
+	\includegraphics[scale=0.3]{images/ECM}
+	\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.49\textwidth}
+	\centering
+	\includegraphics[scale=0.32]{images/ecmscheme.jpg}
+	\caption{}
+\end{subfigure}
+\caption{Analogy between ECM in soft tissue and polyelectrolytes hydrogels: (a) schematic diagram of the structure of the charged hydrated articular cartilage, reproduced from \cite{pictureECM}; (b) an anionic polyelectrolyte gel modelled as a three-phase continuum, reproduced from \cite{DROZDOVph}.}
+\end{figure}
 
 There is now compelling evidence that the relaxation of stress in polymer gels, and thus in ECM is governed by the interplay of the poroelastic and viscoelastic nature of the gel. While the first determines the long range motion of solvents, visco-elastic dominates the stress relaxation dynamics at the microscopic level. Being the same level at which cells probe their environment, this suggests that the visco-elastic properties of the ECM might play a role in determining cell response [ADD ARTICLE IN NOTE AS CITATION].
 
@@ -140,8 +156,9 @@ J=1+v_s C_s.
 
 The volume fractions of fluid $\phi_f$ and solid $\phi_n$ phases in the gel are thus be defined as:
 \begin{equation}
-\phi_f -= \frac{v_sC_s}{1+v_sC_s}, \qquad \phi_n = \frac{1}{1+v_sC_s}.
+\phi_f = \frac{v_sC_s}{1+v_sC_s}, \qquad \phi_n = \frac{1}{1+v_sC_s}.
 \end{equation}
+where again we are neglecting the contribution of ions to the total volume.
 While $C_m$ denote the number of each phase molecule per unit volume in the initial configuration, the actual concentration in the current state is denoted by $c_m=C_m/J$. Note that throughout this work we will be using $i=1,\ldots,N$ for denote only the concentration of ionic species, while $m\in\left\{s,1,\ldots,N\right\}$ to refer to both the solvent and solutes.
 
 Mass conservation must apply to all mobile species and in the initial configuration these read:
@@ -196,70 +213,58 @@ As in [SARAH PAPER], we here consider that the initial state of the system $\mat
  
 We are here interested in the coupling of this two phenomena and how information from experiment at different spatial and temporal scale can be coupled. To do so, we will here present two different approaches that have been proposed in the literature to describe the complex mechanics of hydrogels. In particular, nanoscale rheological testing with AFM usually rely on a 1D \textit{Standard Linear Solid} model, as the one shown in Figure \ref{fig1}, to fit the experimental data \cite{Article1,viscoporo}.  
 
-As pointed out by Hu et~al. \cite{viscoporo}, AFM measurements with nano-scale beads allow to capture the viscoelastic relaxation dynamics. But given the short length scale considered in the experiment, poroelastic relaxation is too fast to be captured. On the other hand, when considering larger time and spatial scale, such in standard compression test, the situation is reversed and what can be measure is the poroelastic dynamics. In this regime, the system can be well approximated by a poro-hyperelastic model \cite{Reviewpolyel,ecm2}. However, we are here interested in understanding how this two aspect interplay in determining the behaviour of the tissue. In the realm of soft matter, models have been proposed that either explicitly decouple the volumetric and isochoric deformation of the system \cite{magneto,NGUYEN}, see Figure \ref{Model2}, or not \cite{Article1,CACCAVO2}, see Figure \ref{fig1}. We here consider both constitutive models with the aim of comparing their predictions and identify any difference that would allow us to predict experimentally which of the two better describe the system under study. To avoid any confusion, we will denote them as model A and model B respectively. As an explanatory example of the non-equilibrium thermodynamics framework, we will here fully derive only the first model, see Figure \ref{fig1}. The details on the derivation of the second model can instead be found in Appendix [Need to add the name]. 
+As pointed out by Hu et~al. \cite{viscoporo}, AFM measurements with nano-scale beads allow to capture the viscoelastic relaxation dynamics. But given the short length scale considered in the experiment, poroelastic relaxation is too fast to be captured. On the other hand, when considering larger time and spatial scale, such in standard compression test, the situation is reversed and what can be measure is the poroelastic dynamics. In this regime, the system can be well approximated by a poro-hyperelastic model \cite{Reviewpolyel,ecm2}. However, we are here interested in understanding how this two aspect interplay in determining the behaviour of the tissue. In the realm of soft matter, models have been proposed that either explicitly decouple the volumetric and isochoric deformation of the system \cite{magneto,NGUYEN}, see Figure \ref{figmode}(B1), or not \cite{Article1,CACCAVO2}, see Figure \ref{figmode}(A1). We here consider both constitutive models with the aim of comparing their predictions and identify any difference that would allow us to predict experimentally which of the two better describe the system under study. To avoid any confusion, we will denote them as model A and model B respectively. As an explanatory example of the non-equilibrium thermodynamics framework, we will here fully derive only the first model, see Figure \ref{figmode}(A1). The details on the derivation of the second model can instead be found in Appendix [Need to add the name]. 
+
 \begin{figure}[h!]
-	\begin{subfigure}{0.49\textwidth}
+	\hspace{-10mm}
+	\begin{subfigure}{0.32\textwidth}
 		\centering
-	\def\svgwidth{0.78\linewidth}
+	\def\svgwidth{0.95\linewidth}
 	\input{latex/images/modelA1.pdf_tex}
 	\caption*{\textbf{(A1)}}
 	\label{fig1A}
 	\end{subfigure}
-	\begin{subfigure}{0.49\textwidth}
+	\begin{subfigure}{0.32\textwidth}
 	\centering
-	\def\svgwidth{0.78\linewidth}
+	\def\svgwidth{0.92\linewidth}
 	\input{latex/images/modelB1.pdf_tex}
 	\caption*{\textbf{(B1)}}
 	\label{fig1B}
 \end{subfigure}
-
-
-\begin{subfigure}{1\textwidth}
-	\centering
-	\LARGE
-	\def\svgwidth{0.75\linewidth}
+\begin{subfigure}{0.34\textwidth}
+	\Large
+	\def\svgwidth{1.75\linewidth}
 	\input{latex/images/modelA2.pdf_tex}
 	\caption*{\textbf{(A2)}}
 	\label{Model2}
 \end{subfigure}
 \vspace{5mm}
-\caption{(left) Rheological model; (right) visual description of the multiplicative decomposition in Equations (A)-(B) respectively.}
+\caption{(A1) Rheological model for model A; (B1) rheological model for model B; (A3) multiplicative decomposition corresponding to model A.}
 \label{figmode}
 \end{figure}
+
 Following a common approach in the large-deformation theory \cite{Article1,CACCAVO2,Plasto,magneto,NGUYEN,growthtum}, we base our derivation on a multiplicative decomposition of the deformation tensor $\F$, approach first proposed by Kr\"{o}ner in 1960 \cite{kro}:
 
-\begin{gather}
-\F=\F_e\F_v,\label{dec1}\tag{A}\\
-\F= \bar{\F} \F_{vol}= J^{1/3} \bar{\F}_e \bar{\F}_v.\tag{B}
-\end{gather}
-
-As shown in Figure \ref{figmode}(A1), $\F_e$ is the elastic contribution to the deformation, with $J_e=\det \F_e>0$. On the other hand, the other term $\F_v$ accounts for the viscous part of the deformation, which arise from the local rearrangement of molecules. Equation~(\ref{dec1}) can be intuitively understood in terms of configurations. As shown on the right hand side of Figure \ref{fig1}, this is equivalent to introducing an intermediate virtual configuration $\mathcal{B}_v$, also called natural configuration, between $\mathcal{B}_0$ and $\mathcal{B}$, which correspond to the state the system would be in if it was instantaneously elastically unload. 
-
-As mentioned before, this term does not contribute to change in the volume of the tissue, so that $J_v=\det \F_v= 1$. Since this constraint is not considered in the work of Caccavo et~al. \cite{Article1,CACCAVO2}, our model would differ. Nonetheless, the authors mentioned that the viscous contribution is isochoric, despite not including this aspect in their mathematical formulation. 
-
-The second model we propose is based on the same idea, but it considers two instead of one intermediate configurations. As shown in Figure \ref{Model2}, in addition to the natural configuration, now denoted by $\bar{\mathcal{B}}_v$, the second model also introduce the configuration $\bar{\mathcal{B}}_0$ which accounts for the volumetric expansion of the system. In mathematical terms, this is equivalent to the following decomposition of $\F$:
-
 \begin{equation}
-\F= \bar{\F} \F_{vol}= J^{1/3} \bar{\F}_e \bar{\F}_v,
+\F=\F_e\F_v,\label{dec1}\tag{A}
 \end{equation}
-where we have used the fact that $\F_{vol}=J^{1/3}\mathbb{I}$, with $J=\det \F$. 
 
+As shown in Figure \ref{figmode}(A1), $\F_e$ is the elastic contribution to the deformation, with $J_e=\det \F_e>0$. On the other hand, the term $\F_v$ accounts for the viscous part of the deformation, which arise from the local rearrangement of molecules. A more intuitive understanding of Equation~(\ref{dec1}) comes when thinking in terms of configurations. As shown on the right hand side of Figure \ref{figmode}(A1), the multiplicative decomposition is equivalent to introducing an intermediate virtual configuration $\mathcal{B}_v$, also called natural configuration, which correspond to the state the system would be in if it was instantaneously elastically unload. 
 
-As an explanatory example of the non-equilibrium thermodynamics framework, we will here fully derive only the first model, see Figure \ref{fig1}. The details on the derivation of the second model can instead be found in Appendix [Need to add the name]. 
+As mentioned before, this term does not contribute to change in the volume of the tissue, so that $J_v=\det \F_v= 1$. Since this constraint is not considered in the work of Caccavo et~al. \cite{Article1,CACCAVO2}, our result will differ. Despite not including this aspect in their mathematical formulation, the authors suggest that the viscous contribution should be isochoric.
 
-In other to describe the kinetic evolution of $\mathcal{B}$, we 
+[INTRODUCE $\LL_v$]
  
 \subsection{Energy Balance Inequality.}
 As mentioned in Section \ref{secNET}, the energy imbalance inequality impose restriction on the nature of the free energy $\psi$ of the system depending on how this exchanges energy and mass with the environment. Considering a control volume $R$ in the reference configuration, the system exchanges mass due to diffusion of each mobile species, so that $M(R)$ is given by:
 \begin{equation}
 M(R)= \sum\limits_{m=s,1,\ldots,N} - \int_{\partial R} \mu_m \,\mathbf{J}_m \cdot \mathbf{n} 
 \end{equation}
-where $\mathbf{n}$ is the unit normal vector to the surface $\partial R$ and $\mu_m$ is the chemical potential associated with each species. Widely used in the thermodynamics of mixture, the chemical potential is a measure of the rate of change in free energy associated with adding to a unit volume one more molecule. The work done on $R$ in the original configuration per unit time $W(R)$ is instead made up of two contributions, the electrical $W_{el}(R)$ and mechanical work $W_{mec}(R)$. Following [ADD CITATION DROZDOV,inhomogeneous swelling ph-responsive gel], $W_{el}(R)$ is defined as:
+where $\mathbf{n}$ is the unit normal vector to the surface $\partial R$ and $\mu_m$ is the chemical potential associated with each species. Widely used in the thermodynamics of mixture, the chemical potential is a measure of the rate of change in free energy associated with adding to a unit volume one more molecule. The work done on $R$ in the original configuration per unit time $W(R)$ is instead made up of two contributions, the electrical $W_{el}(R)$ and mechanical work $W_{mec}(R)$. Following \cite{DROZDOVph}, $W_{el}(R)$ is defined as:
 \begin{equation}
 W_{el}(R) = -\int_{\partial R} \Phi\, \dot{\mathbf{H}}\cdot \mathbf{n}
 \end{equation}
-As suggested by Gurtin \cite{GURTIN}, when accounting for the mechanical work, we consider also the effect of micro-stresses $\boldsymbol{\epsilon}$, which arise due to the system heterogeneity [ADD CITATION, The Interactions of Composition and Stress 
-in Crystalline Solids]. As before we consider that the dominant contribution is related to the solvent, so that:
+As suggested by Gurtin \cite{GURTIN}, when accounting for the mechanical work, we consider also the effect of micro-stresses $\boldsymbol{\epsilon}$, which arise due to the system heterogeneity \cite{microstress}. As before we consider that the dominant contribution is related to the mixing of the solvent and solid phase, so that $W_{mec}(R)$ reads:
 \begin{equation}
 W_{mec}(R) = \int_{\partial R} \left(\boldsymbol{\xi}\cdot \mathbf{n}\right)\dot{C}_s + \int_{\partial R} \mathbb{S}\mathbf{n} \cdot \dot{\mathbf{u}}
 \end{equation}
@@ -279,6 +284,53 @@ Further accounting for the balance laws presented in the previous section, we ob
 \end{aligned} 
 \end{equation}
 
+As exhaustively discussed in \cite{GURTIN,Plasto}, the energy imbalance inequality and the isotropic assumption on the system both impose restrictions on the constitutive equation for the free energy $\psi$. Adapting their results, to our specific problem, we have that:
+\begin{equation}
+\psi = \psi (\F,\F_e, C_s, C_i, \nabla C_s,\mathbf{H}).
+\end{equation}
+
+Based on this result, we can now assign the form of the function $\psi$, which will problem-dependent.
+\subsection{Construction of the Free Energy.}
+Following the standard approach in phase-field modeling, we assume that the total free energy is given by the superposition of each contribution. In our problem, there are six mechanisms that contributes to the energy: 
+
+\begin{enumerate}
+	{\indentitem\item[\textbullet] the energy of the electric field $\psi_1$;}
+	{\indentitem \item[\textbullet] the energy of solvent and solutes' molecules not interacting with the solid phase $\psi_2$;}
+	{\indentitem\item[\textbullet] the energy of mixing the solid phase with the solution, $\psi_3$;}
+	{\indentitem\item[\textbullet] the energy of mixing the solvent with the solutes in solution, $\psi_4$;}
+	{\indentitem\item[\textbullet] the interfacial energy between dissimilar phases, $\psi_5$;}
+	{\indentitem\item[\textbullet] the energy of the solid phase not interacting with the solution, $\psi_6$.}
+\end{enumerate}
+
+Assuming the solid phase to be an ideal and linear dielectric material, with constant permittivity $\epsilon$,the free energy of polarization reads \cite{DROZDOV+,Reviewpolyel}:
+\begin{gather}
+\psi_1 = \frac{1}{2\epsilon J} \mathbf{H}\F^T \cdot \F \mathbf{H}.
+\end{gather}
+
+The specific energy density $\psi_2$ has the standard form:
+\begin{equation}
+\psi_1 = \sum\limits_{m} \mu^0_m C_m
+\end{equation} 
+where $\mu^0_m$ denote the chemical potential of non interacting solvent molecules and ions. Making use of the Flory-Huggins theory \cite{flory,hug}, the mixing energy is determined by the formula:
+\begin{equation}
+\psi_3 = \frac{k_B T J}{v_s} \left(\phi_f \ln \phi_f + \chi \phi_f \phi_n\right),
+\end{equation}
+where $k_B$ is the Boltzmann's constant, $T$ is the temperature and $\chi$ is the Flory-Huggins parameter, the adimensional parameter related to the enthalpy of mixing. It is worth mentioning also the approach of Xue et al. \cite{ecm1,ecm2}, where only the mixing of GAGs and solvent is assumed to contribute to the free energy. Despite GAGs having the main contribution on the swelling properties of the ECM, there is no direct experimental evidence that collagen not mixing with water. Moreover, in our model we are not explicitly differentiating between the two as separate entities, but as a unique network with fix charges, which coincide to the GAGs location.
+
+When considering the contribution to the energy coming from the mixing of free ions with the solvent, it is commonly assumed that the solution is dilute \cite{Reviewpolyel,ecm1,ecm2}, so that $\psi_4$ reads:
+
+\begin{equation}
+\psi_4 = k_B T \sum\limits_{i=1}^{N} C_i \left(\ln \frac{C_i}{ C_s}-1\right).
+\end{equation}
+
+Differently from previous work on the modelling of soft tissue, we include the effect of interface tension, which is further couple to the mechanical deformation as proposed by Hong et al. \cite{Interface}. Note that as above, we assume that the contribution of ions in negligible, so that only the ideal solid-solvent interface plays a role:
+\begin{equation}
+\psi_5 = \frac{\gamma}{2} J \left|\nabla C_s\right|,
+\end{equation}
+where the constant $\gamma$ plays a role analogous to a surface tension.
+Finally, 
+
+\newpage
 \bibliographystyle{splncs04}
 \bibliography{latex/ref}
 %
