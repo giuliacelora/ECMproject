@@ -10,6 +10,18 @@ Anand, L.: A thermo-mechanically-coupled theory accounting for hydrogen
   (2011). \doi{https://doi.org/10.1016/j.ijsolstr.2010.11.029},
   \url{http://www.sciencedirect.com/science/article/pii/S0020768310004361}
 
+\bibitem{BERGSTROM1998931}
+Bergström, J., Boyce, M.: Constitutive modeling of the large strain
+  time-dependent behavior of elastomers. Journal of the Mechanics and Physics
+  of Solids  \textbf{46}(5),  931 -- 954 (1998).
+  \doi{https://doi.org/10.1016/S0022-5096(97)00075-6},
+  \url{http://www.sciencedirect.com/science/article/pii/S0022509697000756}
+
+\bibitem{boyce2}
+Boyce, M.C., Arruda, E.M.: Constitutive models of rubber elasticity: A review.
+  Rubber Chemistry and Technology  \textbf{73}(3),  504--523 (2000).
+  \doi{10.5254/1.3547602}, \url{https://doi.org/10.5254/1.3547602}
+
 \bibitem{Article1}
 Caccavo, D., Cascone, S., Lamberti, G., Barba, A.A.: Hydrogels: experimental
   characterization and mathematical modelling of their mechanical and diffusive
@@ -23,6 +35,10 @@ Caccavo, D., Vietri, A., Lamberti, G., Barba, A.A., Larsson, A.: Modeling the
   vol.~42, chap.~12, pp. 357 -- 383. Elsevier (2018).
   \doi{https://doi.org/10.1016/B978-0-444-63964-6.00012-X},
   \url{http://www.sciencedirect.com/science/article/pii/B978044463964600012X}
+
+\bibitem{doi}
+Doi, M.: Soft Matter Physics. OUP Oxford (2013),
+  \url{https://books.google.co.uk/books?id=ccUaBj73PZsC}
 
 \bibitem{DROZDOV+}
 Drozdov, A.: Swelling of ph-responsive cationic gels: Constitutive modeling and
@@ -42,6 +58,11 @@ Drozdov, A.D., deClaville Christiansen, J., Sanporean, C.G.: Inhomogeneous
 Flory, P.J.: Thermodynamics of high polymer solutions. The Journal of Chemical
   Physics  \textbf{10}(1),  51--61 (1942). \doi{10.1063/1.1723621},
   \url{https://doi.org/10.1063/1.1723621}
+
+\bibitem{floryprinciples}
+Flory, P.: Principles of Polymer Chemistry. Baker lectures 1948, Cornell
+  University Press (1953),
+  \url{https://books.google.co.uk/books?id=CQ0EbEkT5R0C}
 
 \bibitem{magneto}
 Garcia-Gonzalez, D.: Magneto-visco-hyperelasticity for hard-magnetic soft
@@ -94,6 +115,12 @@ Larché, F., Cahn, J.: The interactions of composition and stress in
   crystalline solids. Acta Metallurgica  \textbf{33}(3),  331 -- 357 (1985).
   \doi{https://doi.org/10.1016/0001-6160(85)90077-X},
   \url{http://www.sciencedirect.com/science/article/pii/000161608590077X}
+
+\bibitem{multdec}
+Lubarda, V.A.: {Constitutive theories based on the multiplicative decomposition
+  of deformation gradient: Thermoelasticity, elastoplasticity, and biomechanics
+  }. Applied Mechanics Reviews  \textbf{57}(2),  95--108 (04 2004).
+  \doi{10.1115/1.1591000}, \url{https://doi.org/10.1115/1.1591000}
 
 \bibitem{NGUYEN}
 N’Guyen, T., Lejeunes, S., Eyheramendy, D., Boukamel, A.: A thermodynamical

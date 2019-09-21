@@ -408,4 +408,34 @@ Das thermodynamische Verhalten von verspannten Kristallen, bei denen sich Phase 
   url      = {http://www.sciencedirect.com/science/article/pii/S0022509613000550},
 }
 
+@Book{floryprinciples,
+  title     = {Principles of Polymer Chemistry},
+  publisher = {Cornell University Press},
+  year      = {1953},
+  author    = {Flory, P.J.},
+  series    = {Baker lectures 1948},
+  isbn      = {9780801401343},
+  lccn      = {lc53013473},
+  url       = {https://books.google.co.uk/books?id=CQ0EbEkT5R0C},
+}
+
+@Article{boyce2,
+  author  = {Boyce, Mary C. and Arruda, Ellen M.},
+  title   = {Constitutive Models of Rubber Elasticity: A Review},
+  journal = {Rubber Chemistry and Technology},
+  year    = {2000},
+  volume  = {73},
+  number  = {3},
+  pages   = {504-523},
+  doi     = {10.5254/1.3547602},
+  eprint  = {https://doi.org/10.5254/1.3547602},
+  url     = { 
+        https://doi.org/10.5254/1.3547602
+    
+},
+}
+
+@Book{,
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

@@ -97,25 +97,45 @@ For the purpose of this study, we will focus on isothermal process, i.e. $T=cons
 \end{equation}
 where $R$ is a arbitrary control volume of the system, $\psi$ is the Helmholtz free energy, $W(R)$ is the rate at which the environment does work on $R$ and $M(R)$ is the inflow of mass due to transport. It is important to note that the energy inequality~(\ref{energyin}) holds for any isothermal process, independently of the specific physical system involved. Consequently, there is a constraint on the form the function $\psi$ can assume and how this can depend on the thermodynamic variables describing the system. 
 
-The major focus of non-equilibrium thermodynamics is in defining the precise form of $\d_i S$, which, unlike $\d_e S$ is not a state function, but depends on the specific transformation applied to the system. This is introduced in the theory with the concepts of \textit{thermodynamic forces} $F_m$ (cause) and \textit{thermodynamic fluxes} $J_m$ (effect) has been introduced, so that $\d_iS$ has the form:
-
+The major focus of non-equilibrium thermodynamics is in defining the precise form of $\d_i S$, which, unlike $\d_e S$ is not a state function, but depends on the specific transformation applied to the system. 
+Different theories have been proposed, \cite{NET}, each with its specific domain of applicability. In our study we will focus on \textquotedblleft Classical Irreversible Thermodynamics'' (CIT) which was pioneered by Onsager \cite{onsager} and Prigogine \cite{prigogine} in the first half of the 20th century. One of its most important assumptions is the \textit{Local Equilibrium Hypothesis}, which guarantees thermodynamic variables, including entropy, are locally well-defined, \cite{NET}. 
+Consequently, we can introduce the entropy density $s=s(\mathbf{x},t)$ such that:
 \begin{equation}
-\d_iS = \sum_m F_m J_m.
+S = \int_{R} s \,\d V, \qquad \d s = \d_e s + \d_is, \qquad \d_is > 0, 
+\end{equation}
+and the local entropy production:
+\begin{equation}
+\sigma \equiv \frac{\d_i s}{\d t} \geq 0.
+\end{equation}
+
+Another central aspect of the theory is the introduction of \textit{thermodynamic forces} \footnote{Not to be intended in the mechanical sense} $F_m$ (causes) and \textit{thermodynamic fluxes} $J_m$ (effects) to describe the evolution of the irreversible transformation. These are related to $\sigma$ as follows:
+\begin{equation}
+\sigma = \sum_m F_m J_m.
 \label{2law}
 \end{equation}
 
-Different relation between forces and fluxes have been proposed in the literature giving rise to a variety of theory, each with its specific domain of applicability \cite{NET}. In our study we will focus on \textquotedblleft Classical Irreversible Thermodynamics'' (CIT) which was pioneered by Onsager \cite{onsager} and Prigogine \cite{prigogine} in the first half of the 20th century. This is built on three major assumptions:
+While the local equilibrium hypothesis is at basis of most theories of non-equilibrium thermodynamics, the following two hypotheses are the one uniquely characterizing CIT:
 \begin{itemize}
-	\item[1.] \textit{Local Equilibrium Hypothesis}: thermodynamic variables are locally well-defined;
-	\item[2.] \textit{Linear Relation between forces $F$ and fluxes $J$}:
+	\item[1.] \textit{Linear Relation between forces $F$ and fluxes $J$}:
 	\begin{equation}
 	J_m = \sum_k L_{mk} F_k,\label{lin}
 	\end{equation}
 	where the constant $L_{mk}$ are referred to as \textbf{phenomenological coefficients};
-	\item[3.] \textit{Microscopic Reversibility}: time reversibility of processes at the micro-scale. 
+	\item[2.] \textit{Microscopic Reversibility}: time reversibility of processes at the micro-scale. 
 \end{itemize}
 
-Despite the wide range of applicability of such theory, this does not apply to the domain of far-from equilibrium thermodynamics, for the linear approximation breaks down. It is still under debate which range of physical phenomena lie in the domain of applicability of CIT, particularly in the novel realm of active matter, where experimental validation of theories still lacks.
+Starting from two principles, in its seminal paper \cite{onsager} Onsager derives the well-known \textit{Onsager Reciprocal Relation}:
+\begin{equation}
+L_{mk}=L_{km}.
+\end{equation}
+
+If we now consider a isothermal transformation in the framework of CIT, alongside the energy imbalance inequality, the following equality must hold:
+
+\begin{equation}
+W(R)+M(R)-\frac{\d}{\d t} \left\{\int_R \psi \right\} = T \int_R \sigma \,\d V
+\end{equation}
+
+In the past few decades, CIT has been applied successfully to the modelling of several physical phenomena by engineers, physicists and applied mathematicians. However, this only applies to  phenomena near-equilibrium,for which a linear approximation of the flux-force relation holds. The growing interest in complex far-from-equilibrium phenomena has pushed toward the development of a more general framework to the study of non-equilibrium phenomena.  
 
 \section{Extracellular Matrix.}
 \label{ECMcomp}
@@ -152,6 +172,7 @@ We here assume that the deformation of the ECM corresponds to the one of the sol
 where $v_m$ are the characteristic molecular volume of each species. As common in tissue modelling, we will here assume that the contribution of ions to the volume is negligible so that Equation~(\ref{comp}) reduces to:
 \begin{equation}
 J=1+v_s C_s.
+\label{inc}
 \end{equation} 
 
 The volume fractions of fluid $\phi_f$ and solid $\phi_n$ phases in the gel are thus be defined as:
@@ -216,16 +237,17 @@ We are here interested in the coupling of this two phenomena and how information
 As pointed out by Hu et~al. \cite{viscoporo}, AFM measurements with nano-scale beads allow to capture the viscoelastic relaxation dynamics. But given the short length scale considered in the experiment, poroelastic relaxation is too fast to be captured. On the other hand, when considering larger time and spatial scale, such in standard compression test, the situation is reversed and what can be measure is the poroelastic dynamics. In this regime, the system can be well approximated by a poro-hyperelastic model \cite{Reviewpolyel,ecm2}. However, we are here interested in understanding how this two aspect interplay in determining the behaviour of the tissue. In the realm of soft matter, models have been proposed that either explicitly decouple the volumetric and isochoric deformation of the system \cite{magneto,NGUYEN}, see Figure \ref{figmode}(B1), or not \cite{Article1,CACCAVO2}, see Figure \ref{figmode}(A1). We here consider both constitutive models with the aim of comparing their predictions and identify any difference that would allow us to predict experimentally which of the two better describe the system under study. To avoid any confusion, we will denote them as model A and model B respectively. As an explanatory example of the non-equilibrium thermodynamics framework, we will here fully derive only the first model, see Figure \ref{figmode}(A1). The details on the derivation of the second model can instead be found in Appendix [Need to add the name]. 
 
 \begin{figure}[h!]
-	\hspace{-10mm}
+	\hspace{-12mm}
 	\begin{subfigure}{0.32\textwidth}
 		\centering
+		\large
 	\def\svgwidth{0.95\linewidth}
 	\input{latex/images/modelA1.pdf_tex}
 	\caption*{\textbf{(A1)}}
 	\label{fig1A}
 	\end{subfigure}
 	\begin{subfigure}{0.32\textwidth}
-	\centering
+	\large
 	\def\svgwidth{0.92\linewidth}
 	\input{latex/images/modelB1.pdf_tex}
 	\caption*{\textbf{(B1)}}
@@ -246,14 +268,27 @@ As pointed out by Hu et~al. \cite{viscoporo}, AFM measurements with nano-scale b
 Following a common approach in the large-deformation theory \cite{Article1,CACCAVO2,Plasto,magneto,NGUYEN,growthtum}, we base our derivation on a multiplicative decomposition of the deformation tensor $\F$, approach first proposed by Kr\"{o}ner in 1960 \cite{kro}:
 
 \begin{equation}
-\F=\F_e\F_v,\label{dec1}\tag{A}
+\F=\F_e\F_v,\label{dec1}.
 \end{equation}
 
-As shown in Figure \ref{figmode}(A1), $\F_e$ is the elastic contribution to the deformation, with $J_e=\det \F_e>0$. On the other hand, the term $\F_v$ accounts for the viscous part of the deformation, which arise from the local rearrangement of molecules. A more intuitive understanding of Equation~(\ref{dec1}) comes when thinking in terms of configurations. As shown on the right hand side of Figure \ref{figmode}(A1), the multiplicative decomposition is equivalent to introducing an intermediate virtual configuration $\mathcal{B}_v$, also called natural configuration, which correspond to the state the system would be in if it was instantaneously elastically unload. 
+As shown in Figure \ref{figmode}(A1), $\F_e$ is the elastic contribution to the deformation, with $J_e=\det \F_e>0$. On the other hand, the term $\F_v$ accounts for the viscous part of the deformation, which arise from the local rearrangement of molecules. As illustrate in Figure \ref{figmode}(A2), the multiplicative decomposition is equivalent to introducing an intermediate configuration $\mathcal{B}_v$, called natural or virtual configuration. Despite not being a real state of the system, it can be interpreted as the state the system would be in if it was instantaneously elastically unload. 
 
-As mentioned before, this term does not contribute to change in the volume of the tissue, so that $J_v=\det \F_v= 1$. Since this constraint is not considered in the work of Caccavo et~al. \cite{Article1,CACCAVO2}, our result will differ. Despite not including this aspect in their mathematical formulation, the authors suggest that the viscous contribution should be isochoric.
+Using Equation~(\ref{dec1}), we can compute the velocity gradient tensor $\LL$:
+\begin{equation}
+\LL = \dot{\F}\F^{-1} = \LL_e + \F_e \LL_v \F_e^{-1},
+\end{equation}
+where $\LL_e=\dot{\F}_e\F_e^{-1}$ and $\dot{\F}_v\F_v^{-1}$ are respectively the elastic and viscous velocity gradient tensor. These can be decomposed in their symmetric and skewed part:
 
-[INTRODUCE $\LL_v$]
+\begin{equation}
+\begin{aligned}
+\LL_e = \mathbb{D}_e + \mathbb{W}_e, \ \ \mathbb{D}_e = \frac{\LL_e+\LL^T_e}{2}, \ \ \mathbb{W}_e = \frac{\LL_e-\LL^T_e}{2};\\
+\LL_v = \mathbb{D}_v + \mathbb{W}_v,  \ \ \mathbb{D}_v = \frac{\LL_v+\LL^T_v}{2}, \ \ \mathbb{W}_v = \frac{\LL_v-\LL^T_v}{2}.
+\end{aligned}
+\end{equation}
+
+As mentioned before, the physical nature of the viscous deformation, molecular rearrangement, implies that $\F_v$ must preserve the volume, i.e. $J_v=\det \F_v= 1$. Despite agreeing with this argument, Caccavo et~al. \cite{Article1,CACCAVO2} do not include this constraint in their mathematical formulation. Consequently, our results will differ.
+
+Despite the additional constraint, the decomposition~(\ref{dec1}) is not unique, as $\mathcal{B}_v$ would remained relaxed under any arbitrary rigid-body rotation \cite{multdec}. As suggested by \cite{Plasto}, in the case of isotropic material, it is reasonable to assume the viscous flow to be irrotational, i.e. $\mathbb{W}_v=\mathbb{O}$, so that $\LL_v \equiv \mathbb{D}_v$.
  
 \subsection{Energy Balance Inequality.}
 As mentioned in Section \ref{secNET}, the energy imbalance inequality impose restriction on the nature of the free energy $\psi$ of the system depending on how this exchanges energy and mass with the environment. Considering a control volume $R$ in the reference configuration, the system exchanges mass due to diffusion of each mobile species, so that $M(R)$ is given by:
@@ -328,8 +363,22 @@ Differently from previous work on the modelling of soft tissue, we include the e
 \psi_5 = \frac{\gamma}{2} J \left|\nabla C_s\right|,
 \end{equation}
 where the constant $\gamma$ plays a role analogous to a surface tension.
-Finally, 
+Finally, we need to specify the mechanical energy density $\psi_6$, that without any loss of generality can be decomposed as:
 
+\begin{equation}
+\psi_6 = \psi_\mathbf{A}(\F) + \psi_\mathbf{B}(\F_e)
+\end{equation}
+where $\mathbf{A}$ and $\mathbf{B}$ refer to the branch of the standard linear solid model in Figure \ref{figmode} (A1) which is associated with the elastic energy.
+
+As in \cite{ecm2}, we decide to model the collagen network as an isotropic and compressible Neo-Hookean material:
+
+\begin{eqnarray}
+\psi_\mathbf{A}(\F) = \frac{G_\mathbf{A}}{2} \left(\F:\F - 3 -2 \ln J\right)\\
+\psi_\mathbf{B}(\F_e) = \frac{G_\mathbf{B}}{2} \left(\F_e:\F_e - 3 -2 \ln J_{e}\right)
+\end{eqnarray}
+where $G_\mathbf{\cdot}$ stands for the shear modulus associated with each branches, while $J$ and $J_e$ are as defined in the previous sections. The hyper-elastic nature of polymers network response can be derived in the realm of statical thermodynamics, assuming Gaussian chains and an affine network model \cite{floryprinciples}. However, other thermodynamically consistent stretching energy have been proposed in the literature, which can account based on other network models \cite{BERGSTROM1998931,boyce2,doi}.
+
+\subsection{Entropy Production.}
 \newpage
 \bibliographystyle{splncs04}
 \bibliography{latex/ref}
