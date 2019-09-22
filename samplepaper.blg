@@ -1,46 +1,9 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
-The top-level auxiliary file: samplepaper.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: samplepaper.aux
 The style file: splncs04.bst
 Database file #1: latex/ref.bib
-You've used 27 entries,
-            2850 wiz_defined-function locations,
-            834 strings with 11071 characters,
-and the built_in function-call counts, 16426 in all, are:
-= -- 1420
-> -- 348
-< -- 46
-+ -- 151
-- -- 117
-* -- 1114
-:= -- 2013
-add.period$ -- 51
-call.type$ -- 27
-change.case$ -- 136
-chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 1462
-empty$ -- 1500
-format.name$ -- 131
-if$ -- 3706
-int.to.chr$ -- 0
-int.to.str$ -- 27
-missing$ -- 269
-newline$ -- 87
-num.names$ -- 56
-pop$ -- 379
-preamble$ -- 1
-purify$ -- 112
-quote$ -- 0
-skip$ -- 554
-stack$ -- 0
-substring$ -- 1135
-swap$ -- 907
-text.length$ -- 46
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 98
-warning$ -- 0
-while$ -- 130
-width$ -- 29
-write$ -- 347
+I was expecting a `,' or a `}'---line 494 of file latex/ref.bib
+ : 
+ : @Comment{jabref-meta: databaseType:bibtex;}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+(There was 1 error message)

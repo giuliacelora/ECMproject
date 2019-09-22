@@ -51,7 +51,7 @@
 
 \begin{document}
 %
-\title{A thermodynamically consistent multi-phase model of Extracellular Matrix}
+\title{A thermodynamically consistent poro-visco-elastic model of Extracellular Matrix}
 %
 \titlerunning{Mechanical Properties of ECM}
 % If the paper title is too long for the running head, you can set
@@ -63,7 +63,7 @@
 % First names are abbreviated in the running head.
 % If there are more than two authors, 'et al.' is used.
 %
-\institute{Mathematical Institute University of Oxford}
+\institute{Mathematical Institute, University of Oxford}
 %
 \maketitle              % typeset the header of the contribution
 %
@@ -74,38 +74,35 @@
 %
 %
 \section{Introduction}
-There are several studies supporting the central role of mechanical stimulus in tissue morphogenesis and homeostasis. In tissues, cells are mainly surrounded by extracellular matrix (ECM), a soft porous media made up of  network of polymer chains and proteins. \textit{In vitro} studies have shown that ECM rigidity and shear stresses can alone promote malignant phenotypes in population of initially normal cells, impact on cell proliferation and differentiation. Unlike originally thought biological process are not simply regulated by biochemical signals but by the complex interplay of mechanical and chemical stimuli.
 
-With the development of new experimental techniques such as Atomic Force Microscopy (AFM), the local mechanical properties of material can be measured with atomic precision. When tested at this scale, soft tissues and ECM in particular have been found to be visco-elastic. While a large amount of literature focuses on the elastic properties of ECM, it remains unclear the role of viscosity in determining cell behaviour. However, recent efforts to develop synthetic ECM with tunable viscoelasticity has the potential to 
+There are several studies supporting the central role of mechanical stimuli in tissue morphogenesis and homeostasis \cite{ex1,ex2}. In tissues, cells are mainly surrounded by extracellular matrix (ECM), a soft porous media made up of  networks of polymer chains and proteins. \textit{In vitro} studies have shown that ECM rigidity and shear stresses can alone promote malignant phenotypes in a population of initially normal cells, impact on cell proliferation and differentiation \cite{ex3}. Further experiments on solid tumour development have proven that this is often associated to a stiffening of the tissue compared to the surrounding healthy one \cite{ex4}, which results in the exposure of cells to higher compressive stresses as well as favouring the collapse of blood vessels and impeding the diffusion of substances in the extra-cellular environment ultimately decreasing the efficacy of numerous therapies \cite{ecm2}. Based on such evidence, it is now widely accepted that, unlike originally thought, biological process are not simply regulated by biochemical signals but by the complex interplay of mechanical and chemical stimuli.
  
+Given the different physical nature and scale of phenomena involved, coupling micro-environment and cell behaviours is a problem of high complexity. This requires understanding processes occurring at different temporal and spatial scales and how they interplay to determine the macroscopic behaviour of a tissue, whether healthy or damaged. If we can learn to tune its properties, as cells already do, this could led to the development of novel therapies and completely change our approach to  drug design. In order for this to be possible, alongside experiments, it is necessary to develop a theoretical framework able to capture both the biology and physics involved and which is consistent with the known universal laws of Nature \cite{NET}. 
 
- While purely elastic solid only store energy when deformed, viscoelastic material exhibit a time-dependent response as part of the energy is dissipated in the deformation process.
+With the development of new experimental techniques such as Atomic Force Microscopy (AFM), the local mechanical properties of a material can be measured with atomic precision \cite{viscoporo}. When tested at this scale, soft tissues and the ECM in particular have been found to be visco-elastic \cite{ex5}. Purely elastic solids only store energy when deformed, viscoelastic material instead exhibit a time-dependent response as part of the energy is dissipated in the deformation process. While a large amount of literature focuses on the elastic properties of ECM, it remains unclear the role of viscosity in determining cell behaviour. However, the recent efforts to develop synthetic ECM, i.e. hydrogels, with tunable viscoelasticity, have now opened new research opportunities \cite{viscocell}. 
 
+Despite the progress in experimental techniques, theoretical studies of viscoelastic soft materials remain limited. While experiments rapidly progress, most of the literature on mathematical modelling for soft matter has completely neglected viscous dissipation \cite{Article1}. Whether this assumption might be valid for certain applications, the empirical studies previously mentioned highlight the need of including this component in the study of living tissues. Our works aims to develop a continuum mathematical model of the extracellular matrix which is consistent with the laws of thermodynamics, which accounts for its poro-visco-elastic properties and the coupling of mechanical, transport and electrical phenomena. At our present knowledge, there is no previous work in the literature capturing all these aspects. In \cite{ecm1,ecm2} Xue et al.~ develop a nonlinear poroelastic theory for ECM, which couples all three physical phenomena but does not include viscous dissipation. In \cite{Jeru}, the authors couple mechano-electrophysiological effects including the viscous dissipation but neglect transport; Caccavo et al.~ \cite{Article1} propose a poro-viscoelastic model for neutral hydrogel, thus excluding electrical effects.  Following these previous work, we will derive our model in the framework of linear non-equilibrium thermodynamics \cite{NET}, multi-phase modelling and Biot's poroelastic theory of continuum \cite{Biot}. 
 
+Despite the large number of studies that have characterised the poro-elastic and visco-elastic properties of ECM independently, little is known about their combined effect. In the literature, two main constitutive models have been presented, but never rigorously compared.  Instead of arbitrarily choosing one of the two, we here rely on both approaches, with the aim of identifying their differences and investigating experimental result which would allow us to experimentally test which one best describes the behaviour of soft tissues. From this point of view, our results are more widely applicable to the study of polyelectrolyte gels, which are largely applied as biomedical devices and as a synthetic equivalent of ECM.
 
-The aim of coupling micro-environment and cell behaviours requires a clear understanding of both and the investigation of phenomena occurring at different time and spacial scales. In this work we focus on the Extracellular Matrix (ECM), the external network of polymers supporting cells in tissues. Its mechanical properties, in particular its stiffness, contribute to determine the response of tissues to external mechanical stimuli. By controlling the composition of the matrix, its properties can be tuned to meet the function of a specific tissues. 
-
-Experiments have shown that tumour development is associated to a stiffening of the tissue compared to the surrounding healthy one, despite the fact that tumour cells themselves are usually softer than normal ones. Such contradiction is just apparent, as ECM can account for such resistance to mechanical stimuli. As a result, cells are exposed to higher compressive stresses which can select for more aggressive and invasive phenotype of cancer cells, as well as favour the collapse of blood vessels and impede the diffusion of substances in the extra-cellular environment ultimately decreasing the efficacy of numerous therapies.
-
-Usually approach to the modelling of solid tumour is the use of multi-phase theory, according to which tumour are equivalent to material consisting of a solid matrix of cells and ECM, and an interstitial fluid phase. Besides involving the use of fundamental laws such as conservation of mass and momentum, the formulation of the model requires the use of several constitutive equation for each of the phase considered. These dictate the macroscopic behaviour of the system and thus heavily affect the prediction of the model, and are usually based on experimental result and have thus a limited range of applicability. Having a more fundamental description of the system requires instead deriving such properties based on the microscopic behaviour of the system.   As mentioned before, there is little understanding on the properties of the fundamental components of the ECM.
+Our work is organized as follows: in Section \ref{secNET} we start with a brief overview of Classical Irreversible Thermodynamics. After presenting the composition of the ECM, Section \ref{modeldev} will be focusing on the derivation of the governing equation for the deformation and swelling of ECM. [... FOLLOWING SECTIONS TO UPDATE AS I WRITE.]
 
 \section{Non Equilibrium Thermodynamics.}
 \label{secNET}
-While equilibrium thermodynamics successfully apply to the description of ideal process, real processes are irreversible. In this cases, the change in entropy $\d S$ can result from the reversible exchange of energy and matter with the external environment, $\d_eS$ or the internal dissipation od energy during the process, $\d_iS$ \cite{NET}:
+While equilibrium thermodynamics can describe ideal processes, it does not apply to real processes which are irreversible. In this cases, the change in the entropy of a system $\d S$ results from both the reversible exchange of energy and matter with the external environment $\d_eS$ and the internal dissipation of energy during the process $\d_iS$ \cite{NET}:
 \begin{equation}
-\d S = \d_eS + \d_iS, \hspace{5mm} \d_eS= \frac{\d Q}{T},
+\d S = \d_eS + \d_iS, 
 \end{equation}
-where $Q$ is the amount of energy added to the environment and $T$ is the temperature. 
-According to the second law of thermodynamics, which applies universally to any system or subsystem, $\d S_i\ge 0$.
+According to the second law of thermodynamics, which applies universally to any system or any of its sub-part $\d S_i\ge 0$. It is important to notice that the second law allows transformations in which total change in entropy $d S$ of the system is negative. This occurs whenever $-\d_e S>\d_i S$ and it can lead to the spontaneous formation of complex and ordered structures such as living organisms. From this point of view, life has emerged as an efficient mechanism able to increase sufficiently the entropy of its environment \cite{JeremyEngland}.  
 
-For the purpose of this study, we will focus on isothermal process, i.e. $T=const$. Under this assumption, as derived by Gurtin in \cite{GURTIN}, the second law of thermodynamics is equivalent to the following \textit{energy imbalance inequality}:
+In this study, we will focus on isothermal processes, i.e. $T=const$. Under this assumption, as derived by Gurtin in \cite{GURTIN}, the second law of thermodynamics is equivalent to the following \textit{energy imbalance inequality}:
 \begin{equation}
 \frac{\d}{\d t} \left\{\int_R \psi \right\}\leq W(R) + M(R) \label{energyin}
 \end{equation}
-where $R$ is a arbitrary control volume of the system, $\psi$ is the Helmholtz free energy, $W(R)$ is the rate at which the environment does work on $R$ and $M(R)$ is the inflow of mass due to transport. It is important to note that the energy inequality~(\ref{energyin}) holds for any isothermal process, independently of the specific physical system involved. Consequently, there is a constraint on the form the function $\psi$ can assume and how this can depend on the thermodynamic variables describing the system. 
+where $R$ is a arbitrary control volume of the system, $\psi$ is the Helmholtz free energy, $W(R)$ is the rate at which the environment does work on $R$ and $M(R)$ is the inflow of mass due to transport. It is important to note that, as long as the quantities involved are well defined, the energy inequality~(\ref{energyin}) holds for any isothermal process independently of the specific physical system considered. This imposes a constraint on the form of the function $\psi$ and how this depends on the other thermodynamic variables, such as temperature or pressure, which are used to describe the system. 
 
-The major focus of non-equilibrium thermodynamics is in defining the precise form of $\d_i S$, which, unlike $\d_e S$ is not a state function, but depends on the specific transformation applied to the system. 
-Different theories have been proposed, \cite{NET}, each with its specific domain of applicability. In our study we will focus on \textquotedblleft Classical Irreversible Thermodynamics'' (CIT) which was pioneered by Onsager \cite{onsager} and Prigogine \cite{prigogine} in the first half of the 20th century. One of its most important assumptions is the \textit{Local Equilibrium Hypothesis}, which guarantees thermodynamic variables, including entropy, are locally well-defined, \cite{NET}. 
+Non-equilibrium thermodynamics mainly focuses on defining the form of $\d_i S$, which, unlike the reversible entropy production $\d_e S$, is not a state variable but depends on the specific transformation applied to the system. 
+Different theories have been proposed, \cite{NET}, each with its assumptions and specific domain of applicability. In our study we will focus on \textquotedblleft Classical Irreversible Thermodynamics'' (CIT) which was pioneered by Onsager \cite{onsager} and Prigogine \cite{prigogine} in the first half of the 20th century. One the most important assumptions of this theory is the \textit{Local Equilibrium Hypothesis}, which guarantees thermodynamic variables, including entropy, are locally well-defined, \cite{NET}. 
 Consequently, we can introduce the entropy density $s=s(\mathbf{x},t)$ such that:
 \begin{equation}
 S = \int_{R} s \,\d V, \qquad \d s = \d_e s + \d_is, \qquad \d_is > 0, 
@@ -115,13 +112,13 @@ and the local entropy production:
 \sigma \equiv \frac{\d_i s}{\d t} \geq 0.
 \end{equation}
 
-Another central aspect of the theory is the introduction of \textit{thermodynamic forces} \footnote{Not to be intended in the mechanical sense} $F_m$ (causes) and \textit{thermodynamic fluxes} $J_m$ (effects) to describe the evolution of the irreversible transformation. These are related to $\sigma$ as follows:
+Another central aspect of the theory is the introduction of \textit{thermodynamic forces} \footnote{Not to be intended in the mechanical sense} $F_m$ (causes) and \textit{thermodynamic fluxes} $J_m$ (effects) to describe the time evolution of the system during an irreversible transformation. These are related to $\sigma$ as follows:
 \begin{equation}
 \sigma = \sum_m F_m J_m.
 \label{2law}
 \end{equation}
 
-While the local equilibrium hypothesis is at basis of most theories of non-equilibrium thermodynamics, the following two hypotheses are the one uniquely characterizing CIT:
+While the local equilibrium hypothesis is at the basis of most theories of non-equilibrium thermodynamics, the following two hypotheses uniquely identify CIT:
 \begin{itemize}
 	\item[1.] \textit{Linear Relation between forces $F$ and fluxes $J$}:
 	\begin{equation}
@@ -131,24 +128,24 @@ While the local equilibrium hypothesis is at basis of most theories of non-equil
 	\item[2.] \textit{Microscopic Reversibility}: time reversibility of processes at the micro-scale. 
 \end{itemize}
 
-Starting from two principles, in its seminal paper \cite{onsager} Onsager derives the well-known \textit{Onsager Reciprocal Relation}:
+Starting from these two principles, in its seminal paper \cite{onsager} Onsager derives the well-known \textit{Onsager Reciprocal Relation}:
 \begin{equation}
 L_{mk}=L_{km}.
 \end{equation}
 
-If we now consider a isothermal transformation in the framework of CIT, alongside the energy imbalance inequality, the following equality must hold:
+If we now consider an isothermal transformation in the framework of CIT, alongside with the energy imbalance inequality, we have that the following must hold:
 
 \begin{equation}
 W(R)+M(R)-\frac{\d}{\d t} \left\{\int_R \psi \right\} = T \int_R \sigma \,\d V
 \end{equation}
 
-In the past few decades, CIT has been applied successfully to the modelling of several physical phenomena by engineers, physicists and applied mathematicians. However, this only applies to  phenomena near-equilibrium,for which a linear approximation of the flux-force relation holds. The growing interest in complex far-from-equilibrium phenomena has pushed toward the development of a more general framework to the study of non-equilibrium phenomena.  
+In the past few decades, CIT has been applied successfully to the modelling of several physical phenomena of interest for engineers, physicists and applied mathematicians. However, its validity is limited to phenomena near-equilibrium, for which a linear approximation of the flux-force relation holds. The growing interest in more complex far-from-equilibrium phenomena has pushed toward the development of a more general framework for the study of a non-equilibrium phenomena. Since this goes beyond the purpose of our study, we will not discuss it further. We just want to mention the law of steepest entropy ascent, which, according to Beretta \cite{SEA2}, seems to emerge as the fourth fundamental law of nature. In the linear regime, this principle can be used to prove Onsager's reciprocal relation \cite{SEA1}, with no reference to the microscopic reversibility hypothesis, whose validity remains instead controversial \cite{CIT}.
 
-\section{Extracellular Matrix.}
+\section{Composition of Extracellular Matrix.}
 \label{ECMcomp}
-Despite the tissue-specific nature of Extracellular Matrix (ECM), this is mainly composed of a network of collagen fibrils entangled with charged chains of glycosaminoglycans (GAGs). While collagen is mainly responsible for the mechanical behaviour of the tissue, GAGs can imbibe water, giving ECM the ability to swell while maintaining its structural integrity. As a result, the ECM behave as a polyelectrolyte gel \cite{ecm1,ecm2}. Besides being largely present in the natural world, synthetic polyelectrolytes are currently employed for a wide range of applications, such as drug delivery, biomedical devices, scaffolds for tissue engineering and soft robotics [ADD CITATIONS]. The increasing popularity of such material has boost the development of mathematical model of such systems, in particular focusing particularly on the their swelling and plastic behaviours [ADD CITATIONS].
-
-\begin{figure}
+Despite the tissue-specific nature of Extracellular Matrix (ECM), as shown in Figure \ref{ECMfig} (a), this is usually composed of a network of collagen fibrils entangled with proteoglycans (PGAs) which are covalently bonded to charged chains of glycosaminoglycans (GAGs).  While collagen is mainly responsible for the mechanical behaviour of the tissue, GAGs can imbibe water, giving the extracellular matrix the ability to swell while maintaining its structural integrity. From this point of view, the ECM behaves as a polyelectrolyte gel \cite{ecm1,ecm2}. As schematically illustrated in Figure \ref{ECMfig}(b), polyelectrolyte gels are 3D networks of cross-linked polymer chains that contain ionizable functional groups. When in solution the gel swells, while the functional groups dissociate into fixed charges and mobile ions in the solution. Besides being largely present in the natural world, synthetic polyelectrolytes are currently employed for a wide range of applications, such as drug delivery, biomedical devices, scaffolds for tissue engineering and soft robotics \cite{hydroex3,hydroex2,hydroex1,hydroex4}. Given their wide industrial application, there has been a growing effort in understanding their behaviour and translating it into mathematical models. In particular, research has been focusing on the phenomena of swelling, i.e. large deformation due to absorption of water, and the diffusion transport and release of solution  \cite{DROZDOV+,DROZDOVph,Reviewpolyel,swell2}. However, only a small fraction of the study published accounts for the visco-elastic properties of the polymer network.
+\vspace{4mm}
+\begin{figure}[h]
 	\begin{subfigure}{0.49\textwidth}
 	\centering
 	\includegraphics[scale=0.3]{images/ECM}
@@ -160,49 +157,54 @@ Despite the tissue-specific nature of Extracellular Matrix (ECM), this is mainly
 	\caption{}
 \end{subfigure}
 \caption{Analogy between ECM in soft tissue and polyelectrolytes hydrogels: (a) schematic diagram of the structure of the charged hydrated articular cartilage, reproduced from \cite{pictureECM}; (b) an anionic polyelectrolyte gel modelled as a three-phase continuum, reproduced from \cite{DROZDOVph}.}
+\label{ECMfig}
 \end{figure}
-
-There is now compelling evidence that the relaxation of stress in polymer gels, and thus in ECM is governed by the interplay of the poroelastic and viscoelastic nature of the gel. While the first determines the long range motion of solvents, visco-elastic dominates the stress relaxation dynamics at the microscopic level. Being the same level at which cells probe their environment, this suggests that the visco-elastic properties of the ECM might play a role in determining cell response [ADD ARTICLE IN NOTE AS CITATION].
-
+\vspace{2mm}
+As shown in Figure \ref{ECMfig}, the extracellular matrix falls into the definition of polyelectrolytes so that the knowledge acquired in the study of these materials can be transferred to soft tissues. For the purpose of this study, we will not explicitly distinguish between collagen, PGAs and GAGs. At the tissue level, this can be grouped into a single solid phase (the polymer networks), whose mechanical properties are treated as the average over the different components contribution. As common in multiphase models of tissue, we will assume that the matrix is isotropic and GAGs are evenly distributed on the network. While this is not a good approximation for tissue like cartilage, which are highly anisotropic, it does apply to the extracellular matrix found in other soft tissue like liver, brain and tumours. It is also important to point out that ECM has additional properties such as thermo-sensitivity and pH-sensitivity. However, both in living organisms and in experimental set-up temperature and pH are maintained fairly constant.
 
 \section{Model Development}
+\label{modeldev}
 \subsection{Conservation Law.}
 
-The ECM is here considered as a three-phase medium composed of a solid polymer network with fixed charges, a solvent (i.e. water molecules) and solutes (freely moving charges).
+As mentioned in the previous section, we here consider the ECM as a three-phase medium composed of a solid polymer network with fixed charges, a solvent (i.e. water molecules, interstitial fluid) and solutes (freely moving charges). 
 
-We here assume that the deformation of the ECM corresponds to the one of the solid network. As the tissue deform, the material element originally located at $\mathbf{X}$ in the initial configuration $\mathcal{B}_0$ is displaced to the point $\mathbf{x}$ in the current configuration $\mathcal{B}$. Such transformation is described by the deformation gradient $\F= \partial \mathbf{x}/\partial \mathbf{X}$, while the information about its change in the ECM volume due to swelling is encoded in $J= \det \F$. Since we assume the solid phase to be incompressible, any change in the volume can only be related to the migration of solvent and solutes molecules, whose nominal concentrations will be denoted by $C_s$ and $C_i$ respectively, $i=1,\ldots,N$ with $N$ number of free ion species. This lead to the molecular incompressibility condition:
+We assume that the deformation of the ECM corresponds to the one of the solid network. As the tissue deform, the material element originally located at $\mathbf{X}$ in the initial configuration $\mathcal{B}_0$ is displaced to the point $\mathbf{x}$ in the current configuration $\mathcal{B}$. Such transformation is described by the deformation gradient tensor $\F= \partial \mathbf{x}/\partial \mathbf{X}$; the information about the change in ECM's volume due is encoded by $J= \det \F$. Since we assume the solid phase to be incompressible, any change in the volume can only be related to the migration of solvent and solutes molecules, whose nominal concentrations will be denoted by $C_s$ and $C_i$ respectively, $i=1,\ldots,N$ with $N$ being the number of free ion species. This lead to the molecular incompressibility condition:
 
 \begin{equation}
  J= 1 + v_s C_s +\sum\limits_{i=1}^{N} v_i C_i
  \label{comp}
 \end{equation}
-where $v_m$ are the characteristic molecular volume of each species. As common in tissue modelling, we will here assume that the contribution of ions to the volume is negligible so that Equation~(\ref{comp}) reduces to:
+where $v_m$ are the characteristic molecular volume of each species in the solution. When considering the interstitial fluid, the contribution of ions to the volume can be neglected \cite{ecm1,ecm2} so that Equation~(\ref{comp}) reduces to:
+
 \begin{equation}
 J=1+v_s C_s.
 \label{inc}
 \end{equation} 
 
-The volume fractions of fluid $\phi_f$ and solid $\phi_n$ phases in the gel are thus be defined as:
+Consequently, the volume fractions of fluid $\phi_f$ and solid $\phi_n$ phases in the gel are defined as:
 \begin{equation}
 \phi_f = \frac{v_sC_s}{1+v_sC_s}, \qquad \phi_n = \frac{1}{1+v_sC_s}.
 \end{equation}
 where again we are neglecting the contribution of ions to the total volume.
-While $C_m$ denote the number of each phase molecule per unit volume in the initial configuration, the actual concentration in the current state is denoted by $c_m=C_m/J$. Note that throughout this work we will be using $i=1,\ldots,N$ for denote only the concentration of ionic species, while $m\in\left\{s,1,\ldots,N\right\}$ to refer to both the solvent and solutes.
+While $C_m$ denote the number of each molecule per unit volume in the initial configuration for the $m$-th species in the solution, the actual concentration in the current state is denoted by $c_m=C_m/J$. Throughout the derivation of the model, we will be using the index $i=1,\ldots,N$ to denote the ionic species only, while $m\in\left\{s,1,\ldots,N\right\}$ to refer to all mobile species, i.e. both the solvent and solutes.
 
-Mass conservation must apply to all mobile species and in the initial configuration these read:
+Mass conservation must apply to all mobile species and in the initial configuration this reads:
 \begin{equation}
 \dot{C}_m + \nabla_0 \cdot \mathbf{J}_m = 0, 
 \end{equation}
-where $\mathbf{J}_m$ is the nominal flux per unit area in the dry state and $\nabla_0$ denote the gradient in the Lagrangian coordinate $\mathbf{X}$. Their counterparts in the actual configuration are denoted by $\mathbf{j}_m$ and $\nabla$ and are defined by the flow rule:
+where $\mathbf{J}_m$ is the nominal flux per unit area in the dry state and $\nabla_0$ denote the gradient in the Lagrangian coordinates $\mathbf{X}$. Their counterparts in the actual configuration are denoted by $\mathbf{j}_m$ and $\nabla$ and are defined according to the following rules:
 \begin{equation}
 \mathbf{J}_m = J \F^{-1} \mathbf{j}_m, \qquad \nabla_0 (\cdot) = \F^{T} \nabla(\cdot).
 \end{equation}
 
-We also neglect any effect due to inertia, or any internal volume force so that the conservation of momentum for the gel reads:
+When considering tissues or hydrogels, inertial and gravitational effect are commonly neglected, so that the conservation of momentum for the ECM reads:
+
 \begin{gather}
 \nabla_0 \cdot \mathbb{S}=0\\
 \end{gather}
-where $\mathbb{S}$ is the first Piola-Kirchoff tensor, which is related to the Cauchy stress tensor $\mathbb{T}$, as:
+
+where $\mathbb{S}$ is the first Piola-Kirchoff tensor, which represents the stress state of the ECM in the initial configuration. The counterpart in the current configuration is the Cauchy stress tensor $\mathbb{T}$, which is related to $\mathbb{S}$ as follows:
+
 \begin{equation}
 \mathbb{T} = J^{-1}\mathbb{S}\F^T.
 \end{equation}
@@ -211,26 +213,28 @@ The presence of free moving ions generates and electric field which is denoted b
 \begin{equation}
 \mathbf{E}= -\nabla_0 \, \Phi, \hspace{8mm} \mathbf{e}= - \nabla \, \Phi.
 \end{equation}
-As the gel is here considered to be a dielectric material, the presence of the field induces an electric displacement, which must satisfy Gauss law of electrostatics:
+
+As in \cite{Reviewpolyel}, we consider the matrix to be a dielectric material. Consequently, the presence of the electric field generates an electric displacement $\mathbf{H}$, which must obey Gauss law of electrostatics:
 \begin{equation}
 \nabla_0 \cdot \mathbf{H}= Q,
 \label{gauss}
 \end{equation}
-where $\mathbf{H}$ is the nominal electric displacement and $Q$ is the local total charge, which accounts for both fixed and moving charges:
+where $Q$ is the local total charge, which accounts for both fixed and moving charges:
 \begin{equation}
 Q = e\left(\sum\limits_{i} z_i C_i+z_f C_{f}\right)\, , 
 \end{equation}
-where $e$ is the elementary charge, $C_f$ is the concentration of fix charges and $z_m$ is the valence of the corresponding charged species. Note that $C_f$ here corresponds to the concentration of GAGs, which is only a fraction of $C_s$. As for above, we can move from nominal quantities to the corresponding value in the current configuration by applying the following rules:
+where $e$ is the elementary charge, $C_f$ is the concentration of fix charges and $z_m$ is the valence of the corresponding charged species. Note that $C_f$ here corresponds to the concentration of GAGs, which is assumed to be a constant a fraction of $C_s$. As for above, we can move from nominal quantities to the corresponding value in the current configuration by applying the following rules:
 
 \begin{eqnarray}
 \mathbf{H} = J \mathbf{h}\F^{-T},\\
 \mathbf{E} = \F^T \mathbf{e},
 \end{eqnarray}
 where $\mathbf{h}$ is the electric displacement in the current configuration.
+\newpage
 
 \subsection{Kinematics.}
 
-As in [SARAH PAPER], we here consider that the initial state of the system $\mathcal{B}_0$ corresponds to the dry state of the gel. At any time $t$, the actual configuration of the body is $\mathcal{B}_t$. In this section, we want to focus on the rule according to which the body deforms from $\mathcal{B}_0$ to $\mathcal{B}_t$, which depends on the properties of the system studied. In our case, we consider a poro-visco-elastic material. As shown in Figure \ref{deformation}, there are two mechanisms that can contribute to the change in the body conformation: a volume preserving viscous deformation and long range transport of fluid that leads to swelling. 
+As in \cite{sarah}, we here consider that the initial state of the system $\mathcal{B}_0$ corresponds to the dry state of the gel. At any time $t$, the actual configuration of the body is $\mathcal{B}_t$. In this section, we want to focus on the rule according to which the body deforms from $\mathcal{B}_0$ to $\mathcal{B}_t$, which depends on the properties of the system studied. In our case, we consider a poro-visco-elastic material. As shown in Figure \ref{deformation}, there are two mechanisms that can contribute to the change in the body conformation: a volume preserving viscous deformation and long range transport of fluid that leads to swelling. 
 
 \begin{figure}[h!]
 	\centering

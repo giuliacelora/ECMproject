@@ -7,165 +7,210 @@
 Anand, L.: A thermo-mechanically-coupled theory accounting for hydrogen
   diffusion and large elastic–viscoplastic deformations of metals.
   International Journal of Solids and Structures  \textbf{48}(6),  962 -- 971
-  (2011). \doi{https://doi.org/10.1016/j.ijsolstr.2010.11.029},
-  \url{http://www.sciencedirect.com/science/article/pii/S0020768310004361}
+  (2011)
+
+\bibitem{SEA1}
+{Benfenati}, F., {Beretta}, G.P.: {Ergodicity, Maximum Entropy Production, and
+  Steepest Entropy Ascent in the Proofs of Onsager's Reciprocal Relations}.
+  Journal of Non Equilibrium Thermodynamics  \textbf{43},  101--110 (Apr 2018)
+
+\bibitem{SEA2}
+Beretta, G.P.: The fourth law of thermodynamics: steepest entropy ascent. arXiv
+  preprint arXiv:1908.05768  (2019)
 
 \bibitem{BERGSTROM1998931}
 Bergström, J., Boyce, M.: Constitutive modeling of the large strain
   time-dependent behavior of elastomers. Journal of the Mechanics and Physics
-  of Solids  \textbf{46}(5),  931 -- 954 (1998).
-  \doi{https://doi.org/10.1016/S0022-5096(97)00075-6},
-  \url{http://www.sciencedirect.com/science/article/pii/S0022509697000756}
+  of Solids  \textbf{46}(5),  931 -- 954 (1998)
+
+\bibitem{ex1}
+Bertet, C., Sulak, L., Lecuit, T.: Myosin-dependent junction remodelling
+  controls planar cell intercalation and axis elongation. Nature  \textbf{429},
+   667--71 (07 2004)
+
+\bibitem{Biot}
+Biot, M.A.: General theory of three‐dimensional consolidation. Journal of
+  Applied Physics  \textbf{12}(2),  155--164 (1941)
 
 \bibitem{boyce2}
 Boyce, M.C., Arruda, E.M.: Constitutive models of rubber elasticity: A review.
-  Rubber Chemistry and Technology  \textbf{73}(3),  504--523 (2000).
-  \doi{10.5254/1.3547602}, \url{https://doi.org/10.5254/1.3547602}
+  Rubber Chemistry and Technology  \textbf{73}(3),  504--523 (2000)
+
+\bibitem{hydroex3}
+Buenger, D., Topuz, F., Groll, J.: Hydrogels in sensing applications. Progress
+  in Polymer Science  \textbf{37}(12),  1678 -- 1719 (2012)
+
+\bibitem{ex3}
+Butcher, D., Alliston, T., Weaver, V.: A tense situation: forcing tumour
+  progression. nat rev cancer 9: 108-122. Nature reviews. Cancer  \textbf{9},
+  108--22 (03 2009)
 
 \bibitem{Article1}
 Caccavo, D., Cascone, S., Lamberti, G., Barba, A.A.: Hydrogels: experimental
   characterization and mathematical modelling of their mechanical and diffusive
-  behaviour. Chem. Soc. Rev.  \textbf{47},  2357--2373 (2018).
-  \doi{10.1039/C7CS00638A}, \url{http://dx.doi.org/10.1039/C7CS00638A}
+  behaviour. Chem. Soc. Rev.  \textbf{47},  2357--2373 (2018)
 
 \bibitem{CACCAVO2}
 Caccavo, D., Vietri, A., Lamberti, G., Barba, A.A., Larsson, A.: Modeling the
   mechanics and the transport phenomena in hydrogels. In: Manca, D. (ed.)
   Quantitative Systems Pharmacology, Computer Aided Chemical Engineering,
-  vol.~42, chap.~12, pp. 357 -- 383. Elsevier (2018).
-  \doi{https://doi.org/10.1016/B978-0-444-63964-6.00012-X},
-  \url{http://www.sciencedirect.com/science/article/pii/B978044463964600012X}
+  vol.~42, chap.~12, pp. 357 -- 383. Elsevier (2018)
+
+\bibitem{viscocell}
+Chaudhuri, O.: Viscoelastic hydrogels for 3d cell culture. Biomater. Sci.
+  \textbf{5},  1480--1490 (2017)
+
+\bibitem{hydroex2}
+Cohen~Stuart, M., Huck, W., Genzer, J., Müller, M., Ober, C., Stamm, M.,
+  Sukhorukov, G., Szleifer, I., Tsukruk, V., Urban, M., Winnik, F., Zauscher,
+  S., Luzinov, I., Minko, S.: Emerging applications of stimuli-responsive
+  polymer materials. Nature materials  \textbf{9},  101--13 (2010)
+
+\bibitem{hydroex1}
+Deligkaris, K., Tadele, T.S., Olthuis, W., Van~den Berg, A.: Hydrogel-based
+  devices for biomedical applications. Sensors and Actuators B: Chemical
+  \textbf{147},  765--774 (2010)
 
 \bibitem{doi}
-Doi, M.: Soft Matter Physics. OUP Oxford (2013),
-  \url{https://books.google.co.uk/books?id=ccUaBj73PZsC}
+Doi, M.: Soft Matter Physics. OUP Oxford (2013)
 
 \bibitem{DROZDOV+}
 Drozdov, A.: Swelling of ph-responsive cationic gels: Constitutive modeling and
   structure–property relations. International Journal of Solids and
-  Structures  \textbf{64-65},  176 -- 190 (2015).
-  \doi{https://doi.org/10.1016/j.ijsolstr.2015.03.023},
-  \url{http://www.sciencedirect.com/science/article/pii/S0020768315001389}
+  Structures  \textbf{64-65},  176 -- 190 (2015)
 
 \bibitem{DROZDOVph}
 Drozdov, A.D., deClaville Christiansen, J., Sanporean, C.G.: Inhomogeneous
   swelling of ph-responsive gels. International Journal of Solids and
-  Structures  \textbf{87},  11 -- 25 (2016).
-  \doi{https://doi.org/10.1016/j.ijsolstr.2016.02.037},
-  \url{http://www.sciencedirect.com/science/article/pii/S0020768316001050}
+  Structures  \textbf{87},  11 -- 25 (2016)
 
 \bibitem{flory}
 Flory, P.J.: Thermodynamics of high polymer solutions. The Journal of Chemical
-  Physics  \textbf{10}(1),  51--61 (1942). \doi{10.1063/1.1723621},
-  \url{https://doi.org/10.1063/1.1723621}
+  Physics  \textbf{10}(1),  51--61 (1942)
 
 \bibitem{floryprinciples}
 Flory, P.: Principles of Polymer Chemistry. Baker lectures 1948, Cornell
-  University Press (1953),
-  \url{https://books.google.co.uk/books?id=CQ0EbEkT5R0C}
+  University Press (1953)
+
+\bibitem{Jeru}
+Garcia-Gonzalez, D., Jerusalem, A.: Energy based mechano-electrophysiological
+  model of cns damage at the tissue scale. Journal of the Mechanics and Physics
+  of Solids  \textbf{125},  22 -- 37 (2019)
 
 \bibitem{magneto}
 Garcia-Gonzalez, D.: Magneto-visco-hyperelasticity for hard-magnetic soft
   materials: theory and numerical applications. Smart Materials and Structures
-  \textbf{28}(8),  085020 (jul 2019). \doi{10.1088/1361-665x/ab2b05},
-  \url{https://doi.org/10.1088%2F1361-665x%2Fab2b05}
+  \textbf{28}(8),  085020 (jul 2019)
 
 \bibitem{GURTIN}
 Gurtin, M.E.: Generalized ginzburg-landau and cahn-hilliard equations based on
   a microforce balance. Physica D: Nonlinear Phenomena  \textbf{92}(3),  178 --
-  192 (1996). \doi{https://doi.org/10.1016/0167-2789(95)00173-5},
-  \url{http://www.sciencedirect.com/science/article/pii/0167278995001735}
+  192 (1996)
+
+\bibitem{sarah}
+Hennessy, M.G., Münch, A., Wagner, B.: Surface induced phase separation of a
+  swelling hydrogel (2018), preprint on webpage at
+  \url{http://www.wias-berlin.de/preprint/2562/wias_preprints_2562.pdf},
 
 \bibitem{Reviewpolyel}
 Hong, W.: Continuum Models of Stimuli-responsive Gels, pp. 165--196. Springer
-  Berlin Heidelberg, Berlin, Heidelberg (2012).
-  \doi{10.1007/978-3-642-19373-6},
-  \url{https://doi.org/10.1007/978-3-642-19373-6_6}
+  Berlin Heidelberg, Berlin, Heidelberg (2012)
 
 \bibitem{Interface}
 Hong, W., Wang, X.: A phase-field model for systems with coupled large
   deformation and mass transport. Journal of the Mechanics and Physics of
-  Solids  \textbf{61}(6),  1281 -- 1294 (2013).
-  \doi{https://doi.org/10.1016/j.jmps.2013.03.001},
-  \url{http://www.sciencedirect.com/science/article/pii/S0022509613000550}
+  Solids  \textbf{61}(6),  1281 -- 1294 (2013)
 
 \bibitem{viscoporo}
 Hu, Y., Suo, Z.: Viscoelasticity and poroelasticity in elastomeric gels. Acta
-  Mechanica Solida Sinica  \textbf{25}(5),  441 -- 458 (2012).
-  \doi{https://doi.org/10.1016/S0894-9166(12)60039-1},
-  \url{http://www.sciencedirect.com/science/article/pii/S0894916612600391}
+  Mechanica Solida Sinica  \textbf{25}(5),  441 -- 458 (2012)
 
 \bibitem{hug}
 Huggins, M.L.: Some properties of solutions of long-chain compounds. The
-  Journal of Physical Chemistry  \textbf{46}(1),  151--158 (1942).
-  \doi{10.1021/j150415a018}, \url{https://doi.org/10.1021/j150415a018}
+  Journal of Physical Chemistry  \textbf{46}(1),  151--158 (1942)
 
 \bibitem{NET}
 Kondepudi, D., Prigogine, I.: Modern Thermodynamics: From Heat Engines to
-  Dissipative Structures. CourseSmart, John Wiley \& Sons (2014),
-  \url{https://books.google.co.uk/books?id=SPU8BQAAQBAJ}
+  Dissipative Structures. CourseSmart, John Wiley \& Sons (2014)
 
 \bibitem{kro}
 {Kr{\"o}ner}, E.: {Allgemeine Kontinuumstheorie der Versetzungen und
   Eigenspannungen}. Archive for Rational Mechanics and Analysis  \textbf{4},
-  273--334 (Jan 1959). \doi{10.1007/BF00281393}
+  273--334 (1959)
 
 \bibitem{microstress}
 Larché, F., Cahn, J.: The interactions of composition and stress in
-  crystalline solids. Acta Metallurgica  \textbf{33}(3),  331 -- 357 (1985).
-  \doi{https://doi.org/10.1016/0001-6160(85)90077-X},
-  \url{http://www.sciencedirect.com/science/article/pii/000161608590077X}
+  crystalline solids. Acta Metallurgica  \textbf{33}(3),  331 -- 357 (1985)
+
+\bibitem{CIT}
+Lebon, G., Jou, D., José, C.V.: Understanding Non-Equilibrium Thermodynamics.
+  Springer-Verlag Berlin Heidelberg (01 2008)
+
+\bibitem{ex5}
+Levental, I., Georges, P.C., Janmey, P.A.: Soft biological materials and their
+  impact on cell function. Soft Matter  \textbf{3},  299--306 (2007)
+
+\bibitem{hydroex4}
+Li, J., Mooney, D.: Designing hydrogels for controlled drug delivery. Nature
+  Reviews Materials  \textbf{1},  16071 (2016)
 
 \bibitem{multdec}
 Lubarda, V.A.: {Constitutive theories based on the multiplicative decomposition
   of deformation gradient: Thermoelasticity, elastoplasticity, and biomechanics
-  }. Applied Mechanics Reviews  \textbf{57}(2),  95--108 (04 2004).
-  \doi{10.1115/1.1591000}, \url{https://doi.org/10.1115/1.1591000}
+  }. Applied Mechanics Reviews  \textbf{57}(2),  95--108 (04 2004)
+
+\bibitem{JeremyEngland}
+Marsland, R., England, J.: Limits of predictions in thermodynamic systems: a
+  review. Reports on Progress in Physics  \textbf{81}(1) (2017)
 
 \bibitem{NGUYEN}
 N’Guyen, T., Lejeunes, S., Eyheramendy, D., Boukamel, A.: A thermodynamical
   framework for the thermo-chemo-mechanical couplings in soft materials at
-  finite strain. Mechanics of Materials  \textbf{95},  158 -- 171 (2016).
-  \doi{https://doi.org/10.1016/j.mechmat.2016.01.008},
-  \url{http://www.sciencedirect.com/science/article/pii/S016766361600017X}
+  finite strain. Mechanics of Materials  \textbf{95},  158 -- 171 (2016)
 
 \bibitem{onsager}
 Onsager, L.: Reciprocal relations in irreversible processes. i. Phys. Rev.
-  \textbf{37},  405--426 (Feb 1931). \doi{10.1103/PhysRev.37.405},
-  \url{https://link.aps.org/doi/10.1103/PhysRev.37.405}
+  \textbf{37},  405--426 (Feb 1931)
+
+\bibitem{ex4}
+Paszek, M.J., Zahir, N., Johnson, K.R., Lakins, J.N., Rozenberg, G.I., Gefen,
+  A., Reinhart-King, C.A., Margulies, S.S., Dembo, M., Boettiger, D., Hammer,
+  D.A., Weaver, V.M.: Tensional homeostasis and the malignant phenotype. Cancer
+  Cell  \textbf{8}(3),  241 -- 254 (2005)
 
 \bibitem{prigogine}
 Prigogine, I.: Introduction to thermodynamics of irreversible processes.
-  Interscience Publishers (1968),
-  \url{https://books.google.co.uk/books?id=G3peAAAAIAAJ}
+  Interscience Publishers (1968)
+
+\bibitem{ex2}
+Rauzi, M., V{\'e}rant, P., Lecuit, T., Lenne, P.F.: Nature and anisotropy of
+  cortical forces orienting drosophila tissue morphogenesis. Nature Cell
+  Biology  \textbf{10},  1401--1410 (2008)
 
 \bibitem{pictureECM}
 Sun, D.N., Gu, W.Y., Guo, X.E., Lai, W.M., Mow, V.C.: A mixed finite element
   formulation of triphasic mechano-electrochemical theory for charged, hydrated
   biological soft tissues. International Journal for Numerical Methods in
-  Engineering  \textbf{45}(10),  1375--1402 (1999).
-  \doi{10.1002/(SICI)1097-0207(19990810)45:10<1375::AID-NME635>3.0.CO;2-7},
-  \url{https://onlinelibrary.wiley.com/doi/abs/10.1002/%28SICI%291097-0207%2819990810%2945%3A10%3C1375%3A%3AAID-NME635%3E3.0.CO%3B2-7}
+  Engineering  \textbf{45}(10),  1375--1402 (1999)
 
 \bibitem{growthtum}
 Xue, S.L., Li, B., Feng, X.Q., Gao, H.: Biochemomechanical poroelastic theory
   of avascular tumor growth. Journal of the Mechanics and Physics of Solids
-  \textbf{94},  409 -- 432 (2016).
-  \doi{https://doi.org/10.1016/j.jmps.2016.05.011},
-  \url{http://www.sciencedirect.com/science/article/pii/S0022509616302162}
+  \textbf{94},  409 -- 432 (2016)
 
 \bibitem{ecm1}
 Xue, S.L., Li, B., Feng, X.Q., Gao, H.: A non-equilibrium thermodynamic model
   for tumor extracellular matrix with enzymatic degradation. Journal of the
-  Mechanics and Physics of Solids  \textbf{104},  32 -- 56 (2017).
-  \doi{https://doi.org/10.1016/j.jmps.2017.04.002},
-  \url{http://www.sciencedirect.com/science/article/pii/S0022509617300698}
+  Mechanics and Physics of Solids  \textbf{104},  32 -- 56 (2017)
 
 \bibitem{ecm2}
 Xue, S.L., Lin, S.Z., Li, B., Feng, X.Q.: A nonlinear poroelastic theory of
   solid tumors with glycosaminoglycan swelling. Journal of Theoretical Biology
-  \textbf{433},  49 -- 56 (2017).
-  \doi{https://doi.org/10.1016/j.jtbi.2017.08.021},
-  \url{http://www.sciencedirect.com/science/article/pii/S0022519317303958}
+  \textbf{433},  49 -- 56 (2017)
+
+\bibitem{swell2}
+Yu, Y., Landis, C.M., Huang, R.: {Salt-Induced Swelling and Volume Phase
+  Transition of Polyelectrolyte Gels}. Journal of Applied Mechanics
+  \textbf{84}(5) (03 2017)
 
 \end{thebibliography}
