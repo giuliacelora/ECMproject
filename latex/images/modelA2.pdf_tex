@@ -53,12 +53,12 @@
   \begin{picture}(1,0.81222174)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{images/modelA2.pdf}}%
-    \put(0.19338123,0.53780884){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.50895684\unitlength}\raggedright $\mathcal{B}_0$\end{minipage}}}%
-    \put(0.5147886,0.18302618){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.50895684\unitlength}\raggedright $\mathcal{B}_{v}$\end{minipage}}}%
-    \put(0.67217053,0.62041754){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.50895684\unitlength}\raggedright $\mathcal{B}$\end{minipage}}}%
-    \put(0.2010867,0.27693919){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.50895684\unitlength}\raggedright $\F_v$\end{minipage}}}%
-    \put(0.43761055,0.76018886){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.50895684\unitlength}\raggedright $\F$\end{minipage}}}%
-    \put(0.82684583,0.26520012){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.50895684\unitlength}\raggedright $\F_e$\end{minipage}}}%
+    \put(-0.2,0){\includegraphics[width=\unitlength,page=1]{images/modelA2.pdf}}%
+    \put(0.00838123,0.53780884){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.50895684\unitlength}\raggedright $\mathcal{B}_0$\end{minipage}}}%
+    \put(0.3147886,0.18302618){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.50895684\unitlength}\raggedright $\mathcal{B}_{v}$\end{minipage}}}%
+    \put(0.47217053,0.60041754){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.50895684\unitlength}\raggedright $\mathcal{B}$\end{minipage}}}%
+    \put(-0.0010867,0.26693919){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.50895684\unitlength}\raggedright $\F_v$\end{minipage}}}%
+    \put(0.23761055,0.76018886){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.50895684\unitlength}\raggedright $\F$\end{minipage}}}%
+    \put(0.62684583,0.26520012){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.50895684\unitlength}\raggedright $\F_e$\end{minipage}}}%
   \end{picture}%
 \endgroup%

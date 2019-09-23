@@ -108,9 +108,9 @@ Gurtin, M.E.: Generalized ginzburg-landau and cahn-hilliard equations based on
   192 (1996)
 
 \bibitem{sarah}
-Hennessy, M.G., Münch, A., Wagner, B.: Surface induced phase separation of a
-  swelling hydrogel (2018), preprint on webpage at
-  \url{http://www.wias-berlin.de/preprint/2562/wias_preprints_2562.pdf},
+Hennessy, M.G., M\"{u}nch, A., Wagner, B.: Surface induced phase separation of
+  a swelling hydrogel (2018), preprint on webpage
+  \url{http://www.wias-berlin.de/preprint/2562/wias_preprints_2562.pdf}
 
 \bibitem{Reviewpolyel}
 Hong, W.: Continuum Models of Stimuli-responsive Gels, pp. 165--196. Springer
@@ -163,6 +163,11 @@ Lubarda, V.A.: {Constitutive theories based on the multiplicative decomposition
 Marsland, R., England, J.: Limits of predictions in thermodynamic systems: a
   review. Reports on Progress in Physics  \textbf{81}(1) (2017)
 
+\bibitem{Netti}
+Netti, P.A., Berk, D.A., Swartz, M.A., Grodzinsky, A.J., Jain, R.K.: Role of
+  extracellular matrix assembly in interstitial transport in solid tumors.
+  Cancer Research  \textbf{60}(9),  2497--2503 (2000)
+
 \bibitem{NGUYEN}
 N’Guyen, T., Lejeunes, S., Eyheramendy, D., Boukamel, A.: A thermodynamical
   framework for the thermo-chemo-mechanical couplings in soft materials at
@@ -192,6 +197,11 @@ Sun, D.N., Gu, W.Y., Guo, X.E., Lai, W.M., Mow, V.C.: A mixed finite element
   formulation of triphasic mechano-electrochemical theory for charged, hydrated
   biological soft tissues. International Journal for Numerical Methods in
   Engineering  \textbf{45}(10),  1375--1402 (1999)
+
+\bibitem{wang}
+Wang, X., Hong, W.: A visco-poroelastic theory for polymeric gels. Proceedings
+  of the Royal Society A: Mathematical, Physical and Engineering Sciences
+  \textbf{468}(2148),  3824--3841 (2012). \doi{10.1098/rspa.2012.0385}
 
 \bibitem{growthtum}
 Xue, S.L., Li, B., Feng, X.Q., Gao, H.: Biochemomechanical poroelastic theory
