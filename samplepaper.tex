@@ -114,7 +114,7 @@ and the local entropy production:
 
 Another central aspect of the theory is the introduction of \textit{thermodynamic forces} \footnote{Not to be intended in the mechanical sense} $F_m$ (causes) and \textit{thermodynamic fluxes} $J_m$ (effects) to describe the time evolution of the system during an irreversible transformation. These are related to $\sigma$ as follows:
 \begin{equation}
-\sigma = \sum_m F_m J_m.
+\sigma = \sum_m F_m J_m\geq 0.
 \label{2law}
 \end{equation}
 
@@ -364,7 +364,7 @@ If we now substitute~(\ref{temp1}) into~(\ref{temp2}), and include the constrain
 \left(\frac{\partial \psi}{\partial \nabla_0 C_s}-\boldsymbol{\xi}\right) \cdot \nabla_0 \dot{C}_s + \left(\frac{\partial \psi}{\partial C_s}-\mu_s-\nabla_0 \cdot \boldsymbol{\xi}+p v\right)\dot{C}_s\\
 + \sum_i\left(\frac{\partial \psi}{\partial C_i} + e\Phi z_i-\mu_i\right) \dot{C}_i +\left(\frac{\partial \psi}{\partial \mathbf{H}}-\mathbf{E}\right) \cdot \dot{\mathbf{H}}\\
 + \left(\frac{\partial \psi}{\partial \F} + \frac{\partial \psi}{\partial\F_e}\F_v^{-1}- \mathbb{S} - p J \F^{-T}\right): \dot{\F}+ \sum_m \nabla_0 \,\mu_m \cdot \mathbf{J}_m \\
-- \left(\F_e^T\frac{\partial \psi}{\partial \F_e}+p_v\mathbb{I}\right):\mathbb{L}_v\leq 0 . \label{ineq}
+- \F_e^T\frac{\partial \psi}{\partial \F_e}:\mathbb{L}_v\leq 0 . \label{ineq}
 \end{aligned}
 \end{equation}
 
@@ -387,11 +387,32 @@ Based on Equations~(\ref{eqCIT}), (\ref{ineq}) and (\ref{dis}), we can move from
 \begin{aligned}
 \left(\frac{\partial \psi}{\partial \nabla_0 C_s}-\boldsymbol{\xi}\right) \cdot \nabla_0 \dot{C}_s + \left(\frac{\partial \psi}{\partial C_s}-\mu_s-\nabla_0 \cdot \boldsymbol{\xi}+p v\right)\dot{C}_s\\
 + \sum_i\left(\frac{\partial \psi}{\partial C_i} + e\Phi z_i-\mu_i\right) \dot{C}_i +\left(\frac{\partial \psi}{\partial \mathbf{H}}-\mathbf{E}\right) \cdot \dot{\mathbf{H}}\\
-+ \left(\frac{\partial \psi}{\partial \F} + \frac{\partial \psi}{\partial\F_e}\F_v^{-1}- \mathbb{S} - p J \F^{-T}\right): \dot{\F}+ \sum_m \left[\nabla_0 \,\mu_m - \zeta_m\right]\cdot \mathbf{J}_m \\
--\left[\zeta_v + \left(\F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right)\right]:\mathbb{L}_v=0
++ \left(\frac{\partial \psi}{\partial \F} + \frac{\partial \psi}{\partial\F_e}\F_v^{-1}- \mathbb{S} - p J \F^{-T}\right): \dot{\F}+ \sum_m \left[\nabla_0 \,\mu_m + T\zeta_m\right]\cdot \mathbf{J}_m \\
++\left(T\zeta_v - \F_e^T\frac{\partial \psi}{\partial \F_e}\right):\mathbb{L}_v=0
 \end{aligned} 
 \end{equation}
-which needs to hold for any possible value of the fluxes of the thermodynamics variables
+which needs to hold for any possible evolution of the system, i.e. for any independent values of $\nabla_0 \dot{C}_s$, $\dot{C}_s$, $\dot{C}_m$, $\dot{\mathbf{H}}$, $\dot{F}$, $\mathbf{J}_m$ and $\LL_v$ at any point $\mathbf{X}$ and time $t$. In order for this to hold, all the terms in the brackets need to vanish. Hence, we obtain:
+\begin{gather}
+\boldsymbol{\xi} = \frac{\partial \psi}{\partial \nabla_0 C_s},\\
+\mu_s = p v -\nabla_0 \cdot \boldsymbol{\xi} + \frac{\partial \psi}{\partial C_s},\\
+\mu_i =  e\Phi z_i +\frac{\partial \psi}{\partial C_i},\hspace{5mm} i=1,\ldots,N ,\\
+\mathbf{E} = \frac{\partial \psi}{\partial \mathbf{H}} ,\label{ele}\\
+\mathbb{S} = -p J \F^{-T} + \frac{\partial \psi}{\partial \F}+ \frac{\partial \psi}{\partial\F_e}\F_v^{-1}\, ,\\
+\zeta_m =-T^{-1} \nabla_0 \,\mu_m,\\
+\zeta_v = T^{-1} \F_e^T\frac{\partial \psi}{\partial \F_e}.\label{vflow1}
+\end{gather}
+
+Assuming that the assumptions of classical non-equilibrium thermodynamics hold for the system under study, we can use the identity~(\ref{lin}) to couple, in principle, any flux to any force. However, based on symmetry arguments, \textit{Curie's law} \cite{CIT} reduces the number of possible couplings between different physical phenomena. As we are considering the ECM to be isotropic, there can be no coupling between fluxes and forces of different tensorial nature. Consequently, we are left with the following force-flux relation:
+\begin{gather}
+\LL_v = L_{vv} \zeta_v,\label{vflow2}\\
+\mathbf{J}_m = \sum_{k=s,1,\ldots,N} L_{mk} \zeta_k.
+\end{gather}
+
+Combining Equation~(\ref{vflow1}) and (\ref{vflow2}), and imposing that condition~(\ref{Jv}) is satisfied, we can characterise the viscous flow by the following relation:
+\begin{equation}
+\LL_v = L_{vv}T^{-1}\left(\F_e^T\frac{\partial \psi}{\partial \F_e}\right)^D = \eta^{-1}\left(\F_e^T\frac{\partial \psi}{\partial \F_e}\right)^D ,
+\end{equation}
+where $\eta$ is the viscosity of the dashpot in the rheological model and $\left(\cdot\right)^D = \cdot-1/3 \text{tr} \cdot$ is the deviatoric component of the tensor in the brackets.
 \subsection{Construction of the Free Energy.}
 
 Following a standard approach in phase-field modeling, we assume that the total free energy can be additively decomposed, so that each mechanisms contributes independently:
