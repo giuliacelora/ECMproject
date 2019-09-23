@@ -136,7 +136,8 @@ L_{mk}=L_{km}.
 If we now consider an isothermal transformation in the framework of CIT, alongside with the energy imbalance inequality, we have that the following must hold:
 
 \begin{equation}
-W(R)+M(R)-\frac{\d}{\d t} \left\{\int_R \psi \right\} = T \int_R \sigma \,\d V
+W(R)+M(R)-\frac{\d}{\d t} \left\{\int_R \psi \right\} = T \int_R \sigma \,\d V\, ,
+\label{eqCIT}
 \end{equation}
 
 In the past few decades, CIT has been applied successfully to the modelling of several physical phenomena of interest for engineers, physicists and applied mathematicians. However, its validity is limited to phenomena near-equilibrium, for which a linear approximation of the flux-force relation holds. The growing interest in more complex far-from-equilibrium phenomena has pushed toward the development of a more general framework for the study of a non-equilibrium phenomena. Since this goes beyond the purpose of our study, we will not discuss it further. We just want to mention the law of steepest entropy ascent, which, according to Beretta \cite{SEA2}, seems to emerge as the fourth fundamental law of nature. In the linear regime, this principle can be used to prove Onsager's reciprocal relation \cite{SEA1}, with no reference to the microscopic reversibility hypothesis, whose validity remains instead controversial \cite{CIT}.
@@ -377,8 +378,20 @@ Note that in deriving~(\ref{ineq}), we have also made us of the following identi
 Having specified how the system interact with its environment, we can now discuss how it dissipates energy. As mentioned in Section~(\ref{}), there are two contributions: transport (diffusion of solvent and solutes) and viscosity. The thermodynamic fluxes \footnote{See Section \ref{secNET}} associated with these two phenomena are $\mathbf{J}_m$, $m=s,1,\ldots,N$, and $\LL_v$. Consequently, using Equation~(\ref{2law}), we obtain:
 \begin{equation}
 \sigma = \sum_m \zeta_m \cdot \mathbf{J}_m + \zeta_v : \LL_v,
+\label{dis}
 \end{equation}
 where $\zeta$s represent the thermodynamic forces associate with each flux. 
+
+Based on Equations~(\ref{eqCIT}), (\ref{ineq}) and (\ref{dis}), we can move from the energy imbalance to an equality condition:
+\begin{equation}
+\begin{aligned}
+\left(\frac{\partial \psi}{\partial \nabla_0 C_s}-\boldsymbol{\xi}\right) \cdot \nabla_0 \dot{C}_s + \left(\frac{\partial \psi}{\partial C_s}-\mu_s-\nabla_0 \cdot \boldsymbol{\xi}+p v\right)\dot{C}_s\\
++ \sum_i\left(\frac{\partial \psi}{\partial C_i} + e\Phi z_i-\mu_i\right) \dot{C}_i +\left(\frac{\partial \psi}{\partial \mathbf{H}}-\mathbf{E}\right) \cdot \dot{\mathbf{H}}\\
++ \left(\frac{\partial \psi}{\partial \F} + \frac{\partial \psi}{\partial\F_e}\F_v^{-1}- \mathbb{S} - p J \F^{-T}\right): \dot{\F}+ \sum_m \left[\nabla_0 \,\mu_m - \zeta_m\right]\cdot \mathbf{J}_m \\
+-\left[\zeta_v + \left(\F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right)\right]:\mathbb{L}_v=0
+\end{aligned} 
+\end{equation}
+which needs to hold for any possible value of the fluxes of the thermodynamics variables
 \subsection{Construction of the Free Energy.}
 
 Following a standard approach in phase-field modeling, we assume that the total free energy can be additively decomposed, so that each mechanisms contributes independently:
