@@ -1,6 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
-The top-level auxiliary file: samplepaper.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: samplepaper.aux
 The style file: splncs04.bst
 Database file #1: latex/ref.bib
 I was expecting a `,' or a `}'---line 37 of file latex/ref.bib
@@ -8,45 +6,8 @@ I was expecting a `,' or a `}'---line 37 of file latex/ref.bib
  : @InBook{Reviewpolyel,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You've used 47 entries,
-            2850 wiz_defined-function locations,
-            907 strings with 12335 characters,
-and the built_in function-call counts, 28496 in all, are:
-= -- 2367
-> -- 753
-< -- 78
-+ -- 320
-- -- 263
-* -- 1813
-:= -- 3467
-add.period$ -- 48
-call.type$ -- 47
-change.case$ -- 269
-chr.to.int$ -- 0
-cite$ -- 47
-duplicate$ -- 2571
-empty$ -- 2558
-format.name$ -- 294
-if$ -- 6377
-int.to.chr$ -- 0
-int.to.str$ -- 47
-missing$ -- 492
-newline$ -- 147
-num.names$ -- 96
-pop$ -- 798
-preamble$ -- 1
-purify$ -- 225
-quote$ -- 0
-skip$ -- 927
-stack$ -- 0
-substring$ -- 1892
-swap$ -- 1602
-text.length$ -- 78
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 176
-warning$ -- 0
-while$ -- 221
-width$ -- 49
-write$ -- 473
-(There was 1 error message)
+Repeated entry---line 512 of file latex/ref.bib
+ : @misc{vol
+ :          ,
+I'm skipping whatever remains of this entry
+(There were 2 error messages)

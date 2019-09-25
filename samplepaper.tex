@@ -234,6 +234,7 @@ where $\mathbf{h}$ is the electric displacement in the current configuration.
 \newpage
 
 \subsection{Kinematics.}
+\label{kin}
 
 As in \cite{sarah}, we here consider that the initial state of the system $\mathcal{B}_0$ corresponds to the dry state of the gel. At any time $t$, the actual configuration of the body is $\mathcal{B}_t$. Note that in what follows we will refer to the the current configuration $\mathcal{B}_t$ as $\mathcal{B}$. 
 
@@ -319,6 +320,7 @@ Note that in the second model B, this condition is naturally imposed as the only
 Despite condition~(\ref{Jv}) being common assumption in the study of hydrogels and soft tissue, there are few exceptions \cite{Article1,CACCAVO2,wang} model. Consequently, our results will differ from the one in the paper mentioned. 
  
 \subsection{Energy Balance Inequality.}
+
 As mentioned in Section \ref{secNET}, the energy imbalance inequality impose restrictions on the nature of the free energy $\psi$ depending on  how the system exchanges energy and mass with the environment. Considering a control volume $R$ in the reference configuration $\mathcal{B}_0$, the system exchanges mass due to diffusion of each mobile species, so that $M(R)$ is given by:
 \begin{equation}
 M(R)= \sum\limits_{m=s,1,\ldots,N} - \int_{\partial R} \mu_m \,\mathbf{J}_m \cdot \mathbf{n} 
@@ -373,46 +375,6 @@ Note that in deriving~(\ref{ineq}), we have also made us of the following identi
 \dot{\F}=\dot{\F}_e\F_v+\F_e\dot{\F}_v \Longrightarrow \dot{\F}_e=\dot{\F}\F_v^{-1}-\F_e \LL_v.
 \end{equation}
 
-\subsection{Entropy Production $\sigma$.}
-
-Having specified how the system interact with its environment, we can now discuss how it dissipates energy. As mentioned in Section~(\ref{}), there are two contributions: transport (diffusion of solvent and solutes) and viscosity. The thermodynamic fluxes \footnote{See Section \ref{secNET}} associated with these two phenomena are $\mathbf{J}_m$, $m=s,1,\ldots,N$, and $\LL_v$. Consequently, using Equation~(\ref{2law}), we obtain:
-\begin{equation}
-\sigma = \sum_m \zeta_m \cdot \mathbf{J}_m + \zeta_v : \LL_v,
-\label{dis}
-\end{equation}
-where $\zeta$s represent the thermodynamic forces associate with each flux. 
-
-Based on Equations~(\ref{eqCIT}), (\ref{ineq}) and (\ref{dis}), we can move from the energy imbalance to an equality condition:
-\begin{equation}
-\begin{aligned}
-\left(\frac{\partial \psi}{\partial \nabla_0 C_s}-\boldsymbol{\xi}\right) \cdot \nabla_0 \dot{C}_s + \left(\frac{\partial \psi}{\partial C_s}-\mu_s-\nabla_0 \cdot \boldsymbol{\xi}+p v\right)\dot{C}_s\\
-+ \sum_i\left(\frac{\partial \psi}{\partial C_i} + e\Phi z_i-\mu_i\right) \dot{C}_i +\left(\frac{\partial \psi}{\partial \mathbf{H}}-\mathbf{E}\right) \cdot \dot{\mathbf{H}}\\
-+ \left(\frac{\partial \psi}{\partial \F} + \frac{\partial \psi}{\partial\F_e}\F_v^{-1}- \mathbb{S} - p J \F^{-T}\right): \dot{\F}+ \sum_m \left[\nabla_0 \,\mu_m + T\zeta_m\right]\cdot \mathbf{J}_m \\
-+\left(T\zeta_v - \F_e^T\frac{\partial \psi}{\partial \F_e}\right):\mathbb{L}_v=0
-\end{aligned} 
-\end{equation}
-which needs to hold for any possible evolution of the system, i.e. for any independent values of $\nabla_0 \dot{C}_s$, $\dot{C}_s$, $\dot{C}_m$, $\dot{\mathbf{H}}$, $\dot{F}$, $\mathbf{J}_m$ and $\LL_v$ at any point $\mathbf{X}$ and time $t$. In order for this to hold, all the terms in the brackets need to vanish. Hence, we obtain:
-\begin{gather}
-\boldsymbol{\xi} = \frac{\partial \psi}{\partial \nabla_0 C_s},\\
-\mu_s = p v -\nabla_0 \cdot \boldsymbol{\xi} + \frac{\partial \psi}{\partial C_s},\\
-\mu_i =  e\Phi z_i +\frac{\partial \psi}{\partial C_i},\hspace{5mm} i=1,\ldots,N ,\\
-\mathbf{E} = \frac{\partial \psi}{\partial \mathbf{H}} ,\label{ele}\\
-\mathbb{S} = -p J \F^{-T} + \frac{\partial \psi}{\partial \F}+ \frac{\partial \psi}{\partial\F_e}\F_v^{-1}\, ,\\
-\zeta_m =-T^{-1} \nabla_0 \,\mu_m,\\
-\zeta_v = T^{-1} \F_e^T\frac{\partial \psi}{\partial \F_e}.\label{vflow1}
-\end{gather}
-
-Assuming that the assumptions of classical non-equilibrium thermodynamics hold for the system under study, we can use the identity~(\ref{lin}) to couple, in principle, any flux to any force. However, based on symmetry arguments, \textit{Curie's law} \cite{CIT} reduces the number of possible couplings between different physical phenomena. As we are considering the ECM to be isotropic, there can be no coupling between fluxes and forces of different tensorial nature. Consequently, we are left with the following force-flux relation:
-\begin{gather}
-\LL_v = L_{vv} \zeta_v,\label{vflow2}\\
-\mathbf{J}_m = \sum_{k=s,1,\ldots,N} L_{mk} \zeta_k.
-\end{gather}
-
-Combining Equation~(\ref{vflow1}) and (\ref{vflow2}), and imposing that condition~(\ref{Jv}) is satisfied, we can characterise the viscous flow by the following relation:
-\begin{equation}
-\LL_v = L_{vv}T^{-1}\left(\F_e^T\frac{\partial \psi}{\partial \F_e}\right)^D = \eta^{-1}\left(\F_e^T\frac{\partial \psi}{\partial \F_e}\right)^D ,
-\end{equation}
-where $\eta$ is the viscosity of the dashpot in the rheological model and $\left(\cdot\right)^D = \cdot-1/3 \text{tr} \cdot$ is the deviatoric component of the tensor in the brackets.
 \subsection{Construction of the Free Energy.}
 
 Following a standard approach in phase-field modeling, we assume that the total free energy can be additively decomposed, so that each mechanisms contributes independently:
@@ -449,7 +411,7 @@ As the interstitial fluid is well approximated by a dilute solution, the contrib
 
 As proposed by Hong et al. \cite{Interface}, we include in the energy the effect of interface tension. Despite having been neglected in many models for hydrogel swelling, this term plays a role in the transient poroelastic relaxation of the material, when boundaries between solvent-rich and solvent-poor regions can emerge \cite{sarah,Interface}. Again we assume that the contribution of mobile ions is negligible, so that only the ideal solid-solvent interface contributes to the energy:
 \begin{equation}
-\psi_5 = \frac{\gamma}{2} J \left|\nabla C_s\right|,
+\psi_5 = \frac{\gamma}{2} J \left|\nabla C_s\right|^2,
 \end{equation}
 where the constant $\gamma$ plays a role analogous to a surface tension. Without any loss of generality we assume that the last term $\psi_6$ in the free energy can be additively decomposed into two contribution; one for each branch of the standard linear solid model in Figure \ref{figmode} (a):
 
@@ -463,9 +425,226 @@ As in \cite{ecm2}, we decide to model the solid network as an isotropic and comp
 \psi_\mathbf{A}(\F) = \frac{G_\mathbf{A}}{2} \left(\F:\F - 3 -2 \ln J\right)\\
 \psi_\mathbf{B}(\F_e) = \frac{G_\mathbf{B}}{2} \left(\F_e:\F_e - 3 -2 \ln J_{e}\right)\label{hyp}
 \end{eqnarray}
-where $G_\mathbf{\cdot}$ stands for the shear modulus associated with each branches, $J_e= \det \F_e$, while $J$ is as defined in the previous sections. As derived in \cite{floryprinciples}, the hyper-elastic model~(\ref{hyp}) can be correlated to the microscopic properties of a polymer network, under the assumption of Gaussian chains and affine deformation. Other thermodynamically consistent form of the stretching energy have been proposed in the literature \cite{BERGSTROM1998931,boyce2,doi}. These have been also derived by statistical arguments but starting from different network models.
+where $G_\mathbf{\cdot}$ stands for the shear modulus associated with each branches, $J_e= \det \F_e$, while $J$ is as defined in the previous sections. As derived in \cite{floryprinciples}, the hyper-elastic model~(\ref{hyp}) can be correlated to the microscopic properties of a polymer network, under the assumption of Gaussian chains and affine deformation. Other thermodynamically consistent form of the stretching energy have been proposed in the literature \cite{BERGSTROM1998931,boyce2,doi}. These have been also derived by statistical arguments but starting from different network models
+\subsection{Entropy Production $\sigma$.}
+\label{ent}
+Having specified how the system interact with its environment, we can now discuss how it dissipates energy. As mentioned in Section~(\ref{kin}), there are two contributions: transport (diffusion of solvent and solutes) and viscosity. The thermodynamic fluxes \footnote{See Section \ref{secNET}} associated with these two phenomena are $\mathbf{J}_m$, $m=s,1,\ldots,N$, and $\LL_v$. Consequently, using Equation~(\ref{2law}), we obtain:
+\begin{equation}
+\sigma = \sum_m \zeta_m \cdot \mathbf{J}_m + \zeta_v : \LL_v,
+\label{dis}
+\end{equation}
+where $\zeta$s represent the thermodynamic forces associate with each flux. 
+
+Based on Equations~(\ref{eqCIT}), (\ref{ineq}) and (\ref{dis}), we can move from the energy imbalance to an equality condition:
+\begin{equation}
+\begin{aligned}
+\left(\frac{\partial \psi}{\partial \nabla_0 C_s}-\boldsymbol{\xi}\right) \cdot \nabla_0 \dot{C}_s + \left(\frac{\partial \psi}{\partial C_s}-\mu_s-\nabla_0 \cdot \boldsymbol{\xi}+p v\right)\dot{C}_s\\
++ \sum_i\left(\frac{\partial \psi}{\partial C_i} + e\Phi z_i-\mu_i\right) \dot{C}_i +\left(\frac{\partial \psi}{\partial \mathbf{H}}-\mathbf{E}\right) \cdot \dot{\mathbf{H}}\\
++ \left(\frac{\partial \psi}{\partial \F} + \frac{\partial \psi}{\partial\F_e}\F_v^{-1}- \mathbb{S} - p J \F^{-T}\right): \dot{\F}+ \sum_m \left[\nabla_0 \,\mu_m + T\zeta_m\right]\cdot \mathbf{J}_m \\
++\left(T\zeta_v - \F_e^T\frac{\partial \psi}{\partial \F_e}\right):\mathbb{L}_v=0
+\end{aligned} 
+\end{equation}
+which needs to hold for any possible evolution of the system, i.e. for any independent values of $\nabla_0 \dot{C}_s$, $\dot{C}_s$, $\dot{C}_m$, $\dot{\mathbf{H}}$, $\dot{F}$, $\mathbf{J}_m$ and $\LL_v$ at any point $\mathbf{X}$ and time $t$. In order for this to hold, all the terms in the brackets need to vanish. Hence, we obtain:
+\begin{gather}
+\boldsymbol{\xi} = \gamma J \,\mathbb{B}^{-1} \,\nabla_0 \,C_s,\\[2mm]
+\begin{aligned}
+\mu_s = p v + \mu_s^0 - \gamma J \nabla^2 C_s + kT&\left[\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s}\right.\\
+&\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s v)^2}-\sum_i \frac{C_i}{C_s}\right], 
+\end{aligned}\\[2.5mm]
+\mu_i = \mu^0_i + e\Phi z_i + kT \ln \frac{C_i}{C_s},\\
+\mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, \\[3mm]
+\begin{aligned}
+\mathbb{T}= -p \mathbb{I} + \gamma &\left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]+ \epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right]\\
+&+ \frac{G_\mathbf{A}}{1+C_sv}\left(\mathbb{B}-\mathbb{I}\right) + \frac{G_\mathbf{B}}{1+C_sv}\left(\mathbb{B}_e-\mathbb{I}\right),
+\end{aligned}\\[2.5mm]
+\zeta_m =-T^{-1} \nabla_0 \,\mu_m,\\
+\zeta_v = T^{-1} G_\mathbf{B} (\mathbb{C}_e-\mathbb{I}).\label{vflow1}
+\end{gather}
+
+Assuming to be in regime of linear non-equilibrium thermodynamics, we can use the identity~(\ref{lin}) to couple fluxes and forces. However, considering the symmetry constraint from \textit{Curie's law}\footnote{an effect can not have more symmetries than its cause} \cite{CIT}, there can be no coupling between fluxes and forces of different tensorial nature. Consequently, we are left with the following force-flux relation:
+\begin{gather}
+\LL_v = L_{vv} \zeta_v,\label{vflow2}\\
+\mathbf{J}_m = \sum_{k=s,1,\ldots,N} L_{mk} \zeta_k. \label{dif}
+\end{gather}
+
+%Combining Equation~(\ref{vflow1}) and (\ref{vflow2}), and imposing that condition~(\ref{Jv}) is satisfied, we can characterise the viscous flow by the following relation:
+%\begin{equation}
+%\LL_v = L_{vv}T^{-1}\text{DEV}\left[\F_e^T\frac{\partial \psi}{\partial \F_e}\right] = \eta^{-1}\text{DEV}\left[\F_e^T\frac{\partial \psi}{\partial \F_e}\right] ,
+%\end{equation}
+%where $\eta$ represent the viscosity of the material and $\text{DEV}\left[\cdot\right] = \cdot-1/3\, \text{tr}(\cdot)$ is the deviatoric component of the tensor in the brackets. 
+
+%The dissipative contribution due to the relative movement of phases has been largely studied in the literature \cite{ecm1,ecm2}. Starting from Equation~(\ref{dif}) and standard arguments we can get to the following definition for the fluxes:
+As described in Appendix , starting from Equations~(\ref{vflow1})-(\ref{dif}) and with common consideration from the theory of mixture, we can derive the following system of equations:
+\begin{eqnarray}
+\mathbf{j}_s = -K c_s \left(c_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} c_i \nabla \mu_i\right),\\
+\mathbf{j}_i = - \frac{D_i}{k_B T}c_i\nabla \mu_i + \frac{D_i}{D^0_i} \frac{c_i}{c_s} \mathbf{j}_s, \\
+\dot{\mathbb{B}}_e =\LL\mathbb{B}_e + \mathbb{B}_e \LL^T - \frac{1}{\tau_R} \,\mathbb{B}_e\text{DEV}[\mathbb{B}_e].
+\end{eqnarray}
+where the parameters are macroscopic phenomenological coefficients, that can either be estimated experimentally or derived from the nano/microscopic properties of the different phases \cite{ecm1,ecm2}. 
+
+\section{Unconstrained Free Swelling.}
+We here consider the first experimental setup: unconstrained free swelling. In such situation, we consider the ECM is left free to swell in bath of interstitial solution. As the system evolves, the ECM increases in size until it reaches a steady state where all variables are homogenous, i.e. no spatial dependency, so that all fluxes or higher order derivatives vanish. Imposing the continuity condition at the boundary of the domain, and assuming the stress to vanish in the bath, following \cite{swell2} we have:
+\begin{eqnarray}
+\mu_s=\mu^{ext}_s = \mu^0_s - vkT \sum_i c^0_i ,\\
+\mu_i=\mu^{ext}_i = \mu^0_i +kT\ln(vc^0_i),\\
+\mathbb{T}=0.
+\end{eqnarray} 
+Finally, to investigate the equilibrium, we specify the deformation gradient tensor, which is of the form:
+\begin{equation}
+\F= \lambda \mathbb{I},                                                                
+\end{equation}
+with $\lambda=(1+C_s v_s)^{1/3}$. 
+\subsection{Model A.}
 
 \newpage
+\appendix
+\section{Glossary of Variables and Parameters in the Model.}
+
+\begin{table}[h]
+\begin{tabular}{c  l}
+	$\psi\qquad $ & Helmholtz free energy per unit volume in the initial configuration\\
+	$\eta\qquad $ & Viscosity of the collagen network,\\
+	$G_\mathbf{A}\qquad$ & Shear modulus related to spring $\mathbf{A}$\\
+	$G_\mathbf{B}\qquad$ & Shear modulus related to spring $\mathbf{B}$\\
+	$\tau_R\qquad$ & Viscous relaxation time of the collagen network,\\
+	$D_i\qquad$ & Diffusion coefficient for the $i$-th solute species when in pure solvent (interstitial fluid),\\
+	$D^0_i\qquad$ & Diffusion coefficient for the $i$-th solute species in ECM,\\
+	$K\qquad$ &  Hydraulic permeability of the ECM to the interstitial fluid (solvent+solute),\\
+	$k\qquad$ &  Hydraulic  permeability  to  pure  solvent (water),\\
+	$\kappa$ & volum
+\end{tabular}	
+\end{table}
+\section{f}
+\begin{gather}
+\boldsymbol{\xi} = \frac{\partial \psi}{\partial \nabla_0 C_s},\\
+\mu_s = p v -\nabla_0 \cdot \boldsymbol{\xi} + \frac{\partial \psi}{\partial C_s},\\
+\mu_i =  e\Phi z_i +\frac{\partial \psi}{\partial C_i},\hspace{5mm} i=1,\ldots,N ,\\
+\mathbf{E} = \frac{\partial \psi}{\partial \mathbf{H}} ,\label{ele}\\
+\mathbb{S} = -p J \F^{-T} + \frac{\partial \psi}{\partial \F}+ \frac{\partial \psi}{\partial\F_e}\F_v^{-1}\, ,\\
+\zeta_m =-T^{-1} \nabla_0 \,\mu_m,\\
+\zeta_v = T^{-1} \F_e^T\frac{\partial \psi}{\partial \F_e}.
+\end{gather}
+\section{Energy Dissipation.}
+
+Combining Equation~(\ref{vflow1}) and (\ref{vflow2}), and imposing that condition~(\ref{Jv}) is satisfied, we can characterise the viscous flow by the following relation:
+\begin{equation}
+\LL_v = L_{vv}T^{-1}\text{DEV}\left[\F_e^T\frac{\partial \psi}{\partial \F_e}\right] = \eta^{-1}\text{DEV}\left[\F_e^T\frac{\partial \psi}{\partial \F_e}\right] ,
+\end{equation}
+where $\eta$ represent the viscosity of the material and $\text{DEV}\left[\cdot\right] = \cdot-1/3\, \text{tr}(\cdot)$ is the deviatoric component of the tensor in the brackets. Using Equation~(\ref{}), we obtain:
+\begin{equation}
+\LL_v = \frac{G_\mathbf{B} }{\eta}\text{DEV}[\mathbb{C}_e] = \frac{\text{DEV}[\mathbb{C}_e]}{2\tau_R}.
+\end{equation}
+
+If we now consider the left elastic Cauchy Green tensor $\mathbb{B}_e=\F_e \F^T_e$, we can relate its time derivative to $\LL_v$:
+\begin{equation}
+\begin{aligned}
+\dot{\mathbb{B}}_e &= \LL \mathbb{B}_e + \mathbb{B}_e \LL^T - 2 \F_e d_v \F_e^{T} \\
+&= \LL\mathbb{B}_e + \mathbb{B}_e \LL^T - \frac{1}{\tau_R} \F_e\left[\mathbb{C}_e-\frac{1}{3}tr(\mathbb{B}_e)\mathbb{I}\right]\F_e^T\\
+&= \LL\mathbb{B}_e + \mathbb{B}_e \LL^T - \frac{1}{\tau_R} \,\mathbb{B}_e\underbrace{\left[\mathbb{B}_e-\frac{1}{3}tr(\mathbb{B}_e)\mathbb{I}\right]}_{\text{DEV}[\mathbb{B}_e]}.
+\end{aligned}
+\end{equation}
+
+For what concern the dissipation due to transport phenomena, the forces $\varsigma_m$ is dependent on the deformation. For this reason, it is more suitable to move from the Lagrangian to the Eulerian coordinates.  Using the  can rewrite the flux as $\mathbf{j}_m = c_m (\mathbf{v}_m-\mathbf{v}_n)= c_m \bar{\mathbf{v}}_{m}$, where $\mathbf{v}_m$ is the velocity of the $m$-th component in the current configuration, $\mathbf{v}_n$ is the velocity of the network also in the current configuration and  $\bar{\mathbf{v}}_{m}$ is the relative velocity of the $m$-th component with respect to the network. 
+
+In the framework of linear non-equilibrium thermodynamics, the transport dissipation function is given by:
+\begin{eqnarray}
+-c_j \nabla \mu_j = \sum_b L_{jb} \bar{\mathbf{v}}_j= \sum_{i\neq j} f_{ji} \left(\bar{\mathbf{v}}_i-\bar{\mathbf{v}}_j\right) + f_{js} (\bar{\mathbf{v}}_s-\bar{\mathbf{v}}_j) + f_{jn} \bar{\mathbf{v}}_j,\label{drag1}\\
+-c_s \nabla \mu_s = \sum_i f_{si} \left(\bar{\mathbf{v}}_i-\bar{\mathbf{v}}_s\right)+ f_{sn} \bar{\mathbf{v}}_s,
+\end{eqnarray}
+where $f_{mi}$ and $h_{mn}$ are the drag coefficients related to the interaction between fluid constituents and the polymer network respectively. Based on the Onsanger's reciprocal relation we have that:
+\begin{equation}
+f_{mb}=f_{bm}.
+\end{equation}
+Common assumption in the study of mixture theory is that the solute-solute drag can be neglected so that $f_{ij}=0$ for $i,j=1,\ldots,N$ \cite{ecm1,biophysics}. The remaining drag coefficient are instead defined by:
+\begin{equation}
+f_{sn} = \frac{1}{k}, \ \ f_{js}=\frac{k_BT c_j}{D^0_{j}},\ \  f_{js}+f_{jn}= \frac{k_BT c_j}{D_j}, \label{drag2}
+\end{equation}
+where $k$ is the hydraulic permeability of the solvent in the network, $D^0_j$ is the diffusion coefficient of the solute in pure solution, while $D_j$ is the diffusion coefficient in the gel.
+
+Using~(\ref{drag1})-(\ref{drag2}), the relative velocities are of the form:
+\begin{eqnarray}
+\bar{\mathbf{v}}_s = -K \left(c_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} c_i \nabla \mu_i\right),\\
+\bar{\mathbf{v}}_j = - \frac{D_j}{k_B T}\nabla \mu_j + \frac{D_j}{D^0_j} \bar{\mathbf{v}}_s, 
+\end{eqnarray}
+and the coefficient $K$ is defined as:
+\begin{equation}
+\frac{1}{K} = \frac{1}{k} + \sum_i k_B T \left(1-\frac{D_i}{D^0_i}\right) \frac{c_i}{D^0_i}.
+\end{equation}
+
+\section{Model B: Separating the Volumetric Deformation.}
+The derivation of the governing equation for the second model proposed follow the same steps as model A, with few changes. From the point of view of conservation laws (Section \ref{conslaw}), these are still valid as they do not depend on the specific kinetics model chosen. As discussed in Section \ref{kin}, we use multiplicative decomposition to isolate the different contribution to the strain:
+\begin{equation}
+\F= \bar{\F} \F_{vol}= J^{1/3} \bar{\F}_e \bar{\F}_v,\label{mol2}
+\end{equation}
+where we have used the fact that $\F_{vol}=J^{1/3}\mathbb{I}$, with $J=\det \F$. Where both $\bar{\F}_e$  and $\bar{\F}_v$ needs to preserve the ECM volume. Analogously to Equation~(\ref{Jv}), this can be ensured by imposing the following condition:
+\begin{equation}
+\det \bar{\F}_v = 1.
+\end{equation}
+\begin{figure}
+	\Large
+	\def\svgwidth{1\linewidth}
+	\input{latex/images/modelB2.pdf_tex}
+	\caption{Multiplicative decomposition of Model B}
+\end{figure}
+
+In this case it is easier to express the kinematics of the ECM in terms $\LL=\dot{\F}\F^{-1}$, instead of $\dot{\F}$ and $\bar{\LL}_v=\dot{\bar{\F}}_v\bar{\F}_v^{-1}$. When we look at the free energy, we now have three decouple mechanical variables that can contribute to it $J$ for the first spring, $\bar{\F}$ and $\bar{\F}_e$ on due to the springs in branch $\mathbf{A}$ and $\mathbf{B}$ respectively. Consequently, Equation~(\ref{temp1}) will now be of the form:
+\begin{equation}
+\psi = \psi (J,\bar{\F}_e, \bar{\F}, C_s, C_i, \nabla_0 \,C_s,\mathbf{H}).\label{aptemp1}
+\end{equation}
+
+If we differentiate $J$, $\bar{\F}$ and $\bar{\F}_e$, we can reduce the number of variables expressing them in terms of $\LL$ and $\bar{\LL}_v$:
+
+\begin{gather}
+\dot{J} = J (\mathbb{I}:\LL),\\
+\dot{\bar{\F}} = J^{-1/3} \LL \F - \frac{1}{3} J^{-1/3} (\mathbb{I}:\LL) \F \\
+\dot{\bar{\F}}_e = \text{DEV}[\LL] \bar{\F}_e -\bar{\F}_e \bar{\LL}_v.\label{aptemp2}
+\end{gather}
+If we now combine Equations~(\ref{aptemp1})-(\ref{aptemp2}) with the energy inequality, what we obtain is:
+\begin{equation}
+\begin{aligned}
+\left(\frac{\partial \psi}{\partial \nabla_0 C_s}-\boldsymbol{\xi}\right) \cdot \nabla_0 \dot{C}_s + \left(\frac{\partial \psi}{\partial C_s}-\mu_s-\nabla_0 \cdot \boldsymbol{\xi}+p v\right)\dot{C}_s\\
++ \sum_i\left(\frac{\partial \psi}{\partial C_i} + e\Phi z_i-\mu_i\right) \dot{C}_i +\left(\frac{\partial \psi}{\partial \mathbf{H}}-\mathbf{E}\right) \cdot \dot{\mathbf{H}}\\
+ +\left(\text{DEV}\left[J^{-1/3}\frac{\partial \psi}{\partial \bar{\F}}\F^T + \frac{\partial \psi}{\partial \bar{\F}_e}\bar{\F}_e^{T}\right]- \mathbb{S}\F^T +J\left(\frac{\partial \psi}{\partial J} - p\right)\mathbb{I}\right):\LL\\
+ + \sum_m \nabla_0 \,\mu_m \cdot \mathbf{J}_m - \bar{\F}_e^T\frac{\partial \psi}{\partial \bar{\F}_e}:\mathbb{\bar{L}}_v\leq 0 . \label{ineq2}
+\end{aligned}
+\end{equation}
+
+Finally we need to update the constitutive laws for the strain free energy $\psi_6$, which, similarly to the case discussed in Section , can be decompose as the sum of contributions from each spring in Figure \ref{figmode}(b):
+
+\begin{equation}
+\psi_6 = \psi_\mathbf{A}(\bar{\F}) + \psi_\mathbf{B}(\bar{\F}_e) + \psi_{vol}(J).
+\end{equation}
+
+Again we assume the ECM to behave as an hyperplastic material:
+\begin{eqnarray}
+\psi_\mathbf{A}(\F) = \frac{G_\mathbf{A}}{2} \left(\bar{\F}:\bar{\F} - 3\right),\\
+\psi_\mathbf{B}(\F_e) = \frac{G_\mathbf{B}}{2} \left(\bar{\F}_e:\bar{\F}_e - 3 \right).
+\end{eqnarray}
+
+For the volumetric contribution we consider as before a logarithmic term:
+\begin{equation}
+\psi_{vol}(J) = \frac{\kappa}{2} \ln J^2.
+\end{equation}
+
+The above volumetric constitutive assumption is one of the most common in modelling hyper-elastic material. However, as shown in \cite{vol}, this has several limitation in the regime of large deformation, which highlights the need of study more realistic form which can capture the more complex behaviour of real material. From this point of view, being able to decouple the volumetric deformation as in model B allows to investigate this aspect alone [REPHRASE].
+
+When looking at the entropy production, Equation~(\ref{dis}) still holds simply by replacing $\LL_v$ with $\bar{\LL}_v$. Using the same argument as in Section~(\ref{ent}), we are left with the following system of equations:
+\begin{gather}
+\boldsymbol{\xi} = \gamma J \,\mathbb{B}^{-1} \,\nabla_0 \,C_s,\\[2mm]
+\begin{aligned}
+\mu_s = p v + \mu_s^0 - \gamma J \nabla^2 C_s + kT&\left[\ln \frac{C_s v}{1+C_s v} + \frac{1}{1+C_sv}\right.\\
+&\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s v)^2}-\sum_i \frac{C_i}{C_s}\right], 
+\end{aligned}\\[2.5mm]
+\mu_i = \mu^0_i + e\Phi z_i + kT \ln \frac{C_i}{C_s},\\
+\mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, \\[3mm]
+\begin{aligned}
+\mathbb{T}= \left(\frac{\kappa}{1+C_sv_s}-p\right) \mathbb{I} + \frac{G_1}{1+C_sv}\text{DEV}[\bar{\B}] + \frac{G_2}{1+C_sv}\text{DEV}[\bar{\B}_e]\\
++ \gamma \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]+ \epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right],
+\end{aligned}
+\end{gather}
+coupled to the governing equations:
+
+%The dissipative contribution due to the relative movement of phases has been largely studied in the literature \cite{ecm1,ecm2}. Starting from Equation~(\ref{dif}) and standard arguments we can get to the following definition for the fluxes:
 \bibliographystyle{splncs04}
 \bibliography{latex/ref}
 %
