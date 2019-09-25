@@ -1,4 +1,6 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: samplepaper.aux
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: samplepaper.aux
 The style file: splncs04.bst
 Database file #1: latex/ref.bib
 I was expecting a `,' or a `}'---line 37 of file latex/ref.bib
@@ -6,8 +8,50 @@ I was expecting a `,' or a `}'---line 37 of file latex/ref.bib
  : @InBook{Reviewpolyel,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 512 of file latex/ref.bib
+Repeated entry---line 511 of file latex/ref.bib
  : @misc{vol
  :          ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "biophysics"
+You've used 48 entries,
+            2850 wiz_defined-function locations,
+            912 strings with 12480 characters,
+and the built_in function-call counts, 28933 in all, are:
+= -- 2398
+> -- 770
+< -- 78
++ -- 327
+- -- 269
+* -- 1841
+:= -- 3523
+add.period$ -- 48
+call.type$ -- 48
+change.case$ -- 275
+chr.to.int$ -- 0
+cite$ -- 48
+duplicate$ -- 2609
+empty$ -- 2603
+format.name$ -- 301
+if$ -- 6470
+int.to.chr$ -- 0
+int.to.str$ -- 48
+missing$ -- 499
+newline$ -- 150
+num.names$ -- 98
+pop$ -- 819
+preamble$ -- 1
+purify$ -- 230
+quote$ -- 0
+skip$ -- 935
+stack$ -- 0
+substring$ -- 1913
+swap$ -- 1620
+text.length$ -- 78
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 180
+warning$ -- 0
+while$ -- 224
+width$ -- 50
+write$ -- 480
 (There were 2 error messages)

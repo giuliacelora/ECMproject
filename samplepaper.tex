@@ -133,22 +133,21 @@ In the past few decades, CIT has been applied successfully to the modelling of s
 \section{Composition of Extracellular Matrix.}
 \label{ECMcomp}
 Despite the tissue-specific nature of Extracellular Matrix (ECM), as shown in Figure \ref{ECMfig} (a), this is usually composed of a network of collagen fibrils entangled with proteoglycans (PGAs) which are covalently bonded to charged chains of glycosaminoglycans (GAGs).  While collagen is mainly responsible for the mechanical behaviour of the tissue, GAGs can imbibe water, giving the extracellular matrix the ability to swell while maintaining its structural integrity. From this point of view, the ECM behaves as a polyelectrolyte gel \cite{ecm1,ecm2}. As schematically illustrated in Figure \ref{ECMfig}(b), polyelectrolyte gels are 3D networks of cross-linked polymer chains that contain ionizable functional groups. When in solution the gel swells, while the functional groups dissociate into fixed charges and mobile ions in the solution. Besides being largely present in the natural world, synthetic polyelectrolytes are currently employed for a wide range of applications, such as drug delivery, biomedical devices, scaffolds for tissue engineering and soft robotics \cite{hydroex3,hydroex2,hydroex1,hydroex4}. Given their wide industrial application, there has been a growing effort in understanding their behaviour and translating it into mathematical models. In particular, research has been focusing on the phenomena of swelling, i.e. large deformation due to absorption of water, and the diffusion transport and release of solution  \cite{DROZDOV+,DROZDOVph,Reviewpolyel,swell2}. However, only a small fraction of the study published accounts for the visco-elastic properties of the polymer network.
-\vspace{4mm}
+
 \begin{figure}[h]
 	\begin{subfigure}{0.49\textwidth}
 	\centering
-	\includegraphics[scale=0.32]{images/ECM}
+	\includegraphics[scale=0.38]{images/ECM}
 	\caption{}
 	\end{subfigure}
 	\begin{subfigure}{0.49\textwidth}
 	\centering
-	\includegraphics[scale=0.35]{images/ecmscheme.jpg}
+	\includegraphics[scale=0.42]{images/ecmscheme.jpg}
 	\caption{}
 \end{subfigure}
 \caption{Analogy between ECM in soft tissue and polyelectrolytes hydrogels: (a) schematic diagram of the structure of the charged hydrated articular cartilage, reproduced from \cite{pictureECM}; (b) an anionic polyelectrolyte gel modelled as a three-phase continuum, reproduced from \cite{DROZDOVph}.}
 \label{ECMfig}
 \end{figure}
-\vspace{2mm}
 
 As shown in Figure \ref{ECMfig}, the extracellular matrix falls into the definition of polyelectrolytes so that the knowledge acquired in the study of these materials can be transferred to soft tissues. For the purpose of this study, we will not explicitly distinguish between collagen, PGAs and GAGs. At the tissue level, this can be grouped into a single solid phase (the polymer networks), whose mechanical properties are treated as the average over the different components contribution. As common in multiphase models of tissue, we will assume that the matrix is isotropic and GAGs are evenly distributed on the network. While this is not a good approximation for tissue like cartilage, which are highly anisotropic, it does apply to the extracellular matrix found in other soft tissue like liver, brain and tumours. It is also important to point out that ECM has additional properties such as thermo-sensitivity and pH-sensitivity. However, both in living organisms and in experimental set-up temperature and pH are maintained fairly constant.
 
@@ -309,23 +308,25 @@ Despite condition~(\ref{Jv}) being common assumption in the study of hydrogels a
  
 \subsection{Energy Balance Inequality.}
 
-As mentioned in Section \ref{secNET}, the energy imbalance inequality impose restrictions on the nature of the free energy $\psi$ depending on  how the system exchanges energy and mass with the environment. Considering a control volume $R$ in the reference configuration $\mathcal{B}_0$, the system exchanges mass due to diffusion of each mobile species, so that $M(R)$ is given by:
+As mentioned in Section \ref{secNET}, according to how the system exchanges energy and mass with the environment, the energy imbalance imposes restrictions on the free energy $\psi$. Considering a control volume $R$ in the reference configuration $\mathcal{B}_0$, the system exchanges mass due to the diffusion of each mobile species, so that $M(R)$ is given by:
 \begin{equation}
 M(R)= \sum\limits_{m=s,1,\ldots,N} - \int_{\partial R} \mu_m \,\mathbf{J}_m \cdot \mathbf{n} 
 \end{equation}
-where $\mathbf{n}$ is the unit normal vector to the surface $\partial R$ and $\mu_m$ is the chemical potential associated with each species. Widely used in the thermodynamics of mixture, the chemical potential is a measure of the rate of change in free energy associated with adding one more molecule to a unit volume. The term $W(R)$, as defined in Section \ref{secNET}, is instead decomposed in two contributions, the rate of electrical $W_{el}(R)$ and mechanical work $W_{mec}(R)$. Following \cite{DROZDOVph}, $W_{el}(R)$ is defined as:
+where $\mathbf{n}$ is the unit normal vector to the surface $\partial R$ and $\mu_m$ is the chemical potential associated with each species. Widely used in the thermodynamics of mixture, the chemical potential is a measure of the rate of change in free energy associated with adding one more molecule to a unit volume. The term $W(R)$ is instead decomposed in two contributions, the rate of electrical $W_{el}(R)$ and mechanical work $W_{mec}(R)$. Following \cite{DROZDOVph}, $W_{el}(R)$ is defined as:
 \begin{equation}
 W_{el}(R) = -\int_{\partial R} \Phi\, \dot{\mathbf{H}}\cdot \mathbf{n}
 \end{equation}
-As suggested by Gurtin \cite{GURTIN}, when accounting for the mechanical work, besides the contribution of macro-stresses $\mathbb{S}$, we need also to account for the effect of micro-stresses $\boldsymbol{\epsilon}$, which arise due to the system heterogeneity \cite{microstress}. As before we only take into account the dominant contribution of the solvent while neglecting the solute, so that $W_{mec}(R)$ reads:
+
+Following the work of Gurtin \cite{GURTIN}, we account both for the presence of macro-stresses $\mathbb{S}$ and micro-stresses $\boldsymbol{\epsilon}$, which arise due to the system heterogeneity \cite{microstress}. As before we only consider the dominant contribution of the solvent while neglecting the solute, so that $W_{mec}(R)$ reads:
 \begin{equation}
 W_{mec}(R) = \int_{\partial R} \left(\boldsymbol{\xi}\cdot \mathbf{n}\right)\dot{C}_s + \int_{\partial R} \mathbb{S}\mathbf{n} \cdot \dot{\mathbf{u}}
 \end{equation}
-where $\mathbf{u}= \mathbf{x}-\mathbf{X}$ is the displacement vector, which is related to the deformation tensor by $\F=\mathbb{I}-\nabla_0 \mathbf{u}$. Substituting this result back into the formula~(\ref{energyin}) and applying the divergence theorem we obtain the following integral inequality:
+where $\mathbf{u}= \mathbf{x}-\mathbf{X}$ is the displacement vector, which is related to the deformation tensor by $\F=\mathbb{I}-\nabla_0 \mathbf{u}$. Substituting this result back into the formula~(\ref{energyin}) and applying the divergence theorem we obtain the following inequality:
 \begin{equation}
 \int_R \dot{\psi} - \mathbf{E}\cdot \dot{\mathbf{H}} \, + \, \sum\limits_{i=1}^{N} \left[e \Phi  z_i \dot{C}_i+ \nabla_0 \left(\mu_i \mathbf{J}_i \right)\right] + \nabla_0 (\mu_s \mathbf{J}_s- \boldsymbol{\xi}\dot{C}_s -\mathbb{S}^T\mathbf{\dot{u}}) \leq 0 
 \end{equation}
-Since the above inequality must hold for any choice of the volume $R$, the constraint must hold locally. So that:
+
+Since this must hold for any choice of the volume $R$, the inequality must hold also locally:
 \begin{equation}
 \dot{\psi} - \mathbf{E}\cdot \dot{\mathbf{H}} \, + \, \sum\limits_{i=1}^{N} \left[e \Phi  z_i \dot{C}_i+ \nabla_0 \left(\mu_i \mathbf{J}_i \right)\right] + \nabla_0 (\mu_s \mathbf{J}_s- \boldsymbol{\xi}\dot{C}_s -\mathbb{S}^T\mathbf{\dot{u}}) \leq 0. 
 \end{equation}
@@ -338,23 +339,24 @@ Further accounting for Equations~(\ref{consmass})-(\ref{consmom}), we obtain tha
 \end{aligned} 
 \end{equation}
 
-As exhaustively discussed in previous studies \cite{Plasto,GURTIN}, the energy imbalance inequality impose restrictions on the constitutive equation of the free energy $\psi$. Adapting their results, to our specific problem, we have that:
+As exhaustively discussed in previous studies \cite{Plasto,GURTIN}, the energy inequality imposes restrictions on the constitutive equation of the free energy $\psi$. Adapting their results, to the specific problem here studied, we have that:
 \begin{equation}
 \psi = \psi (\F,\F_e, C_s, C_i, \nabla_0 \,C_s,\mathbf{H}), \label{temp1}
 \end{equation}
-which rules out preclude any explicit dependency of $\psi$ on the chemical potential or the viscous deformation gradient $\F_v$. By differentiating the incompressibility condition~(\ref{inc}), we obtain:
+which precludes any explicit dependency of $\psi$ on the chemical potential or the viscous deformation gradient $\F_v$. By differentiating the incompressibility condition~(\ref{inc}) and~(\ref{Jv}), we obtain:
+
 \begin{gather}
-v_s\dot{C_s} - J \F^{-T}:\dot{\F} =0 \label{temp3}.
+v_s\dot{C_s} - J \F^{-T}:\dot{\F} =0 \label{temp3}\\
+\mathbb{I}:\LL_v=0. \label{temp4}
 \end{gather}
 
-The condition~(\ref{Jv}) will be instead strongly imposed. [REPHRASE]
-If we now substitute~(\ref{temp1}) into~(\ref{temp2}), and include the constraint~(\ref{temp3}) using $p$ as Lagrange multiplier, we are left with the augmented form of the energy imbalance inequality:
+If we now substitute~(\ref{temp1}) into~(\ref{temp2}), and include the constraint~(\ref{temp3})-(\ref{temp4}) using as Lagrange multipliers $p$ and $p_v$ respectively, we are left with the augmented form of the energy imbalance inequality:
 \begin{equation}
 \begin{aligned}
 \left(\frac{\partial \psi}{\partial \nabla_0 C_s}-\boldsymbol{\xi}\right) \cdot \nabla_0 \dot{C}_s + \left(\frac{\partial \psi}{\partial C_s}-\mu_s-\nabla_0 \cdot \boldsymbol{\xi}+p v\right)\dot{C}_s\\
 + \sum_i\left(\frac{\partial \psi}{\partial C_i} + e\Phi z_i-\mu_i\right) \dot{C}_i +\left(\frac{\partial \psi}{\partial \mathbf{H}}-\mathbf{E}\right) \cdot \dot{\mathbf{H}}\\
 + \left(\frac{\partial \psi}{\partial \F} + \frac{\partial \psi}{\partial\F_e}\F_v^{-1}- \mathbb{S} - p J \F^{-T}\right): \dot{\F}+ \sum_m \nabla_0 \,\mu_m \cdot \mathbf{J}_m \\
-- \F_e^T\frac{\partial \psi}{\partial \F_e}:\mathbb{L}_v\leq 0 . \label{ineq}
+- \left(\F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right):\mathbb{L}_v\leq 0 . \label{ineq}
 \end{aligned}
 \end{equation}
 
@@ -365,7 +367,7 @@ Note that in deriving~(\ref{ineq}), we have also made us of the following identi
 
 \subsection{Construction of the Free Energy.}
 
-Following a standard approach in phase-field modeling, we assume that the total free energy can be additively decomposed, so that each mechanisms contributes independently:
+Following a standard approach in phase-field modeling, we assume that the total free energy can be additively decomposed with each physical mechanisms contributing independently. We here consider six distinct contributions:
 
 \begin{enumerate}
 	{\indentitem\item[\textbullet] the energy of the electric field $\psi_1$;}
@@ -387,9 +389,9 @@ The specific energy density $\psi_2$ has the standard form:
 \end{equation} 
 where $\mu^0_m$ denotes the chemical potential of non interacting solvent and ions molecules. According to Flory-Huggins theory \cite{flory,hug} of mixtures, the mixing energy is given by:
 \begin{equation}
-\psi_3 = \frac{k_B T J}{v_s} \left(\phi_f \ln \phi_f + \chi \phi_f \phi_n\right),
+\psi_3 = \frac{k_B T J}{v_s} \left(\phi_f \ln \phi_f + \chi \phi_f \phi_n\right),\label{mix}
 \end{equation}
-where $k_B$ is the Boltzmann's constant, $T$ is the temperature and $\chi$ is the Flory-Huggins parameter, which is related to the enthalpy of mixing. It is worth mentioning that Xue et al. follow a different approach \cite{ecm1,ecm2}. They assume that only the mixing of GAGs and solvent contributes to the free energy. Despite the swelling properties of the ECM are mainly related to GAGs, we could find no direct experimental evidence that collagen can not mixing with water. Moreover, as mentioned in Section \ref{ECMcomp}, we are not considering GAGs and collagen as separate entities, but as a unique solid phase.
+where $k_B$ is the Boltzmann's constant, $T$ is the temperature and $\chi$ is the Flory-Huggins parameter, which is a measure of the enthalpy of mixing. Different is the approach of Xue et al. in \cite{ecm1,ecm2}. In these studies, the authors assume only the mixing of GAGs with solvent, while neglecting the collagen. Since we are considering GAGs and the collagen network as as a unique solid phase and we could not find any evidence that collagen does not mix with water, we have chosen the more general form~(\ref{mix}).
 
 As the interstitial fluid is well approximated by a dilute solution, the contribution $\psi_4$ reads \cite{Reviewpolyel,ecm1,ecm2}:
 
@@ -397,23 +399,25 @@ As the interstitial fluid is well approximated by a dilute solution, the contrib
 \psi_4 = k_B T \sum\limits_{i=1}^{N} C_i \left(\ln \frac{C_i}{ C_s}-1\right).
 \end{equation}
 
-As proposed by Hong et al. \cite{Interface}, we include in the energy the effect of interface tension. Despite having been neglected in many models for hydrogel swelling, this term plays a role in the transient poroelastic relaxation of the material, when boundaries between solvent-rich and solvent-poor regions can emerge \cite{sarah,Interface}. Again we assume that the contribution of mobile ions is negligible, so that only the ideal solid-solvent interface contributes to the energy:
+As proposed by Hong et al. \cite{Interface}, we include in the energy the effect of interface tension. Despite having been neglected in many models for hydrogel swelling, this term plays a role in the transient poroelastic relaxation of the material, when boundaries between solvent-rich and solvent-poor regions can emerge \cite{sarah,Interface}. Again we assume that the contribution of mobile ions is negligible, so that only the solid-solvent interface contributes to the energy:
 \begin{equation}
 \psi_5 = \frac{\gamma}{2} J \left|\nabla C_s\right|^2,
 \end{equation}
-where the constant $\gamma$ plays a role analogous to a surface tension. Without any loss of generality we assume that the last term $\psi_6$ in the free energy can be additively decomposed into two contribution; one for each branch of the standard linear solid model in Figure \ref{figmode} (a):
+where the constant $\gamma$ plays a role analogous to a surface tension.
+
+Finally, we need to specify the strain energy $\psi_6$ which we can decompose into the contribution from the spring $\mathbf{A}$ and the spring of $\mathbf{B}$ of the standard linear solid model in Figure \ref{figmode}(a):
 
 \begin{equation}
 \psi_6 = \psi_\mathbf{A}(\F) + \psi_\mathbf{B}(\F_e).
 \end{equation}
 
-As in \cite{ecm2}, we decide to model the solid network as an isotropic and compressible Neo-Hookean material:
+As in \cite{ecm2}, we decide to model the solid network as an isotropic  Neo-Hookean material:
 
 \begin{eqnarray}
 \psi_\mathbf{A}(\F) = \frac{G_\mathbf{A}}{2} \left(\F:\F - 3 -2 \ln J\right)\\
 \psi_\mathbf{B}(\F_e) = \frac{G_\mathbf{B}}{2} \left(\F_e:\F_e - 3 -2 \ln J_{e}\right)\label{hyp}
 \end{eqnarray}
-where $G_\mathbf{\cdot}$ stands for the shear modulus associated with each branches, $J_e= \det \F_e$, while $J$ is as defined in the previous sections. As derived in \cite{floryprinciples}, the hyper-elastic model~(\ref{hyp}) can be correlated to the microscopic properties of a polymer network, under the assumption of Gaussian chains and affine deformation. Other thermodynamically consistent form of the stretching energy have been proposed in the literature \cite{BERGSTROM1998931,boyce2,doi}. These have been also derived by statistical arguments but starting from different network models.
+where $G_\mathbf{\cdot}$ stands for the shear modulus associated with each spring, $J_e= \det \F_e$, while $J$ is as defined in the previous sections. As derived in \cite{floryprinciples}, the hyper-elastic model~(\ref{hyp}) can be correlated to the microscopic properties of a polymer network, under the assumption of Gaussian chains and affine deformation. Other thermodynamically consistent form of the stretching energy have been proposed in the literature \cite{BERGSTROM1998931,boyce2,doi}. These have been also derived by statistical arguments but starting from different network models.
 
 \subsection{Entropy Production $\sigma$.}
 \label{ent}
@@ -431,29 +435,30 @@ Based on Equations~(\ref{eqCIT}), (\ref{ineq}) and (\ref{dis}), we can move from
 \left(\frac{\partial \psi}{\partial \nabla_0 C_s}-\boldsymbol{\xi}\right) \cdot \nabla_0 \dot{C}_s + \left(\frac{\partial \psi}{\partial C_s}-\mu_s-\nabla_0 \cdot \boldsymbol{\xi}+p v\right)\dot{C}_s\\
 + \sum_i\left(\frac{\partial \psi}{\partial C_i} + e\Phi z_i-\mu_i\right) \dot{C}_i +\left(\frac{\partial \psi}{\partial \mathbf{H}}-\mathbf{E}\right) \cdot \dot{\mathbf{H}}\\
 + \left(\frac{\partial \psi}{\partial \F} + \frac{\partial \psi}{\partial\F_e}\F_v^{-1}- \mathbb{S} - p J \F^{-T}\right): \dot{\F}+ \sum_m \left[\nabla_0 \,\mu_m + T\zeta_m\right]\cdot \mathbf{J}_m \\
-+\left(T\zeta_v - \F_e^T\frac{\partial \psi}{\partial \F_e}\right):\mathbb{L}_v=0
++\left(T\zeta_v - \F_e^T\frac{\partial \psi}{\partial \F_e}+p_v\mathbb{I}\right):\mathbb{L}_v=0
 \end{aligned} 
 \end{equation}
 which needs to hold for any possible evolution of the system, i.e. for any independent values of $\nabla_0 \dot{C}_s$, $\dot{C}_s$, $\dot{C}_m$, $\dot{\mathbf{H}}$, $\dot{F}$, $\mathbf{J}_m$ and $\LL_v$ at any point $\mathbf{X}$ and time $t$. In order for this to hold, all the terms in the brackets need to vanish. Hence, we obtain:
 \begin{gather}
-\boldsymbol{\xi} = \gamma J \,\mathbb{B}^{-1} \,\nabla_0 \,C_s,\\[2mm]
+\boldsymbol{\xi} = \gamma J \,\mathbb{B}^{-1} \,\nabla_0 \,C_s,\\[2mm]\label{sys1}
 \begin{aligned}
-\mu_s = p v + \mu_s^0 - \gamma J \nabla^2 C_s + kT&\left[\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s}\right.\\
-&\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s v)^2}-\sum_i \frac{C_i}{C_s}\right], 
+\mu_s = p v_s + \mu_s^0 - \gamma J \nabla^2 C_s + k_BT&\left[\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s}\right.\\
+&\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s v_s)^2}-\sum_i \frac{C_i}{C_s}\right], 
 \end{aligned}\\[2.5mm]
 \mu_i = \mu^0_i + e\Phi z_i + kT \ln \frac{C_i}{C_s},\\
-\mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, , \qquad -\epsilon J \nabla^2 \phi = Q\, ,\\[3mm]
+\mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, , \qquad -\epsilon J \nabla^2 \phi = Q\, ,\\[3mm]\label{sys2}
 \zeta_m =-T^{-1} \nabla_0 \,\mu_m,\\
-\zeta_v = T^{-1} G_\mathbf{B} (\mathbb{C}_e-\mathbb{I}).\label{vflow1}
+\zeta_v = T^{-1} \left[G_\mathbf{B} (\mathbb{C}_e-\mathbb{I})-p_v\mathbb{I}\right].\label{vflow1}
 \end{gather}
 \begin{gather}
 \begin{aligned}
-\mathbb{T}= -p \mathbb{I} + \gamma &\left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]+ \epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right]\\
-&+ \frac{G_\mathbf{A}}{1+C_sv}\left(\mathbb{B}-\mathbb{I}\right) + \frac{G_\mathbf{B}}{1+C_sv}\left(\mathbb{B}_e-\mathbb{I}\right),
+\mathbb{T}= -p \mathbb{I} + \underbrace{\gamma \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]}_{\mathbb{T}^{kort}}+ \underbrace{\epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right]}_{\mathbb{T}^{Max}}\\
++ \frac{G_\mathbf{A}}{1+C_sv_s}\left(\mathbb{B}-\mathbb{I}\right) + \frac{G_\mathbf{B}}{1+C_sv_s}\left(\mathbb{B}_e-\mathbb{I}\right),
 \end{aligned}
+\label{sys3}
 \end{gather}
 
-Assuming to be in regime of linear non-equilibrium thermodynamics, we can use the identity~(\ref{lin}) to couple fluxes and forces. However, considering the symmetry constraint from \textit{Curie's law}\footnote{an effect can not have more symmetries than its cause} \cite{CIT}, there can be no coupling between fluxes and forces of different tensorial nature. Consequently, we are left with the following force-flux relation:
+Assuming to be in regime of linear non-equilibrium thermodynamics, we can use the identity~(\ref{lin}) to couple fluxes and forces. However, considering the symmetry constraint from \textit{Curie's law}\footnote{Macroscopic causes can not have more element of symmetries than the effect they cause \cite{CIT}} , there can be no coupling between fluxes and forces of different tensorial nature. Consequently, we are left with the following force-flux relation:
 \begin{gather}
 \LL_v = L_{vv} \zeta_v,\label{vflow2}\\
 \mathbf{J}_m = \sum_{k=s,1,\ldots,N} L_{mk} \zeta_k. \label{dif}
@@ -470,31 +475,73 @@ As described in Appendix \ref{apenergy}, starting from Equations~(\ref{vflow1})-
 \begin{eqnarray}
 \mathbf{j}_s = -K c_s \left(c_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} c_i \nabla \mu_i\right),\\
 \mathbf{j}_i = - \frac{D_i}{k_B T}c_i\nabla \mu_i + \frac{D_i}{D^0_i} \frac{c_i}{c_s} \mathbf{j}_s, \\
-\dot{\mathbb{B}}_e =\LL\mathbb{B}_e + \mathbb{B}_e \LL^T - \frac{1}{\tau_R} \,\mathbb{B}_e\text{DEV}[\mathbb{B}_e].
+\dot{\mathbb{B}}_e =\LL\mathbb{B}_e + \mathbb{B}_e \LL^T - \frac{1}{\tau_R} \,\mathbb{B}_e\text{DEV}[\mathbb{B}_e].\label{Be}
 \end{eqnarray}
 where the parameters are macroscopic phenomenological coefficients, that can either be estimated experimentally or derived from the nano/microscopic properties of the different phases \cite{ecm1,ecm2}. 
 
 \section{Unconstrained Free Swelling.}
-We here consider the first experimental setup: unconstrained free swelling. In such situation, we consider the ECM is left free to swell in bath of interstitial solution. As the system evolves, the ECM increases in size until it reaches a steady state where all variables are homogenous, i.e. no spatial dependency, so that all fluxes or higher order derivatives vanish. Imposing the continuity condition at the boundary of the domain, and assuming the stress to vanish in the bath, following \cite{swell2} we have:
-\begin{eqnarray}
-\mu_s=\mu^{ext}_s = \mu^0_s - vkT \sum_i c^0_i ,\\
-\mu_i=\mu^{ext}_i = \mu^0_i +kT\ln(vc^0_i),\\
-\mathbb{T}=0.
-\end{eqnarray} 
+We here consider the first experimental setup: unconstrained free swelling. In such situation, we consider the ECM is left free to swell in bath of interstitial solution. As the system evolves, the ECM increases in size until it reaches a steady state. As in \cite{DROZDOVph}, we are assume that at equilibrium:
+\begin{itemize}
+	\item[1.] chemical potentials of solvent and solutes is homogeneous and equal in the bath and in the bath:
+	\begin{eqnarray}
+	\mu_s=\mu^{ext}_s = \mu^0_s - vkT \sum_i c^0_i ,\\\label{free1}
+	\mu_i=\mu^{ext}_i = \mu^0_i +kT\ln(v_sc^0_i),
+	\end{eqnarray} 
+	where the bath solution is assumed to be neutral with a potential $\phi^{bath}=0$.
+	\item[2.] The electrostatic potential and the solute concentration are constant in the ECM, but different to the value in the bath. This difference creates a thin charged interface at the boundary, whose thickness is negligible compared to the size of the ECM.
+	\item[3.] The contribution of $\mathbb{T}^{Max}$ and $\mathbb{T}^{kort}$to the stress at this interface can be neglected compared to the mechanical stress due to the deformation. 
+	\item[4.] The bath is in a stress free configuration so as the ECM at equilibrium:
+	\begin{equation}
+	\mathbb{T}=0.\label{free2}
+	\end{equation} 
+\end{itemize}
+
 Finally, to investigate the equilibrium, we specify the deformation gradient tensor, which is of the form:
 \begin{equation}
-\F= \lambda \mathbb{I},                                                                
+\F= \lambda \mathbb{I},\label{deffree}                                                                
 \end{equation}
-with $\lambda=(1+C_s v_s)^{1/3}$. 
+with $\lambda=(1+C_s v_s)^{1/3}$. To simplify, we also assume that there are only two species of ions in the solution: a positive $C_+$ with $z_+=1$ and a negative one $C_-$ with $z_-=-1$. Since the bath solution is neutral, the total charge must vanish, $c^0_+=c^0_-=c^0$.
 \subsection{Model A.}
+In the case of free swelling, due to the symmetry of $\F$, it reasonable to assume that also $\F_e$ is of the similar form, $\F_e=\lambda_e \mathbb{I}$. Consequently, based on Equation~(\ref{apBe}) in Appendix \ref{apenergy}, we have that the viscous contribution vanish so that $\B_e=\B= \lambda^2 \mathbb{I}$. Substituting this result and the boundary condition~(\ref{free1})-(\ref{free2}) into Equations (\ref{sys1})-(\ref{sys2}) and (\ref{sys3}), setting to zero all spatial derivative, we obtain:
+\begin{gather}
+p = \frac{G_\mathbf{A}+G_{\mathbf{B}}}{1+C_sv_s}(\lambda^2-1),\label{presA}\\
+0 = \frac{pv_s}{k_BT} + \ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s} +\frac{\chi}{(1+C_s v_s)^2}-\sum_i \left(\frac{C_i}{C_s}-vc^0\right), \\[2mm]
+0 = \pm\frac{e}{k_B T} \phi  + \ln \frac{C_\pm}{C_s v_s c_\pm^0},\qquad i=1,\ldots,N,\\[2.5mm]
+Q = e\left(C_+-C_-+z_f C_{f}\right)=0.\label{electron}
+\end{gather}
 
+Note that at equilibrium the electro-neutrality condition is naturally imposed, Equation~(\ref{electron}). As shown in Appendix , manipulating the above system we can reduce the number of unknown to the solvent concentration $C_s$:
+\begin{gather}
+C_{\pm}= \frac{1}{2}\left[\mp z_fC_f+ \sqrt{(z_fC_f)^2+(2v_sC_sc_0)^2}\,\right],\label{eqion}\\
+\begin{aligned}
+F_{\mathbf{A}}(C_s; c_0,\chi,G_{eq})=&\frac{1+C_sv_s+\chi}{(1+C_sv_s)^2}+\frac{G_{eq} v_s}{k_BT} \frac{(1+v_sC_s)^{2/3}-1}{1+C_sv}\\[1.5mm]
+&+\ln \frac{C_sv_s}{1+C_sv_s} +2c_0v_s-\sqrt{\left(\frac{z_fC_f}{C_s}\right)^2+4v_s^2c^2_0} =0 \label{eqF}
+\end{aligned}
+\end{gather}
+where $G_{eq}=G_\mathbf{A}+G_\mathbf{B}$. Note that Equation~(\ref{eqion}) corresponds to the well known Donnan Equilibrium \cite{DROZDOVph}. Equation~(\ref{eqF}) instead implicitly defines the concentration $C_s$ and thus the final swelling volume. As expected, the latter can be controlled by changing the concentration of ions in the bath. We also notice that, free swelling experiment, are not sufficient to differentiate the elastic properties of the two branches as the two behave equivalently.
+\subsection{Model B.}
+In this second case, given the symmetry of the problem, we have that, at equilibrium the deviatoric component of the stress tensor $\mathbb{T}$ vanishes. Combining this information with the boundary condition and solving the system~(\ref{sys1B})-(\ref{sys2B}) for its equilibrium, we obtain the same equations as for model A, expect for the pressure, which is now defined as:
+\begin{equation}
+p= \frac{\kappa}{1+C_s v_s}.
+\end{equation}
+
+Consequently, while Equation~(\ref{eqion}) still hold, we have that also the equilibrium condition~(\ref{eqF}) is now of the form:
+\begin{equation}
+\begin{aligned}
+F_{\mathbf{B}}(C_s; c_0,\chi,\kappa)=&\frac{1+C_sv_s+\chi}{(1+C_sv_s)^2}+\frac{\kappa v_s}{k_BT} \frac{1}{1+C_sv}+\ln \frac{C_sv_s}{1+C_sv_s}\\[1.5mm]
+& +2c_0v-\sqrt{\left(\frac{z_fC_f}{C_s}\right)^2+4v_s^2c^2_0} =0 \label{eqFb}
+\end{aligned}
+\end{equation}
 \newpage
 \appendix
 \section{Glossary of Variables and Parameters in the Model.}
 
 \begin{table}[h]
 \begin{tabular}{c  l}
-	$\psi\qquad $ & Helmholtz free energy per unit volume in the initial configuration\\
+	$\psi\qquad $ & Helmholtz free energy per unit volume in the initial configuration,\\
+	$\mathbf{u}\qquad$ & Displacement vector,\\
+	$\F\qquad$ & Deformation gradient tensor $\F=\mathbb{I}-\nabla_0\mathbf{u}$,\\
+	$J$ & Determinant of the deformation gradient tensor $J=\det \F$,\\
 	$\eta\qquad $ & Viscosity of the collagen network,\\
 	$G_\mathbf{A}\qquad$ & Shear modulus related to spring $\mathbf{A}$\\
 	$G_\mathbf{B}\qquad$ & Shear modulus related to spring $\mathbf{B}$\\
@@ -504,6 +551,10 @@ with $\lambda=(1+C_s v_s)^{1/3}$.
 	$K\qquad$ &  Hydraulic permeability of the ECM to the interstitial fluid (solvent+solute),\\
 	$k\qquad$ &  Hydraulic  permeability  to  pure  solvent (water),\\
 	$\kappa\qquad$ & Bulk modulus\\
+	$\mathbb{T}^{Kort}\quad$ & Korteweg stress due to the ideal interface\\
+	$\mathbb{T}^{Max}\quad$ & Maxwell stress due to the electric displacement\\
+	$k_B\qquad$ & Boltzmann constant\\
+	$\text{DEV}\left[\cdot\right]\quad$ & Deviatoric part of the tensor $\text{DEV}\left[\cdot\right] = \cdot-1/3\, \text{tr}(\cdot)$
 \end{tabular}	
 \end{table}
 %\section{f}
@@ -520,11 +571,15 @@ with $\lambda=(1+C_s v_s)^{1/3}$.
 \label{apenergy}
 Combining Equation~(\ref{vflow1}) and (\ref{vflow2}), and imposing that condition~(\ref{Jv}) is satisfied, we can characterise the viscous flow by the following relation:
 \begin{equation}
-\LL_v = L_{vv}T^{-1}\text{DEV}\left[\F_e^T\frac{\partial \psi}{\partial \F_e}\right] = \eta^{-1}\text{DEV}\left[\F_e^T\frac{\partial \psi}{\partial \F_e}\right] ,
+\LL_v = L_{vv}T^{-1}\left[\F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right] \stackrel{(\ast)}{=} \frac{G_\mathbf{B}}{\eta}\text{DEV}\left[\mathbb{C}_e\right] ,
 \end{equation}
-where $\eta$ represent the viscosity of the material and $\text{DEV}\left[\cdot\right] = \cdot-1/3\, \text{tr}(\cdot)$ is the deviatoric component of the tensor in the brackets. Using Equation~(\ref{}), we obtain:
+where $\eta$ represent the viscosity of the material and the equality $(\ast)$ follows from Equation~(\ref{temp4}):
 \begin{equation}
-\LL_v = \frac{G_\mathbf{B} }{\eta}\text{DEV}[\mathbb{C}_e] = \frac{\text{DEV}[\mathbb{C}_e]}{2\tau_R}.
+\eta tr(\LL_v)= tr\left(\F_e^T\frac{\partial \psi}{\partial \F_e}\right) -  3 p_v=0 \Longrightarrow  p_v = \frac{tr\left(\F_e^T\frac{\partial \psi}{\partial \F_e}\right)}{3}.
+\end{equation}
+Using Equation~(\ref{hyp}), we obtain:
+\begin{equation}
+\LL_v = \frac{G_\mathbf{B} }{\eta}\text{DEV}[\mathbb{C}_e] = \frac{\text{DEV}[\mathbb{C}_e]}{2\tau_R}.\label{apBe}
 \end{equation}
 
 If we now consider the left elastic Cauchy Green tensor $\mathbb{B}_e=\F_e \F^T_e$, we can relate its time derivative to $\LL_v$:
@@ -622,7 +677,7 @@ The above volumetric constitutive assumption is one of the most common in modell
 
 When looking at the entropy production, Equation~(\ref{dis}) still holds simply by replacing $\LL_v$ with $\bar{\LL}_v$. Using the same argument as in Section~(\ref{ent}), we are left with the following system of equations:
 \begin{gather}
-\boldsymbol{\xi} = \gamma J \,\mathbb{B}^{-1} \,\nabla_0 \,C_s,\\[2mm]
+\boldsymbol{\xi} = \gamma J \,\mathbb{B}^{-1} \,\nabla_0 \,C_s,\label{sys1B}\\[2mm]
 \begin{aligned}
 \mu_s = p v + \mu_s^0 - \gamma J \nabla^2 C_s + kT&\left[\ln \frac{C_s v}{1+C_s v} + \frac{1}{1+C_sv}\right.\\
 &\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s v)^2}-\sum_i \frac{C_i}{C_s}\right], 
@@ -631,7 +686,7 @@ When looking at the entropy production, Equation~(\ref{dis}) still holds simply 
 \mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, \\[3mm]
 \begin{aligned}
 \mathbb{T}= \left(\frac{\kappa}{1+C_sv_s}-p\right) \mathbb{I} + \frac{G_\mathbf{A}}{1+C_sv}\text{DEV}[\bar{\B}] + \frac{G_\mathbf{B}}{1+C_sv}\text{DEV}[\bar{\B}_e]\\
-+ \gamma \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]+ \epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right],
++ \gamma \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]+ \epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right],\label{sys2B}
 \end{aligned}
 \end{gather}
 coupled to the governing equations:
