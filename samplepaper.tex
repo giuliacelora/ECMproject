@@ -73,19 +73,7 @@
 %
 %
 %
-\section{Introduction}
-
-There are several studies supporting the central role of mechanical stimuli in tissue morphogenesis and homeostasis \cite{ex1,ex2}. In tissues, cells are mainly surrounded by extracellular matrix (ECM), a soft porous media made up of  networks of polymer chains and proteins. \textit{In vitro} studies have shown that ECM rigidity and shear stresses can alone promote malignant phenotypes in a population of initially normal cells, impact on cell proliferation and differentiation \cite{ex3}. Further experiments on solid tumour development have proven that this is often associated to a stiffening of the tissue compared to the surrounding healthy one \cite{ex4}, which results in the exposure of cells to higher compressive stresses as well as favouring the collapse of blood vessels and impeding the diffusion of substances in the extra-cellular environment ultimately decreasing the efficacy of numerous therapies \cite{ecm2}. Based on such evidence, it is now widely accepted that, unlike originally thought, biological process are not simply regulated by biochemical signals but by the complex interplay of mechanical and chemical stimuli.
- 
-Given the different physical nature and scale of phenomena involved, coupling micro-environment and cell behaviours is a problem of high complexity. This requires understanding processes occurring at different temporal and spatial scales and how they interplay to determine the macroscopic behaviour of a tissue, whether healthy or damaged. If we can learn to tune its properties, as cells already do, this could led to the development of novel therapies and completely change our approach to  drug design. In order for this to be possible, alongside experiments, it is necessary to develop a theoretical framework able to capture both the biology and physics involved and which is consistent with the known universal laws of Nature \cite{NET}. 
-
-With the development of new experimental techniques such as Atomic Force Microscopy (AFM), the local mechanical properties of a material can be measured with atomic precision \cite{viscoporo}. When tested at this scale, soft tissues and the ECM in particular have been found to be visco-elastic \cite{ex5}. Purely elastic solids only store energy when deformed, viscoelastic material instead exhibit a time-dependent response as part of the energy is dissipated in the deformation process. While a large amount of literature focuses on the elastic properties of ECM, it remains unclear the role of viscosity in determining cell behaviour. However, the recent efforts to develop synthetic ECM, i.e. hydrogels, with tunable viscoelasticity, have now opened new research opportunities \cite{viscocell}. 
-
-Despite the progress in experimental techniques, theoretical studies of viscoelastic soft materials remain limited. While experiments rapidly progress, most of the literature on mathematical modelling for soft matter has completely neglected viscous dissipation \cite{Article1}. Whether this assumption might be valid for certain applications, the empirical studies previously mentioned highlight the need of including this component in the study of living tissues. Our works aims to develop a continuum mathematical model of the extracellular matrix which is consistent with the laws of thermodynamics, which accounts for its poro-visco-elastic properties and the coupling of mechanical, transport and electrical phenomena. At our present knowledge, there is no previous work in the literature capturing all these aspects. In \cite{ecm1,ecm2} Xue et al.~ develop a nonlinear poroelastic theory for ECM, which couples all three physical phenomena but does not include viscous dissipation. In \cite{Jeru}, the authors couple mechano-electrophysiological effects including the viscous dissipation but neglect transport; Caccavo et al.~ \cite{Article1} propose a poro-viscoelastic model for neutral hydrogel, thus excluding electrical effects.  Following these previous work, we will derive our model in the framework of linear non-equilibrium thermodynamics \cite{NET}, multi-phase modelling and Biot's poroelastic theory of continuum \cite{Biot}. 
-
-Despite the large number of studies that have characterised the poro-elastic and visco-elastic properties of ECM independently, little is known about their combined effect. In the literature, two main constitutive models have been presented, but never rigorously compared.  Instead of arbitrarily choosing one of the two, we here rely on both approaches, with the aim of identifying their differences and investigating experimental result which would allow us to experimentally test which one best describes the behaviour of soft tissues. From this point of view, our results are more widely applicable to the study of polyelectrolyte gels, which are largely applied as biomedical devices and as a synthetic equivalent of ECM.
-
-Our work is organized as follows: in Section \ref{secNET} we start with a brief overview of Classical Irreversible Thermodynamics. After presenting the composition of the ECM, Section \ref{modeldev} will be focusing on the derivation of the governing equation for the deformation and swelling of ECM. [... FOLLOWING SECTIONS TO UPDATE AS I WRITE.]
+\input{introduction}
 
 \section{Non Equilibrium Thermodynamics.}
 \label{secNET}
@@ -149,18 +137,19 @@ Despite the tissue-specific nature of Extracellular Matrix (ECM), as shown in Fi
 \begin{figure}[h]
 	\begin{subfigure}{0.49\textwidth}
 	\centering
-	\includegraphics[scale=0.3]{images/ECM}
+	\includegraphics[scale=0.32]{images/ECM}
 	\caption{}
 	\end{subfigure}
 	\begin{subfigure}{0.49\textwidth}
 	\centering
-	\includegraphics[scale=0.32]{images/ecmscheme.jpg}
+	\includegraphics[scale=0.35]{images/ecmscheme.jpg}
 	\caption{}
 \end{subfigure}
 \caption{Analogy between ECM in soft tissue and polyelectrolytes hydrogels: (a) schematic diagram of the structure of the charged hydrated articular cartilage, reproduced from \cite{pictureECM}; (b) an anionic polyelectrolyte gel modelled as a three-phase continuum, reproduced from \cite{DROZDOVph}.}
 \label{ECMfig}
 \end{figure}
 \vspace{2mm}
+
 As shown in Figure \ref{ECMfig}, the extracellular matrix falls into the definition of polyelectrolytes so that the knowledge acquired in the study of these materials can be transferred to soft tissues. For the purpose of this study, we will not explicitly distinguish between collagen, PGAs and GAGs. At the tissue level, this can be grouped into a single solid phase (the polymer networks), whose mechanical properties are treated as the average over the different components contribution. As common in multiphase models of tissue, we will assume that the matrix is isotropic and GAGs are evenly distributed on the network. While this is not a good approximation for tissue like cartilage, which are highly anisotropic, it does apply to the extracellular matrix found in other soft tissue like liver, brain and tumours. It is also important to point out that ECM has additional properties such as thermo-sensitivity and pH-sensitivity. However, both in living organisms and in experimental set-up temperature and pH are maintained fairly constant.
 
 \section{Model Development}
@@ -231,7 +220,6 @@ where $e$ is the elementary charge, $C_f$ is the concentration of fix charges an
 \mathbf{E} = \F^T \mathbf{e},
 \end{eqnarray}
 where $\mathbf{h}$ is the electric displacement in the current configuration.
-\newpage
 
 \subsection{Kinematics.}
 \label{kin}
@@ -285,7 +273,7 @@ As an explanatory example of the derivation of a model in the non-equilibrium th
 	\label{Model2}
 \end{subfigure}
 \vspace{5mm}
-\caption{(a-b)two different rheological models for soft tissue; (c) multiplicative decomposition corresponding to model A, Equation~(\ref{dec1}).}
+\caption{(a-b) two different rheological models for soft tissue; (c) multiplicative decomposition corresponding to model A, Equation~(\ref{dec1}).}
 \label{figmode}
 \end{figure}
 
@@ -425,16 +413,18 @@ As in \cite{ecm2}, we decide to model the solid network as an isotropic and comp
 \psi_\mathbf{A}(\F) = \frac{G_\mathbf{A}}{2} \left(\F:\F - 3 -2 \ln J\right)\\
 \psi_\mathbf{B}(\F_e) = \frac{G_\mathbf{B}}{2} \left(\F_e:\F_e - 3 -2 \ln J_{e}\right)\label{hyp}
 \end{eqnarray}
-where $G_\mathbf{\cdot}$ stands for the shear modulus associated with each branches, $J_e= \det \F_e$, while $J$ is as defined in the previous sections. As derived in \cite{floryprinciples}, the hyper-elastic model~(\ref{hyp}) can be correlated to the microscopic properties of a polymer network, under the assumption of Gaussian chains and affine deformation. Other thermodynamically consistent form of the stretching energy have been proposed in the literature \cite{BERGSTROM1998931,boyce2,doi}. These have been also derived by statistical arguments but starting from different network models
+where $G_\mathbf{\cdot}$ stands for the shear modulus associated with each branches, $J_e= \det \F_e$, while $J$ is as defined in the previous sections. As derived in \cite{floryprinciples}, the hyper-elastic model~(\ref{hyp}) can be correlated to the microscopic properties of a polymer network, under the assumption of Gaussian chains and affine deformation. Other thermodynamically consistent form of the stretching energy have been proposed in the literature \cite{BERGSTROM1998931,boyce2,doi}. These have been also derived by statistical arguments but starting from different network models.
+
 \subsection{Entropy Production $\sigma$.}
 \label{ent}
+
 Having specified how the system interact with its environment, we can now discuss how it dissipates energy. As mentioned in Section~(\ref{kin}), there are two contributions: transport (diffusion of solvent and solutes) and viscosity. The thermodynamic fluxes \footnote{See Section \ref{secNET}} associated with these two phenomena are $\mathbf{J}_m$, $m=s,1,\ldots,N$, and $\LL_v$. Consequently, using Equation~(\ref{2law}), we obtain:
+
 \begin{equation}
 \sigma = \sum_m \zeta_m \cdot \mathbf{J}_m + \zeta_v : \LL_v,
 \label{dis}
 \end{equation}
-where $\zeta$s represent the thermodynamic forces associate with each flux. 
-
+where $\zeta$s represent the thermodynamic forces associate with each flux.
 Based on Equations~(\ref{eqCIT}), (\ref{ineq}) and (\ref{dis}), we can move from the energy imbalance to an equality condition:
 \begin{equation}
 \begin{aligned}
@@ -452,13 +442,15 @@ which needs to hold for any possible evolution of the system, i.e. for any indep
 &\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s v)^2}-\sum_i \frac{C_i}{C_s}\right], 
 \end{aligned}\\[2.5mm]
 \mu_i = \mu^0_i + e\Phi z_i + kT \ln \frac{C_i}{C_s},\\
-\mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, \\[3mm]
+\mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, , \qquad -\epsilon J \nabla^2 \phi = Q\, ,\\[3mm]
+\zeta_m =-T^{-1} \nabla_0 \,\mu_m,\\
+\zeta_v = T^{-1} G_\mathbf{B} (\mathbb{C}_e-\mathbb{I}).\label{vflow1}
+\end{gather}
+\begin{gather}
 \begin{aligned}
 \mathbb{T}= -p \mathbb{I} + \gamma &\left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]+ \epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right]\\
 &+ \frac{G_\mathbf{A}}{1+C_sv}\left(\mathbb{B}-\mathbb{I}\right) + \frac{G_\mathbf{B}}{1+C_sv}\left(\mathbb{B}_e-\mathbb{I}\right),
-\end{aligned}\\[2.5mm]
-\zeta_m =-T^{-1} \nabla_0 \,\mu_m,\\
-\zeta_v = T^{-1} G_\mathbf{B} (\mathbb{C}_e-\mathbb{I}).\label{vflow1}
+\end{aligned}
 \end{gather}
 
 Assuming to be in regime of linear non-equilibrium thermodynamics, we can use the identity~(\ref{lin}) to couple fluxes and forces. However, considering the symmetry constraint from \textit{Curie's law}\footnote{an effect can not have more symmetries than its cause} \cite{CIT}, there can be no coupling between fluxes and forces of different tensorial nature. Consequently, we are left with the following force-flux relation:
@@ -474,7 +466,7 @@ Assuming to be in regime of linear non-equilibrium thermodynamics, we can use th
 %where $\eta$ represent the viscosity of the material and $\text{DEV}\left[\cdot\right] = \cdot-1/3\, \text{tr}(\cdot)$ is the deviatoric component of the tensor in the brackets. 
 
 %The dissipative contribution due to the relative movement of phases has been largely studied in the literature \cite{ecm1,ecm2}. Starting from Equation~(\ref{dif}) and standard arguments we can get to the following definition for the fluxes:
-As described in Appendix , starting from Equations~(\ref{vflow1})-(\ref{dif}) and with common consideration from the theory of mixture, we can derive the following system of equations:
+As described in Appendix \ref{apenergy}, starting from Equations~(\ref{vflow1})-(\ref{dif}) and with common consideration from the theory of mixture, we can derive the following system of equations:
 \begin{eqnarray}
 \mathbf{j}_s = -K c_s \left(c_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} c_i \nabla \mu_i\right),\\
 \mathbf{j}_i = - \frac{D_i}{k_B T}c_i\nabla \mu_i + \frac{D_i}{D^0_i} \frac{c_i}{c_s} \mathbf{j}_s, \\
@@ -511,21 +503,21 @@ with $\lambda=(1+C_s v_s)^{1/3}$.
 	$D^0_i\qquad$ & Diffusion coefficient for the $i$-th solute species in ECM,\\
 	$K\qquad$ &  Hydraulic permeability of the ECM to the interstitial fluid (solvent+solute),\\
 	$k\qquad$ &  Hydraulic  permeability  to  pure  solvent (water),\\
-	$\kappa$ & volum
+	$\kappa\qquad$ & Bulk modulus\\
 \end{tabular}	
 \end{table}
-\section{f}
-\begin{gather}
-\boldsymbol{\xi} = \frac{\partial \psi}{\partial \nabla_0 C_s},\\
-\mu_s = p v -\nabla_0 \cdot \boldsymbol{\xi} + \frac{\partial \psi}{\partial C_s},\\
-\mu_i =  e\Phi z_i +\frac{\partial \psi}{\partial C_i},\hspace{5mm} i=1,\ldots,N ,\\
-\mathbf{E} = \frac{\partial \psi}{\partial \mathbf{H}} ,\label{ele}\\
-\mathbb{S} = -p J \F^{-T} + \frac{\partial \psi}{\partial \F}+ \frac{\partial \psi}{\partial\F_e}\F_v^{-1}\, ,\\
-\zeta_m =-T^{-1} \nabla_0 \,\mu_m,\\
-\zeta_v = T^{-1} \F_e^T\frac{\partial \psi}{\partial \F_e}.
-\end{gather}
+%\section{f}
+%\begin{gather}
+%\boldsymbol{\xi} = \frac{\partial \psi}{\partial \nabla_0 C_s},\\
+%\mu_s = p v -\nabla_0 \cdot \boldsymbol{\xi} + \frac{\partial \psi}{\partial C_s},\\
+%\mu_i =  e\Phi z_i +\frac{\partial \psi}{\partial C_i},\hspace{5mm} i=1,\ldots,N ,\\
+%\mathbf{E} = \frac{\partial \psi}{\partial \mathbf{H}} ,\label{ele}\\
+%\mathbb{S} = -p J \F^{-T} + \frac{\partial \psi}{\partial \F}+ \frac{\partial \psi}{\partial\F_e}\F_v^{-1}\, ,\\
+%\zeta_m =-T^{-1} \nabla_0 \,\mu_m,\\
+%\zeta_v = T^{-1} \F_e^T\frac{\partial \psi}{\partial \F_e}.
+%\end{gather}
 \section{Energy Dissipation.}
-
+\label{apenergy}
 Combining Equation~(\ref{vflow1}) and (\ref{vflow2}), and imposing that condition~(\ref{Jv}) is satisfied, we can characterise the viscous flow by the following relation:
 \begin{equation}
 \LL_v = L_{vv}T^{-1}\text{DEV}\left[\F_e^T\frac{\partial \psi}{\partial \F_e}\right] = \eta^{-1}\text{DEV}\left[\F_e^T\frac{\partial \psi}{\partial \F_e}\right] ,
@@ -638,13 +630,48 @@ When looking at the entropy production, Equation~(\ref{dis}) still holds simply 
 \mu_i = \mu^0_i + e\Phi z_i + kT \ln \frac{C_i}{C_s},\\
 \mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, \\[3mm]
 \begin{aligned}
-\mathbb{T}= \left(\frac{\kappa}{1+C_sv_s}-p\right) \mathbb{I} + \frac{G_1}{1+C_sv}\text{DEV}[\bar{\B}] + \frac{G_2}{1+C_sv}\text{DEV}[\bar{\B}_e]\\
+\mathbb{T}= \left(\frac{\kappa}{1+C_sv_s}-p\right) \mathbb{I} + \frac{G_\mathbf{A}}{1+C_sv}\text{DEV}[\bar{\B}] + \frac{G_\mathbf{B}}{1+C_sv}\text{DEV}[\bar{\B}_e]\\
 + \gamma \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]+ \epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right],
 \end{aligned}
 \end{gather}
 coupled to the governing equations:
+\begin{gather}
+\mathbf{j}_s = -K c_s \left(c_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} c_i \nabla \mu_i\right),\\
+\mathbf{j}_i = - \frac{D_i}{k_B T}c_i\nabla \mu_i + \frac{D_i}{D^0_i} \frac{c_i}{c_s} \mathbf{j}_s, \\
+\dot{\bar{\B}}_e = \bar{\B}_e \LL^T +\LL \bar{\B}_e - \frac{2}{3} \, tr(\LL) \bar{\B}_e -\frac{1}{\tau_R} \bar{\B}_e \text{DEV}\left[\bar{\B}_e\right]
+\end{gather}
+\section{Korteweg stress terms.}
+The Korteweg stress is the part of the mechanical stress which is related to the interfacial free energy. We here report the result related to the second model. This will have a contribution from the both the derivative with respect to $\bar{F}$ and $J$:
+\begin{equation}
+\mathbb{T}^{korg} = \text{DEV}\left[J^{-1}\frac{\partial \psi_{int}}{\partial \bar{\F}}\bar{\F}^T\right] + \frac{\partial \psi_{int}}{\partial J} \mathbb{I}
+\end{equation}
+where the interface energy is given by:
+\begin{equation}
+\psi_{int}(J,\bar{F}) = \frac{\gamma}{2} J^{1/3} \bar{\F}^{-1}\bar{\F}^{-T} \left|\nabla_0 C\right|^2.
+\end{equation}
+Using the properties of the deformation tensor $\bar{F}$, it can be shown that:
+\begin{equation}
+\frac{\partial }{\partial \bar{\F}} \left(\bar{\F}^{-1} \bar{\F}^{-T} \left|\nabla_0 C\right|^2\right) \bar{\F}^T = -2 J^{2/3} \,\nabla C \otimes \nabla C,
+\end{equation} 
+so that the Korteweg stress is given by:
+\begin{equation}
+\mathbb{T}^{korg} = - \gamma \text{DEV} \left[ \nabla C \otimes \nabla C\right] + \frac{\gamma}{6} \left|\nabla C\right|^2 \mathbb{I}.
+\label{kor}
+\end{equation}
+If we now explicitly evaluate the deviatoric component we have:
+\begin{equation*}
+\begin{aligned}
+tr(\nabla C \otimes \nabla C) = \left|\nabla C\right|^2 \\ \text{DEV}\left[\nabla C \otimes \nabla C\right] = \nabla C \otimes \nabla C -\frac{\left|\nabla C\right|^2}{3} \mathbb{I}.
+\end{aligned}
+\end{equation*}
+Substituting now the expressions back in Equation~(\ref{kor}), we obtain:
+\begin{equation}
+\mathbb{T}^{korg} = \gamma \left[\frac{1}{2} \left|\nabla C\right|^2 \mathbb{I} - \nabla C \otimes \nabla C\right],
+\end{equation}
+which is equivalent to result obtained for the first model.
 
-%The dissipative contribution due to the relative movement of phases has been largely studied in the literature \cite{ecm1,ecm2}. Starting from Equation~(\ref{dif}) and standard arguments we can get to the following definition for the fluxes:
+%The dissipative contribution due to the relative movement of phases has been largely studied in the literature \cite{ecm1,ecm2}. Starting from Equation~(\ref{dif}) and standard arguments we can get to the following definition for the fluxes:\
+\newpage
 \bibliographystyle{splncs04}
 \bibliography{latex/ref}
 %
