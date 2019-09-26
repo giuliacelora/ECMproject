@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'modelA1.pdf' (pdf, eps, ps)
+%% Accompanies image file 'freeswell.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{338.54119248bp}%
+    \setlength{\unitlength}{897.9105215bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,13 +50,21 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,1.59902808)%
+  \begin{picture}(1,0.41306119)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{images/modelA1.pdf}}%
-    \put(-0.15058969,0.83021589){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.71510889\unitlength}\raggedright $G^A_1,\F$\end{minipage}}}%
-    \put(0.7257798,0.63073076){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.74042252\unitlength}\raggedright $G^A_2,\F_e$\end{minipage}}}%
-    \put(0.73053019,0.98801303){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.97457326\unitlength}\raggedright $\eta^A,\F_v$\end{minipage}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{images/modelA1.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{images/freeswell.pdf}}%
+    \put(0.13242007,0.05890223){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31317821\unitlength}\raggedright \Large{Reference} \end{minipage}}}%
+    \put(0.68598889,0.06199273){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28276712\unitlength}\raggedright \Large{Current}\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{images/freeswell.pdf}}%
+    \put(0.17393582,0.11623458){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$a$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{images/freeswell.pdf}}%
+    \put(0.13346978,0.14454183){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$b$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{images/freeswell.pdf}}%
+    \put(0.68809793,0.10188216){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\lambda a$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{images/freeswell.pdf}}%
+    \put(0.60004644,0.15246436){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\lambda b$\end{tabular}}}}%
+    \put(0.16355122,0.17662154){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$c$\end{tabular}}}}%
+    \put(0.65050669,0.20610176){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\lambda c$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

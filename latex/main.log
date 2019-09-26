@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  20 SEP 2019 08:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  26 SEP 2019 13:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -921,53 +921,59 @@ y-namic vari-ables are lo-cally well-
  []
 
 [2]
+
+LaTeX Warning: Citation `ecm' on page 3 undefined on input line 71.
+
 <images/visco_poro.png, id=17, 617.30624pt x 348.30125pt>
 File: images/visco_poro.png Graphic file (type png)
 <use images/visco_poro.png>
 Package pdftex.def Info: images/visco_poro.png  used on input line 77.
 (pdftex.def)             Requested size: 200.62215pt x 113.19656pt.
- [3] (./images/model1.pdf_tex
+[3] (./images/model1.pdf_tex
 
-LaTeX Warning: File `model1.pdf' not found on input line 56.
+LaTeX Warning: File `images/model1.pdf' not found on input line 56.
 
 
-! Package pdftex.def Error: File `model1.pdf' not found: using draft setting.
+! Package pdftex.def Error: File `images/model1.pdf' not found: using draft set
+ting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.56 ...ics[width=\unitlength,page=1]{model1.pdf}}
+l.56 ...th=\unitlength,page=1]{images/model1.pdf}}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `model1.pdf' not found on input line 60.
+LaTeX Warning: File `images/model1.pdf' not found on input line 60.
 
 
-! Package pdftex.def Error: File `model1.pdf' not found: using draft setting.
+! Package pdftex.def Error: File `images/model1.pdf' not found: using draft set
+ting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.60 ...ics[width=\unitlength,page=2]{model1.pdf}}
+l.60 ...th=\unitlength,page=2]{images/model1.pdf}}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `model1.pdf' not found on input line 62.
+LaTeX Warning: File `images/model1.pdf' not found on input line 62.
 
 
-! Package pdftex.def Error: File `model1.pdf' not found: using draft setting.
+! Package pdftex.def Error: File `images/model1.pdf' not found: using draft set
+ting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.62 ...ics[width=\unitlength,page=3]{model1.pdf}}
+l.62 ...th=\unitlength,page=3]{images/model1.pdf}}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1079,7 +1085,11 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <0.5> not available
 LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 189.
 
 
-[8] [9]
+[8]
+
+LaTeX Warning: Citation `Article2' on page 9 undefined on input line 230.
+
+[9]
 Overfull \hbox (0.25706pt too wide) in paragraph at lines 242--243
 []\OT1/cmr/m/n/12 Based on On-sager re-cip-ro-cal re-la-tion, which as-sumes mi
 -croscale re-versibil-
@@ -1465,7 +1475,11 @@ Overfull \hbox (14.26392pt too wide) in paragraph at lines 632--643
 [23 <./images/phasetau-eps-converted-to.pdf> <./images/transient_flux4-eps-conv
 erted-to.pdf> <./images/transient_flux-eps-converted-to.pdf> <./images/transien
 t_flux3-eps-converted-to.pdf> <./images/transient_flux2-eps-converted-to.pdf>]
-[24] [25] [26] [27] [28] [29] (./images/gel.pdf_tex
+[24] [25] [26] [27]
+
+LaTeX Warning: Citation `ecm' on page 28 undefined on input line 793.
+
+[28] [29] (./images/gel.pdf_tex
 <images/gel.pdf, id=218, page=1, 506.8157pt x 186.5873pt>
 File: images/gel.pdf Graphic file (type pdf)
 <use images/gel.pdf, page 1>
@@ -1480,7 +1494,11 @@ Package pdftex.def Info: images/gel.pdf , page2 used on input line 60.
 
 pdfTeX warning: /usr/bin/pdflatex (file ./images/gel.pdf): PDF inclusion: multi
 ple pdfs with page group included in a single page
->] [31] [32] [33] [34] [35]
+>] [31] [32]
+
+LaTeX Warning: Citation `ecm' on page 33 undefined on input line 928.
+
+[33] [34] [35]
 Overfull \hbox (4.67726pt too wide) detected at line 1041
 [][]
  []
@@ -1526,11 +1544,14 @@ rd-
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
 
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
  14611 strings out of 492982
  271534 string characters out of 6134895
- 332884 words of memory out of 5000000
+ 332876 words of memory out of 5000000
  17989 multiletter control sequences out of 15000+600000
  546767 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1556,7 +1577,7 @@ type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (42 pages, 1124069 bytes).
+Output written on main.pdf (42 pages, 1125078 bytes).
 PDF statistics:
  335 PDF objects out of 1000 (max. 8388607)
  217 compressed objects within 3 object streams

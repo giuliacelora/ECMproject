@@ -256,6 +256,7 @@ As an explanatory example of the derivation of a model in the non-equilibrium th
 	\caption{Rheological Model A}
 	\label{fig1A}
 	\end{subfigure}
+\hspace{10mm}
 	\begin{subfigure}{0.32\textwidth}
 	\Large
 	\def\svgwidth{0.95\linewidth}
@@ -405,17 +406,17 @@ As proposed by Hong et al. \cite{Interface}, we include in the energy the effect
 \end{equation}
 where the constant $\gamma$ plays a role analogous to a surface tension.
 
-Finally, we need to specify the strain energy $\psi_6$ which we can decompose into the contribution from the spring $\mathbf{A}$ and the spring of $\mathbf{B}$ of the standard linear solid model in Figure \ref{figmode}(a):
+Finally, we need to specify the strain energy $\psi_6$ which we can decompose into the contribution from the spring $1$ and spring $2$ in the standard linear solid model in Figure \ref{figmode}(a):
 
 \begin{equation}
-\psi_6 = \psi_\mathbf{A}(\F) + \psi_\mathbf{B}(\F_e).
+\psi_6 = \psi_1(\F) + \psi_2(\F_e).
 \end{equation}
 
 As in \cite{ecm2}, we decide to model the solid network as an isotropic  Neo-Hookean material:
 
 \begin{eqnarray}
-\psi_\mathbf{A}(\F) = \frac{G_\mathbf{A}}{2} \left(\F:\F - 3 -2 \ln J\right)\\
-\psi_\mathbf{B}(\F_e) = \frac{G_\mathbf{B}}{2} \left(\F_e:\F_e - 3 -2 \ln J_{e}\right)\label{hyp}
+\psi_1(\F) = \frac{G^A_1}{2} \left(\F:\F - 3 -2 \ln J\right)\\
+\psi_2(\F_e) = \frac{G^A_2}{2} \left(\F_e:\F_e - 3 -2 \ln J_{e}\right)\label{hyp}
 \end{eqnarray}
 where $G_\mathbf{\cdot}$ stands for the shear modulus associated with each spring, $J_e= \det \F_e$, while $J$ is as defined in the previous sections. As derived in \cite{floryprinciples}, the hyper-elastic model~(\ref{hyp}) can be correlated to the microscopic properties of a polymer network, under the assumption of Gaussian chains and affine deformation. Other thermodynamically consistent form of the stretching energy have been proposed in the literature \cite{BERGSTROM1998931,boyce2,doi}. These have been also derived by statistical arguments but starting from different network models.
 
@@ -446,14 +447,14 @@ which needs to hold for any possible evolution of the system, i.e. for any indep
 &\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s v_s)^2}-\sum_i \frac{C_i}{C_s}\right], 
 \end{aligned}\\[2.5mm]
 \mu_i = \mu^0_i + e\Phi z_i + kT \ln \frac{C_i}{C_s},\\
-\mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, , \qquad -\epsilon J \nabla^2 \phi = Q\, ,\\[3mm]\label{sys2}
+\mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, , \qquad -\epsilon J \nabla^2 \Phi = Q\, ,\\[3mm]\label{sys2}
 \zeta_m =-T^{-1} \nabla_0 \,\mu_m,\\
 \zeta_v = T^{-1} \left[G_\mathbf{B} (\mathbb{C}_e-\mathbb{I})-p_v\mathbb{I}\right].\label{vflow1}
 \end{gather}
 \begin{gather}
 \begin{aligned}
 \mathbb{T}= -p \mathbb{I} + \underbrace{\gamma \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]}_{\mathbb{T}^{kort}}+ \underbrace{\epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right]}_{\mathbb{T}^{Max}}\\
-+ \frac{G_\mathbf{A}}{1+C_sv_s}\left(\mathbb{B}-\mathbb{I}\right) + \frac{G_\mathbf{B}}{1+C_sv_s}\left(\mathbb{B}_e-\mathbb{I}\right),
++ \frac{G^A_1}{1+C_sv_s}\left(\mathbb{B}-\mathbb{I}\right) + \frac{G^A_2}{1+C_sv_s}\left(\mathbb{B}_e-\mathbb{I}\right),
 \end{aligned}
 \label{sys3}
 \end{gather}
@@ -480,6 +481,14 @@ As described in Appendix \ref{apenergy}, starting from Equations~(\ref{vflow1})-
 where the parameters are macroscopic phenomenological coefficients, that can either be estimated experimentally or derived from the nano/microscopic properties of the different phases \cite{ecm1,ecm2}. 
 
 \section{Unconstrained Free Swelling.}
+
+\begin{figure}
+	\centering
+	\def\svgwidth{0.95\linewidth}
+	\input{latex/images/freeswell.pdf_tex}
+	\caption{Schematic representation of a free swelling. Since we are considering an isotropic mixture, the ECM maintains its shape while all dimension are stretched of the same amount $\lambda$. So that the relative volume change is $\delta V = \lambda^3-1$. }
+\end{figure}
+
 We here consider the first experimental setup: unconstrained free swelling. In such situation, we consider the ECM is left free to swell in bath of interstitial solution. As the system evolves, the ECM increases in size until it reaches a steady state. As in \cite{DROZDOVph}, we are assume that at equilibrium:
 \begin{itemize}
 	\item[1.] chemical potentials of solvent and solutes is homogeneous and equal in the bath and in the bath:
@@ -504,7 +513,7 @@ with $\lambda=(1+C_s v_s)^{1/3}$. To simplify, we also assume that there are onl
 \subsection{Model A.}
 In the case of free swelling, due to the symmetry of $\F$, it reasonable to assume that also $\F_e$ is of the similar form, $\F_e=\lambda_e \mathbb{I}$. Consequently, based on Equation~(\ref{apBe}) in Appendix \ref{apenergy}, we have that the viscous contribution vanish so that $\B_e=\B= \lambda^2 \mathbb{I}$. Substituting this result and the boundary condition~(\ref{free1})-(\ref{free2}) into Equations (\ref{sys1})-(\ref{sys2}) and (\ref{sys3}), setting to zero all spatial derivative, we obtain:
 \begin{gather}
-p = \frac{G_\mathbf{A}+G_{\mathbf{B}}}{1+C_sv_s}(\lambda^2-1),\label{presA}\\
+p = \frac{G^A_1+G^A_2}{1+C_sv_s}(\lambda^2-1),\label{presA}\\
 0 = \frac{pv_s}{k_BT} + \ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s} +\frac{\chi}{(1+C_s v_s)^2}-\sum_i \left(\frac{C_i}{C_s}-vc^0\right), \\[2mm]
 0 = \pm\frac{e}{k_B T} \phi  + \ln \frac{C_\pm}{C_s v_s c_\pm^0},\qquad i=1,\ldots,N,\\[2.5mm]
 Q = e\left(C_+-C_-+z_f C_{f}\right)=0.\label{electron}
@@ -514,11 +523,11 @@ Note that at equilibrium the electro-neutrality condition is naturally imposed, 
 \begin{gather}
 C_{\pm}= \frac{1}{2}\left[\mp z_fC_f+ \sqrt{(z_fC_f)^2+(2v_sC_sc_0)^2}\,\right],\label{eqion}\\
 \begin{aligned}
-F_{\mathbf{A}}(C_s; c_0,\chi,G_{eq})=&\frac{1+C_sv_s+\chi}{(1+C_sv_s)^2}+\frac{G_{eq} v_s}{k_BT} \frac{(1+v_sC_s)^{2/3}-1}{1+C_sv}\\[1.5mm]
+F_{\mathbf{A}}(C_s; c_0,\chi,G^A_{eq})=&\frac{1+C_sv_s+\chi}{(1+C_sv_s)^2}+\frac{G^A_{eq} v_s}{k_BT} \frac{(1+v_sC_s)^{2/3}-1}{1+C_sv_s}\\[1.5mm]
 &+\ln \frac{C_sv_s}{1+C_sv_s} +2c_0v_s-\sqrt{\left(\frac{z_fC_f}{C_s}\right)^2+4v_s^2c^2_0} =0 \label{eqF}
 \end{aligned}
 \end{gather}
-where $G_{eq}=G_\mathbf{A}+G_\mathbf{B}$. Note that Equation~(\ref{eqion}) corresponds to the well known Donnan Equilibrium \cite{DROZDOVph}. Equation~(\ref{eqF}) instead implicitly defines the concentration $C_s$ and thus the final swelling volume. As expected, the latter can be controlled by changing the concentration of ions in the bath. We also notice that, free swelling experiment, are not sufficient to differentiate the elastic properties of the two branches as the two behave equivalently.
+where $G^A_{eq}=G^A_1+G^A_2$. Note that Equation~(\ref{eqion}) corresponds to the well known Donnan Equilibrium \cite{DROZDOVph}. Equation~(\ref{eqF}) instead implicitly defines the concentration $C_s$ and thus the final swelling volume. As expected, the latter can be controlled by changing the concentration of ions in the bath. We also notice that, free swelling experiment, are not sufficient to differentiate the elastic properties of the two branches as the two behave equivalently.
 \subsection{Model B.}
 In this second case, given the symmetry of the problem, we have that, at equilibrium the deviatoric component of the stress tensor $\mathbb{T}$ vanishes. Combining this information with the boundary condition and solving the system~(\ref{sys1B})-(\ref{sys2B}) for its equilibrium, we obtain the same equations as for model A, expect for the pressure, which is now defined as:
 \begin{equation}
@@ -528,10 +537,31 @@ p= \frac{\kappa}{1+C_s v_s}.
 Consequently, while Equation~(\ref{eqion}) still hold, we have that also the equilibrium condition~(\ref{eqF}) is now of the form:
 \begin{equation}
 \begin{aligned}
-F_{\mathbf{B}}(C_s; c_0,\chi,\kappa)=&\frac{1+C_sv_s+\chi}{(1+C_sv_s)^2}+\frac{\kappa v_s}{k_BT} \frac{1}{1+C_sv}+\ln \frac{C_sv_s}{1+C_sv_s}\\[1.5mm]
-& +2c_0v-\sqrt{\left(\frac{z_fC_f}{C_s}\right)^2+4v_s^2c^2_0} =0 \label{eqFb}
+F_{\mathbf{B}}(C_s; c_0,\chi,\kappa)=&\frac{1+C_sv_s+\chi}{(1+C_sv_s)^2}+\frac{\kappa v_s}{k_BT} \frac{1}{1+C_sv_s}+\ln \frac{C_sv_s}{1+C_sv_s}\\[1.5mm]
+& +2c_0v_s-\sqrt{\left(\frac{z_fC_f}{C_s}\right)^2+4v_s^2c^2_0} =0 \label{eqFb}
 \end{aligned}
 \end{equation}
+\subsection{Comparison of the two Models.}
+
+As illustrated in Figure~\ref{Exp1}(b), the discrepancy between the two model depends on the real elastic properties of the material tested. In particular, the softer the tissue, the larger is the difference between the two. Looking at Figure~\ref{Exp1}(b), the major discrepancy is in the equilibrium behaviour at the two limits: $c_0$ small and $c_0$ large. 
+\begin{figure}
+	\begin{subfigure}{0.6\textwidth}
+		\includegraphics[scale=0.36]{images/freeswel1}
+		\caption{$G^A_{eq}=5e2$}
+	\end{subfigure}
+	\begin{subfigure}{0.39\textwidth}
+		\hspace{-8mm}
+		\includegraphics[scale=0.36]{images/freeswel2}
+		\caption{}
+	\end{subfigure}
+\vspace{3mm}
+\caption{Comparison of the prediction for the two models in a Free Swelling experiment. We consider as a reference Model A (ground truth). We fix the concentration $c_0=c^*_0$ of ions in the bath, we leave the matrix reach is steady state and we measure $C_s$. Given such information, we can estimate $\kappa(c^*_0)$ using Equation~(\ref{eqFb}). The experiment is repeated for a different salt concentration in the bath (each experiment correspond to a colour). (a) Using the estimated values $\kappa(c^*_0)$, we simulate an \textit{in silico} experiment and we compare it with Model A ('reality'). (b) Relative error from the \textit{in silico} experiment for the different values of $\kappa(c^*_0)$ as a function of the matrix stiffness. We note that the softer the matrix, the larger is the discrepancy between the two model. The choice of $c^*_0$ has a large impact on the error, as the model can not agree for the two limits: $c_0$ small or $c_0$ large. Note that the shear modulus of the ECM is estimated to be of order $10^3-10^4$ \cite{Netti}.}
+\label{Exp1}
+\end{figure}
+\section{Confined Compression Test.}
+In this second example, we look at another of the commonly 
+%\section{Compression Test.}
+%We here consider another standardd
 \newpage
 \appendix
 \section{Glossary of Variables and Parameters in the Model.}
@@ -541,10 +571,13 @@ F_{\mathbf{B}}(C_s; c_0,\chi,\kappa)=&\frac{1+C_sv_s+\chi}{(1+C_sv_s)^2}+\frac{\
 	$\psi\qquad $ & Helmholtz free energy per unit volume in the initial configuration,\\
 	$\mathbf{u}\qquad$ & Displacement vector,\\
 	$\F\qquad$ & Deformation gradient tensor $\F=\mathbb{I}-\nabla_0\mathbf{u}$,\\
-	$J$ & Determinant of the deformation gradient tensor $J=\det \F$,\\
-	$\eta\qquad $ & Viscosity of the collagen network,\\
-	$G_\mathbf{A}\qquad$ & Shear modulus related to spring $\mathbf{A}$\\
-	$G_\mathbf{B}\qquad$ & Shear modulus related to spring $\mathbf{B}$\\
+	$J\qquad$ & Determinant of the deformation gradient tensor $J=\det \F$,\\
+	$\eta^A\qquad $ & Viscosity of the collagen network in model A,\\
+	$G^A_1\qquad$ & Shear modulus related to spring $1$ in model A\\
+	$G^A_2\qquad$ & Shear modulus related to spring $2$ in model A\\
+	$G^B_1\qquad$ & Shear modulus related to spring $1$ in model B\\
+	$G^B_2\qquad$ & Shear modulus related to spring $2$ in model B\\
+	$\eta^B\qquad$ & Viscosity of the collagen network in model A,\\
 	$\tau_R\qquad$ & Viscous relaxation time of the collagen network,\\
 	$D_i\qquad$ & Diffusion coefficient for the $i$-th solute species when in pure solvent (interstitial fluid),\\
 	$D^0_i\qquad$ & Diffusion coefficient for the $i$-th solute species in ECM,\\
@@ -571,15 +604,15 @@ F_{\mathbf{B}}(C_s; c_0,\chi,\kappa)=&\frac{1+C_sv_s+\chi}{(1+C_sv_s)^2}+\frac{\
 \label{apenergy}
 Combining Equation~(\ref{vflow1}) and (\ref{vflow2}), and imposing that condition~(\ref{Jv}) is satisfied, we can characterise the viscous flow by the following relation:
 \begin{equation}
-\LL_v = L_{vv}T^{-1}\left[\F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right] \stackrel{(\ast)}{=} \frac{G_\mathbf{B}}{\eta}\text{DEV}\left[\mathbb{C}_e\right] ,
+\LL_v = L_{vv}T^{-1}\left[\F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right] \stackrel{(\ast)}{=} \frac{G_\mathbf{B}}{\eta^A}\text{DEV}\left[\mathbb{C}_e\right] ,
 \end{equation}
-where $\eta$ represent the viscosity of the material and the equality $(\ast)$ follows from Equation~(\ref{temp4}):
+where $\eta^A$ represent the viscosity of the material and the equality $(\ast)$ follows from Equation~(\ref{temp4}):
 \begin{equation}
-\eta tr(\LL_v)= tr\left(\F_e^T\frac{\partial \psi}{\partial \F_e}\right) -  3 p_v=0 \Longrightarrow  p_v = \frac{tr\left(\F_e^T\frac{\partial \psi}{\partial \F_e}\right)}{3}.
+\eta^A tr(\LL_v)= tr\left(\F_e^T\frac{\partial \psi}{\partial \F_e}\right) -  3 p_v=0 \Longrightarrow  p_v = \frac{tr\left(\F_e^T\frac{\partial \psi}{\partial \F_e}\right)}{3}.
 \end{equation}
 Using Equation~(\ref{hyp}), we obtain:
 \begin{equation}
-\LL_v = \frac{G_\mathbf{B} }{\eta}\text{DEV}[\mathbb{C}_e] = \frac{\text{DEV}[\mathbb{C}_e]}{2\tau_R}.\label{apBe}
+\LL_v = \frac{G^A_2 }{\eta^A}\text{DEV}[\mathbb{C}_e] = \frac{\text{DEV}[\mathbb{C}_e]}{2\tau_R}.\label{apBe}
 \end{equation}
 
 If we now consider the left elastic Cauchy Green tensor $\mathbb{B}_e=\F_e \F^T_e$, we can relate its time derivative to $\LL_v$:
@@ -659,13 +692,13 @@ If we now combine Equations~(\ref{aptemp1})-(\ref{aptemp2}) with the energy ineq
 Finally we need to update the constitutive laws for the strain free energy $\psi_6$, which, similarly to the case discussed in Section , can be decompose as the sum of contributions from each spring in Figure \ref{figmode}(b):
 
 \begin{equation}
-\psi_6 = \psi_\mathbf{A}(\bar{\F}) + \psi_\mathbf{B}(\bar{\F}_e) + \psi_{vol}(J).
+\psi_6 = \psi_1(\bar{\F}) + \psi_2(\bar{\F}_e) + \psi_{vol}(J).
 \end{equation}
 
 Again we assume the ECM to behave as an hyperplastic material:
 \begin{eqnarray}
-\psi_\mathbf{A}(\F) = \frac{G_\mathbf{A}}{2} \left(\bar{\F}:\bar{\F} - 3\right),\\
-\psi_\mathbf{B}(\F_e) = \frac{G_\mathbf{B}}{2} \left(\bar{\F}_e:\bar{\F}_e - 3 \right).
+\psi_1(\bar{\F}) = \frac{G^B_1}{2} \left(\bar{\F}:\bar{\F} - 3\right),\\
+\psi_2(\bar{\F}_e) = \frac{G^B_2}{2} \left(\bar{\F}_e:\bar{\F}_e - 3 \right).
 \end{eqnarray}
 
 For the volumetric contribution we consider as before a logarithmic term:
@@ -685,7 +718,7 @@ When looking at the entropy production, Equation~(\ref{dis}) still holds simply 
 \mu_i = \mu^0_i + e\Phi z_i + kT \ln \frac{C_i}{C_s},\\
 \mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, \\[3mm]
 \begin{aligned}
-\mathbb{T}= \left(\frac{\kappa}{1+C_sv_s}-p\right) \mathbb{I} + \frac{G_\mathbf{A}}{1+C_sv}\text{DEV}[\bar{\B}] + \frac{G_\mathbf{B}}{1+C_sv}\text{DEV}[\bar{\B}_e]\\
+\mathbb{T}= \left(\frac{\kappa}{1+C_sv_s}-p\right) \mathbb{I} + \frac{G^B_1}{1+C_sv}\text{DEV}[\bar{\B}] + \frac{G^B_2}{1+C_sv}\text{DEV}[\bar{\B}_e]\\
 + \gamma \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]+ \epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right],\label{sys2B}
 \end{aligned}
 \end{gather}
@@ -695,37 +728,7 @@ coupled to the governing equations:
 \mathbf{j}_i = - \frac{D_i}{k_B T}c_i\nabla \mu_i + \frac{D_i}{D^0_i} \frac{c_i}{c_s} \mathbf{j}_s, \\
 \dot{\bar{\B}}_e = \bar{\B}_e \LL^T +\LL \bar{\B}_e - \frac{2}{3} \, tr(\LL) \bar{\B}_e -\frac{1}{\tau_R} \bar{\B}_e \text{DEV}\left[\bar{\B}_e\right]
 \end{gather}
-\section{Korteweg stress terms.}
-The Korteweg stress is the part of the mechanical stress which is related to the interfacial free energy. We here report the result related to the second model. This will have a contribution from the both the derivative with respect to $\bar{F}$ and $J$:
-\begin{equation}
-\mathbb{T}^{korg} = \text{DEV}\left[J^{-1}\frac{\partial \psi_{int}}{\partial \bar{\F}}\bar{\F}^T\right] + \frac{\partial \psi_{int}}{\partial J} \mathbb{I}
-\end{equation}
-where the interface energy is given by:
-\begin{equation}
-\psi_{int}(J,\bar{F}) = \frac{\gamma}{2} J^{1/3} \bar{\F}^{-1}\bar{\F}^{-T} \left|\nabla_0 C\right|^2.
-\end{equation}
-Using the properties of the deformation tensor $\bar{F}$, it can be shown that:
-\begin{equation}
-\frac{\partial }{\partial \bar{\F}} \left(\bar{\F}^{-1} \bar{\F}^{-T} \left|\nabla_0 C\right|^2\right) \bar{\F}^T = -2 J^{2/3} \,\nabla C \otimes \nabla C,
-\end{equation} 
-so that the Korteweg stress is given by:
-\begin{equation}
-\mathbb{T}^{korg} = - \gamma \text{DEV} \left[ \nabla C \otimes \nabla C\right] + \frac{\gamma}{6} \left|\nabla C\right|^2 \mathbb{I}.
-\label{kor}
-\end{equation}
-If we now explicitly evaluate the deviatoric component we have:
-\begin{equation*}
-\begin{aligned}
-tr(\nabla C \otimes \nabla C) = \left|\nabla C\right|^2 \\ \text{DEV}\left[\nabla C \otimes \nabla C\right] = \nabla C \otimes \nabla C -\frac{\left|\nabla C\right|^2}{3} \mathbb{I}.
-\end{aligned}
-\end{equation*}
-Substituting now the expressions back in Equation~(\ref{kor}), we obtain:
-\begin{equation}
-\mathbb{T}^{korg} = \gamma \left[\frac{1}{2} \left|\nabla C\right|^2 \mathbb{I} - \nabla C \otimes \nabla C\right],
-\end{equation}
-which is equivalent to result obtained for the first model.
-
-%The dissipative contribution due to the relative movement of phases has been largely studied in the literature \cite{ecm1,ecm2}. Starting from Equation~(\ref{dif}) and standard arguments we can get to the following definition for the fluxes:\
+%\include{kort}
 \newpage
 \bibliographystyle{splncs04}
 \bibliography{latex/ref}
