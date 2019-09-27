@@ -547,7 +547,7 @@ As illustrated in Figure~\ref{Exp1}(b), the discrepancy between the two model de
 \begin{figure}
 	\begin{subfigure}{0.6\textwidth}
 		\includegraphics[scale=0.36]{images/freeswel1}
-		\caption{$G^A_{eq}=5e2$}
+		\caption{$G^A_{eq}=5e3$}
 	\end{subfigure}
 	\begin{subfigure}{0.39\textwidth}
 		\hspace{-8mm}
@@ -555,14 +555,41 @@ As illustrated in Figure~\ref{Exp1}(b), the discrepancy between the two model de
 		\caption{}
 	\end{subfigure}
 \vspace{3mm}
-\caption{Comparison of the prediction for the two models in a Free Swelling experiment. We consider as a reference Model A (ground truth). We fix the concentration $c_0=c^*_0$ of ions in the bath, we leave the matrix reach is steady state and we measure $C_s$. Given such information, we can estimate $\kappa(c^*_0)$ using Equation~(\ref{eqFb}). The experiment is repeated for a different salt concentration in the bath (each experiment correspond to a colour). (a) Using the estimated values $\kappa(c^*_0)$, we simulate an \textit{in silico} experiment and we compare it with Model A ('reality'). (b) Relative error from the \textit{in silico} experiment for the different values of $\kappa(c^*_0)$ as a function of the matrix stiffness. We note that the softer the matrix, the larger is the discrepancy between the two model. The choice of $c^*_0$ has a large impact on the error, as the model can not agree for the two limits: $c_0$ small or $c_0$ large. Note that the shear modulus of the ECM is estimated to be of order $10^3-10^4$ \cite{Netti}.}
+\caption{Comparison of the prediction for the two models in a Free Swelling experiment. We consider as a reference Model A (ground truth). We fix the concentration $c^*_0$ of ions in the bath, we leave the matrix reach is steady state and we measure $C_s(c^*_0)$. Using Equations~(\ref{eqF})-(\ref{eqFb}) we have $\kappa(c^*_0)=G^A_{eq}((1+v_sC_s)^{2/3}-1)$. The same is repeated for three different salt concentration (each experiment correspond to a colour,see legend of Figure (b)). (a) 
+Comparison between Model A and Model B for the different estimated values $\kappa(c^*_0)$. (b) Relative error between the model as a function of the matrix stiffness $G_{eq}^A$. We note that the softer the matrix, the larger is the discrepancy between the two model. The choice of $c^*_0$ can also impact on the estimated error. Given the same mixing parameter $\chi$, the two models can not agree on the equilibrium behaviour for the two limits: $c_0$ small or $c_0$ large. Consequently the best choice would be choosing $c_0$ in the region of transition. Note that the shear modulus of the ECM is estimated to be of order $10^3-10^4$ \cite{Netti}.}
 \label{Exp1}
 \end{figure}
+\begin{figure}
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\includegraphics[scale=0.32]{images/chi2}
+		\caption{}
+	\end{subfigure}	
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\includegraphics[scale=0.285]{images/chi3p}
+		\caption{}
+	\end{subfigure}	
+
+	\centering
+	\begin{subfigure}{0.6\textwidth}
+		\includegraphics[scale=0.415]{images/chi1}
+		\caption{}
+	\end{subfigure}
+\caption{Model Comparison 2: despite there is a set of parameters that would give rise to the same equilibrium behaviour this can drastically change the predicted mixing properties of the ECM. (a-b) Example of an \textit{in silico} experiment for $G^A_{eq}=5e2$: data are generated using model A and adding random noise. The fitting for model B is obtained using the non-linear least square method function in MATLAB, \texttt{fmincon}. (a) Predicted equilibrium concentration of water in the ECM; (b) Predicted mechanical pressure in the ECM from model A (blue) and model B (red). Despite capturing the same qualitative trend, the two differ of several order of magnitude. (c) Flory-Huggins parameter $\chi$ used in the \textit{in silico} experiment vs the one estimated fitting model B to the \textit{in silico} data $\hat{\chi}$; .}
+\end{figure}
 \section{Confined Compression Test.}
-<<<<<<< HEAD
-In this second example, we look at another of the commonly 
-=======
-In this second example, we look at another of the common mechanical test used to investigate the properties of a material. This allows to measure both the dynamical and equilibrium behaviour of the material by measuring the stress while imposing a known strain $\epsilon$.
+
+\begin{figure}[h]
+	\centering
+	\def\svgwidth{0.89\linewidth}
+	\input{latex/images/compression.pdf_tex}
+	\vspace{2mm}
+	\caption{Schematic representation of a compression test with a porous piston. A deformation is imposed in the $Z$ direction and the force necessary to maintain the deformation is recorded. }
+\end{figure}
+
+In this second example, we consider to perform on a swollen slice of ECM a compression test with the use of a porous platen,which allows the fluids to flow so to maintain the chemical equilibrium with the external bath \cite{Netti}. This allows to measure both the dynamical and equilibrium behaviour of the material by measuring the stress while imposing a known strain $\epsilon$. The corresponding deformation tensor is of the form:
+
 \begin{equation}
 \F=J_0^{1/3}\begin{bmatrix}
 1 &0&0\\
@@ -582,7 +609,7 @@ b &0&0\\
 \end{equation}
 We are first interested in the equilibrium behaviour, for which Equations~(\ref{eqion}) still holds. Focusing on the contribution of spring B, studying the equilibriums of Equation~(\ref{Be}), we obtain that $b=b_1$. Since $\det B_e= (\det F)^2$, we conclude that:
 \begin{equation}
-b = J_0^{2/3}\lambda_1^2.
+b = J_0^{2/3}\lambda_1^{2/3}.
 \end{equation}
 
 Using the boundary condition, we can now compute the pressure and the equilibrium condition:
@@ -593,6 +620,13 @@ p = -\sigma + \frac{G^A_1}{J_0\lambda_1} (J^{2/3}_0\lambda_1^2-1)+\frac{G^A_2}{J
 &+\ln \frac{J_0\lambda_1-1}{J_0\lambda_1} +2c_0v_s-\sqrt{\left(\frac{z_fC_fv_s}{J_0\lambda_1-1}\right)^2+4v_s^2c^2_0}
 \end{aligned}
 \end{gather}
+\begin{table}
+	\begin{tabular}{c c}
+		$\chi$ & 0.525\\
+		$G^A_1$ & 23.22 Pa\\
+		$G^A_2$ & 13.8 Pa
+	\end{tabular}
+\end{table}
 \subsection{Model B}
 \begin{equation}
 \bar{\B}=\begin{bmatrix}
@@ -618,18 +652,40 @@ p = -\sigma + \frac{\kappa}{J_0\lambda_1}+\dfrac{2G^B_1}{3J_0\lambda_1^{5/3}} (\
 \end{aligned}
 \end{gather}
 
+REDO MODEL A
 %\section{Compression Test.}
 %We here consider another standardd
+\begin{figure}
+	\hspace{-8mm}
+	\begin{subfigure}{0.65\textwidth}
+		\hspace{6mm}
+		\includegraphics[scale=0.35]{images/compression.eps}
+		\caption{}
+	\end{subfigure}
+\hspace{6mm}
+	\begin{subtable}{0.32\textwidth}
+			\begin{tabular}{||c | c | c|| }		
+				\hline\addlinespace[2pt]
+				& Model A & Model B\\[0.5mm]
+				\hline\addlinespace[2pt]
+				$\quad \chi\quad$ & $\quad0.498\quad$&$\quad0.523\quad$\\[0.5mm]
+				$G^A_1$ & 18.9 kPa& 5.47 kPa\\[0.5mm]
+				$G^A_2$ & 3.3 Pa& 52.9 kPa\\[0.5mm]
+				$J_0$ & $20.6$& $14.8$\\[0.5mm]
+				\hline
+			\end{tabular}	
+		\caption{}
+	\end{subtable}
+\caption{Comparison of the two model in fitting real experimental data from \cite{Netti}.}
+\end{figure}
 \newpage
 \appendix
 \section{Glossary of Variables and Parameters in the Model.}
 \begin{table}[h]
 \begin{tabular}{c  l}
 	$\psi\qquad $ & Helmholtz free energy per unit volume in the initial configuration,\\
-<<<<<<< HEAD
 	$\mathbf{u}\qquad$ & Displacement vector,\\
 	$\F\qquad$ & Deformation gradient tensor $\F=\mathbb{I}-\nabla_0\mathbf{u}$,\\
-=======
 	$C_f\qquad$ & Concentration of fix charges in the network,\\
 	$z_f\qquad$ & Charge of a GAG chain,\\
 	$v_m$ & Characteristic molecular volume of the species $m$,\\

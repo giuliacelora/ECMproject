@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  26 SEP 2019 13:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  27 SEP 2019 13:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1498,7 +1498,11 @@ ple pdfs with page group included in a single page
 
 LaTeX Warning: Citation `ecm' on page 33 undefined on input line 928.
 
-[33] [34] [35]
+[33]
+
+LaTeX Warning: Citation `Netti' on page 34 undefined on input line 962.
+
+[34] [35]
 Overfull \hbox (4.67726pt too wide) detected at line 1041
 [][]
  []
@@ -1549,10 +1553,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 14611 strings out of 492982
- 271534 string characters out of 6134895
+ 14612 strings out of 492982
+ 271541 string characters out of 6134895
  332876 words of memory out of 5000000
- 17989 multiletter control sequences out of 15000+600000
+ 17990 multiletter control sequences out of 15000+600000
  546767 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,23n,53p,10346b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1577,7 +1581,7 @@ type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (42 pages, 1125078 bytes).
+Output written on main.pdf (42 pages, 1125194 bytes).
 PDF statistics:
  335 PDF objects out of 1000 (max. 8388607)
  217 compressed objects within 3 object streams

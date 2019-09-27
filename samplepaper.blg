@@ -13,7 +13,6 @@ Repeated entry---line 511 of file latex/ref.bib
  :          ,
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "biophysics"
-<<<<<<< HEAD
 You've used 48 entries,
             2850 wiz_defined-function locations,
             912 strings with 12480 characters,
@@ -55,6 +54,4 @@ warning$ -- 0
 while$ -- 224
 width$ -- 50
 write$ -- 480
-=======
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 (There were 2 error messages)
