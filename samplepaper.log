@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  26 SEP 2019 17:25
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.8)  26 SEP 2019 22:21
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  27 SEP 2019 09:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1353,29 +1349,16 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 70.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-<<<<<<< HEAD
 ) (./introduction.tex
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) [2] [3] [4]
 <latex/images/ECM.png, id=155, 421.575pt x 300.12125pt>
-=======
-) (introduction.tex
-[1
-
-{C:/Users/celor/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]) [2]
-[3] [4]
-<latex/images/ECM.png, id=154, 421.575pt x 300.12125pt>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 File: latex/images/ECM.png Graphic file (type png)
 <use latex/images/ECM.png>
 Package pdftex.def Info: latex/images/ECM.png  used on input line 140.
 (pdftex.def)             Requested size: 160.20015pt x 114.04726pt.
-<<<<<<< HEAD
 <latex/images/ecmscheme.jpg, id=157, 421.62318pt x 268.26624pt>
-=======
-<latex/images/ecmscheme.jpg, id=156, 421.62318pt x 268.26624pt>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 File: latex/images/ecmscheme.jpg Graphic file (type jpg)
 <use latex/images/ecmscheme.jpg>
 Package pdftex.def Info: latex/images/ecmscheme.jpg  used on input line 145.
@@ -1389,11 +1372,7 @@ Overfull \hbox (6.98808pt too wide) in paragraph at lines 145--146
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5 <./latex/images/ECM.png> <./latex/images/ecmscheme.jpg>] [6] [7]
-<<<<<<< HEAD
 <latex/images/visco_poro.png, id=218, 617.30624pt x 348.30125pt>
-=======
-<latex/images/visco_poro.png, id=216, 617.30624pt x 348.30125pt>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 File: latex/images/visco_poro.png Graphic file (type png)
 <use latex/images/visco_poro.png>
 Package pdftex.def Info: latex/images/visco_poro.png  used on input line 236.
@@ -1404,68 +1383,41 @@ Overfull \hbox (0.51605pt too wide) in paragraph at lines 247--248
 n the non-equilibrium
  []
 
-<<<<<<< HEAD
 (./latex/images/modelA1.pdf_tex
 <latex/images/modelA1.pdf, id=250, page=1, 339.81073pt x 543.36687pt>
-=======
-(latex/images/modelA1.pdf_tex
-<latex/images/modelA1.pdf, id=248, page=1, 339.81073pt x 543.36687pt>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 File: latex/images/modelA1.pdf Graphic file (type pdf)
 <use latex/images/modelA1.pdf, page 1>
 Package pdftex.def Info: latex/images/modelA1.pdf , page1 used on input line 56
 .
 (pdftex.def)             Requested size: 105.52762pt x 168.74046pt.
-<<<<<<< HEAD
 <latex/images/modelA1.pdf, id=251, page=2, 339.81073pt x 543.36687pt>
-=======
-<latex/images/modelA1.pdf, id=249, page=2, 339.81073pt x 543.36687pt>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 File: latex/images/modelA1.pdf Graphic file (type pdf)
 <use latex/images/modelA1.pdf, page 2>
 Package pdftex.def Info: latex/images/modelA1.pdf , page2 used on input line 60
 .
 (pdftex.def)             Requested size: 105.52762pt x 168.74046pt.
-<<<<<<< HEAD
 ) (./latex/images/modelB1.pdf_tex
 <latex/images/modelB1.pdf, id=252, page=1, 339.81073pt x 543.36687pt>
-=======
-) (latex/images/modelB1.pdf_tex
-<latex/images/modelB1.pdf, id=250, page=1, 339.81073pt x 543.36687pt>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 File: latex/images/modelB1.pdf Graphic file (type pdf)
 <use latex/images/modelB1.pdf, page 1>
 Package pdftex.def Info: latex/images/modelB1.pdf , page1 used on input line 56
 .
 (pdftex.def)             Requested size: 105.52762pt x 168.74046pt.
-<<<<<<< HEAD
 <latex/images/modelB1.pdf, id=253, page=2, 339.81073pt x 543.36687pt>
-=======
-<latex/images/modelB1.pdf, id=251, page=2, 339.81073pt x 543.36687pt>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 File: latex/images/modelB1.pdf Graphic file (type pdf)
 <use latex/images/modelB1.pdf, page 2>
 Package pdftex.def Info: latex/images/modelB1.pdf , page2 used on input line 60
 .
 (pdftex.def)             Requested size: 105.52762pt x 168.74046pt.
-<<<<<<< HEAD
 <latex/images/modelB1.pdf, id=254, page=3, 339.81073pt x 543.36687pt>
-=======
-<latex/images/modelB1.pdf, id=252, page=3, 339.81073pt x 543.36687pt>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 File: latex/images/modelB1.pdf Graphic file (type pdf)
 <use latex/images/modelB1.pdf, page 3>
 Package pdftex.def Info: latex/images/modelB1.pdf , page3 used on input line 62
 .
 (pdftex.def)             Requested size: 105.52762pt x 168.74046pt.
 )
-<<<<<<< HEAD
 (./latex/images/modelA2.pdf_tex
 <latex/images/modelA2.pdf, id=255, page=1, 714.28575pt x 580.15843pt>
-=======
-(latex/images/modelA2.pdf_tex
-<latex/images/modelA2.pdf, id=253, page=1, 714.28575pt x 580.15843pt>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 File: latex/images/modelA2.pdf Graphic file (type pdf)
 <use latex/images/modelA2.pdf, page 1>
 Package pdftex.def Info: latex/images/modelA2.pdf , page1 used on input line 56
@@ -1482,13 +1434,6 @@ Overfull \hbox (13.12724pt too wide) in paragraph at lines 280--281
 y [[],[],[],[],[],[]],
  []
 
-<<<<<<< HEAD
-=======
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9 <./latex/images/modelA1.pdf> <./latex/images/modelA1.pdf
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1510,13 +1455,8 @@ pdfTeX warning: /usr/bin/pdflatex (file ./latex/images/modelB1.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
 > <./latex/images/modelA2.pdf
 
-<<<<<<< HEAD
 pdfTeX warning: /usr/bin/pdflatex (file ./latex/images/modelA2.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
-=======
-pdfTeX warning: pdflatex.exe (file ./latex/images/modelA2.pdf): PDF inclusion: 
-multiple pdfs with page group included in a single page
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 >] [10] [11]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 374.
 
@@ -1526,53 +1466,32 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 374.
  [12]
-<<<<<<< HEAD
 [13] [14] (./latex/images/freeswell.pdf_tex
 <latex/images/freeswell.pdf, id=466, page=1, 901.27768pt x 435.37227pt>
-=======
-[13] [14] (latex/images/freeswell.pdf_tex
-<latex/images/freeswell.pdf, id=463, page=1, 901.27768pt x 435.37227pt>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 File: latex/images/freeswell.pdf Graphic file (type pdf)
 <use latex/images/freeswell.pdf, page 1>
 Package pdftex.def Info: latex/images/freeswell.pdf , page1 used on input line 
 56.
 (pdftex.def)             Requested size: 329.7663pt x 159.29819pt.
-<<<<<<< HEAD
 <latex/images/freeswell.pdf, id=467, page=2, 901.27768pt x 435.37227pt>
-=======
-<latex/images/freeswell.pdf, id=464, page=2, 901.27768pt x 435.37227pt>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 File: latex/images/freeswell.pdf Graphic file (type pdf)
 <use latex/images/freeswell.pdf, page 2>
 Package pdftex.def Info: latex/images/freeswell.pdf , page2 used on input line 
 59.
 (pdftex.def)             Requested size: 329.7663pt x 159.29819pt.
-<<<<<<< HEAD
 <latex/images/freeswell.pdf, id=468, page=3, 901.27768pt x 435.37227pt>
-=======
-<latex/images/freeswell.pdf, id=465, page=3, 901.27768pt x 435.37227pt>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 File: latex/images/freeswell.pdf Graphic file (type pdf)
 <use latex/images/freeswell.pdf, page 3>
 Package pdftex.def Info: latex/images/freeswell.pdf , page3 used on input line 
 61.
 (pdftex.def)             Requested size: 329.7663pt x 159.29819pt.
-<<<<<<< HEAD
 <latex/images/freeswell.pdf, id=469, page=4, 901.27768pt x 435.37227pt>
-=======
-<latex/images/freeswell.pdf, id=466, page=4, 901.27768pt x 435.37227pt>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 File: latex/images/freeswell.pdf Graphic file (type pdf)
 <use latex/images/freeswell.pdf, page 4>
 Package pdftex.def Info: latex/images/freeswell.pdf , page4 used on input line 
 63.
 (pdftex.def)             Requested size: 329.7663pt x 159.29819pt.
-<<<<<<< HEAD
 <latex/images/freeswell.pdf, id=470, page=5, 901.27768pt x 435.37227pt>
-=======
-<latex/images/freeswell.pdf, id=467, page=5, 901.27768pt x 435.37227pt>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 File: latex/images/freeswell.pdf Graphic file (type pdf)
 <use latex/images/freeswell.pdf, page 5>
 Package pdftex.def Info: latex/images/freeswell.pdf , page5 used on input line 
@@ -1583,7 +1502,6 @@ Underfull \vbox (badness 2181) has occurred while \output is active []
 
  [16 <./latex/images/freeswell.pdf> <./latex/images/freeswell.pdf
 
-<<<<<<< HEAD
 pdfTeX warning: /usr/bin/pdflatex (file ./latex/images/freeswell.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
 > <./latex/images/freeswell.pdf
@@ -1598,28 +1516,11 @@ usion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: /usr/bin/pdflatex (file ./latex/images/freeswell.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
-=======
-pdfTeX warning: pdflatex.exe (file ./latex/images/freeswell.pdf): PDF inclusion
-: multiple pdfs with page group included in a single page
-> <./latex/images/freeswell.pdf
-
-pdfTeX warning: pdflatex.exe (file ./latex/images/freeswell.pdf): PDF inclusion
-: multiple pdfs with page group included in a single page
-> <./latex/images/freeswell.pdf
-
-pdfTeX warning: pdflatex.exe (file ./latex/images/freeswell.pdf): PDF inclusion
-: multiple pdfs with page group included in a single page
-> <./latex/images/freeswell.pdf
-
-pdfTeX warning: pdflatex.exe (file ./latex/images/freeswell.pdf): PDF inclusion
-: multiple pdfs with page group included in a single page
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 >]
 Underfull \vbox (badness 2608) has occurred while \output is active []
 
  [17]
 Package epstopdf Info: Source file: <latex/images/freeswel1.eps>
-<<<<<<< HEAD
 (epstopdf)                    date: 2019-09-26 15:57:18
 (epstopdf)                    size: 62017 bytes
 (epstopdf)             Output file: <latex/images/freeswel1-eps-converted-to.pd
@@ -1628,37 +1529,20 @@ f>
 (epstopdf)                    size: 25246 bytes
 (epstopdf)             Command: <repstopdf --outfile=latex/images/freeswel1-eps
 -converted-to.pdf latex/images/freeswel1.eps>
-=======
-(epstopdf)                    date: 2019-09-26 20:30:46
-(epstopdf)                    size: 65746 bytes
-(epstopdf)             Output file: <latex/images/freeswel1-eps-converted-to.pd
-f>
-(epstopdf)                    date: 2019-09-26 20:30:46
-(epstopdf)                    size: 25246 bytes
-(epstopdf)             Command: <epstopdf --outfile=latex/images/freeswel1-eps-
-converted-to.pdf latex/images/freeswel1.eps>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 (epstopdf)             \includegraphics on input line 549.
 Package epstopdf Info: Output file is already uptodate.
 
 
-<<<<<<< HEAD
 pdfTeX warning: /usr/bin/pdflatex (file ./latex/images/freeswel1-eps-converted-
 to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allo
 wed
 <latex/images/freeswel1-eps-converted-to.pdf, id=574, 538.01pt x 352.31625pt>
-=======
-pdfTeX warning: pdflatex.exe (file ./latex/images/freeswel1-eps-converted-to.pd
-f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<latex/images/freeswel1-eps-converted-to.pdf, id=570, 538.01pt x 352.31625pt>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 File: latex/images/freeswel1-eps-converted-to.pdf Graphic file (type pdf)
 <use latex/images/freeswel1-eps-converted-to.pdf>
 Package pdftex.def Info: latex/images/freeswel1-eps-converted-to.pdf  used on i
 nput line 549.
 (pdftex.def)             Requested size: 193.68344pt x 126.83374pt.
 Package epstopdf Info: Source file: <latex/images/freeswel2.eps>
-<<<<<<< HEAD
 (epstopdf)                    date: 2019-09-26 17:03:16
 (epstopdf)                    size: 44613 bytes
 (epstopdf)             Output file: <latex/images/freeswel2-eps-converted-to.pd
@@ -1667,30 +1551,14 @@ f>
 (epstopdf)                    size: 23936 bytes
 (epstopdf)             Command: <repstopdf --outfile=latex/images/freeswel2-eps
 -converted-to.pdf latex/images/freeswel2.eps>
-=======
-(epstopdf)                    date: 2019-09-26 20:30:46
-(epstopdf)                    size: 46960 bytes
-(epstopdf)             Output file: <latex/images/freeswel2-eps-converted-to.pd
-f>
-(epstopdf)                    date: 2019-09-26 20:30:46
-(epstopdf)                    size: 23936 bytes
-(epstopdf)             Command: <epstopdf --outfile=latex/images/freeswel2-eps-
-converted-to.pdf latex/images/freeswel2.eps>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 (epstopdf)             \includegraphics on input line 554.
 Package epstopdf Info: Output file is already uptodate.
 
 
-<<<<<<< HEAD
 pdfTeX warning: /usr/bin/pdflatex (file ./latex/images/freeswel2-eps-converted-
 to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allo
 wed
 <latex/images/freeswel2-eps-converted-to.pdf, id=575, 471.7625pt x 352.31625pt>
-=======
-pdfTeX warning: pdflatex.exe (file ./latex/images/freeswel2-eps-converted-to.pd
-f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<latex/images/freeswel2-eps-converted-to.pdf, id=571, 471.7625pt x 352.31625pt>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 
 File: latex/images/freeswel2-eps-converted-to.pdf Graphic file (type pdf)
 <use latex/images/freeswel2-eps-converted-to.pdf>
@@ -1700,25 +1568,12 @@ nput line 554.
 
 Overfull \hbox (13.74976pt too wide) in paragraph at lines 553--555
 []  [] 
-<<<<<<< HEAD
- []
-
-[18 <./latex/images/freeswel1-eps-converted-to.pdf> <./latex/images/freeswel2-e
-ps-converted-to.pdf>]
-Overfull \hbox (45.2737pt too wide) in paragraph at lines 568--590
-[][] 
  []
 
 
-Underfull \vbox (badness 1931) has occurred while \output is active []
-
- [19]
-
-LaTeX Warning: Citation `biophysics' on page 20 undefined on input line 636.
-
-[20] (./latex/images/modelB2.pdf_tex
-<latex/images/modelB2.pdf, id=631, page=1, 1156.95789pt x 600.99973pt>
-=======
+Overfull \hbox (16.6261pt too wide) in paragraph at lines 562--566
+\OT1/cmr/m/n/10 <<<<<<< HEAD In this sec-ond ex-am-ple, we look at an-other of 
+the com-monly =======
  []
 
 
@@ -1726,38 +1581,36 @@ Underfull \vbox (badness 2080) has occurred while \output is active []
 
  [18 <./latex/images/freeswel1-eps-converted-to.pdf> <./latex/images/freeswel2-
 eps-converted-to.pdf>] [19] [20]
-Overfull \hbox (45.2737pt too wide) in paragraph at lines 623--651
+Overfull \hbox (89.8164pt too wide) in paragraph at lines 627--659
 [][] 
  []
 
 [21]
 
-LaTeX Warning: Citation `biophysics' on page 22 undefined on input line 697.
+LaTeX Warning: Citation `biophysics' on page 22 undefined on input line 705.
 
-[22] (latex/images/modelB2.pdf_tex
-<latex/images/modelB2.pdf, id=649, page=1, 1156.95789pt x 600.99973pt>
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
+[22] (./latex/images/modelB2.pdf_tex
+<latex/images/modelB2.pdf, id=653, page=1, 1156.95789pt x 600.99973pt>
 File: latex/images/modelB2.pdf Graphic file (type pdf)
 <use latex/images/modelB2.pdf, page 1>
 Package pdftex.def Info: latex/images/modelB2.pdf , page1 used on input line 56
 .
 (pdftex.def)             Requested size: 347.12354pt x 180.31964pt.
-<<<<<<< HEAD
-) [21 <./latex/images/modelB2.pdf>]
-[22] [23] (./samplepaper.bbl [24] [25]) [26]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 734.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 734.
+) [23 <./latex/images/modelB2.pdf>]
+[24] [25] (./samplepaper.bbl [26] [27]) [28]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 803.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 803.
  (./samplepaper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 734.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 734.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 803.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 803.
 Package rerunfilecheck Info: File `samplepaper.out' has not changed.
 (rerunfilecheck)             Checksum: E8DA86615B6F0BEC4C6DA07130997CEC;114.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 734.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 803.
  ) 
 Here is how much of TeX's memory you used:
- 31184 strings out of 492982
- 745792 string characters out of 6134895
- 937781 words of memory out of 5000000
+ 31197 strings out of 492982
+ 745977 string characters out of 6134895
+ 937785 words of memory out of 5000000
  33967 multiletter control sequences out of 15000+600000
  14788 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1779,64 +1632,17 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
-msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
-sbm7.pfb>
-Output written on samplepaper.pdf (26 pages, 977337 bytes).
+e1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pf
+b>
+Output written on samplepaper.pdf (28 pages, 993581 bytes).
 PDF statistics:
- 818 PDF objects out of 1000 (max. 8388607)
- 611 compressed objects within 7 object streams
- 195 named destinations out of 1000 (max. 500000)
-=======
-) [23 <./latex/images/modelB2.pdf>] [24]
-[25] (samplepaper.bbl [26] [27]) [28]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 795.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 795.
- (samplepaper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 795.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 795.
-Package rerunfilecheck Info: File `samplepaper.out' has not changed.
-(rerunfilecheck)             Checksum: EDA7E413B6A4FBC299D3DD6439F82FB5;115.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 795.
- ) 
-Here is how much of TeX's memory you used:
- 31405 strings out of 492895
- 754146 string characters out of 3133480
- 955137 words of memory out of 3000000
- 34537 multiletter control sequences out of 15000+200000
- 14788 words of font info for 56 fonts, out of 3000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 64i,22n,111p,1655b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/symbols/msbm7.pfb>
-Output written on samplepaper.pdf (28 pages, 1073899 bytes).
-PDF statistics:
- 837 PDF objects out of 1000 (max. 8388607)
+ 845 PDF objects out of 1000 (max. 8388607)
+ 635 compressed objects within 7 object streams
  208 named destinations out of 1000 (max. 500000)
->>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
  106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
