@@ -559,18 +559,86 @@ As illustrated in Figure~\ref{Exp1}(b), the discrepancy between the two model de
 \label{Exp1}
 \end{figure}
 \section{Confined Compression Test.}
+<<<<<<< HEAD
 In this second example, we look at another of the commonly 
+=======
+In this second example, we look at another of the common mechanical test used to investigate the properties of a material. This allows to measure both the dynamical and equilibrium behaviour of the material by measuring the stress while imposing a known strain $\epsilon$.
+\begin{equation}
+\F=J_0^{1/3}\begin{bmatrix}
+1 &0&0\\
+0&1&0\\
+0&0& \lambda_1
+\end{bmatrix}, 
+\end{equation}
+where $\lambda_1 = 1 - \epsilon$. 
+\subsection{Model A}
+As before, $\B_e$ has a structure similar to $\F$:
+\begin{equation}
+\B_e=\begin{bmatrix}
+b &0&0\\
+0&b&0\\
+0&0& b_1
+\end{bmatrix}. 
+\end{equation}
+We are first interested in the equilibrium behaviour, for which Equations~(\ref{eqion}) still holds. Focusing on the contribution of spring B, studying the equilibriums of Equation~(\ref{Be}), we obtain that $b=b_1$. Since $\det B_e= (\det F)^2$, we conclude that:
+\begin{equation}
+b = J_0^{2/3}\lambda_1^2.
+\end{equation}
+
+Using the boundary condition, we can now compute the pressure and the equilibrium condition:
+\begin{gather}
+p = -\sigma + \frac{G^A_1}{J_0\lambda_1} (J^{2/3}_0\lambda_1^2-1)+\frac{G^A_2}{J_0\lambda_1} (J_0^{2/3} \lambda_1^{2/3}-1) \\
+\begin{aligned}
+\frac{\sigma v_s}{k_B T}=&\frac{J_0\lambda_1+\chi}{J_0^2\lambda^2_1}+\frac{G_1^Av_s}{k_BT} \frac{J_0^{2/3}\lambda^2_1-1}{J_0 \lambda_1}+\frac{G_2^Av_s}{k_BT} \frac{J_0^{2/3}\lambda^{2/3}_1-1}{J_0 \lambda_1}\\[1.5mm]
+&+\ln \frac{J_0\lambda_1-1}{J_0\lambda_1} +2c_0v_s-\sqrt{\left(\frac{z_fC_fv_s}{J_0\lambda_1-1}\right)^2+4v_s^2c^2_0}
+\end{aligned}
+\end{gather}
+\subsection{Model B}
+\begin{equation}
+\bar{\B}=\begin{bmatrix}
+\lambda_1^{-2/3} &0&0\\
+0&\lambda_1^{-2/3}&0\\
+0&0& \lambda_1^{4/3}
+\end{bmatrix}, \qquad
+\bar{\B}_e=\begin{bmatrix}
+\bar{b} &0&0\\
+0&\bar{b}&0\\
+0&0& \bar{b}_1
+\end{bmatrix}
+\end{equation}
+
+As for the model A, at equilibrium we have that $\bar{b}=\bar{b}_1$. However, in this case, we have that $\det \bar{B}_e=1$ so that $\bar{b}=1$ so that the second spring does not contribute to the stress. Using the boundary condition, we have that:
+
+\begin{gather}
+\displaystyle 
+p = -\sigma + \frac{\kappa}{J_0\lambda_1}+\dfrac{2G^B_1}{3J_0\lambda_1^{5/3}} (\lambda_1^2-1) \\
+\begin{aligned}
+\frac{\sigma v_s}{k_B T}=&\dfrac{J_0\lambda_1+\chi}{J_0^2\lambda^2_1}+\frac{2G_1^Bv_s}{3k_BT} \dfrac{\lambda^2_1-1}{J_0 \lambda_1^{5/3}}+\frac{\kappa v_s}{k_BT} \frac{1}{J_0 \lambda_1}+\ln \frac{J_0\lambda_1-1}{J_0\lambda_1}\\[1.5mm]
+& +2c_0v_s-\sqrt{\left(\frac{z_fC_fv_s}{J_0\lambda_1-1}\right)^2+4v_s^2c^2_0}
+\end{aligned}
+\end{gather}
+>>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 %\section{Compression Test.}
 %We here consider another standardd
 \newpage
 \appendix
 \section{Glossary of Variables and Parameters in the Model.}
-
 \begin{table}[h]
 \begin{tabular}{c  l}
 	$\psi\qquad $ & Helmholtz free energy per unit volume in the initial configuration,\\
+<<<<<<< HEAD
 	$\mathbf{u}\qquad$ & Displacement vector,\\
 	$\F\qquad$ & Deformation gradient tensor $\F=\mathbb{I}-\nabla_0\mathbf{u}$,\\
+=======
+	$C_f\qquad$ & Concentration of fix charges in the network,\\
+	$z_f\qquad$ & Charge of a GAG chain,\\
+	$v_m$ & Characteristic molecular volume of the species $m$,\\
+	$\mathbf{u}\qquad$ & Displacement vector,\\
+	$\F\qquad$ & Deformation gradient tensor $\F=\mathbb{I}-\nabla_0\mathbf{u}$,\\	
+	$\mathbb{C}\qquad$ & Right Cauchy-Green Tensor $\mathbb{C}=\F^T\F$,\\
+	$\mathbb{B}\qquad$ & Left Cauchy-Green Tensor $\mathbb{B}=\F\F^T$,\\
+	$\LL\qquad$ & Velocity Gradient Tensor $\LL=\dot{\F}F^{-1}$,\\
+>>>>>>> 9a98df00ba687f9a06cdcd98a853bf0b52d3dee0
 	$J\qquad$ & Determinant of the deformation gradient tensor $J=\det \F$,\\
 	$\eta^A\qquad $ & Viscosity of the collagen network in model A,\\
 	$G^A_1\qquad$ & Shear modulus related to spring $1$ in model A\\
