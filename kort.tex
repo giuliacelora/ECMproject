@@ -1,0 +1,31 @@
+\section{Korteweg stress terms.}
+The Korteweg stress is the part of the mechanical stress which is related to the interfacial free energy. We here report the result related to the second model. This will have a contribution from the both the derivative with respect to $\bar{F}$ and $J$:
+\begin{equation}
+\mathbb{T}^{korg} = \text{DEV}\left[J^{-1}\frac{\partial \psi_{int}}{\partial \bar{\F}}\bar{\F}^T\right] + \frac{\partial \psi_{int}}{\partial J} \mathbb{I}
+\end{equation}
+where the interface energy is given by:
+\begin{equation}
+\psi_{int}(J,\bar{F}) = \frac{\gamma}{2} J^{1/3} \bar{\F}^{-1}\bar{\F}^{-T} \left|\nabla_0 C\right|^2.
+\end{equation}
+Using the properties of the deformation tensor $\bar{F}$, it can be shown that:
+\begin{equation}
+\frac{\partial }{\partial \bar{\F}} \left(\bar{\F}^{-1} \bar{\F}^{-T} \left|\nabla_0 C\right|^2\right) \bar{\F}^T = -2 J^{2/3} \,\nabla C \otimes \nabla C,
+\end{equation} 
+so that the Korteweg stress is given by:
+\begin{equation}
+\mathbb{T}^{korg} = - \gamma \text{DEV} \left[ \nabla C \otimes \nabla C\right] + \frac{\gamma}{6} \left|\nabla C\right|^2 \mathbb{I}.
+\label{kor}
+\end{equation}
+If we now explicitly evaluate the deviatoric component we have:
+\begin{equation*}
+\begin{aligned}
+tr(\nabla C \otimes \nabla C) = \left|\nabla C\right|^2 \\ \text{DEV}\left[\nabla C \otimes \nabla C\right] = \nabla C \otimes \nabla C -\frac{\left|\nabla C\right|^2}{3} \mathbb{I}.
+\end{aligned}
+\end{equation*}
+Substituting now the expressions back in Equation~(\ref{kor}), we obtain:
+\begin{equation}
+\mathbb{T}^{korg} = \gamma \left[\frac{1}{2} \left|\nabla C\right|^2 \mathbb{I} - \nabla C \otimes \nabla C\right],
+\end{equation}
+which is equivalent to result obtained for the first model.
+
+%The dissipative contribution due to the relative movement of phases has been largely studied in the literature \cite{ecm1,ecm2}. Starting from Equation~(\ref{dif}) and standard arguments we can get to the following definition for the fluxes:\

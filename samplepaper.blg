@@ -6,8 +6,9 @@ I was expecting a `,' or a `}'---line 37 of file latex/ref.bib
  : @InBook{Reviewpolyel,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 512 of file latex/ref.bib
+Repeated entry---line 511 of file latex/ref.bib
  : @misc{vol
  :          ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "biophysics"
 (There were 2 error messages)
