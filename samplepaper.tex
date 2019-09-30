@@ -653,24 +653,35 @@ p = -\sigma + \frac{\kappa}{J_0\lambda_1}+\dfrac{2G^B_1}{3J_0\lambda_1^{5/3}} (\
 	\begin{subfigure}{0.62\textwidth}
 		\hspace{6mm}
 		\includegraphics[scale=0.35]{images/compression.eps}
-		\caption{}
+		\caption{Fitted Model}
+		\label{fit}
 	\end{subfigure}
-\hspace{4mm}
 	\begin{subtable}{0.375\textwidth}
-			\begin{tabular}{||c | c ||c| c|| }		
+			\begin{tabular}{c | c ||c| c }		
 				\hline\addlinespace[2pt]
-				& Model A && Model B\\[0.5mm]
+				 \multicolumn{2}{c}{Model A} &  \multicolumn{2}{c}{Model B}\\[0.5mm]
 				\hline\addlinespace[2pt]
 				$\quad \chi\quad$ & $\quad0.498\quad$ &$\quad \chi\quad$&$\quad0.523\quad$\\[0.5mm]
 				$G^A_1$ & 18.9 kPa&$\kappa$& 0.83 kPa\\[0.5mm]
 				$G^A_2$ & 5.3 Pa&$G^B_1$& 55.1 kPa\\[0.5mm]
 				$J_0$ & $20.7$&  $J_0$&$14.8$\\[0.5mm]
 				\hline
-			\end{tabular}	
-		\caption{}
+			\end{tabular}
+		\caption{Estimated Parameters}
+		\label{param}
 	\end{subtable}
-\caption{Comparison of the two model in fitting real experimental data from \cite{Netti}.}
+\caption{Comparison of the two model in fitting real experimental data from \cite{Netti}.}		
 \end{figure}
+
+As shown in Figure \ref{fit}, both models are able to capture the qualitative behaviour of the data. However, as shown by the parameters in Table \ref{param}, there are quantitative differences. In particular, there are order of magnitude of difference in the estimated pressure $p$. If we look at its value for zero-strain, i.e. $\lambda_1=1$, we obtain: 
+\begin{gather}
+p^A = \frac{G^A_1+G^A_2}{J_0}(J_0^{2/3}-1) = \frac{24.2 \text{ kPa}}{20.7}(20.7^{2/3}-1) = 7.64 \text{ kPa},\\
+p^B = \frac{\kappa}{J_0} = \frac{0.83 \text{ kPa}}{14.8} = 56.08 \text{ Pa}
+\end{gather}
+
+When designing synthetic ECM, the tuning of the internal pressure cells in a culture are exposed to is of large importance. As mentioned in the introduction, cells are sensitive to pressure and their response can greatly change depending on this stimulus. Consequently, depending on the model chosen, the
+
+[NEO-HOOKEAN form IS DERIVED FOR CONSTANT VOLUME DEFORMATION!] 
 \newpage
 \appendix
 \section{Glossary of Variables and Parameters in the Model.}
@@ -681,7 +692,7 @@ p = -\sigma + \frac{\kappa}{J_0\lambda_1}+\dfrac{2G^B_1}{3J_0\lambda_1^{5/3}} (\
 	$\F\qquad$ & Deformation gradient tensor $\F=\mathbb{I}-\nabla_0\mathbf{u}$,\\
 	$C_f\qquad$ & Concentration of fix charges in the network,\\
 	$z_f\qquad$ & Charge of a GAG chain,\\
-	$v_m$ & Characteristic molecular volume of the species $m$,\\
+	$v_m\qquad$ & Characteristic molecular volume of the species $m$,\\
 	$\mathbf{u}\qquad$ & Displacement vector,\\
 	$\F\qquad$ & Deformation gradient tensor $\F=\mathbb{I}-\nabla_0\mathbf{u}$,\\	
 	$\mathbb{C}\qquad$ & Right Cauchy-Green Tensor $\mathbb{C}=\F^T\F$,\\
@@ -720,7 +731,7 @@ p = -\sigma + \frac{\kappa}{J_0\lambda_1}+\dfrac{2G^B_1}{3J_0\lambda_1^{5/3}} (\
 \label{apenergy}
 Combining Equation~(\ref{vflow1}) and (\ref{vflow2}), and imposing that condition~(\ref{Jv}) is satisfied, we can characterise the viscous flow by the following relation:
 \begin{equation}
-\LL_v = L_{vv}T^{-1}\left[\F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right] \stackrel{(\ast)}{=} \frac{G_\mathbf{B}}{\eta^A}\text{DEV}\left[\mathbb{C}_e\right] ,
+\LL_v = L_{vv}T^{-1}\left[\F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right] \stackrel{(\ast)}{=} \frac{G^A_2}{\eta^A}\text{DEV}\left[\mathbb{C}_e\right] ,
 \end{equation}
 where $\eta^A$ represent the viscosity of the material and the equality $(\ast)$ follows from Equation~(\ref{temp4}):
 \begin{equation}
