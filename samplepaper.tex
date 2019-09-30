@@ -513,175 +513,26 @@ with $\lambda=(1+C_s v_s)^{1/3}$. To simplify, we also assume that there are onl
 \subsection{Model A.}
 In the case of free swelling, due to the symmetry of $\F$, it reasonable to assume that also $\F_e$ is of the similar form, $\F_e=\lambda_e \mathbb{I}$. Consequently, based on Equation~(\ref{apBe}) in Appendix \ref{apenergy}, we have that the viscous contribution vanish so that $\B_e=\B= \lambda^2 \mathbb{I}$. Substituting this result and the boundary condition~(\ref{free1})-(\ref{free2}) into Equations (\ref{sys1})-(\ref{sys2}) and (\ref{sys3}), setting to zero all spatial derivative, we obtain:
 \begin{gather}
-p = \frac{G^A_1+G^A_2}{1+C_sv_s}(\lambda^2-1),\label{presA}\\
-0 = \frac{pv_s}{k_BT} + \ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s} +\frac{\chi}{(1+C_s v_s)^2}-\sum_i \left(\frac{C_i}{C_s}-vc^0\right), \\[2mm]
+p_A = \frac{G^A_1+G^A_2}{1+C_sv_s}(\lambda^2-1),\label{presA}\\
+\Pi^{n}_A = \frac{k_BT}{v_s} \left[\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s} +\frac{\chi}{(1+C_s v_s)^2}\right],\\
+\Pi^{ion}_A = k_B T \sum_i \left(\frac{C_i}{v_sC_s}-c^0\right),\\
+0 = \frac{v_s}{k_BT} (p_A+\Pi^{n}_A-\Pi^{ion}_A), \\[2mm]
 0 = \pm\frac{e}{k_B T} \phi  + \ln \frac{C_\pm}{C_s v_s c_\pm^0},\qquad i=1,\ldots,N,\\[2.5mm]
 Q = e\left(C_+-C_-+z_f C_{f}\right)=0.\label{electron}
 \end{gather}
-
-Note that at equilibrium the electro-neutrality condition is naturally imposed, Equation~(\ref{electron}). As shown in Appendix , manipulating the above system we can reduce the number of unknown to the solvent concentration $C_s$:
+where $\Pi^{n}$ and $\Pi^{ion}_A$ are the osmotic pressures due to the mixing of the polymer network with the solvent and the imbalance of ions inside and outside the ECM. 
+Note that at equilibrium the system reaches a balance between the mechanical pressure $p_A$ and the osmotic pressures. Moreover, the electro-neutrality condition is naturally imposed, Equation~(\ref{electron}). As shown in Appendix , manipulating the above system we can reduce the number of unknown to the solvent concentration $C_s$:
 \begin{gather}
 C_{\pm}= \frac{1}{2}\left[\mp z_fC_f+ \sqrt{(z_fC_f)^2+(2v_sC_sc_0)^2}\,\right],\label{eqion}\\
 \begin{aligned}
-F_{\mathbf{A}}(C_s; c_0,\chi,G^A_{eq})=&\frac{1+C_sv_s+\chi}{(1+C_sv_s)^2}+\frac{G^A_{eq} v_s}{k_BT} \frac{(1+v_sC_s)^{2/3}-1}{1+C_sv_s}\\[1.5mm]
+F_{A}(C_s; c_0,\chi,G^A_{eq})=&\frac{1+C_sv_s+\chi}{(1+C_sv_s)^2}+\frac{G^A_{eq} v_s}{k_BT} \frac{(1+v_sC_s)^{2/3}-1}{1+C_sv_s}\\[1.5mm]
 &+\ln \frac{C_sv_s}{1+C_sv_s} +2c_0v_s-\sqrt{\left(\frac{z_fC_f}{C_s}\right)^2+4v_s^2c^2_0} =0 \label{eqF}
 \end{aligned}
 \end{gather}
 where $G^A_{eq}=G^A_1+G^A_2$. Note that Equation~(\ref{eqion}) corresponds to the well known Donnan Equilibrium \cite{DROZDOVph}. Equation~(\ref{eqF}) instead implicitly defines the concentration $C_s$ and thus the final swelling volume. As expected, the latter can be controlled by changing the concentration of ions in the bath. We also notice that, free swelling experiment, are not sufficient to differentiate the elastic properties of the two branches as the two behave equivalently.
-\subsection{Model B.}
-In this second case, given the symmetry of the problem, we have that, at equilibrium the deviatoric component of the stress tensor $\mathbb{T}$ vanishes. Combining this information with the boundary condition and solving the system~(\ref{sys1B})-(\ref{sys2B}) for its equilibrium, we obtain the same equations as for model A, expect for the pressure, which is now defined as:
-\begin{equation}
-p= \frac{\kappa}{1+C_s v_s}.
-\end{equation}
 
-Consequently, while Equation~(\ref{eqion}) still hold, we have that also the equilibrium condition~(\ref{eqF}) is now of the form:
-\begin{equation}
-\begin{aligned}
-F_{\mathbf{B}}(C_s; c_0,\chi,\kappa)=&\frac{1+C_sv_s+\chi}{(1+C_sv_s)^2}+\frac{\kappa v_s}{k_BT} \frac{1}{1+C_sv_s}+\ln \frac{C_sv_s}{1+C_sv_s}\\[1.5mm]
-& +2c_0v_s-\sqrt{\left(\frac{z_fC_f}{C_s}\right)^2+4v_s^2c^2_0} =0 \label{eqFb}
-\end{aligned}
-\end{equation}
-\subsection{Comparison of the two Models.}
-
-As illustrated in Figure~\ref{Exp1}(b), the discrepancy between the two model depends on the real elastic properties of the material tested. In particular, the softer the tissue, the larger is the difference between the two. Looking at Figure~\ref{Exp1}(b), the major discrepancy is in the equilibrium behaviour at the two limits: $c_0$ small and $c_0$ large. 
-\begin{figure}
-	\begin{subfigure}{0.6\textwidth}
-		\includegraphics[scale=0.36]{images/freeswel1}
-		\caption{$G^A_{eq}=5e3$}
-	\end{subfigure}
-	\begin{subfigure}{0.39\textwidth}
-		\hspace{-8mm}
-		\includegraphics[scale=0.36]{images/freeswel2}
-		\caption{}
-	\end{subfigure}
-\vspace{3mm}
-\caption{Comparison of the prediction for the two models in a Free Swelling experiment. We consider as a reference Model A (ground truth). We fix the concentration $c^*_0$ of ions in the bath, we leave the matrix reach is steady state and we measure $C_s(c^*_0)$. Using Equations~(\ref{eqF})-(\ref{eqFb}) we have $\kappa(c^*_0)=G^A_{eq}((1+v_sC_s)^{2/3}-1)$. The same is repeated for three different salt concentration (each experiment correspond to a colour,see legend of Figure (b)). (a) 
-Comparison between Model A and Model B for the different estimated values $\kappa(c^*_0)$. (b) Relative error between the model as a function of the matrix stiffness $G_{eq}^A$. We note that the softer the matrix, the larger is the discrepancy between the two model. The choice of $c^*_0$ can also impact on the estimated error. Given the same mixing parameter $\chi$, the two models can not agree on the equilibrium behaviour for the two limits: $c_0$ small or $c_0$ large. Consequently the best choice would be choosing $c_0$ in the region of transition. Note that the shear modulus of the ECM is estimated to be of order $10^3-10^4$ \cite{Netti}.}
-\label{Exp1}
-\end{figure}
-\begin{figure}
-	\begin{subfigure}{0.49\textwidth}
-		\centering
-		\includegraphics[scale=0.32]{images/chi2}
-		\caption{}
-	\end{subfigure}	
-	\begin{subfigure}{0.49\textwidth}
-		\centering
-		\includegraphics[scale=0.285]{images/chi3p}
-		\caption{}
-	\end{subfigure}	
-
-	\centering
-	\begin{subfigure}{0.6\textwidth}
-		\includegraphics[scale=0.415]{images/chi1}
-		\caption{}
-	\end{subfigure}
-\caption{Model Comparison 2: despite there is a set of parameters that would give rise to the same equilibrium behaviour this can drastically change the predicted mixing properties of the ECM. (a-b) Example of an \textit{in silico} experiment for $G^A_{eq}=5e2$: data are generated using model A and adding random noise. The fitting for model B is obtained using the non-linear least square method function in MATLAB, \texttt{fmincon}. (a) Predicted equilibrium concentration of water in the ECM; (b) Predicted mechanical pressure in the ECM from model A (blue) and model B (red). Despite capturing the same qualitative trend, the two differ of several order of magnitude. (c) Flory-Huggins parameter $\chi$ used in the \textit{in silico} experiment vs the one estimated fitting model B to the \textit{in silico} data $\hat{\chi}$; .}
-\end{figure}
-\section{Confined Compression Test.}
-
-\begin{figure}[h]
-	\centering
-	\def\svgwidth{0.89\linewidth}
-	\input{latex/images/compression.pdf_tex}
-	\vspace{2mm}
-	\caption{Schematic representation of a compression test with a porous piston. A deformation is imposed in the $Z$ direction and the force necessary to maintain the deformation is recorded. }
-\end{figure}
-
-In this second example, we consider to perform on a swollen slice of ECM a compression test with the use of a porous platen,which allows the fluids to flow so to maintain the chemical equilibrium with the external bath \cite{Netti}. This allows to measure both the dynamical and equilibrium behaviour of the material by measuring the stress while imposing a known strain $\epsilon$. The corresponding deformation tensor is of the form:
-
-\begin{equation}
-\F=J_0^{1/3}\begin{bmatrix}
-1 &0&0\\
-0&1&0\\
-0&0& \lambda_1
-\end{bmatrix}, 
-\end{equation}
-where $\lambda_1 = 1 - \epsilon$. 
-\subsection{Model A}
-As before, $\B_e$ has a structure similar to $\F$:
-\begin{equation}
-\B_e=\begin{bmatrix}
-b &0&0\\
-0&b&0\\
-0&0& b_1
-\end{bmatrix}. 
-\end{equation}
-We are first interested in the equilibrium behaviour, for which Equations~(\ref{eqion}) still holds. Focusing on the contribution of spring B, studying the equilibriums of Equation~(\ref{Be}), we obtain that $b=b_1$. Since $\det B_e= (\det F)^2$, we conclude that:
-\begin{equation}
-b = J_0^{2/3}\lambda_1^{2/3}.
-\end{equation}
-
-Using the boundary condition, we can now compute the pressure and the equilibrium condition:
-\begin{gather}
-p = -\sigma + \frac{G^A_1}{J_0\lambda_1} (J^{2/3}_0\lambda_1^2-1)+\frac{G^A_2}{J_0\lambda_1} (J_0^{2/3} \lambda_1^{2/3}-1) \\
-\begin{aligned}
-\frac{\sigma v_s}{k_B T}=&\frac{J_0\lambda_1+\chi}{J_0^2\lambda^2_1}+\frac{G_1^Av_s}{k_BT} \frac{J_0^{2/3}\lambda^2_1-1}{J_0 \lambda_1}+\frac{G_2^Av_s}{k_BT} \frac{J_0^{2/3}\lambda^{2/3}_1-1}{J_0 \lambda_1}\\[1.5mm]
-&+\ln \frac{J_0\lambda_1-1}{J_0\lambda_1} +2c_0v_s-\sqrt{\left(\frac{z_fC_fv_s}{J_0\lambda_1-1}\right)^2+4v_s^2c^2_0}
-\end{aligned}
-\end{gather}
-
-\subsection{Model B}
-\begin{equation}
-\bar{\B}=\begin{bmatrix}
-\lambda_1^{-2/3} &0&0\\
-0&\lambda_1^{-2/3}&0\\
-0&0& \lambda_1^{4/3}
-\end{bmatrix}, \qquad
-\bar{\B}_e=\begin{bmatrix}
-\bar{b} &0&0\\
-0&\bar{b}&0\\
-0&0& \bar{b}_1
-\end{bmatrix}
-\end{equation}
-
-As for the model A, at equilibrium we have that $\bar{b}=\bar{b}_1$. However, in this case, we have that $\det \bar{B}_e=1$ so that $\bar{b}=1$ so that the second spring does not contribute to the stress. Using the boundary condition, we have that:
-
-\begin{gather}
-\displaystyle 
-p = -\sigma + \frac{\kappa}{J_0\lambda_1}+\dfrac{2G^B_1}{3J_0\lambda_1^{5/3}} (\lambda_1^2-1) \\
-\begin{aligned}
-\frac{\sigma v_s}{k_B T}=&\dfrac{J_0\lambda_1+\chi}{J_0^2\lambda^2_1}+\frac{2G_1^Bv_s}{3k_BT} \dfrac{\lambda^2_1-1}{J_0 \lambda_1^{5/3}}+\frac{\kappa v_s}{k_BT} \frac{1}{J_0 \lambda_1}+\ln \frac{J_0\lambda_1-1}{J_0\lambda_1}\\[1.5mm]
-& +2c_0v_s-\sqrt{\left(\frac{z_fC_fv_s}{J_0\lambda_1-1}\right)^2+4v_s^2c^2_0}
-\end{aligned}
-\end{gather}
-
-%\section{Compression Test.}
-%We here consider another standardd
-\begin{figure}
-	\hspace{-8mm}
-	\begin{subfigure}{0.62\textwidth}
-		\hspace{6mm}
-		\includegraphics[scale=0.35]{images/compression.eps}
-		\caption{Fitted Model}
-		\label{fit}
-	\end{subfigure}
-	\begin{subtable}{0.375\textwidth}
-			\begin{tabular}{c | c ||c| c }		
-				\hline\addlinespace[2pt]
-				 \multicolumn{2}{c}{Model A} &  \multicolumn{2}{c}{Model B}\\[0.5mm]
-				\hline\addlinespace[2pt]
-				$\quad \chi\quad$ & $\quad0.498\quad$ &$\quad \chi\quad$&$\quad0.523\quad$\\[0.5mm]
-				$G^A_1$ & 18.9 kPa&$\kappa$& 0.83 kPa\\[0.5mm]
-				$G^A_2$ & 5.3 Pa&$G^B_1$& 55.1 kPa\\[0.5mm]
-				$J_0$ & $20.7$&  $J_0$&$14.8$\\[0.5mm]
-				\hline
-			\end{tabular}
-		\caption{Estimated Parameters}
-		\label{param}
-	\end{subtable}
-\caption{Comparison of the two model in fitting real experimental data from \cite{Netti}.}		
-\end{figure}
-
-As shown in Figure \ref{fit}, both models are able to capture the qualitative behaviour of the data. However, as shown by the parameters in Table \ref{param}, there are quantitative differences. In particular, there are order of magnitude of difference in the estimated pressure $p$. If we look at its value for zero-strain, i.e. $\lambda_1=1$, we obtain: 
-\begin{gather}
-p^A = \frac{G^A_1+G^A_2}{J_0}(J_0^{2/3}-1) = \frac{24.2 \text{ kPa}}{20.7}(20.7^{2/3}-1) = 7.64 \text{ kPa},\\
-p^B = \frac{\kappa}{J_0} = \frac{0.83 \text{ kPa}}{14.8} = 56.08 \text{ Pa}
-\end{gather}
-
-When designing synthetic ECM, the tuning of the internal pressure cells in a culture are exposed to is of large importance. As mentioned in the introduction, cells are sensitive to pressure and their response can greatly change depending on this stimulus. Consequently, depending on the model chosen, the
-
-[NEO-HOOKEAN form IS DERIVED FOR CONSTANT VOLUME DEFORMATION!] 
+%\input{compression2}
+\input{compression1}
 \newpage
 \appendix
 \section{Glossary of Variables and Parameters in the Model.}
@@ -697,7 +548,7 @@ When designing synthetic ECM, the tuning of the internal pressure cells in a cul
 	$\F\qquad$ & Deformation gradient tensor $\F=\mathbb{I}-\nabla_0\mathbf{u}$,\\	
 	$\mathbb{C}\qquad$ & Right Cauchy-Green Tensor $\mathbb{C}=\F^T\F$,\\
 	$\mathbb{B}\qquad$ & Left Cauchy-Green Tensor $\mathbb{B}=\F\F^T$,\\
-	$\LL\qquad$ & Velocity Gradient Tensor $\LL=\dot{\F}F^{-1}$,\\
+	$\LL\qquad$ & Velocity Gradient Tensor $\LL=\dot{\F}\F^{-1}$,\\
 	$J\qquad$ & Determinant of the deformation gradient tensor $J=\det \F$,\\
 	$\eta^A\qquad $ & Viscosity of the collagen network in model A,\\
 	$G^A_1\qquad$ & Shear modulus related to spring $1$ in model A\\
@@ -830,9 +681,12 @@ Again we assume the ECM to behave as an hyperplastic material:
 
 For the volumetric contribution we consider as before a logarithmic term:
 \begin{equation}
-\psi_{vol}(J) = \frac{\kappa}{2} \ln J^2.
+\psi_{vol}(J) = \frac{\kappa}{2} \ln J^2. \label{psivol}
 \end{equation}
-
+ALTERNATIVE:
+\begin{equation}
+\psi_{vol}(J) = \frac{G_{vol}}{2}\left[3(J^{2/3}-1) -\ln J^2\right].
+\end{equation}
 The above volumetric constitutive assumption is one of the most common in modelling hyper-elastic material. However, as shown in \cite{vol}, this has several limitation in the regime of large deformation, which highlights the need of study more realistic form which can capture the more complex behaviour of real material. From this point of view, being able to decouple the volumetric deformation as in model B allows to investigate this aspect alone [REPHRASE].
 
 When looking at the entropy production, Equation~(\ref{dis}) still holds simply by replacing $\LL_v$ with $\bar{\LL}_v$. Using the same argument as in Section~(\ref{ent}), we are left with the following system of equations:

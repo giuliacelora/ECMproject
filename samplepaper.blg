@@ -8,50 +8,51 @@ I was expecting a `,' or a `}'---line 37 of file latex/ref.bib
  : @InBook{Reviewpolyel,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 511 of file latex/ref.bib
+Repeated entry---line 519 of file latex/ref.bib
  : @misc{vol
  :          ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for ""
 Warning--I didn't find a database entry for "biophysics"
-You've used 48 entries,
+You've used 49 entries,
             2850 wiz_defined-function locations,
-            912 strings with 12480 characters,
-and the built_in function-call counts, 28933 in all, are:
-= -- 2398
-> -- 770
-< -- 78
-+ -- 327
-- -- 269
-* -- 1841
-:= -- 3523
-add.period$ -- 48
-call.type$ -- 48
-change.case$ -- 275
+            917 strings with 12741 characters,
+and the built_in function-call counts, 29680 in all, are:
+= -- 2457
+> -- 802
+< -- 80
++ -- 340
+- -- 281
+* -- 1891
+:= -- 3616
+add.period$ -- 49
+call.type$ -- 49
+change.case$ -- 284
 chr.to.int$ -- 0
-cite$ -- 48
-duplicate$ -- 2609
-empty$ -- 2603
-format.name$ -- 301
-if$ -- 6470
+cite$ -- 49
+duplicate$ -- 2673
+empty$ -- 2659
+format.name$ -- 314
+if$ -- 6632
 int.to.chr$ -- 0
-int.to.str$ -- 48
-missing$ -- 499
-newline$ -- 150
-num.names$ -- 98
-pop$ -- 819
+int.to.str$ -- 49
+missing$ -- 513
+newline$ -- 153
+num.names$ -- 100
+pop$ -- 844
 preamble$ -- 1
-purify$ -- 230
+purify$ -- 238
 quote$ -- 0
-skip$ -- 935
+skip$ -- 958
 stack$ -- 0
-substring$ -- 1913
-swap$ -- 1620
-text.length$ -- 78
+substring$ -- 1951
+swap$ -- 1663
+text.length$ -- 80
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 180
+type$ -- 184
 warning$ -- 0
-while$ -- 224
-width$ -- 50
-write$ -- 480
+while$ -- 229
+width$ -- 51
+write$ -- 490
 (There were 2 error messages)
