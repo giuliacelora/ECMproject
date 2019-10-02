@@ -7,8 +7,8 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{booktabs} % For pretty tables
-\usepackage{caption} % For caption spacing
-\usepackage{subcaption}
+\usepackage[labelfont=bf,font=scriptsize]{caption}
+\usepackage[font=scriptsize]{subcaption}
 \usepackage{graphicx}
 \usepackage{pgfplots}
 \usepackage[all]{nowidow}
@@ -478,10 +478,13 @@ As described in Appendix \ref{apenergy}, starting from Equations~(\ref{vflow1})-
 \mathbf{j}_i = - \frac{D_i}{k_B T}c_i\nabla \mu_i + \frac{D_i}{D^0_i} \frac{c_i}{c_s} \mathbf{j}_s, \\
 \dot{\mathbb{B}}_e =\LL\mathbb{B}_e + \mathbb{B}_e \LL^T - \frac{1}{\tau_R} \,\mathbb{B}_e\text{DEV}[\mathbb{B}_e].\label{Be}
 \end{eqnarray}
-where the parameters are macroscopic phenomenological coefficients, that can either be estimated experimentally or derived from the nano/microscopic properties of the different phases \cite{ecm1,ecm2}. 
+where the parameters are macroscopic phenomenological coefficients, that can either be estimated experimentally or derived from the nano/microscopic properties of the different phases \cite{ecm1,ecm2}. The analogous system of equation for model B can be found in Appendix \ref{modelB}. 
 
+Having concluded the derivation of the model, we are now interested in comparing the two model in different experimental settings: free swelling and compression test. For the second case, after using a numerical study \textit{in silico}, we will also test the two models on real data collected by Netti et~al. \cite{Netti} from compression test on tumour extracellular matrix. 
+
+In all simulation, unless differently stated, we will use the parameters in Table \ref{Tab1} will be considered to be constant \cite{Netti,ecm2}.
 \section{Unconstrained Free Swelling.}
-
+\label{free}
 \begin{figure}
 	\centering
 	\def\svgwidth{0.95\linewidth}
@@ -493,8 +496,8 @@ We here consider the first experimental setup: unconstrained free swelling. In s
 \begin{itemize}
 	\item[1.] chemical potentials of solvent and solutes is homogeneous and equal in the bath and in the bath:
 	\begin{eqnarray}
-	\mu_s=\mu^{ext}_s = \mu^0_s - vkT \sum_i c^0_i ,\\\label{free1}
-	\mu_i=\mu^{ext}_i = \mu^0_i +kT\ln(v_sc^0_i),
+	\mu_s=\mu^{ext}_s = \mu^0_s - vkT \sum_i c^i_0 ,\\\label{free1}
+	\mu_i=\mu^{ext}_i = \mu^0_i +kT\ln(v_sc^i_0),
 	\end{eqnarray} 
 	where the bath solution is assumed to be neutral with a potential $\phi^{bath}=0$.
 	\item[2.] The electrostatic potential and the solute concentration are constant in the ECM, but different to the value in the bath. This difference creates a thin charged interface at the boundary, whose thickness is negligible compared to the size of the ECM.
@@ -509,8 +512,32 @@ Finally, to investigate the equilibrium, we specify the deformation gradient ten
 \begin{equation}
 \F= \lambda \mathbb{I},\label{deffree}                                                                
 \end{equation}
-with $\lambda=(1+C_s v_s)^{1/3}$. To simplify, we also assume that there are only two species of ions in the solution: a positive $C_+$ with $z_+=1$ and a negative one $C_-$ with $z_-=-1$. Since the bath solution is neutral, the total charge must vanish, $c^0_+=c^0_-=c^0$.
+with $\lambda=(1+C_s v_s)^{1/3}$. To simplify, we also assume that there are only two species of ions in the solution: a positive $C_+$ with $z_+=1$ and a negative one $C_-$ with $z_-=-1$. Since the bath solution is neutral, the total charge must vanish, $c^+_0=c^-_0=c_0$.
+
+Throughout the work, unless differently specified, we will use the parameters in Table \ref{Tab1} will be considered to be constant so to reflect the condition in the experiment by Netti et~al. \cite{Netti,ecm2}.
+
+\begin{table}[h!]
+	\vspace{4mm}
+	\centering
+	\begin{tabular}{||c c c||}
+		\hline\addlinespace[2pt]
+		Symbol  & Value& Unit\\
+		\hline\addlinespace[5pt]
+		$\qquad C_f\qquad$  & $3.947\times 10^{23}$& $\qquad\text{m}^{-3}\quad$\\
+		$\qquad v_s\qquad$  & $3\times 10^{-29}$& $\qquad\text{m}^3\quad$ \\
+		$\qquad z_f\qquad$ & $-4$& -\\
+		$\qquad k_B\qquad$ & $1.38 \times 10^{-23}$& $\qquad\text{J}/\text{K}\quad$\\
+		$\qquad T\qquad$ &$295$ &K\\
+		$\qquad c^i_0\qquad$ & $9.27\times 10^{25}$& $\qquad\text{m}^{-3}\quad$\\
+		\hline
+	\end{tabular}
+	\vspace{2mm}
+	\caption{Parameters adopted in the simulations as estimated in \cite{ecm2} in reference to the experiment by Netti et~al. \cite{Netti}.}
+	\label{Tab1}
+\end{table}
+
 \subsection{Model A.}
+
 In the case of free swelling, due to the symmetry of $\F$, it reasonable to assume that also $\F_e$ is of the similar form, $\F_e=\lambda_e \mathbb{I}$. Consequently, based on Equation~(\ref{apBe}) in Appendix \ref{apenergy}, we have that the viscous contribution vanish so that $\B_e=\B= \lambda^2 \mathbb{I}$. Substituting this result and the boundary condition~(\ref{free1})-(\ref{free2}) into Equations (\ref{sys1})-(\ref{sys2}) and (\ref{sys3}), setting to zero all spatial derivative, we obtain:
 \begin{gather}
 p_A = \frac{G^A_1+G^A_2}{1+C_sv_s}(\lambda^2-1),\label{presA}\\
@@ -523,7 +550,9 @@ Q = e\left(C_+-C_-+z_f C_{f}\right)=0.\label{electron}
 where $\Pi^{n}$ and $\Pi^{ion}_A$ are the osmotic pressures due to the mixing of the polymer network with the solvent and the imbalance of ions inside and outside the ECM. 
 Note that at equilibrium the system reaches a balance between the mechanical pressure $p_A$ and the osmotic pressures. Moreover, the electro-neutrality condition is naturally imposed, Equation~(\ref{electron}). As shown in Appendix , manipulating the above system we can reduce the number of unknown to the solvent concentration $C_s$:
 \begin{gather}
-C_{\pm}= \frac{1}{2}\left[\mp z_fC_f+ \sqrt{(z_fC_f)^2+(2v_sC_sc_0)^2}\,\right],\label{eqion}\\
+C_{\pm}= \frac{1}{2}\left[\mp z_fC_f+ \sqrt{(z_fC_f)^2+(2v_sC_sc_0)^2}\,\right],\label{eqion}
+\end{gather}
+\begin{gather}
 \begin{aligned}
 F_{A}(C_s; c_0,\chi,G^A_{eq})=&\frac{1+C_sv_s+\chi}{(1+C_sv_s)^2}+\frac{G^A_{eq} v_s}{k_BT} \frac{(1+v_sC_s)^{2/3}-1}{1+C_sv_s}\\[1.5mm]
 &+\ln \frac{C_sv_s}{1+C_sv_s} +2c_0v_s-\sqrt{\left(\frac{z_fC_f}{C_s}\right)^2+4v_s^2c^2_0} =0 \label{eqF}
@@ -631,6 +660,7 @@ and the coefficient $K$ is defined as:
 \end{equation}
 
 \section{Model B: Separating the Volumetric Deformation.}
+\label{modelB}
 The derivation of the governing equation for the second model proposed follow the same steps as model A, with few changes. From the point of view of conservation laws (Section \ref{conslaw}), these are still valid as they do not depend on the specific kinetics model chosen. As discussed in Section \ref{kin}, we use multiplicative decomposition to isolate the different contribution to the strain:
 \begin{equation}
 \F= \bar{\F} \F_{vol}= J^{1/3} \bar{\F}_e \bar{\F}_v,\label{mol2}

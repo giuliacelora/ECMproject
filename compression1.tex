@@ -4,16 +4,31 @@ In this second case, given the symmetry of the problem, we have that, at equilib
 p = \frac{\partial \psi_{vol}}{\partial J} .\label{presB}%= \frac{\kappa}{1+C_s v_s}.
 \end{equation}
 
+\begin{figure}[h!]
+	\begin{subfigure}{0.53\textwidth}
+		\includegraphics[scale=0.25]{images/manifold}
+		\caption{}
+	\end{subfigure}
+	\hspace{-5mm}
+	\begin{subfigure}{0.46\textwidth}
+		\hspace{-3mm}
+		\includegraphics[scale=0.4]{images/free1}
+		\caption{}
+	\end{subfigure}
+	\caption{Free Swelling: (a) Manifold implicitly defined by Equation~(\ref{eqF}) where $G^A_{eq}=10^3$ is fixed, while $c_0$ and $\chi$ are varied. On the vertical axis, we have plot $\lambda$ as defined by~(\ref{deffree}). In the red, it is highlighted the plane corresponding to $\chi=\chi_{crit}$ that split the parameter space into the region of high swelling and collapse for the material \cite{}.}
+\end{figure}
+
 We follow two different approaches, in case $BA$, we derive the constitutive equation for $\psi_{vol}$, so that the model B and model A predict the same equilibrium behaviour, i.e. $p_A=p_{BA}$. Using Equations~(\ref{presA})-(\ref{presB}), and the constraint $\psi_{vol}(1)=0$, we obtain:
 \begin{equation}
-\frac{\partial \psi^{BA}_{vol}}{\partial J}= G^A_{eq} \frac{J^{2/3}-1}{J} \Longrightarrow \psi_{vol} = \frac{G_{vol}}{2}\left[3(J^{2/3} -1) - 2\ln J\right],
+\frac{\partial \psi^{B}_{vol}}{\partial J}= G^A_{eq} \frac{J^{2/3}-1}{J} \Longrightarrow \psi^B_{vol} = \frac{G_{vol}}{2}\left[3(J^{2/3} -1) - 2\ln J\right],
 \end{equation}
-which is equivalent to using a Neo-Hookean model also for the volumetric spring with shear modulus $G^{BA}_{vol}$. In the second case, we instead consider a more commonly used constitutive model for volumetric deformation. 
+which is equivalent to using a Neo-Hookean model also for the volumetric spring with shear modulus $G_{vol}$. In the second case, we instead consider a more commonly used constitutive model for volumetric deformation. 
 
-[ADD A FIGURE TO SHOW THE DIFFERENCE BETWEEN COLLAPSE AND HIGHLY SWOLLEN PHASE]
+
+
 \section{Confined Compression Test.}
 
-In this second example, we consider to perform on a swollen slice of ECM a compression test with the use of a porous platen,which allows the fluids to flow so to maintain the chemical equilibrium with the external bath \cite{Netti}. This allows to measure both the dynamical and equilibrium behaviour of the material by measuring the stress while imposing a known strain $\epsilon$. The corresponding deformation tensor is of the form:
+In this second example, we consider to perform compression test on a previously swollen slice of ECM. As illustrated in Figure \ref{confcomp}, a porous platen is used so that the fluids is free to flow and the chemical equilibrium with the external bath is restored after the transient relaxation phase. After compression of the tissue in ramps, the system is allowed to relax while the strain $\epsilon$ is maintained constant \cite{Netti}. In this way, both the dynamical and equilibrium behaviour of the material can be assessed. 
 
 \begin{figure}[h]
 	\centering
@@ -21,7 +36,11 @@ In this second example, we consider to perform on a swollen slice of ECM a compr
 	\input{latex/images/compression.pdf_tex}
 	\vspace{2mm}
 	\caption{Schematic representation of a compression test with a porous piston. A deformation is imposed in the $Z$ direction and the force necessary to maintain the deformation is recorded. }
+	\label{confcomp}
 \end{figure}
+
+As the deformation is constrained in $Z$ direction, the deformation tensor is of the form:
+
 \begin{equation}
 \F=J_0^{1/3}\begin{bmatrix}
 1 &0&0\\
@@ -30,7 +49,17 @@ In this second example, we consider to perform on a swollen slice of ECM a compr
 \end{bmatrix},
 \label{F} 
 \end{equation}
-where $\lambda_1 = 1 - \epsilon$. 
+where $\lambda_1 = 1 - \epsilon$. We here restrict our analysis to the equilibrium behaviour, for which the boundary conditions listed in Section \ref{free} still hold with exception to the last one. Due to the external force $\mathbf{F}= -F_z \mathbf{e}_z$ which is exerted on the platen of area $A$, we now have that:
+
+\begin{equation}
+\mathbb{T}= \begin{bmatrix}
+0 &0&0\\
+0&0&0\\
+0&0& \sigma
+\end{bmatrix}, \qquad \sigma = -\frac{F_z}{A}.
+\end{equation} 
+where $\mathbf{e}_z$ is the unit vector in the $z$ direction in the current configuration. As we will see also in this simplified setting where the dynamics is neglected important differences emerges between the two model presented, which result in relevant quantitative predictions. Our aim is thus to understand under which information is necessary in order to discern which one better describe the material studied. 
+
 \subsection{Model A}
 As before, given the symmetries of the system, $\B_e$ is a diagonal matrix of the form:
 \begin{equation}
@@ -72,7 +101,7 @@ Based on Equation~(\ref{F}), we have that the tensors $\bar{\B}$ and $\bar{\B}_e
 As for the model A, at equilibrium we have that $\bar{b}=\bar{b}_1$. However, in this case, we have that $\det \bar{B}_e=1$ so that $\bar{b}=1$ so that the second spring does not contribute to the stress. Using the boundary condition, in the case of model $BA$ we obtain:
 \begin{gather}
 \displaystyle 
-p_{BA} = -\sigma + \frac{G_{vol}}{J_0\lambda_1}(J_0^{2/3}\lambda_1^{2/3}-1)+\dfrac{2G^B_1}{3J_0\lambda_1^{5/3}} (\lambda_1^2-1) \\
+p_{B} = -\sigma + \frac{G_{vol}}{J_0\lambda_1}(J_0^{2/3}\lambda_1^{2/3}-1)+\dfrac{2G^B_1}{3J_0\lambda_1^{5/3}} (\lambda_1^2-1) \\
 \begin{aligned}
 \frac{\sigma v_s}{k_B T}=&\dfrac{J_0\lambda_1+\chi}{J_0^2\lambda^2_1}+\frac{2G_1^Bv_s}{3k_BT} \dfrac{\lambda^2_1-1}{J_0 \lambda_1^{5/3}}+\frac{G_{vol}v_s}{k_BT}\frac{J_0^{2/3}\lambda_1^{2/3}-1}{J_0\lambda_1}\\[1.5mm]
 & +\ln \frac{J_0\lambda_1-1}{J_0\lambda_1}+2c_0v_s-\sqrt{\left(\frac{z_fC_fv_s}{J_0\lambda_1-1}\right)^2+4v_s^2c^2_0}.\label{compAB}
@@ -98,18 +127,18 @@ Unlike the case of unconstrained swelling, we now have that the model $A$ and $B
 	\end{subfigure}
 	\begin{subfigure}{0.49\textwidth}
 		\includegraphics[scale=0.4]{images/comp4}
-		\caption{CHANGE THE MAXIMUM OF THE PLOT}
+		\caption{}
 	\end{subfigure}
 	\caption{Sensitivity Analysis. As expected the mismatch between the two model grows with the strain: (a) Comparison of stress-strain curve predicted by model A (dotted line) and model B (full line) for different value of the parameter $G^A_1$; (b) as $G_1^A$ increase also the discrepancy $\delta\sigma$ grows; (c) $\delta\sigma$ is also particularly sensitive to changes in the mixing parameter $\chi$, in particular we see that there is a relevant jump when the ECM is the \textit{collapsed} phase; (d) on the other hand, only large changes in $G^A_2$ have a relevant impact on $\delta\sigma$.}
 	\label{comp3}
 \end{figure}
 We first focus on comparing the model $A$ and $AB$, assuming that the parameter $\chi$ is fixed and that $G_{vol}=G^A_{eq}$, so that the equilibrium volume $J_0$ is the same for both models. If we now take the difference between Equations~(\ref{compA}) and (\ref{compAB}), we obtain that the difference in the compression stress $\delta \sigma= \sigma_{BA}-\sigma_{A}$ is:
 \begin{equation}
-\delta \sigma = \frac{2 G_1^{AB}}{3} \frac{\lambda_1^2-1}{J_0\lambda_1^{5/3}} - \frac{G_1^A}{J_0^{1/3}}(\lambda_1-\lambda_1^{-1/3}).\label{err}
+\delta \sigma = \frac{2 G_1^{B}}{3} \frac{\lambda_1^2-1}{J_0\lambda_1^{5/3}} - \frac{G_1^A}{J_0^{1/3}}(\lambda_1-\lambda_1^{-1/3}).\label{err}
 \end{equation}
 Looking at the above equation it appears clearly that there is no constant value of $G^{AB}_1$ for which the difference $\delta \sigma$ is identically zero. If we impose that for small deformation, i.e. $\lambda_1\rightarrow 1$, the two models agree at the second order:
 \begin{equation}
-\delta \sigma=0, \qquad \frac{\d \delta \sigma}{\d \lambda_1}=0 \quad\Rightarrow \quad G_1^{AB} = J_0^{2/3}G_1^A.
+\delta \sigma=0, \qquad \frac{\d \delta \sigma}{\d \lambda_1}=0 \quad\Rightarrow \quad G_1^{B} = J_0^{2/3}G_1^A.
 \end{equation}
 Under such condition we can rewrite the Equation~(\ref{err}) as:
 \begin{equation}
@@ -126,8 +155,8 @@ Using the data collected by Netti et~al. \cite{Netti}, we test the
 \begin{figure}[h]
 	\hspace{-8mm}
 	\begin{subfigure}{0.62\textwidth}
-		\hspace{6mm}
-		\includegraphics[scale=0.35]{images/compression.eps}
+		\hspace{2mm}
+		\includegraphics[scale=0.45]{images/compression2.eps}
 		\caption{Fitted Model}
 		\label{fit}
 	\end{subfigure}
