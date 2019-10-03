@@ -12,6 +12,8 @@
 \usepackage{graphicx}
 \usepackage{pgfplots}
 \usepackage[all]{nowidow}
+\usepackage{multirow}
+
 \usepackage[utf8]{inputenc}
 \usepackage{tikz}
 \usetikzlibrary{er,positioning,bayesnet}
@@ -75,19 +77,41 @@
 %
 \input{introduction}
 
+\section{Composition of Extracellular Matrix.}
+\label{ECMcomp}
+Despite the tissue-specific nature of Extracellular Matrix (ECM), this is usually composed of a network of collagen fibrils entangled with proteoglycans (PGAs) which are covalently bonded to charged chains of glycosaminoglycans (GAGs), see Figure \ref{ECMfig_a}.  While collagen is mainly responsible for the mechanical behaviour of the tissue, GAGs can imbibe water, giving the extracellular matrix the ability to swell while maintaining its structural integrity. As mentioned in the introduction, from this point of view, the ECM is a polyelectrolyte gel. As schematically illustrated in Figure \ref{ECMfig}(b), polyelectrolyte gels are 3D networks of cross-linked polymer chains that contain ionizable functional groups. When in solution the gel swells, while the functional groups dissociate into fixed charges and mobile ions in the solution.  In particular, research has been focusing on the phenomena of swelling, i.e. large deformation due to absorption of water, and the diffusion transport and release of solution  \cite{DROZDOV+,DROZDOVph,Reviewpolyel,swell2}. However, only a small fraction of the study published accounts for the visco-elastic properties of the polymer network.
+
+\begin{figure}[h]
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\includegraphics[scale=0.38]{images/ECM}
+		\caption{}
+		\label{ECMfig_a}
+	\end{subfigure}
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\includegraphics[scale=0.42]{images/ecmscheme.jpg}
+		\caption{}
+	\end{subfigure}
+	\caption{Analogy between ECM in soft tissue and polyelectrolytes hydrogels: (a) schematic diagram of the structure of the charged hydrated articular cartilage, reproduced from \cite{pictureECM}; (b) an anionic polyelectrolyte gel modelled as a three-phase continuum, reproduced from \cite{DROZDOVph}.}
+	\label{ECMfig}
+\end{figure}
+
+As shown in Figure \ref{ECMfig}, the extracellular matrix falls into the definition of polyelectrolytes so that the knowledge acquired in the study of these materials can be transferred to soft tissues. For the purpose of this study, we will not explicitly distinguish between collagen, PGAs and GAGs. At the tissue level, this can be grouped into a single solid phase (the polymer network), whose mechanical properties are treated as the average over the different components contribution. As is common in multiphase models of tissue, we will assume that the matrix is isotropic and GAGs are evenly distributed on the network. While this is not a good approximation for tissue like cartilage, which are highly anisotropic, it does apply to the extracellular matrix found in soft tissue such as liver, brain and tumours. It is also important to point out that ECM has additional properties such as thermo-sensitivity and pH-sensitivity. However, both in living organisms and in experimental set-up temperature and pH are maintained fairly constant.
+
 \section{Non Equilibrium Thermodynamics.}
 \label{secNET}
-While equilibrium thermodynamics can describe ideal processes, it does not apply to real processes which are irreversible. In this cases, the change in the entropy of a system $\d S$ results from both the reversible exchange of energy and matter with the external environment $\d_eS$ and the internal dissipation of energy during the process $\d_iS$ \cite{NET}:
+While equilibrium thermodynamics can describe ideal, i.e. reversible, processes, it does not apply to real processes which are irreversible. In this cases, the change in the entropy of a system $\d S$ results from both the reversible exchange of energy and matter with the external environment $\d_eS$ and the internal dissipation of energy during the process $\d_iS$ \cite{NET}:
 \begin{equation}
 \d S = \d_eS + \d_iS, 
 \end{equation}
-According to the second law of thermodynamics, which applies universally to any system or any of its sub-part $\d S_i\ge 0$. It is important to notice that the second law allows transformations in which total change in entropy $d S$ of the system is negative. This occurs whenever $-\d_e S>\d_i S$ and it can lead to the spontaneous formation of complex and ordered structures such as living organisms. From this point of view, life has emerged as an efficient mechanism able to increase sufficiently the entropy of its environment \cite{JeremyEngland}.  
+According to the second law of thermodynamics, which applies universally to any system or any of its sub-part $\d_i S\ge 0$. It is important to notice that the second law allows transformations in which total change in entropy $d S$ of the system is negative. This occurs whenever $-\d_e S>\d_i S$ and it can lead to the spontaneous formation of complex and ordered structures such as living organisms. From this point of view, life has emerged as an efficient mechanism able to increase sufficiently the entropy of its environment \cite{JeremyEngland}.  
 
 In this study, we will focus on isothermal processes, i.e. $T=const$. Under this assumption, as derived by Gurtin in \cite{GURTIN}, the second law of thermodynamics is equivalent to the following \textit{energy imbalance inequality}:
 \begin{equation}
 \frac{\d}{\d t} \left\{\int_R \psi \right\}\leq W(R) + M(R) \label{energyin}
 \end{equation}
-where $R$ is a arbitrary control volume of the system, $\psi$ is the Helmholtz free energy, $W(R)$ is the rate at which the environment does work on $R$ and $M(R)$ is the inflow of mass due to transport. It is important to note that, as long as the quantities involved are well defined, the energy inequality~(\ref{energyin}) holds for any isothermal process independently of the specific physical system considered. This imposes a constraint on the form of the function $\psi$ and how this depends on the other thermodynamic variables, such as temperature or pressure, which are used to describe the system. 
+where $R$ is a arbitrary control volume of the system, $\psi$ is the Helmholtz free energy, $W(R)$ is the rate at which the environment does work on $R$ and $M(R)$ is the inflow of mass due to transport. It is important to note that, as long as the quantities involved are well defined, the energy inequality~(\ref{energyin}) holds for any isothermal process independently of the specific physical system considered. This imposes a constraint on the form of the function $\psi$ and its dependence on the other thermodynamic variables, such as temperature or pressure, which are used to describe the system. 
 
 Non-equilibrium thermodynamics mainly focuses on defining the form of $\d_i S$, which, unlike the reversible entropy production $\d_e S$, is not a state variable but depends on the specific transformation applied to the system. 
 Different theories have been proposed, \cite{NET}, each with its assumptions and specific domain of applicability. In our study we will focus on \textquotedblleft Classical Irreversible Thermodynamics'' (CIT) which was pioneered by Onsager \cite{onsager} and Prigogine \cite{prigogine} in the first half of the 20th century. One the most important assumptions of this theory is the \textit{Local Equilibrium Hypothesis}, which guarantees thermodynamic variables, including entropy, are locally well-defined, \cite{NET}. 
@@ -116,7 +140,7 @@ While the local equilibrium hypothesis is at the basis of most theories of non-e
 	\item[2.] \textit{Microscopic Reversibility}: time reversibility of processes at the micro-scale. 
 \end{itemize}
 
-Starting from these two principles, in its seminal paper \cite{onsager} Onsager derives the well-known \textit{Onsager Reciprocal Relation}:
+Starting from these two principles, in his seminal paper \cite{onsager} Onsager derives the well-known \textit{Onsager Reciprocal Relation}:
 \begin{equation}
 L_{mk}=L_{km}.
 \end{equation}
@@ -128,36 +152,22 @@ W(R)+M(R)-\frac{\d}{\d t} \left\{\int_R \psi \right\} = T \int_R \sigma \,\d V\,
 \label{eqCIT}
 \end{equation}
 
-In the past few decades, CIT has been applied successfully to the modelling of several physical phenomena of interest for engineers, physicists and applied mathematicians. However, its validity is limited to phenomena near-equilibrium, for which a linear approximation of the flux-force relation holds. The growing interest in more complex far-from-equilibrium phenomena has pushed toward the development of a more general framework for the study of a non-equilibrium phenomena. Since this goes beyond the purpose of our study, we will not discuss it further. We just want to mention the law of steepest entropy ascent, which, according to Beretta \cite{SEA2}, seems to emerge as the fourth fundamental law of nature. In the linear regime, this principle can be used to prove Onsager's reciprocal relation \cite{SEA1}, with no reference to the microscopic reversibility hypothesis, whose validity remains instead controversial \cite{CIT}.
-
-\section{Composition of Extracellular Matrix.}
-\label{ECMcomp}
-Despite the tissue-specific nature of Extracellular Matrix (ECM), as shown in Figure \ref{ECMfig} (a), this is usually composed of a network of collagen fibrils entangled with proteoglycans (PGAs) which are covalently bonded to charged chains of glycosaminoglycans (GAGs).  While collagen is mainly responsible for the mechanical behaviour of the tissue, GAGs can imbibe water, giving the extracellular matrix the ability to swell while maintaining its structural integrity. From this point of view, the ECM behaves as a polyelectrolyte gel \cite{ecm1,ecm2}. As schematically illustrated in Figure \ref{ECMfig}(b), polyelectrolyte gels are 3D networks of cross-linked polymer chains that contain ionizable functional groups. When in solution the gel swells, while the functional groups dissociate into fixed charges and mobile ions in the solution. Besides being largely present in the natural world, synthetic polyelectrolytes are currently employed for a wide range of applications, such as drug delivery, biomedical devices, scaffolds for tissue engineering and soft robotics \cite{hydroex3,hydroex2,hydroex1,hydroex4}. Given their wide industrial application, there has been a growing effort in understanding their behaviour and translating it into mathematical models. In particular, research has been focusing on the phenomena of swelling, i.e. large deformation due to absorption of water, and the diffusion transport and release of solution  \cite{DROZDOV+,DROZDOVph,Reviewpolyel,swell2}. However, only a small fraction of the study published accounts for the visco-elastic properties of the polymer network.
-
-\begin{figure}[h]
-	\begin{subfigure}{0.49\textwidth}
-	\centering
-	\includegraphics[scale=0.38]{images/ECM}
-	\caption{}
-	\end{subfigure}
-	\begin{subfigure}{0.49\textwidth}
-	\centering
-	\includegraphics[scale=0.42]{images/ecmscheme.jpg}
-	\caption{}
-\end{subfigure}
-\caption{Analogy between ECM in soft tissue and polyelectrolytes hydrogels: (a) schematic diagram of the structure of the charged hydrated articular cartilage, reproduced from \cite{pictureECM}; (b) an anionic polyelectrolyte gel modelled as a three-phase continuum, reproduced from \cite{DROZDOVph}.}
-\label{ECMfig}
-\end{figure}
-
-As shown in Figure \ref{ECMfig}, the extracellular matrix falls into the definition of polyelectrolytes so that the knowledge acquired in the study of these materials can be transferred to soft tissues. For the purpose of this study, we will not explicitly distinguish between collagen, PGAs and GAGs. At the tissue level, this can be grouped into a single solid phase (the polymer networks), whose mechanical properties are treated as the average over the different components contribution. As common in multiphase models of tissue, we will assume that the matrix is isotropic and GAGs are evenly distributed on the network. While this is not a good approximation for tissue like cartilage, which are highly anisotropic, it does apply to the extracellular matrix found in other soft tissue like liver, brain and tumours. It is also important to point out that ECM has additional properties such as thermo-sensitivity and pH-sensitivity. However, both in living organisms and in experimental set-up temperature and pH are maintained fairly constant.
+In the past few decades, CIT has been applied successfully to the modelling of several physical phenomena of interest for engineers, physicists and applied mathematicians. However, its validity is limited to phenomena near-equilibrium, for which a linear approximation of the flux-force relation holds. The growing interest in more complex far-from-equilibrium phenomena has pushed toward the development of a more general framework for the study of a non-equilibrium phenomena. Since this goes beyond the purpose of our study, we will not discuss it further. We do, however, highlight the law of steepest entropy ascent, which, according to Beretta \cite{SEA2}, seems to emerge as the fourth fundamental law of nature. In the linear regime, this principle can be used to prove Onsager's reciprocal relation \cite{SEA1}, with no reference to the microscopic reversibility hypothesis, whose validity remains instead controversial \cite{CIT}.
 
 \section{Model Development}
 \label{modeldev}
 \subsection{Conservation Law.}
 \label{conslaw}
 As mentioned in the previous section, we here consider the ECM as a three-phase medium composed of a solid polymer network with fixed charges, a solvent (i.e. water molecules, interstitial fluid) and solutes (freely moving charges). 
+\begin{figure}[h!]
+	\centering
+	\def\svgwidth{0.9\linewidth}
+	\input{latex/images/deformation.pdf_tex}
+	\caption{Sketch of the dry and current state of the ECM network.}
+	\label{Above}
+\end{figure}
 
-We assume that the deformation of the ECM corresponds to the one of the solid network. As the tissue deform, the material element originally located at $\mathbf{X}$ in the initial configuration $\mathcal{B}_0$ is displaced to the point $\mathbf{x}$ in the current configuration $\mathcal{B}$. Such transformation is described by the deformation gradient tensor $\F= \partial \mathbf{x}/\partial \mathbf{X}$; the information about the change in ECM's volume due is encoded by $J= \det \F$. Since we assume the solid phase to be incompressible, any change in the volume can only be related to the migration of solvent and solutes molecules, whose nominal concentrations will be denoted by $C_s$ and $C_i$ respectively, $i=1,\ldots,N$ with $N$ being the number of free ion species. This lead to the molecular incompressibility condition:
+As the tissue deforms, the material element originally located at $\mathbf{X}$ in the initial configuration $\mathcal{B}_0$ is displaced to the point $\mathbf{x}$ in the current configuration $\mathcal{B}_t$, see Figure \ref{Above}. Such transformation is described by the deformation gradient tensor $\F= \partial \mathbf{x}/\partial \mathbf{X}$; the information about the change in ECM volume is encoded in $J= \det \F$. As in \cite{sarah}, we consider the reference, or initial, state $\mathcal{B}_0$, which is stress free, to be equivalent to the dry stage of the ECM, i.e. only solid phase present. Since we assume the solid phase to be incompressible, any change in the volume can only be related to the migration of solvent and solutes molecules, whose nominal concentrations will be denoted by $C_s$ and $C_i$ respectively, $i=1,\ldots,N$ with $N$ being the number of free ion species. This lead to the molecular incompressibility condition:
 
 \begin{equation}
  J= 1 + v_s C_s +\sum\limits_{i=1}^{N} v_i C_i
@@ -175,13 +185,13 @@ Consequently, the volume fractions of fluid $\phi_f$ and solid $\phi_n$ phases i
 \phi_f = \frac{v_sC_s}{1+v_sC_s}, \qquad \phi_n = \frac{1}{1+v_sC_s}.
 \end{equation}
 where again we are neglecting the contribution of ions to the total volume.
-While $C_m$ denote the number of each molecule per unit volume in the initial configuration for the $m$-th species in the solution, the actual concentration in the current state is denoted by $c_m=C_m/J$. Throughout the derivation of the model, we will be using the index $i=1,\ldots,N$ to denote the ionic species only, while $m\in\left\{s,1,\ldots,N\right\}$ to refer to all mobile species, i.e. both the solvent and solutes.
+While $C_m$ denote the number of each molecule per unit volume in the initial configuration for the $m$-th species in the solution, the actual concentration in the current state is denoted by $c_m=C_m/J$. Throughout the derivation of the model, we will be using the index $i=1,\ldots,N$ to denote the ionic species only, while $m\in\left\{s,1,\ldots,N\right\}$ refers to all mobile species, i.e. both the solvent and solutes.
 
 Mass conservation must apply to all mobile species and in the initial configuration this reads:
 \begin{equation}
 \dot{C}_m + \nabla_0 \cdot \mathbf{J}_m = 0, \label{consmass}
 \end{equation}
-where $\mathbf{J}_m$ is the nominal flux per unit area in the dry state and $\nabla_0$ denote the gradient in the Lagrangian coordinates $\mathbf{X}$. Their counterparts in the actual configuration are denoted by $\mathbf{j}_m$ and $\nabla$ and are defined according to the following rules:
+where $\mathbf{J}_m$ is the nominal flux per unit area in the dry state, $\dot{C}_m$ is the derivative of $C_m$ with respect to time, i.e.  $\dot{C}_m\equiv\partial_t C_m$ and $\nabla_0$ denote the gradient in the Lagrangian coordinates $\mathbf{X}$. Their counterparts in the actual configuration are denoted by $\mathbf{j}_m$ and $\nabla$ and are defined according to the following rules:
 \begin{equation}
 \mathbf{J}_m = J \F^{-1} \mathbf{j}_m, \qquad \nabla_0 (\cdot) = \F^{T} \nabla(\cdot).
 \end{equation}
@@ -198,12 +208,12 @@ where $\mathbb{S}$ is the first Piola-Kirchoff tensor, which represents the stre
 \mathbb{T} = J^{-1}\mathbb{S}\F^T.
 \end{equation}
 
-The presence of free moving ions generates and electric field which is denoted by $\mathbf{E}$ and $\mathbf{e}$ in the initial and current configuration respectively. Introducing the electrostatic potential $\Phi$, we have that:
+The presence of free moving ions generates an electric field which is denoted by $\mathbf{E}$ and $\mathbf{e}$ in the initial and current configuration respectively. Introducing the electrostatic potential $\Phi$, we have that:
 \begin{equation}
 \mathbf{E}= -\nabla_0 \, \Phi, \hspace{8mm} \mathbf{e}= - \nabla \, \Phi.
 \end{equation}
 
-As in \cite{Reviewpolyel}, we consider the matrix to be a dielectric material. Consequently, the presence of the electric field generates an electric displacement $\mathbf{H}$, which must obey Gauss law of electrostatics:
+As in \cite{Reviewpolyel}, we consider the matrix to be a dielectric material\footnote{an electrical insulator, which can be polarized in the presence of an electric field.}. Consequently, the presence of the electric field generates an electric displacement $\mathbf{H}$\footnote{the vector field that accounts for both the electric field and the polarization of the dielectric material.}, which must obey Gauss law of electrostatics:
 \begin{equation}
 \nabla_0 \cdot \mathbf{H}= Q,
 \label{gauss}
@@ -223,9 +233,7 @@ where $\mathbf{h}$ is the electric displacement in the current configuration.
 \subsection{Kinematics.}
 \label{kin}
 
-As in \cite{sarah}, we here consider that the initial state of the system $\mathcal{B}_0$ corresponds to the dry state of the gel. At any time $t$, the actual configuration of the body is $\mathcal{B}_t$. Note that in what follows we will refer to the the current configuration $\mathcal{B}_t$ as $\mathcal{B}$. 
-
-As mentioned in the introduction, we model the ECM as a poro-visco-elastic material. As shown in Figure \ref{deformation}, there are two mechanisms that can deform the system: 
+As mentioned in the introduction, we model the ECM as a poro-visco-elastic material, with particular interest in the viscous aspect of the material. As shown in Figure \ref{deformation}, there are two molecular processes that give rise to the macroscopic time-dependent response of the system: 
 \begin{itemize}
 	\item [1.] the rearrangements of molecules at the micro-scale,  which has entropic origin and result in a volume-preserving viscous deformation;
 	\item[2.] the long range transport of fluid that leads to swelling, i.e. changes in the ECM's size. 
@@ -238,59 +246,61 @@ As mentioned in the introduction, we model the ECM as a poro-visco-elastic mater
 	\caption{Illustration of the molecular processes which account for the macroscopic deformation of ECM: viscosity is related to change in the conformation of the network which preserve the volume of the network.}
 	\label{deformation}
 \end{figure}
- 
-As mentioned in the introduction, we are here interested in the coupling of this two phenomena. As discussed in \cite{viscoporo}, there are spatial and time scales which allow to study the two independently. On one hand, nanoscale rheological testing with AFM give us information on the visco-elastic properties of the sample. For sufficiently small beads, the length scale considered in the experiment is so short that poroelastic relaxation is almost instantaneous and thus negligible. Different 1D rheological model are usually applied to fit experimental measurement: the most common for tissue and hydrogels is the \textit{Standard Linear Solid} model, which is illustrated in Figure \ref{figmode}(a), to fit the experimental data \cite{Article1,viscoporo}. The poro-elastic behaviour can instead be characterized by standard creep-relaxation test on whole sample. In this case, Darcy's law is usually applied to estimate the hydraulic conductivity and thus characterise the transport of fluid in the material \cite{Netti,viscoporo}. 
+As illustrated in Figure \ref{deformation}, at the microscopic level this results in a visco-elastic and poro-elastic behaviour respectively.
 
-Despite having a good understanding of the two phenomena independently, there has been little attention to investigating how the two couple. In Figure \ref{figmode}, we have illustrated the two main approaches that have been proposed in the literature. To avoid any confusion, we will denote them as model A and model B respectively. Despite being quite similar, model B explicitly decouple the volumetric and deviatoric deformation of the system by introducing an addition spring to standard linear solid (SLS) \cite{magneto,NGUYEN,Jeru}. On the other hand, model A assumes that the model behaves as a SLS both under deviatoric and volumetric deformation.
+In order to capture both phenomena, as common in the large-deformation theory \cite{Article1,CACCAVO2,Plasto,magneto,NGUYEN,growthtum} and first proposed by Kr\"{o}ner in 1960 \cite{kro}, we consider a multiplicative decomposition of the deformation tensor $\F$. As this can be choose arbitrary, different decomposition have been proposed in the literature. We will here consider the two most commonly used, which will be here denoting by model A \cite{Article1,CACCAVO2,Plasto} and model B \cite{magneto,NGUYEN,Jeru}:
 
-At our knowledge, there is no systematic study in the literature that compares the two approaches and their predictions in different experiments. Instead of making an arbitrary decision, we will derive two models, one for each constitutive relation. We will then compare their predictions and investigate whether the two are consistent or can give rise to substantially different behaviour.    
+\begin{gather}
+\text{MODEL A} \Rightarrow\begin{cases}
+\F=\F_e\F_v,\\
+\det\F_v=1, \quad \det\F_e=\det\F
+\end{cases} \label{dec1}\tag{A}\\[4pt]
+\text{MODEL B} \Rightarrow\begin{cases}
+\F= \F_{vol}\bar{\F}=\F_{vol}\bar{\F}_e\bar{\F}_v\\
+\det\F=\det\F_{vol},\quad \det\bar{\F}=\det\bar{\F}_e=\det\bar{\F}_v=1.
+\end{cases}\tag{B}
+\end{gather}
 
-As an explanatory example of the derivation of a model in the non-equilibrium thermodynamics framework, we will here fully derive the governing equation corresponding to model A. The interested reader can find the details of the derivation for model B in Appendix [Need to add the name]. 
+Comparing the two, we note that the only difference is that in model B the volumetric deformation, $\F_{vol}$, is decoupled from the deviatoric one, $\bar{\F}$. 
+To the best of our knowledge, there is no previous systematic study in the literature that compares these two approaches. As it will be clear in Section \ref{}, the choice of how to decompose the vector $\F$ is not only a mathematical argument but also affect the constitutive assumption on the material properties. This highlights the need of experimental testing to validate which model better describe the material studied.
+
+As an explanatory example of the derivation of a model in the non-equilibrium thermodynamics framework, we will fully derive in the main text only the governing equation for model A. The interested reader can find the details of the derivation for model B in Appendix \ref{modelB}. 
+
+
+%	\centering
+%	\begin{subfigure}{0.32\textwidth}
+%		\centering
+%		\Large
+%	\def\svgwidth{0.95\linewidth}
+%	\input{latex/images/modelA1.pdf_tex}
+%	\caption{Rheological Model A}
+%	\label{fig1A}
+%	\end{subfigure}
+%\hspace{10mm}
+%	\begin{subfigure}{0.32\textwidth}
+%	\Large
+%	\def\svgwidth{0.95\linewidth}
+%	\input{latex/images/modelB1.pdf_tex}
+%	\caption{Rheological Model B}
+%	\label{fig1B}
+%\end{subfigure}
 
 \begin{figure}[h!]
 	\centering
-	\begin{subfigure}{0.32\textwidth}
-		\centering
-		\Large
-	\def\svgwidth{0.95\linewidth}
-	\input{latex/images/modelA1.pdf_tex}
-	\caption{Rheological Model A}
-	\label{fig1A}
-	\end{subfigure}
-\hspace{10mm}
-	\begin{subfigure}{0.32\textwidth}
+	\hspace{20mm}
 	\Large
-	\def\svgwidth{0.95\linewidth}
-	\input{latex/images/modelB1.pdf_tex}
-	\caption{Rheological Model B}
-	\label{fig1B}
-\end{subfigure}
-
-\begin{subfigure}{0.34\textwidth}
-	\Large
-	\def\svgwidth{1.75\linewidth}
-	\input{latex/images/modelA2.pdf_tex}
-	\caption{Multiplicative decomposition of Model A}
-	\label{Model2}
-\end{subfigure}
-\vspace{5mm}
-\caption{(a-b) two different rheological models for soft tissue; (c) multiplicative decomposition corresponding to model A, Equation~(\ref{dec1}).}
-\label{figmode}
+	\def\svgwidth{0.6\linewidth}
+	\input{latex/images/modelA2.pdf_tex}\caption{multiplicative decomposition corresponding to model A, Equation~(\ref{dec1}).}
+\label{Model2}
 \end{figure}
 
-Following a common approach in the large-deformation theory \cite{Article1,CACCAVO2,Plasto,magneto,NGUYEN,growthtum}, we base our derivation on a multiplicative decomposition of the deformation tensor $\F$, approach first proposed by Kr\"{o}ner in 1960 \cite{kro}:
-
-\begin{equation}
-\F=\F_e\F_v,\label{dec1}.
-\end{equation}
-
-As shown in Figure \ref{figmode}(a), $\F_e$ is the elastic contribution to the deformation related to the spring in branch $\mathbf{B}$. On the other hand, the term $\F_v$ accounts for the viscous flow due to the dashpot in branch $\mathbf{B}$. As illustrate in Figure \ref{figmode}(c), this multiplicative decomposition is equivalent to introducing an intermediate configuration $\mathcal{B}_v$, called natural or virtual configuration. Despite it not being a real state of the system, it can be interpreted as the state the system would be in if it was instantaneously elastically unload. 
+Looking back at Equation~(\ref{dec1}), $\F_e$ is the elastic contribution to the deformation while, the term $\F_v$ accounts for the viscous flow. As illustrate in Figure \ref{Model2}, the multiplicative decomposition is equivalent to introducing an intermediate configuration $\mathcal{B}_v$, called the natural or virtual configuration. The evolution of the natural configuration can be interpreted as an entropy producing, i.e. dissipative, process. On the other hand, in the elastic deformation from the natural to the current configuration energy is only stored in the system. 
 
 Using Equation~(\ref{dec1}), we can compute the velocity gradient tensor $\LL$:
 \begin{equation}
 \LL = \dot{\F}\F^{-1} = \LL_e + \F_e \LL_v \F_e^{-1},
 \end{equation}
-where $\LL_e=\dot{\F}_e\F_e^{-1}$ and $\dot{\F}_v\F_v^{-1}$ are respectively the elastic and viscous velocity gradient tensor. These can be decomposed in their symmetric and skewed part:
+where $\LL_e=\dot{\F}_e\F_e^{-1}$ and $\dot{\F}_v\F_v^{-1}$ are respectively the elastic and viscous velocity gradient tensor. These can be decomposed in their symmetric $\mathbb{D}$ and skewed $\mathbb{W}$ part:
 
 \begin{equation}
 \begin{aligned}
@@ -300,27 +310,35 @@ where $\LL_e=\dot{\F}_e\F_e^{-1}$ and $\dot{\F}_v\F_v^{-1}$ are respectively the
 \end{equation}
 
 The decomposition~(\ref{dec1}) is not unique, as stress state in $\mathcal{B}_v$ would not change under any arbitrary rigid-body rotation \cite{multdec}. As suggested by \cite{Plasto}, in the case of isotropic material, it is reasonable to assume the viscous flow to be irrotational, i.e. $\mathbb{W}_v=\mathbb{O}$, so that $\LL_v \equiv \mathbb{D}_v$.
-As mentioned before, the physical nature of the viscous deformation, molecular rearrangement. This requires to introduce an additional constraint:
+As mentioned before, the physical nature of the viscous deformation is molecular rearrangement so that volume is preserved. This requires to introduce the additional constraint:
 \begin{equation}
 J_v=\det \F_v= 1.\label{Jv}
 \end{equation}
 
-Note that in the second model B, this condition is naturally imposed as the only volumetric contribution to the stress is related to $\F_{vol}$.
-Despite condition~(\ref{Jv}) being common assumption in the study of hydrogels and soft tissue, there are few exceptions \cite{Article1,CACCAVO2,wang} model. Consequently, our results will differ from the one in the paper mentioned. 
- 
 \subsection{Energy Balance Inequality.}
+\label{sec_ine}
 
 As mentioned in Section \ref{secNET}, according to how the system exchanges energy and mass with the environment, the energy imbalance imposes restrictions on the free energy $\psi$. Considering a control volume $R$ in the reference configuration $\mathcal{B}_0$, the system exchanges mass due to the diffusion of each mobile species, so that $M(R)$ is given by:
 \begin{equation}
 M(R)= \sum\limits_{m=s,1,\ldots,N} - \int_{\partial R} \mu_m \,\mathbf{J}_m \cdot \mathbf{n} 
 \end{equation}
-where $\mathbf{n}$ is the unit normal vector to the surface $\partial R$ and $\mu_m$ is the chemical potential associated with each species. Widely used in the thermodynamics of mixture, the chemical potential is a measure of the rate of change in free energy associated with adding one more molecule to a unit volume. The term $W(R)$ is instead decomposed in two contributions, the rate of electrical $W_{el}(R)$ and mechanical work $W_{mec}(R)$. Following \cite{DROZDOVph}, $W_{el}(R)$ is defined as:
+where $\mathbf{n}$ is the unit normal vector to the surface $\partial R$ and $\mu_m$ is the chemical potential associated with each species. Widely used in the thermodynamics of mixture, the chemical potential is a measure of the rate of change in free energy associated with adding one more molecule to a unit volume.
+
+The term $W(R)$, i.e. the rate of work done on the system, is instead decomposed in two contributions, the rate of electrical $W_{el}(R)$ and mechanical work $W_{mec}(R)$. Following \cite{DROZDOVph}, $W_{el}(R)$ is defined as:
 \begin{equation}
 W_{el}(R) = -\int_{\partial R} \Phi\, \dot{\mathbf{H}}\cdot \mathbf{n}
 \end{equation}
 
-Following the work of Gurtin \cite{GURTIN}, we account both for the presence of macro-stresses $\mathbb{S}$ and micro-stresses $\boldsymbol{\epsilon}$, which arise due to the system heterogeneity \cite{microstress}. As before we only consider the dominant contribution of the solvent while neglecting the solute, so that $W_{mec}(R)$ reads:
-\begin{equation}
+Following the work of Gurtin \cite{GURTIN}, we account both for the presence of macro-stresses $\mathbb{S}$ and micro-stresses $\boldsymbol{\xi}$, which arise due to the system heterogeneity \cite{microstress}. As before we only consider the dominant contribution of the solvent while neglecting the solute, so that $W_{mec}(R)$ reads:
+\begin{equation}	\centering
+%	\begin{subfigure}{0.32\textwidth}
+%		\centering
+%		\Large
+%	\def\svgwidth{0.95\linewidth}
+%	\input{latex/images/modelA1.pdf_tex}
+%	\caption{Rheological Model A}
+%	\label{fig1A}
+%	\end{subfigure}
 W_{mec}(R) = \int_{\partial R} \left(\boldsymbol{\xi}\cdot \mathbf{n}\right)\dot{C}_s + \int_{\partial R} \mathbb{S}\mathbf{n} \cdot \dot{\mathbf{u}}
 \end{equation}
 where $\mathbf{u}= \mathbf{x}-\mathbf{X}$ is the displacement vector, which is related to the deformation tensor by $\F=\mathbb{I}-\nabla_0 \mathbf{u}$. Substituting this result back into the formula~(\ref{energyin}) and applying the divergence theorem we obtain the following inequality:
@@ -341,23 +359,23 @@ Further accounting for Equations~(\ref{consmass})-(\ref{consmom}), we obtain tha
 \end{aligned} 
 \end{equation}
 
-As exhaustively discussed in previous studies \cite{Plasto,GURTIN}, the energy inequality imposes restrictions on the constitutive equation of the free energy $\psi$. Adapting their results, to the specific problem here studied, we have that:
+As exhaustively discussed in previous studies \cite{Plasto,GURTIN}, the energy inequality imposes restrictions on the constitutive equation of the free energy $\psi$. Adapting their results to our specific problem, we have that:
 \begin{equation}
 \psi = \psi (\F,\F_e, C_s, C_i, \nabla_0 \,C_s,\mathbf{H}), \label{temp1}
 \end{equation}
 which precludes any explicit dependency of $\psi$ on the chemical potential or the viscous deformation gradient $\F_v$. By differentiating the incompressibility condition~(\ref{inc}) and~(\ref{Jv}), we obtain:
 
 \begin{gather}
-v_s\dot{C_s} - J \F^{-T}:\dot{\F} =0 \label{temp3}\\
+v_s\dot{C_s} - J \F^{-T}:\dot{\F} =0, \label{temp3}\\
 \mathbb{I}:\LL_v=0. \label{temp4}
 \end{gather}
 
 If we now substitute~(\ref{temp1}) into~(\ref{temp2}), and include the constraint~(\ref{temp3})-(\ref{temp4}) using as Lagrange multipliers $p$ and $p_v$ respectively, we are left with the augmented form of the energy imbalance inequality:
 \begin{equation}
 \begin{aligned}
-\left(\frac{\partial \psi}{\partial \nabla_0 C_s}-\boldsymbol{\xi}\right) \cdot \nabla_0 \dot{C}_s + \left(\frac{\partial \psi}{\partial C_s}-\mu_s-\nabla_0 \cdot \boldsymbol{\xi}+p v\right)\dot{C}_s\\
-+ \sum_i\left(\frac{\partial \psi}{\partial C_i} + e\Phi z_i-\mu_i\right) \dot{C}_i +\left(\frac{\partial \psi}{\partial \mathbf{H}}-\mathbf{E}\right) \cdot \dot{\mathbf{H}}\\
-+ \left(\frac{\partial \psi}{\partial \F} + \frac{\partial \psi}{\partial\F_e}\F_v^{-1}- \mathbb{S} - p J \F^{-T}\right): \dot{\F}+ \sum_m \nabla_0 \,\mu_m \cdot \mathbf{J}_m \\
+\color{blue}{\left(\frac{\partial \psi}{\partial \nabla_0 C_s}-\boldsymbol{\xi}\right)} \color{black}\cdot \nabla_0 \dot{C}_s + \color{blue}{\left(\frac{\partial \psi}{\partial C_s}-\mu_s-\nabla_0 \cdot \boldsymbol{\xi}+p v\right)}\color{black}\dot{C}_s\\
++ \sum_i\color{blue}\left(\frac{\partial \psi}{\partial C_i} + e\Phi z_i-\mu_i\right) \color{black}\dot{C}_i +\color{blue}\left(\frac{\partial \psi}{\partial \mathbf{H}}-\mathbf{E}\right) \cdot \color{black}\dot{\mathbf{H}}\\
++ \color{blue} \left(\frac{\partial \psi}{\partial \F} + \frac{\partial \psi}{\partial\F_e}\F_v^{-1}- \mathbb{S} - p J \F^{-T}\right): \color{black}\dot{\F}+ \sum_m \nabla_0 \,\mu_m \cdot \mathbf{J}_m \\
 - \left(\F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right):\mathbb{L}_v\leq 0 . \label{ineq}
 \end{aligned}
 \end{equation}
@@ -369,7 +387,7 @@ Note that in deriving~(\ref{ineq}), we have also made us of the following identi
 
 \subsection{Construction of the Free Energy.}
 
-Following a standard approach in phase-field modeling, we assume that the total free energy can be additively decomposed with each physical mechanisms contributing independently. We here consider six distinct contributions:
+Having the general form of $\psi$, Equation~(\ref{temp1}), it remains to construct its precise form. Following a standard approach in $\psi$-depending modeling, we assume that the total free energy can be additively decomposed with each physical mechanisms contributing independently. We here consider six distinct contributions:
 
 \begin{enumerate}
 	{\indentitem\item[\textbullet] the energy of the electric field $\psi_1$;}
@@ -407,13 +425,47 @@ As proposed by Hong et al. \cite{Interface}, we include in the energy the effect
 \end{equation}
 where the constant $\gamma$ plays a role analogous to a surface tension.
 
-Finally, we need to specify the strain energy $\psi_6$ which we can decompose into the contribution from the spring $1$ and spring $2$ in the standard linear solid model in Figure \ref{figmode}(a):
+Finally, we need to specify the strain energy $\psi_6$ which depends on the particular constitutive model used to describe the material. As mentioned in the Introduction the Standard Linear Solid (SLS), see Figure \ref{SLS}, is commonly used to describe soft material in the regime of small deformation. However, when account for large deformation, as in the case of swelling, soft material present a non-linear behaviour. For this reason we consider the model in Figure \ref{fig1A}, which is a generalization of the 1D SLS to 3D problems with non-linear elastic response. 
+
+\begin{figure}
+		\begin{subfigure}{0.32\textwidth}
+			\centering
+			\large
+		\def\svgwidth{0.9\linewidth}
+		\input{latex/images/modelA1.pdf_tex}
+		\caption{}
+		\label{fig1A}
+		\end{subfigure}
+	\hspace{20mm}
+			\begin{subtable}{0.375\textwidth}
+				\hspace{-15mm}
+			\begin{tabular}{|c | c | c|}	
+				\hline
+				\multirow{2}{*}{\textbf{ Element } }& \textbf{ Constitutive } & \multirow{2}{*}{\textbf{ Deformation }} \\
+				& \textbf{Properties} &\\
+				\hline	
+				 \multirow{2}{*}{ spring 1 } & Isotropic  & volumetric\\
+				 &Neo-Hookean spring& + deviatoric\\
+			 	\hline
+				\multirow{2}{*}{ spring 2 } & Isotropic  & volumetric\\
+				&Neo-Hookean spring &+ deviatoric\\ 
+				\hline
+				\multirow{2}{*}{dashpot}  & Isotropic  & 	\multirow{2}{*}{deviatoric}\\
+				& Linear dashpot & \\
+				\hline
+			\end{tabular}
+			\caption{}
+		\end{subtable}
+	\caption{(a) Schematic representation of the non-linear rheological model for ECM; (b) Table summarizing the major properties of the model components.}
+\end{figure}
+
+The strain energy can thus be decomposed into the sum of the contributions from spring $1$ and spring $2$:
 
 \begin{equation}
 \psi_6 = \psi_1(\F) + \psi_2(\F_e).
 \end{equation}
 
-As in \cite{ecm2}, we decide to model the solid network as an isotropic  Neo-Hookean material:
+As in \cite{ecm2}, we consider the spring to be isotropic and hyper-elastic (Neo-Hookean) which are characterised by the following form of the free-energy:
 
 \begin{eqnarray}
 \psi_1(\F) = \frac{G^A_1}{2} \left(\F:\F - 3 -2 \ln J\right)\\
@@ -424,33 +476,21 @@ where $G_\mathbf{\cdot}$ stands for the shear modulus associated with each sprin
 \subsection{Entropy Production $\sigma$.}
 \label{ent}
 
-Having specified how the system interact with its environment, we can now discuss how it dissipates energy. As mentioned in Section~(\ref{kin}), there are two contributions: transport (diffusion of solvent and solutes) and viscosity. The thermodynamic fluxes \footnote{See Section \ref{secNET}} associated with these two phenomena are $\mathbf{J}_m$, $m=s,1,\ldots,N$, and $\LL_v$. Consequently, using Equation~(\ref{2law}), we obtain:
+Having specified how the system interacts with its environment, we can now discuss how it dissipates energy. As mentioned in Section~(\ref{kin}), there are two contributions: transport (diffusion of solvent and solutes) and viscosity. The thermodynamic fluxes \footnote{See Section \ref{secNET}} associated with these two phenomena are $\mathbf{J}_m$, $m=s,1,\ldots,N$, and $\LL_v$. Consequently, using Equation~(\ref{2law}), we obtain:
 
 \begin{equation}
 \sigma = \sum_m \zeta_m \cdot \mathbf{J}_m + \zeta_v : \LL_v,
 \label{dis}
 \end{equation}
-where $\zeta$s represent the thermodynamic forces associate with each flux.
-Based on Equations~(\ref{eqCIT}), (\ref{ineq}) and (\ref{dis}), we can move from the energy imbalance to an equality condition:
-\begin{equation}
-\begin{aligned}
-\left(\frac{\partial \psi}{\partial \nabla_0 C_s}-\boldsymbol{\xi}\right) \cdot \nabla_0 \dot{C}_s + \left(\frac{\partial \psi}{\partial C_s}-\mu_s-\nabla_0 \cdot \boldsymbol{\xi}+p v\right)\dot{C}_s\\
-+ \sum_i\left(\frac{\partial \psi}{\partial C_i} + e\Phi z_i-\mu_i\right) \dot{C}_i +\left(\frac{\partial \psi}{\partial \mathbf{H}}-\mathbf{E}\right) \cdot \dot{\mathbf{H}}\\
-+ \left(\frac{\partial \psi}{\partial \F} + \frac{\partial \psi}{\partial\F_e}\F_v^{-1}- \mathbb{S} - p J \F^{-T}\right): \dot{\F}+ \sum_m \left[\nabla_0 \,\mu_m + T\zeta_m\right]\cdot \mathbf{J}_m \\
-+\left(T\zeta_v - \F_e^T\frac{\partial \psi}{\partial \F_e}+p_v\mathbb{I}\right):\mathbb{L}_v=0
-\end{aligned} 
-\end{equation}
-which needs to hold for any possible evolution of the system, i.e. for any independent values of $\nabla_0 \dot{C}_s$, $\dot{C}_s$, $\dot{C}_m$, $\dot{\mathbf{H}}$, $\dot{F}$, $\mathbf{J}_m$ and $\LL_v$ at any point $\mathbf{X}$ and time $t$. In order for this to hold, all the terms in the brackets need to vanish. Hence, we obtain:
+where $\zeta$s represent the thermodynamic forces associate with each flux. On the other hand, $\nabla_0 \dot{C}_s$, $\dot{C}_s$, $\dot{C}_i$, $\mathbf{\dot{H}}$ and $\dot{\F}$ describe the evolution of reversible process. This implies that their value can be controlled and arbitrarily chosen, by carefully tune the condition of an experiment, while the energy imbalance inequality~(\ref{ineq}) continue to hold. Given the constraint~(\ref{temp1}) on $\psi$, this can only happen if the terms highlighted in blue in Equation~(\ref{ineq}) are identically zero. As shown in the Appendix [TO DO], this leads to the following system of equations:
 \begin{gather}
-\boldsymbol{\xi} = \gamma J \,\mathbb{B}^{-1} \,\nabla_0 \,C_s,\\[2mm]\label{sys1}
+\boldsymbol{\xi} = \gamma J \,\mathbb{B}^{-1} \,\nabla_0 \,C_s,\label{sys1}\\[2mm]
 \begin{aligned}
 \mu_s = p v_s + \mu_s^0 - \gamma J \nabla^2 C_s + k_BT&\left[\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s}\right.\\
 &\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s v_s)^2}-\sum_i \frac{C_i}{C_s}\right], 
-\end{aligned}\\[2.5mm]
+\end{aligned}\label{gov1}\\[2.5mm]
 \mu_i = \mu^0_i + e\Phi z_i + kT \ln \frac{C_i}{C_s},\\
-\mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, , \qquad -\epsilon J \nabla^2 \Phi = Q\, ,\\[3mm]\label{sys2}
-\zeta_m =-T^{-1} \nabla_0 \,\mu_m,\\
-\zeta_v = T^{-1} \left[G_\mathbf{B} (\mathbb{C}_e-\mathbb{I})-p_v\mathbb{I}\right].\label{vflow1}
+\mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, , \qquad -\epsilon J \nabla^2 \Phi = Q\, ,\label{sys2}
 \end{gather}
 \begin{gather}
 \begin{aligned}
@@ -460,6 +500,18 @@ which needs to hold for any possible evolution of the system, i.e. for any indep
 \label{sys3}
 \end{gather}
 
+As discussed in Section \ref{secNET}, in the framework of linear non-equilibrium thermodynamics, when considering isothermal transformation, the second law of thermodynamics can be rewrite as Equations~(\ref{eqCIT}). Using the same argument as in Section \ref{sec_ine} and Equation~(\ref{dis}), we can rewrite Equations~(\ref{eqCIT}) in differential form, and substituting Equations~(\ref{sys1})-(\ref{sys3}), we obtain:
+\begin{equation}
+\begin{aligned}
+ \sigma = -  \sum_m \frac{1}{T}\nabla_0 \,\mu_m \cdot \mathbf{J}_m + \frac{1}{T}\left( \F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right):\mathbb{L}_v\label{EQen}
+\end{aligned} 
+\end{equation}
+
+Equating Equation~(\ref{EQen}) and~(\ref{dis}), it is evident that the thermodynamics forces are:
+\begin{gather}
+\zeta_m = \frac{1}{T} \nabla_0 \,\mu_m, \label{vflow1}\\
+\zeta_v = \frac{1}{T} \left( \F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right) = \frac{1}{T} \left[G^A_2(\mathbb{C}_e-\mathbb{I})-p_v\mathbb{I}\right].
+\end{gather}
 Assuming to be in regime of linear non-equilibrium thermodynamics, we can use the identity~(\ref{lin}) to couple fluxes and forces. However, considering the symmetry constraint from \textit{Curie's law}\footnote{Macroscopic causes can not have more element of symmetries than the effect they cause \cite{CIT}} , there can be no coupling between fluxes and forces of different tensorial nature. Consequently, we are left with the following force-flux relation:
 \begin{gather}
 \LL_v = L_{vv} \zeta_v,\label{vflow2}\\
@@ -473,13 +525,13 @@ Assuming to be in regime of linear non-equilibrium thermodynamics, we can use th
 %where $\eta$ represent the viscosity of the material and $\text{DEV}\left[\cdot\right] = \cdot-1/3\, \text{tr}(\cdot)$ is the deviatoric component of the tensor in the brackets. 
 
 %The dissipative contribution due to the relative movement of phases has been largely studied in the literature \cite{ecm1,ecm2}. Starting from Equation~(\ref{dif}) and standard arguments we can get to the following definition for the fluxes:
-As described in Appendix \ref{apenergy}, starting from Equations~(\ref{vflow1})-(\ref{dif}) and with common consideration from the theory of mixture, we can derive the following system of equations:
+As described in Appendix \ref{apenergy}, starting from Equations~(\ref{vflow1})-(\ref{dif}) and with common consideration from the theory of mixture, we can derive the following system of time dependent equations:
 \begin{eqnarray}
-\mathbf{j}_s = -K c_s \left(c_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} c_i \nabla \mu_i\right),\\
-\mathbf{j}_i = - \frac{D_i}{k_B T}c_i\nabla \mu_i + \frac{D_i}{D^0_i} \frac{c_i}{c_s} \mathbf{j}_s, \\
+\partial_t C_s=\nabla_0 \cdot\left[K C_s \F^{-1}\left(c_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} c_i \nabla \mu_i\right)\right],\label{gov2}\\
+\partial_t C_m= \nabla_0\cdot\left[\frac{D_i}{k_B T}C_i\F^{-1}\nabla \mu_i\right] + \frac{D_i}{D^0_i} \frac{C_i}{C_s} \partial_t C_s, \\
 \dot{\mathbb{B}}_e =\LL\mathbb{B}_e + \mathbb{B}_e \LL^T - \frac{1}{\tau_R} \,\mathbb{B}_e\text{DEV}[\mathbb{B}_e].\label{Be}
 \end{eqnarray}
-where the parameters are macroscopic phenomenological coefficients, that can either be estimated experimentally or derived from the nano/microscopic properties of the different phases \cite{ecm1,ecm2}. The analogous system of equation for model B can be found in Appendix \ref{modelB}. 
+where the parameters are macroscopic phenomenological coefficients, that can either be estimated experimentally or derived from the nano/microscopic properties of the different phases \cite{ecm1,ecm2}. To sum up the governing equations for the Model A are Equations~(\ref{gov1})-(\ref{sys3}) together with the flow rules~(\ref{gov2})-(\ref{Be}). The analogous system of equation for model B can be found in Appendix \ref{modelB}. 
 
 Having concluded the derivation of the model, we are now interested in comparing the two model in different experimental settings: free swelling and compression test. For the second case, after using a numerical study \textit{in silico}, we will also test the two models on real data collected by Netti et~al. \cite{Netti} from compression test on tumour extracellular matrix. 
 
@@ -596,6 +648,7 @@ where $G^A_{eq}=G^A_1+G^A_2$. Note that Equation~(\ref{eqion}) corresponds to th
 	$\mathbb{T}^{Kort}\quad$ & Korteweg stress due to the ideal interface\\
 	$\mathbb{T}^{Max}\quad$ & Maxwell stress due to the electric displacement\\
 	$k_B\qquad$ & Boltzmann constant\\
+	$T\qquad$ & Absolute Temperature \\
 	$\text{DEV}\left[\cdot\right]\quad$ & Deviatoric part of the tensor $\text{DEV}\left[\cdot\right] = \cdot-1/3\, \text{tr}(\cdot)$
 \end{tabular}	
 \end{table}
