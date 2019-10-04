@@ -13,6 +13,7 @@
 \usepackage{pgfplots}
 \usepackage[all]{nowidow}
 \usepackage{multirow}
+\usepackage{xcolor}
 
 \usepackage[utf8]{inputenc}
 \usepackage{tikz}
@@ -257,12 +258,12 @@ In order to capture both phenomena, as common in the large-deformation theory \c
 \end{cases} \label{dec1}\tag{A}\\[4pt]
 \text{MODEL B} \Rightarrow\begin{cases}
 \F= \F_{vol}\bar{\F}=\F_{vol}\bar{\F}_e\bar{\F}_v\\
-\det\F=\det\F_{vol},\quad \det\bar{\F}=\det\bar{\F}_e=\det\bar{\F}_v=1.
+\det\F=\det\F_{vol},\quad \det\bar{\F}=\det\bar{\F}_e=\det\bar{\F}_v=1.\label{dec2}
 \end{cases}\tag{B}
 \end{gather}
 
-Comparing the two, we note that the only difference is that in model B the volumetric deformation, $\F_{vol}$, is decoupled from the deviatoric one, $\bar{\F}$. 
-To the best of our knowledge, there is no previous systematic study in the literature that compares these two approaches. As it will be clear in Section \ref{}, the choice of how to decompose the vector $\F$ is not only a mathematical argument but also affect the constitutive assumption on the material properties. This highlights the need of experimental testing to validate which model better describe the material studied.
+Comparing the two, we note that the only difference is that in model B the volumetric deformation, $\F_{vol}$, is decoupled from the deviatoric one, $\bar{\F}$.
+To the best of our knowledge, there is no previous systematic study in the literature that compares these two approaches. While the two model are identical in the case of iso-volumetric deformation, i.e. $\det \F=J=1$, this is not always the case when a tissue swells. As it will be clear in Section \ref{excomp}, the choice of how to decompose the vector $\F$ is not only a mathematical argument but also affect the constitutive assumption on the material properties. This highlights the need of experimental testing to validate which model better describe the material studied.
 
 As an explanatory example of the derivation of a model in the non-equilibrium thermodynamics framework, we will fully derive in the main text only the governing equation for model A. The interested reader can find the details of the derivation for model B in Appendix \ref{modelB}. 
 
@@ -528,12 +529,12 @@ Assuming to be in regime of linear non-equilibrium thermodynamics, we can use th
 As described in Appendix \ref{apenergy}, starting from Equations~(\ref{vflow1})-(\ref{dif}) and with common consideration from the theory of mixture, we can derive the following system of time dependent equations:
 \begin{eqnarray}
 \partial_t C_s=\nabla_0 \cdot\left[K C_s \F^{-1}\left(c_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} c_i \nabla \mu_i\right)\right],\label{gov2}\\
-\partial_t C_m= \nabla_0\cdot\left[\frac{D_i}{k_B T}C_i\F^{-1}\nabla \mu_i -\frac{D_i}{D^0_i} \frac{C_i}{C_s} J\F^{-1} \mathbf{J}_0\right],\label{gov3} \\
+\partial_t C_i= \nabla_0\cdot\left[\frac{D_i}{k_B T}C_i\F^{-1}\nabla \mu_i -\frac{D_i}{D^0_i} \frac{C_i}{C_s} \mathbf{J}_s\right],\label{gov3} \\
 \dot{\mathbb{B}}_e =\LL\mathbb{B}_e + \mathbb{B}_e \LL^T - \frac{1}{\tau_R} \,\mathbb{B}_e\text{DEV}[\mathbb{B}_e].\label{Be}
 \end{eqnarray}
 where the parameters are macroscopic phenomenological coefficients, that can either be estimated experimentally or derived from the nano/microscopic properties of the different phases \cite{ecm1,ecm2}. To sum up the governing equations for the Model A are Equations~(\ref{gov1})-(\ref{sys3}) together with the flow rules~(\ref{gov2})-(\ref{Be}). The analogous system of equation for model B can be found in Appendix \ref{modelB}. 
 
-\subsection{Transport Equation.}
+\subsection{Evolution Equation.}
 
 In order to get a better physical insight into the behaviour, we first rewrite the solvent chemical potential as:
 \begin{gather}
@@ -544,21 +545,84 @@ In order to get a better physical insight into the behaviour, we first rewrite t
 where $p$ represents the pore pressure, $\Pi_{osm}$ is the osmotic pressure of the solution and $\Pi_{grad}$ is the pressure due to interface energy. If we now substitute into Equations~(\ref{gov2}) the chemical potentials~(\ref{mu2})-(\ref{mu}), which yields to:
 \begin{equation}
 \begin{aligned}
-\partial_t C_s=\nabla_0 \cdot\left\{K\F^{-1}\left[C_s v_s\nabla p - \gamma C_s J\nabla \Pi_{grad}+\sum_i \frac{D_i}{D^0_i} C_i e z_i \nabla \Phi\right.\right.\\
-\left.\left.+ k_B T \left(C_s \nabla \Pi_{osm}+ \sum_i\left(1-\frac{D_iC_i}{D^0_iC_s}\right) \nabla C_s - \sum_i\left(1-\frac{D_i}{D^0_i}\right) \nabla C_i \right)\right]\right\}.\label{long}
+\partial_t C_s=\nabla_0 \cdot\left\{K\F^{-1}\left[C_s v_s\nabla p - \color{red}\gamma C_s J\nabla \Pi_{grad}\color{black}+\sum_i \frac{D_i}{D^0_i} C_i e z_i \nabla \Phi\right.\right.\\
+\left.\left.+ k_B T\color{teal} \left(C_s \nabla \Pi_{osm}+ \sum_i\left(1-\frac{D_iC_i}{D^0_iC_s}\right) \nabla C_s - \sum_i\left(1-\frac{D_i}{D^0_i}\right) \nabla C_i \right)\color{black}\right]\right\}.\label{long}
 \end{aligned}
 \end{equation}
 
-The above equation shows that the solvent transport is driven by pressure gradient, osmotic pressure gradient, electric potential gradient and the additional interface term, which has not been considered in the context of polyelectrolytes. In the absence of solutes ($C_i\equiv 0$), we recover the same model presented by Hennessy et. al~\cite{sarah}. If we further assume that $|\nabla \Pi_{grad}|<<1$ and take the limit $v_sC_S\rightarrow\infty$, Equations~(\ref{long}) reduces to Darcy's law for the flow in a porous media. The model for polyelectrolytes proposed by Hong \cite{Reviewpolyel} correspond instead to the limit $D^0_i\rightarrow\infty$, i.e. mobile species can move freely in pure solution, and  $|\nabla \Pi_{grad}|<<1$.
+The above equation shows that the solvent transport is driven by pressure gradient, osmotic pressure gradient (green term in Equation~(\ref{long})), electric potential gradient and the additional composition gradient (red term in Equation~(\ref{long})), which is here first introduced in the context of polyelectrolytes. In the absence of solutes ($C_i\equiv 0$), we recover the same model presented by Hennessy et. al~\cite{sarah}. If we further assume that $|\nabla \Pi_{grad}|<<1$ and take the limit $v_sC_S\rightarrow\infty$, Equations~(\ref{long}) reduces to Darcy's law for the flow in a porous media. The model for polyelectrolytes proposed by Hong \cite{Reviewpolyel} correspond instead to the limit $D^0_i\rightarrow\infty$, i.e. mobile species can move freely in pure solution, and  $|\nabla \Pi_{grad}|<<1$.
 
 Similarly we can rewrite Equation~(\ref{gov3}) as:
 \begin{equation}
-\partial_t C_m = 
+\scriptsize
+\partial_t C_i = \nabla_0 \left[D_i\F^{-1}\left(\underbrace{\nabla C_i}_{\text{diffusion}} +\underbrace{\frac{eC_iz_i}{k_B T} \nabla \Phi}_{\text{electric}}\right)-\underbrace{\frac{D_i C_i}{C_s}\F^{-1}\nabla C_s}_{\text{osmotic pressure}}-\underbrace{\frac{D_i C_i}{D^0_iC_s}\mathbf{J}_s}_{\text{advenction}}\right]\label{long2}
 \end{equation}
-Having concluded the derivation of the model, we are now interested in comparing the two model in different experimental settings: free swelling and compression test. For the second case, after using a numerical study \textit{in silico}, we will also test the two models on real data collected by Netti et~al. \cite{Netti} from compression test on tumour extracellular matrix. 
 
-In all simulation, unless differently stated, we will use the parameters in Table \ref{Tab1} will be considered to be constant \cite{Netti,ecm2}.
-\section{Unconstrained Free Swelling.}
+In the case of ions, the driving forces of transport are the diffusion of ions, the electric field, the osmotic pressure due to the mixing with the solvent and the advection term (due to the relative movement of ions with respect to the solvent). In the limit $D^0_i\rightarrow0$, where the ions can freely move in the pure solution, we recover the formulation of Hong in \cite{Reviewpolyel}, which is commonly used in the description of polyelectrolytes. In the dilute limit, i.e. when the concentration of ions is much smaller than the solvent  concentration $C_i<<C_s$, we can drop both the osmotic and advection term so to recover the well-known Nernst-Planck equation \cite[see Equation (6.67)]{Reviewpolyel}.
+
+As mentioned in the introduction, one the major aspect of interest is the visco-elastic contribution to the evolution of the system. Even though in the transport Equation~(\ref{long})-(\ref{long2}) there is no direct reference to it, the transport is indirectly coupled to the visco-relaxation through the pressure gradient. Taking the divergence of Equation~(\ref{sys3}) and using the conservation of momentum~(\ref{consmom}), we can identify components to the pressure gradient:
+
+\begin{equation}
+\nabla p= \nabla \cdot \mathbb{T}^{kort} + \nabla \cdot \mathbb{T}^{Max} + G_1^A\underbrace{ \nabla \cdot \left[\frac{\B-\mathbb{I}}{1+v_sC_s}\right]}_{\substack{\text{swelling}\\\text{+ deviatoric}\\\text{ deformation}}} + \,\color{red} G_2^A \underbrace{\nabla \cdot\left[\frac{\B_e-\mathbb{I}}{1+v_sC_s}\right]}_{\color{black}\substack{\text{swelling}\\\text{+ deviatoric}\\\text{deformation}\\\text{+ viscous relaxation}}}\color{black}
+\end{equation}
+
+Differently from the standard Neo-Hookean model for polyelectrolytes, we have an additional term highlighted in red, which accounts for the energy stored in the second spring of model A. Its time evolution, as determined by Equation~(\ref{Be}) is driven by the swelling and macroscopic deformation and a relaxation term which capture the viscous nature of the solid phase:
+\begin{equation}
+\dot{\mathbb{B}}_e=\underbrace{\LL\mathbb{B}_e + \mathbb{B}_e \LL^T}_{\substack{\text{swelling}\\\text{+ deviatoric}\\\text{deformation}}} - \underbrace{\frac{1}{\tau_R} \,\mathbb{B}_e\text{DEV}[\mathbb{B}_e]}_{\substack{\text{viscous}\\\text{relaxation}}}\label{Be2}
+\end{equation}
+
+
+Despite the introduction of the non-linear terms, there is an apparent analogy between the above Equation and the ODE describing the standard linear solid, see Equation~(SLS) in the Introduction. The term $\dot{\epsilon} \leftrightarrow \LL$ is related to the strain experienced by spring 1, while $\epsilon_e  \leftrightarrow \mathbb{B}_e$ is the variable describing the strain on the 2. In the limit $\tau_R\rightarrow \infty$, we have that $\mathbb{B}_e\equiv\mathbb{B}$. We thus recover the standard Neo-Hookean hyper-elastic model for hydrogels with shear modulus given by $G^A_1+G^A_2$. Similar result are obtained for model B. The governing equation of Model B is equivalent to~(\ref{Be2}), except for the fact that it is not influence by purely volumetric deformation:
+\begin{equation}
+\dot{\bar{\mathbb{B}}}_e=\underbrace{\bar{\LL}\bar{\mathbb{B}}_e + \bar{\mathbb{B}}_e \bar{\LL}^T}_{\substack{\text{deviatoric}\\\text{deformation}}} - \underbrace{\frac{1}{\tau_R} \,\bar{\mathbb{B}}_e\text{DEV}[\bar{\mathbb{B}}_e]}_{\substack{\text{viscous}\\\text{relaxation}}}
+\end{equation}
+while the pressure gradient is defined as:
+\begin{equation}
+\begin{aligned}
+\nabla p= \nabla \cdot \mathbb{T}^{kort} + \nabla \cdot \mathbb{T}^{Max} + G_1^B\underbrace{ \nabla \cdot \left[\frac{\text{DEV}[\bar{\mathbb{B}}]}{1+v_sC_s}\right]}_{\substack{\text{+ deviatoric}\\\text{ deformation}}} \\
++ \,\color{red} G_2^B \underbrace{\nabla \cdot\left[\frac{\text{DEV}[\bar{\mathbb{B}}_e]}{1+v_sC_s}\right]}_{\color{black}\substack{\text{ deviatoric}\\\text{deformation}\\\text{+ viscous relaxation}}}\color{black}+ G_{vol}\underbrace{\nabla \left(\frac{J^{2/3}-1}{J}\right)}_{swelling}.
+\end{aligned}
+\end{equation}
+
+As we will discuss in the next section, when considering instead a purely volumetric deformation, such as for free swelling, i.e. $\F=\F_{vol}=J^{1/3}\mathbb{I}$, we have that the two model are equivalent given that $G_{vol}\equiv G_A +G_B$. Before comparing the model in different experimental setting, we have briefly summarised in Table~(\ref{summary}) the variables and governing equation for both models. In order to have a close solution, the proper boundary and initial conditions needs also to be assigned depending on the specific problem considered.
+
+\vspace{3mm}
+\begin{table}
+	\centering
+	\begin{tabular}{c|c|c}
+		\hline\addlinespace[2pt]
+		Variable &  \hspace{1pt} Model A \hspace{1pt} & \hspace{1pt} Model B\hspace{1pt} \\
+		\hline
+		\hline\addlinespace[2.5pt]
+		Solvent Concentration &  \multicolumn{2}{c}{$C_s$~(\ref{long})}\\[2.5pt]
+		Chemical Potential of & \multicolumn{2}{c}{ $\mu_s$~(\ref{gov1})}\\
+		the solvent &\multicolumn{2}{c}{}\\[2pt]
+		Ionic Concentrations &\multicolumn{2}{c}{$C_i$~(\ref{long2})}\\[3pt]
+		Chemical Potential of & \multicolumn{2}{c}{$\mu_i$~(\ref{mu}) }\\
+		the ions &\multicolumn{2}{c}{ }\\[2pt]
+		\hline\addlinespace[2pt]
+		Local Volumetric Change & \multicolumn{2}{c}{$J$~(\ref{inc})}\\[2.5pt]
+		Cauchy Stress Tensor & 	\multicolumn{2}{c}{$\mathbb{T}$~(\ref{consmom})}\\[2.5pt]
+		Deformation Gradient & $\F$~(\ref{dec1})& $\F$~(\ref{dec2})\\[2.5pt]
+	 	Pore Pressure & $p$~(\ref{sys3}) & $p$~\ref{sys2B})\\[2.5pt]
+		Left-Cauchy Tensor& \multirow{2}{*}{$\mathbb{B}_e$~(\ref{Be})} & \multirow{2}{*}{$\mathbb{\bar{B}}_e$~(\ref{BeB})}\\
+		for spring 2&&\\
+		Viscous Velocity & \multirow{2}{*}{$\LL_v$~(\ref{Lv1})}&  \multirow{2}{*}{$\bar{\LL}_v$~(\ref{Lv2})}\\
+		Gradient Tensor&&\\
+		\hline\addlinespace[2pt]
+		Electric Field & \multicolumn{2}{c}{$\Phi$~(\ref{sys2})}\\
+		\hline 
+		\hline
+	\end{tabular}
+\vspace{3mm}
+\caption{List of Variables involved in the problem, with reference to the corresponding governing equations.}
+\label{summary}
+\end{table}
+
+\section{Elasticity: Equilibrium Behaviour.}
+In this section, we will be focusing on the equilibrium behaviour of the two model under free and compressed swelling. Given the large number of parameter in the models, such experiment allows to estimate a subset of them. While previous model proposed in the literature have been arbitrarily chosen how to decompose the deformation gradient $\F$, we here shows that such choice need to consider equal to a constitutive equation and thus tested experimentally. 
+
+\subsection{Unconstrained Free Swelling.} 
 \label{free}
 \begin{figure}
 	\centering
@@ -567,73 +631,69 @@ In all simulation, unless differently stated, we will use the parameters in Tabl
 	\caption{Schematic representation of a free swelling. Since we are considering an isotropic mixture, the ECM maintains its shape while all dimension are stretched of the same amount $\lambda$. So that the relative volume change is $\delta V = \lambda^3-1$. }
 \end{figure}
 
-We here consider the first experimental setup: unconstrained free swelling. In such situation, we consider the ECM is left free to swell in bath of interstitial solution. As the system evolves, the ECM increases in size until it reaches a steady state. As in \cite{DROZDOVph}, we are assume that at equilibrium:
+Having derived the set of equations for both model A and model B, we now want to compare how the two behave in different settings. We first look at unconstrained free swelling of a cuboid slice of ECM immersed in a bath of interstitial fluid. For simplicity we consider that contains only two species of free ions, which carry a positive $C_+$ and a negative $C_-$ charge respectively. We assume the bath to be well-mixed and stress-free with both pressure and electric potential identically zero. We denote by $2c_0$ the total concentration of free ions in the bath, so that $c_0$ is the concentration of each ionic species. As the system evolves, the ECM increases in size until it reaches a steady state which is characterised by the continuity of chemical potentials and stresses across the boundary:
+\begin{equation}
+\left[\mu_s\right]^+_-=\left[\mu_+\right]^+_-=\left[\mu_-\right]^+_-=0, \quad \left[\mathbf{n} \mathbb{T}\mathbf{n}\right]^+_-=0.
+\end{equation}
+
+As in \cite{DROZDOVph}, we consider that at equilibrium the following conditions also holds:
 \begin{itemize}
 	\item[1.] chemical potentials of solvent and solutes is homogeneous and equal in the bath and in the bath:
 	\begin{eqnarray}
 	\mu_s=\mu^{ext}_s = \mu^0_s - vkT \sum_i c^i_0 ,\\\label{free1}
-	\mu_i=\mu^{ext}_i = \mu^0_i +kT\ln(v_sc^i_0),
+	\mu_i=\mu^{ext}_i = \mu^0_i +kT\ln(v_sc^i_0).
 	\end{eqnarray} 
-	where the bath solution is assumed to be neutral with a potential $\phi^{bath}=0$.
 	\item[2.] The electrostatic potential and the solute concentration are constant in the ECM, but different to the value in the bath. This difference creates a thin charged interface at the boundary, whose thickness is negligible compared to the size of the ECM.
 	\item[3.] The contribution of $\mathbb{T}^{Max}$ and $\mathbb{T}^{kort}$to the stress at this interface can be neglected compared to the mechanical stress due to the deformation. 
-	\item[4.] The bath is in a stress free configuration so as the ECM at equilibrium:
+	\item[4.] The Cauchy stress tensor is constant in the ECM and equal to the value in the bath:
 	\begin{equation}
 	\mathbb{T}=0.\label{free2}
 	\end{equation} 
 \end{itemize}
 
-Finally, to investigate the equilibrium, we specify the deformation gradient tensor, which is of the form:
+Finally, in order to characterise the equilibrium, we need to specify the deformation gradient tensor, which is of the form:
 \begin{equation}
 \F= \lambda \mathbb{I},\label{deffree}                                                                
 \end{equation}
-with $\lambda=(1+C_s v_s)^{1/3}$. To simplify, we also assume that there are only two species of ions in the solution: a positive $C_+$ with $z_+=1$ and a negative one $C_-$ with $z_-=-1$. Since the bath solution is neutral, the total charge must vanish, $c^+_0=c^-_0=c_0$.
+with $\lambda=(1+C_s v_s)^{1/3}$. 
+Throughout the work, unless differently specified, we will use the parameters listed in Table \ref{Tab1} in Appendix~(\ref{para}).
 
-Throughout the work, unless differently specified, we will use the parameters in Table \ref{Tab1} will be considered to be constant so to reflect the condition in the experiment by Netti et~al. \cite{Netti,ecm2}.
+As shown in Appendix \ref{apfree}, imposing the equilibrium condition to both model A and B, we obtain that the nominal concentration of oxygen in the gel at equilibrium is implicitly defined by the algebraic equation:
 
-\begin{table}[h!]
-	\vspace{4mm}
-	\centering
-	\begin{tabular}{||c c c||}
-		\hline\addlinespace[2pt]
-		Symbol  & Value& Unit\\
-		\hline\addlinespace[5pt]
-		$\qquad C_f\qquad$  & $3.947\times 10^{23}$& $\qquad\text{m}^{-3}\quad$\\
-		$\qquad v_s\qquad$  & $3\times 10^{-29}$& $\qquad\text{m}^3\quad$ \\
-		$\qquad z_f\qquad$ & $-4$& -\\
-		$\qquad k_B\qquad$ & $1.38 \times 10^{-23}$& $\qquad\text{J}/\text{K}\quad$\\
-		$\qquad T\qquad$ &$295$ &K\\
-		$\qquad c^i_0\qquad$ & $9.27\times 10^{25}$& $\qquad\text{m}^{-3}\quad$\\
-		\hline
-	\end{tabular}
-	\vspace{2mm}
-	\caption{Parameters adopted in the simulations as estimated in \cite{ecm2} in reference to the experiment by Netti et~al. \cite{Netti}.}
-	\label{Tab1}
-\end{table}
-
-\subsection{Model A.}
-
-In the case of free swelling, due to the symmetry of $\F$, it reasonable to assume that also $\F_e$ is of the similar form, $\F_e=\lambda_e \mathbb{I}$. Consequently, based on Equation~(\ref{apBe}) in Appendix \ref{apenergy}, we have that the viscous contribution vanish so that $\B_e=\B= \lambda^2 \mathbb{I}$. Substituting this result and the boundary condition~(\ref{free1})-(\ref{free2}) into Equations (\ref{sys1})-(\ref{sys2}) and (\ref{sys3}), setting to zero all spatial derivative, we obtain:
-\begin{gather}
-p_A = \frac{G^A_1+G^A_2}{1+C_sv_s}(\lambda^2-1),\label{presA}\\
-\Pi^{n}_A = \frac{k_BT}{v_s} \left[\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s} +\frac{\chi}{(1+C_s v_s)^2}\right],\\
-\Pi^{ion}_A = k_B T \sum_i \left(\frac{C_i}{v_sC_s}-c^0\right),\\
-0 = \frac{v_s}{k_BT} (p_A+\Pi^{n}_A-\Pi^{ion}_A), \\[2mm]
-0 = \pm\frac{e}{k_B T} \phi  + \ln \frac{C_\pm}{C_s v_s c_\pm^0},\qquad i=1,\ldots,N,\\[2.5mm]
-Q = e\left(C_+-C_-+z_f C_{f}\right)=0.\label{electron}
-\end{gather}
-where $\Pi^{n}$ and $\Pi^{ion}_A$ are the osmotic pressures due to the mixing of the polymer network with the solvent and the imbalance of ions inside and outside the ECM. 
-Note that at equilibrium the system reaches a balance between the mechanical pressure $p_A$ and the osmotic pressures. Moreover, the electro-neutrality condition is naturally imposed, Equation~(\ref{electron}). As shown in Appendix , manipulating the above system we can reduce the number of unknown to the solvent concentration $C_s$:
-\begin{gather}
-C_{\pm}= \frac{1}{2}\left[\mp z_fC_f+ \sqrt{(z_fC_f)^2+(2v_sC_sc_0)^2}\,\right],\label{eqion}
-\end{gather}
 \begin{gather}
 \begin{aligned}
-F_{A}(C_s; c_0,\chi,G^A_{eq})=&\frac{1+C_sv_s+\chi}{(1+C_sv_s)^2}+\frac{G^A_{eq} v_s}{k_BT} \frac{(1+v_sC_s)^{2/3}-1}{1+C_sv_s}\\[1.5mm]
-&+\ln \frac{C_sv_s}{1+C_sv_s} +2c_0v_s-\sqrt{\left(\frac{z_fC_f}{C_s}\right)^2+4v_s^2c^2_0} =0 \label{eqF}
+F_{A}(C_s; c_0,\chi,G^A_{eq})=&\frac{1+C_sv_s+\chi}{(1+C_sv_s)^2}+\frac{p v_s}{k_BT}+\ln \frac{C_sv_s}{1+C_sv_s} +2c_0v_s\\[1.5mm]
+&-\sqrt{\left(\frac{z_fC_f}{C_s}\right)^2+4v_s^2c^2_0} =0 \label{eqF}
 \end{aligned}
 \end{gather}
-where $G^A_{eq}=G^A_1+G^A_2$. Note that Equation~(\ref{eqion}) corresponds to the well known Donnan Equilibrium \cite{DROZDOVph}. Equation~(\ref{eqF}) instead implicitly defines the concentration $C_s$ and thus the final swelling volume. As expected, the latter can be controlled by changing the concentration of ions in the bath. We also notice that, free swelling experiment, are not sufficient to differentiate the elastic properties of the two branches as the two behave equivalently.
+where the pressure $p$ is defined according to the model used as:
+\begin{equation}
+p = \begin{cases}
+\frac{G^A_{eq}}{1+C_sv_s}(\lambda^2-1)\qquad \text{MODEL A}\\
+\frac{G^B_{vol}}{1+C_sv_s}(\lambda^2-1)\qquad \text{MODEL B}.
+\end{cases}
+\end{equation}
+where $G^A_eq=G^A_1+G^A_2$. In this case, both model reduces to the standard hyper-elastic model for polyelectrolytes proposed by Hong \cite{Reviewpolyel}. The most important characteristic of the model are summarised in Figure \ref{analysis}, which highlights the effect of different ion concentration in the bath on the degree of swelling. The behaviour is also sensitive to the value of the mixing parameter $\chi$, which can be manipulated controlling the temperature. Depending on the latter, the ECM will either be in a highly swollen or collapsed phased with really low absorption of fluid \cite{Salt}. 
+
+
+\begin{figure}[h!]
+	\begin{subfigure}{0.53\textwidth}
+		\includegraphics[scale=0.25]{images/manifold}
+		\caption{}
+	\end{subfigure}
+	\hspace{-5mm}
+	\begin{subfigure}{0.46\textwidth}
+		\hspace{-3mm}
+		\includegraphics[scale=0.4]{images/free1}
+		\caption{}
+	\end{subfigure}
+	\caption{Free Swelling: (a) Manifold implicitly defined by Equation~(\ref{eqF}) where $G^A_{eq}=10^3$ is fixed, while $c_0$ and $\chi$ are varied. On the vertical axis, we have plot $\lambda$ as defined by~(\ref{deffree}). In the red, it is highlighted the plane corresponding to $\chi=\chi_{crit}$ that split the parameter space into the region of high swelling and collapse for the material \cite{}.}
+	\label{analysis}
+\end{figure}
+
+As the model are equivalent, we conclude that common unconstrained swelling experiments that test the equilibrium state are not sufficient to discern between the two, but can be useful to estimate some of the several parameter in the model. 
+
+
 
 %\input{compression2}
 \input{compression1}
@@ -695,7 +755,7 @@ where $G^A_{eq}=G^A_1+G^A_2$. Note that Equation~(\ref{eqion}) corresponds to th
 \label{apenergy}
 Combining Equation~(\ref{vflow1}) and (\ref{vflow2}), and imposing that condition~(\ref{Jv}) is satisfied, we can characterise the viscous flow by the following relation:
 \begin{equation}
-\LL_v = L_{vv}T^{-1}\left[\F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right] \stackrel{(\ast)}{=} \frac{G^A_2}{\eta^A}\text{DEV}\left[\mathbb{C}_e\right] ,
+\LL_v = L_{vv}T^{-1}\left[\F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right] \stackrel{(\ast)}{=} \frac{G^A_2}{\eta^A}\text{DEV}\left[\mathbb{C}_e\right] ,\label{Lv1}
 \end{equation}
 where $\eta^A$ represent the viscosity of the material and the equality $(\ast)$ follows from Equation~(\ref{temp4}):
 \begin{equation}
@@ -803,7 +863,11 @@ ALTERNATIVE:
 \end{equation}
 The above volumetric constitutive assumption is one of the most common in modelling hyper-elastic material. However, as shown in \cite{vol}, this has several limitation in the regime of large deformation, which highlights the need of study more realistic form which can capture the more complex behaviour of real material. From this point of view, being able to decouple the volumetric deformation as in model B allows to investigate this aspect alone [REPHRASE].
 
-When looking at the entropy production, Equation~(\ref{dis}) still holds simply by replacing $\LL_v$ with $\bar{\LL}_v$. Using the same argument as in Section~(\ref{ent}), we are left with the following system of equations:
+When looking at the entropy production, Equation~(\ref{dis}) still holds simply by replacing $\LL_v$ with $\bar{\LL}_v$:
+\begin{equation}
+\LL_v = \frac{G^B_2}{\eta^B}\text{DEV}[\bar{\mathbb{C}}_e]\label{Lv2}
+\end{equation}
+ Using the same argument as in Section~(\ref{ent}), we are left with the following system of equations:
 \begin{gather}
 \boldsymbol{\xi} = \gamma J \,\mathbb{B}^{-1} \,\nabla_0 \,C_s,\label{sys1B}\\[2mm]
 \begin{aligned}
@@ -821,8 +885,45 @@ coupled to the governing equations:
 \begin{gather}
 \mathbf{j}_s = -K c_s \left(c_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} c_i \nabla \mu_i\right),\\
 \mathbf{j}_i = - \frac{D_i}{k_B T}c_i\nabla \mu_i + \frac{D_i}{D^0_i} \frac{c_i}{c_s} \mathbf{j}_s, \\
-\dot{\bar{\B}}_e = \bar{\B}_e \LL^T +\LL \bar{\B}_e - \frac{2}{3} \, tr(\LL) \bar{\B}_e -\frac{1}{\tau_R} \bar{\B}_e \text{DEV}\left[\bar{\B}_e\right]
+\dot{\bar{\B}}_e = \bar{\B}_e \bar{\LL}^T +\bar{\LL} \bar{\B}_e -\frac{1}{\tau_R} \bar{\B}_e \text{DEV}\left[\bar{\B}_e\right]\label{BeB}
 \end{gather}
+\section{Simulation Parameter.}
+\label{para}
+Throughout the work, unless differently specified, we will use the parameters in Table \ref{Tab1} will be considered to be constant so to reflect the condition in the experiment by Netti et~al. \cite{Netti,ecm2}.
+\begin{table}[h!]
+	\vspace{4mm}
+	\centering
+	\begin{tabular}{||c c c||}
+		\hline\addlinespace[2pt]
+		Symbol  & Value& Unit\\
+		\hline\addlinespace[5pt]
+		$\qquad C_f\qquad$  & $3.947\times 10^{23}$& $\qquad\text{m}^{-3}\quad$\\
+		$\qquad v_s\qquad$  & $3\times 10^{-29}$& $\qquad\text{m}^3\quad$ \\
+		$\qquad z_f\qquad$ & $-4$& -\\
+		$\qquad k_B\qquad$ & $1.38 \times 10^{-23}$& $\qquad\text{J}/\text{K}\quad$\\
+		$\qquad T\qquad$ &$295$ &K\\
+		$\qquad c^i_0\qquad$ & $9.27\times 10^{25}$& $\qquad\text{m}^{-3}\quad$\\
+		\hline
+	\end{tabular}
+	\vspace{2mm}
+	\caption{Parameters adopted in the simulations as estimated in \cite{ecm2} in reference to the experiment by Netti et~al. \cite{Netti}.}
+	\label{Tab1}
+\end{table}
+\section{Free Swelling}
+\label{apfree}
+In the case of free swelling, due to the symmetry of $\F$, the tensors $\F_e$ and $\bar{F}_e$ is of the similar form, $\F_e=\lambda_e \mathbb{I}$. Consequently, based on Equation~(\ref{apBe}) in Appendix \ref{apenergy}, we have that the viscous contribution vanish so that $\B_e=\B= \lambda^2 \mathbb{I}$. Substituting this result and the boundary condition~(\ref{free1})-(\ref{free2}) into Equations (\ref{sys1})-(\ref{sys2}) and (\ref{sys3}), setting to zero all spatial derivative, we obtain:
+\begin{gather}
+p_A = \frac{G^A_1+G^A_2}{1+C_sv_s}(\lambda^2-1),\label{presA}\\
+\Pi^{n}_A = \frac{k_BT}{v_s} \left[\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s} +\frac{\chi}{(1+C_s v_s)^2}\right],\\
+\Pi^{ion}_A = k_B T \sum_i \left(\frac{C_i}{v_sC_s}-c^0\right),\\
+0 = \frac{v_s}{k_BT} (p_A+\Pi^{n}_A-\Pi^{ion}_A), \\[2mm]
+0 = \pm\frac{e}{k_B T} \phi  + \ln \frac{C_\pm}{C_s v_s c_\pm^0},\qquad i=1,\ldots,N,\\[2.5mm]
+Q = e\left(C_+-C_-+z_f C_{f}\right)=0.\label{electron}
+\end{gather}
+where $\Pi^{n}$ and $\Pi^{ion}_A$ are the osmotic pressures due to the mixing of the polymer network with the solvent and the imbalance of ions inside and outside the ECM. 
+Note that at equilibrium the system reaches a balance between the mechanical pressure $p_A$ and the osmotic pressures. Moreover, the electro-neutrality condition is naturally imposed, Equation~(\ref{electron}). 
+Note that Equation~(\ref{eqion}) corresponds to the well known Donnan Equilibrium \cite{DROZDOVph}. Equation~(\ref{eqF}) instead implicitly defines the concentration $C_s$ and thus the final swelling volume. As expected, the latter can be controlled by changing the concentration of ions in the bath. We also notice that, free swelling experiment, are not sufficient to differentiate the elastic properties of the two branches as the two behave equivalently.
+
 %\include{kort}
 \newpage
 \bibliographystyle{splncs04}

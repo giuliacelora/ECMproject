@@ -28,10 +28,6 @@ Bertet, C., Sulak, L., Lecuit, T.: Myosin-dependent junction remodelling
   controls planar cell intercalation and axis elongation. Nature  \textbf{429},
    667--71 (07 2004)
 
-\bibitem{Biot}
-Biot, M.A.: General theory of three‐dimensional consolidation. Journal of
-  Applied Physics  \textbf{12}(2),  155--164 (1941)
-
 \bibitem{boyce2}
 Boyce, M.C., Arruda, E.M.: Constitutive models of rubber elasticity: A review.
   Rubber Chemistry and Technology  \textbf{73}(3),  504--523 (2000)
@@ -73,12 +69,6 @@ Deligkaris, K., Tadele, T.S., Olthuis, W., Van~den Berg, A.: Hydrogel-based
 
 \bibitem{doi}
 Doi, M.: Soft Matter Physics. OUP Oxford (2013)
-
-\bibitem{pressure}
-Dolega, M., Delarue, M., Ingremeau, F., Prost, J., Delon, A., Cappello, G.:
-  Cell-like pressure sensors reveal increase of mechanical stress towards the
-  core of multicellular spheroids under compression. Nature Communications
-  \textbf{8},  14056 (2017)
 
 \bibitem{DROZDOV+}
 Drozdov, A.: Swelling of ph-responsive cationic gels: Constitutive modeling and
@@ -208,11 +198,6 @@ Sun, D.N., Gu, W.Y., Guo, X.E., Lai, W.M., Mow, V.C.: A mixed finite element
   biological soft tissues. International Journal for Numerical Methods in
   Engineering  \textbf{45}(10),  1375--1402 (1999)
 
-\bibitem{wang}
-Wang, X., Hong, W.: A visco-poroelastic theory for polymeric gels. Proceedings
-  of the Royal Society A: Mathematical, Physical and Engineering Sciences
-  \textbf{468}(2148),  3824--3841 (2012). \doi{10.1098/rspa.2012.0385}
-
 \bibitem{growthtum}
 Xue, S.L., Li, B., Feng, X.Q., Gao, H.: Biochemomechanical poroelastic theory
   of avascular tumor growth. Journal of the Mechanics and Physics of Solids
@@ -232,5 +217,10 @@ Xue, S.L., Lin, S.Z., Li, B., Feng, X.Q.: A nonlinear poroelastic theory of
 Yu, Y., Landis, C.M., Huang, R.: {Salt-Induced Swelling and Volume Phase
   Transition of Polyelectrolyte Gels}. Journal of Applied Mechanics
   \textbf{84}(5) (03 2017)
+
+\bibitem{Salt}
+Yu, Y., Landis, C.M., Huang, R.: {Salt-Induced Swelling and Volume Phase
+  Transition of Polyelectrolyte Gels}. Journal of Applied Mechanics
+  \textbf{84}(5) (03 2017). \doi{10.1115/1.4036113}, 051005
 
 \end{thebibliography}

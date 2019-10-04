@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{761.00729154bp}%
+    \setlength{\unitlength}{600.93069482bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,13 +50,14 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.48196658)%
+  \begin{picture}(1,0.61124553)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{images/SLStand.pdf}}%
-    \put(0.42150639,0.42984911){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.26666237\unitlength}\raggedright $\epsilon$\end{minipage}}}%
-    \put(0.72367999,0.25619361){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.26666237\unitlength}\raggedright $\epsilon$\end{minipage}}}%
-    \put(0.2962292,0.06857964){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.26666237\unitlength}\raggedright $\epsilon_d$\end{minipage}}}%
-    \put(0.48178159,0.06857964){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.26666237\unitlength}\raggedright $\epsilon_1$\end{minipage}}}%
+    \put(0.51528882,0.35525136){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18310145\unitlength}\raggedright \scriptsize $1$\end{minipage}}}%
+    \put(0.59238658,0.25357793){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18310145\unitlength}\raggedright \scriptsize$2$\end{minipage}}}%
+    \put(0.46092266,0.5553315){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.49698955\unitlength}\raggedright \large $\epsilon$\end{minipage}}}%
+    \put(0.30508388,0.07355391){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.49698955\unitlength}\raggedright \large $\epsilon_d$\end{minipage}}}%
+    \put(0.59686898,0.07355391){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.49698955\unitlength}\raggedright \large$\epsilon_e$\end{minipage}}}%
   \end{picture}%
 \endgroup%
