@@ -214,3 +214,90 @@ As described in Appendix \ref{apenergy}, starting from Equations~(\ref{vflow1})-
 \dot{\mathbb{B}}_e =\LL\mathbb{B}_e + \mathbb{B}_e \LL^T - \frac{1}{\tau_R} \,\mathbb{B}_e\text{DEV}[\mathbb{B}_e].\label{Be}
 \end{eqnarray}
 where the parameters are macroscopic phenomenological coefficients, that can either be estimated experimentally or derived from the nano/microscopic properties of the different phases \cite{ecm1,ecm2}. To sum up the governing equations for the Model A are Equations~(\ref{gov1})-(\ref{sys3}) together with the flow rules~(\ref{gov2})-(\ref{Be}). The analogous system of equation for model B can be found in Appendix \ref{modelB}. 
+\subsection{Evolution Equation.}
+
+In order to get a better physical insight into the behaviour, we first rewrite the solvent chemical potential as:
+\begin{gather}
+\mu_s = \mu^0_s + k_B T \left(\frac{p v_s}{k_BT} +\Pi_{osm}-\sum_i \frac{C_i}{C_s} -\frac{\gamma J}{k_B T}\Pi_{grad}\right)\label{mu2},\\
+\Pi_{osm}=\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s}+\frac{\chi}{(1+C_s v_s)^2},\\
+\Pi_{grad} = \nabla^2 C_s,
+\end{gather}
+where $p$ represents the pore pressure, $\Pi_{osm}$ is the osmotic pressure of the solution and $\Pi_{grad}$ is the pressure due to interface energy. If we now substitute into Equations~(\ref{gov2}) the chemical potentials~(\ref{mu2})-(\ref{mu}), which yields to:
+\begin{equation}
+\begin{aligned}
+\partial_t C_s=\nabla_0 \cdot\left\{K\F^{-1}\left[C_s v_s\nabla p - \color{red}\gamma C_s J\nabla \Pi_{grad}\color{black}+\sum_i \frac{D_i}{D^0_i} C_i e z_i \nabla \Phi\right.\right.\\
+\left.\left.+ k_B T\color{teal} \left(C_s \nabla \Pi_{osm}+ \sum_i\left(1-\frac{D_iC_i}{D^0_iC_s}\right) \nabla C_s - \sum_i\left(1-\frac{D_i}{D^0_i}\right) \nabla C_i \right)\color{black}\right]\right\}.\label{long}
+\end{aligned}
+\end{equation}
+
+The above equation shows that the solvent transport is driven by pressure gradient, osmotic pressure gradient (green term in Equation~(\ref{long})), electric potential gradient and the additional composition gradient (red term in Equation~(\ref{long})), which is here first introduced in the context of polyelectrolytes. In the absence of solutes ($C_i\equiv 0$), we recover the same model presented by Hennessy et. al~\cite{sarah}. If we further assume that $|\nabla \Pi_{grad}|<<1$ and take the limit $v_sC_S\rightarrow\infty$, Equations~(\ref{long}) reduces to Darcy's law for the flow in a porous media. The model for polyelectrolytes proposed by Hong \cite{Reviewpolyel} correspond instead to the limit $D^0_i\rightarrow\infty$, i.e. mobile species can move freely in pure solution, and  $|\nabla \Pi_{grad}|<<1$.
+
+Similarly we can rewrite Equation~(\ref{gov3}) as:
+\begin{equation}
+\scriptsize
+\partial_t C_i = \nabla_0 \left[D_i\F^{-1}\left(\underbrace{\nabla C_i}_{\text{diffusion}} +\underbrace{\frac{eC_iz_i}{k_B T} \nabla \Phi}_{\text{electric}}\right)-\underbrace{\frac{D_i C_i}{C_s}\F^{-1}\nabla C_s}_{\text{osmotic pressure}}-\underbrace{\frac{D_i C_i}{D^0_iC_s}\mathbf{J}_s}_{\text{advenction}}\right]\label{long2}
+\end{equation}
+
+In the case of ions, the driving forces of transport are the diffusion of ions, the electric field, the osmotic pressure due to the mixing with the solvent and the advection term (due to the relative movement of ions with respect to the solvent). In the limit $D^0_i\rightarrow0$, where the ions can freely move in the pure solution, we recover the formulation of Hong in \cite{Reviewpolyel}, which is commonly used in the description of polyelectrolytes. In the dilute limit, i.e. when the concentration of ions is much smaller than the solvent  concentration $C_i<<C_s$, we can drop both the osmotic and advection term so to recover the well-known Nernst-Planck equation \cite[see Equation (6.67)]{Reviewpolyel}.
+
+As mentioned in the introduction, one the major aspect of interest is the visco-elastic contribution to the evolution of the system. Even though in the transport Equation~(\ref{long})-(\ref{long2}) there is no direct reference to it, the transport is indirectly coupled to the visco-relaxation through the pressure gradient. Taking the divergence of Equation~(\ref{sys3}) and using the conservation of momentum~(\ref{consmom}), we can identify components to the pressure gradient:
+
+\begin{equation}
+\nabla p= \nabla \cdot \mathbb{T}^{kort} + \nabla \cdot \mathbb{T}^{Max} + G_1^A\underbrace{ \nabla \cdot \left[\frac{\B-\mathbb{I}}{1+v_sC_s}\right]}_{\substack{\text{swelling}\\\text{+ deviatoric}\\\text{ deformation}}} + \,\color{red} G_2^A \underbrace{\nabla \cdot\left[\frac{\B_e-\mathbb{I}}{1+v_sC_s}\right]}_{\color{black}\substack{\text{swelling}\\\text{+ deviatoric}\\\text{deformation}\\\text{+ viscous relaxation}}}\color{black}
+\end{equation}
+
+Differently from the standard Neo-Hookean model for polyelectrolytes, we have an additional term highlighted in red, which accounts for the energy stored in the second spring of model A. Its time evolution, as determined by Equation~(\ref{Be}) is driven by the swelling and macroscopic deformation and a relaxation term which capture the viscous nature of the solid phase:
+\begin{equation}
+\dot{\mathbb{B}}_e=\underbrace{\LL\mathbb{B}_e + \mathbb{B}_e \LL^T}_{\substack{\text{swelling}\\\text{+ deviatoric}\\\text{deformation}}} - \underbrace{\frac{1}{\tau_R} \,\mathbb{B}_e\text{DEV}[\mathbb{B}_e]}_{\substack{\text{viscous}\\\text{relaxation}}}\label{Be2}
+\end{equation}
+
+
+Despite the introduction of the non-linear terms, there is an apparent analogy between the above Equation and the ODE describing the standard linear solid, see Equation~(SLS) in the Introduction. The term $\dot{\epsilon} \leftrightarrow \LL$ is related to the strain experienced by spring 1, while $\epsilon_e  \leftrightarrow \mathbb{B}_e$ is the variable describing the strain on the 2. In the limit $\tau_R\rightarrow \infty$, we have that $\mathbb{B}_e\equiv\mathbb{B}$. We thus recover the standard Neo-Hookean hyper-elastic model for hydrogels with shear modulus given by $G^A_1+G^A_2$. Similar result are obtained for model B. The governing equation of Model B is equivalent to~(\ref{Be2}), except for the fact that it is not influence by purely volumetric deformation:
+\begin{equation}
+\dot{\bar{\mathbb{B}}}_e=\underbrace{\bar{\LL}\bar{\mathbb{B}}_e + \bar{\mathbb{B}}_e \bar{\LL}^T}_{\substack{\text{deviatoric}\\\text{deformation}}} - \underbrace{\frac{1}{\tau_R} \,\bar{\mathbb{B}}_e\text{DEV}[\bar{\mathbb{B}}_e]}_{\substack{\text{viscous}\\\text{relaxation}}}
+\end{equation}
+while the pressure gradient is defined as:
+\begin{equation}
+\begin{aligned}
+\nabla p= \nabla \cdot \mathbb{T}^{kort} + \nabla \cdot \mathbb{T}^{Max} + G_1^B\underbrace{ \nabla \cdot \left[\frac{\text{DEV}[\bar{\mathbb{B}}]}{1+v_sC_s}\right]}_{\substack{\text{+ deviatoric}\\\text{ deformation}}} \\
++ \,\color{red} G_2^B \underbrace{\nabla \cdot\left[\frac{\text{DEV}[\bar{\mathbb{B}}_e]}{1+v_sC_s}\right]}_{\color{black}\substack{\text{ deviatoric}\\\text{deformation}\\\text{+ viscous relaxation}}}\color{black}+ G_{vol}\underbrace{\nabla \left(\frac{J^{2/3}-1}{J}\right)}_{swelling}.
+\end{aligned}
+\end{equation}
+
+As we will discuss in the next section, when considering instead a purely volumetric deformation, such as for free swelling, i.e. $\F=\F_{vol}=J^{1/3}\mathbb{I}$, we have that the two model are equivalent given that $G_{vol}\equiv G_A +G_B$. Before comparing the model in different experimental setting, we have briefly summarised in Table~(\ref{summary}) the variables and governing equation for both models. In order to have a close solution, the proper boundary and initial conditions needs also to be assigned depending on the specific problem considered.
+
+\vspace{3mm}
+\begin{table}
+	\centering
+	\begin{tabular}{c|c|c}
+		\hline\addlinespace[2pt]
+		Variable &  \hspace{1pt} Model A \hspace{1pt} & \hspace{1pt} Model B\hspace{1pt} \\
+		\hline
+		\hline\addlinespace[2.5pt]
+		Solvent Concentration &  \multicolumn{2}{c}{$C_s$~(\ref{long})}\\[2.5pt]
+		Chemical Potential of & \multicolumn{2}{c}{ $\mu_s$~(\ref{gov1})}\\
+		the solvent &\multicolumn{2}{c}{}\\[2pt]
+		Ionic Concentrations &\multicolumn{2}{c}{$C_i$~(\ref{long2})}\\[3pt]
+		Chemical Potential of & \multicolumn{2}{c}{$\mu_i$~(\ref{mu}) }\\
+		the ions &\multicolumn{2}{c}{ }\\[2pt]
+		\hline\addlinespace[2pt]
+		Local Volumetric Change & \multicolumn{2}{c}{$J$~(\ref{inc})}\\[2.5pt]
+		Cauchy Stress Tensor & 	\multicolumn{2}{c}{$\mathbb{T}$~(\ref{consmom})}\\[2.5pt]
+		Deformation Gradient & $\F$~(\ref{dec1})& $\F$~(\ref{dec2})\\[2.5pt]
+		Pore Pressure & $p$~(\ref{sys3}) & $p$~\ref{sys2B})\\[2.5pt]
+		Left-Cauchy Tensor& \multirow{2}{*}{$\mathbb{B}_e$~(\ref{Be})} & \multirow{2}{*}{$\mathbb{\bar{B}}_e$~(\ref{BeB})}\\
+		for spring 2&&\\
+		Viscous Velocity & \multirow{2}{*}{$\LL_v$~(\ref{Lv1})}&  \multirow{2}{*}{$\bar{\LL}_v$~(\ref{Lv2})}\\
+		Gradient Tensor&&\\
+		\hline\addlinespace[2pt]
+		Electric Field & \multicolumn{2}{c}{$\Phi$~(\ref{sys2})}\\
+		\hline 
+		\hline
+	\end{tabular}
+	\vspace{3mm}
+	\caption{List of Variables involved in the problem, with reference to the corresponding governing equations.}
+	\label{summary}
+\end{table}
+
+\section{Elasticity: Equilibrium Behaviour.}
+In this section, we will be focusing on the equilibrium behaviour of the two model under free and compressed swelling. Given the large number of parameter in the models, such experiment allows to estimate a subset of them. While previous model proposed in the literature have been arbitrarily chosen how to decompose the deformation gradient $\F$, we here shows that such choice need to consider equal to a constitutive equation and thus tested experimentally. 

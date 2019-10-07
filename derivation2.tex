@@ -7,21 +7,16 @@ M(R)= \sum\limits_{m=s,1,\ldots,N} - \int_{\partial R} \mu_m \,\mathbf{J}_m \cdo
 \end{equation}
 where $\mathbf{n}$ is the unit normal vector to the surface $\partial R$ and $\mu_m$ is the chemical potential associated with each species. Widely used in the thermodynamics of mixture, the chemical potential is a measure of the rate of change in free energy associated with adding one more molecule to a unit volume.
 
-The term $W(R)$, i.e. the rate of work done on the system, is instead decomposed in two contributions, the rate of electrical $W_{el}(R)$ and mechanical work $W_{mec}(R)$. Following \cite{DROZDOVph}, $W_{el}(R)$ is defined as:
+Following \cite{DROZDOVph}, the term $W(R)$, i.e. the rate of work done on the system, is decomposed into two contributions:
 \begin{equation}
-W_{el}(R) = -\int_{\partial R} \Phi\, \dot{\mathbf{H}}\cdot \mathbf{n}
+W(R) = -\int_{\partial R} \Phi\, \dot{\mathbf{H}}\cdot \mathbf{n} +  \int_{\partial R}\mathbb{S}\mathbf{n} \cdot \dot{\mathbf{u}}
+\end{equation}
+which stands for the rate of electrical and mechanical work respectively. Substituting this result back into the formula~(\ref{energyin}) and applying the divergence theorem we obtain the following inequality:
+\begin{equation}
+\int_R \dot{\psi} - \mathbf{E}\cdot \dot{\mathbf{H}} \, + \, \sum\limits_{i=1}^{N} \left[e \Phi  z_i \dot{C}_i+ \nabla_0 \left(\mu_i \mathbf{J}_i \right)\right] + \nabla_0 (\mu_s \mathbf{J}_s-\mathbb{S}^T\mathbf{\dot{u}}) \leq 0\,. 
 \end{equation}
 
-while $W_{mec}(R)$ reads:
-\begin{equation}	
-W_{mec}(R) =  \int_{\partial R} \mathbb{S}\mathbf{n} \cdot \dot{\mathbf{u}}
-\end{equation}
-where $\mathbf{u}= \mathbf{x}-\mathbf{X}$ is the displacement vector, which is related to the deformation tensor by $\F=\mathbb{I}-\nabla_0 \mathbf{u}$. Substituting this result back into the formula~(\ref{energyin}) and applying the divergence theorem we obtain the following inequality:
-\begin{equation}
-\int_R \dot{\psi} - \mathbf{E}\cdot \dot{\mathbf{H}} \, + \, \sum\limits_{i=1}^{N} \left[e \Phi  z_i \dot{C}_i+ \nabla_0 \left(\mu_i \mathbf{J}_i \right)\right] + \nabla_0 (\mu_s \mathbf{J}_s-\mathbb{S}^T\mathbf{\dot{u}}) \leq 0 
-\end{equation}
-
-Since this must hold for any choice of the volume $R$, the inequality must hold also locally:
+Since the volume $R$ can be chosen arbitrarily, the inequality must hold also locally:
 \begin{equation}
 \dot{\psi} - \mathbf{E}\cdot \dot{\mathbf{H}} \, + \, \sum\limits_{i=1}^{N} \left[e \Phi  z_i \dot{C}_i+ \nabla_0 \left(\mu_i \mathbf{J}_i \right)\right] + \nabla_0 (\mu_s \mathbf{J}_s -\mathbb{S}^T\mathbf{\dot{u}}) \leq 0. 
 \end{equation}
@@ -37,7 +32,7 @@ As exhaustively discussed in previous studies \cite{Plasto,GURTIN}, the energy i
 \begin{equation}
 \psi = \psi (\F,\F_e, C_s, C_i, \mathbf{H}), \label{temp1}
 \end{equation}
-which precludes any explicit dependency of $\psi$ on the chemical potential or the viscous deformation gradient $\F_v$. By differentiating the incompressibility condition~(\ref{inc}) and~(\ref{Jv}), we obtain:
+which precludes any explicit dependency of $\psi$ on the chemical potentials $\mu_m$ or the viscous deformation gradient $\F_v$. By differentiating the incompressibility condition~(\ref{inc}) and~(\ref{Jv}), we obtain:
 
 \begin{gather}
 v_s\dot{C_s} - J \F^{-T}:\dot{\F} =0, \label{temp3}\\
@@ -49,16 +44,15 @@ If we now substitute~(\ref{temp1}) into~(\ref{temp2}), and include the constrain
 \begin{aligned}
  \color{blue}{\left(\frac{\partial \psi}{\partial C_s}-\mu_s+p v\right)}\color{black}\dot{C}_s+\color{blue}\left(\frac{\partial \psi}{\partial \mathbf{H}}-\mathbf{E}\right) \cdot \color{black}\dot{\mathbf{H}}+ \sum_i\color{blue}\left(\frac{\partial \psi}{\partial C_i} + e\Phi z_i-\mu_i\right) \color{black}\dot{C}_i \\
 + \color{blue} \left(\frac{\partial \psi}{\partial \F} + \frac{\partial \psi}{\partial\F_e}\F_v^{-1}- \mathbb{S} - p J \F^{-T}\right): \color{black}\dot{\F}+ \sum_m \nabla_0 \,\mu_m \cdot \mathbf{J}_m \\
-- \left(\F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right):\mathbb{L}_v\leq 0 . \label{ineq}
+- \underbrace{\left(\F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right)}_{\text{DEV}[\mathbb{M}_e]}:\mathbb{L}_v\leq 0 . \label{ineq}
 \end{aligned}
 \end{equation}
-
-Note that in deriving~(\ref{ineq}), we have also made us of the following identity:
+where $\mathbb{M}_e$ is the effective Mandel stress. Note that in deriving~(\ref{ineq}), we have also made us of the following identity:
 \begin{equation}
 \dot{\F}=\dot{\F}_e\F_v+\F_e\dot{\F}_v \Longrightarrow \dot{\F}_e=\dot{\F}\F_v^{-1}-\F_e \LL_v.
 \end{equation}
 \subsection{Construction of the Free Energy.}
-
+\label{freeenergy}
 Having the general form of $\psi$, Equation~(\ref{temp1}), it remains to construct its precise form. Following a standard approach in $\psi$-depending modeling, we assume that the total free energy can be additively decomposed with each physical mechanisms contributing independently. We here consider five distinct contributions:
 
 \begin{enumerate}
@@ -90,7 +84,7 @@ As the interstitial fluid is well approximated by a dilute solution, the contrib
 \psi_4 = k_B T \sum\limits_{i=1}^{N} C_i \left(\ln \frac{C_i}{ C_s}-1\right).
 \end{equation}
 
-Finally, we need to specify the strain energy $\psi_5$ which depends on the particular constitutive model used to describe the material. As mentioned in the Introduction the Standard Linear Solid (SLS), see Figure \ref{SLS}, is commonly used to describe soft material in the regime of small deformation. However, when account for large deformation, as in the case of swelling, soft material present a non-linear behaviour \cite{floryprinciples}. For this reason we consider the model in Figure \ref{fig1A}, which is a generalization of the 1D SLS to 3D problems with non-linear elastic response. 
+Finally, we need to specify the strain energy $\psi_5$. As mentioned in the Introduction the Standard Linear Solid (SLS), see Figure \ref{SLS}, is commonly used to describe soft material in the regime of small deformation. However, when account for large deformation, as in the case of swelling, soft material present a non-linear behaviour \cite{floryprinciples}. For this reason we consider the model in Figure \ref{fig1A}, which is a generalization of the 1D SLS to 3D problems with non-linear elastic response. 
 
 \begin{figure}
 	\begin{subfigure}{0.32\textwidth}
@@ -136,7 +130,7 @@ As in \cite{ecm2}, we consider the spring to be isotropic and hyper-elastic (Neo
 \psi_{5.1}(\F) = \frac{G^A_1}{2} \left(\F:\F - 3 -2 \ln J\right)\\
 \psi_{5.2}(\F_e) = \frac{G^A_2}{2} \left(\F_e:\F_e - 3 -2 \ln J_{e}\right)\label{hyp}
 \end{eqnarray}
-where $G_{1/2}$ stands for the shear modulus associated with each spring, $J_e= \det \F_e$, while $J$ is as defined in the previous sections. As derived in \cite{floryprinciples}, the hyper-elastic model~(\ref{hyp}) can be correlated to the microscopic properties of a polymer network, under the assumption of Gaussian chains and affine deformation. Other thermodynamically consistent form of the stretching energy have been proposed in the literature \cite{BERGSTROM1998931,boyce2,doi}. These have been also derived by statistical arguments but starting from different network models.
+where $G_{1/2}$ stands for the shear modulus associated with each spring, $J_e= \det \F_e$. As derived in \cite{floryprinciples}, the hyper-elastic model~(\ref{hyp}) can be derived in the framework of statistical mechanics based on the microscopic properties of a polymer network. This assumes the network to consist of Gaussian chains and affine deformation. Other thermodynamically consistent form of the stretching energy have been proposed in the literature \cite{BERGSTROM1998931,boyce2,doi} using different network models.
 
 \subsection{Entropy Production $\sigma$.}
 \label{ent}
@@ -147,14 +141,14 @@ Having specified how the system interacts with its environment, we can now discu
 \sigma = \sum_m \zeta_m \cdot \mathbf{J}_m + \zeta_v : \LL_v,
 \label{dis}
 \end{equation}
-where $\zeta$s represent the thermodynamic forces associate with each flux. On the other hand, $\dot{C}_s$, $\dot{C}_i$, $\mathbf{\dot{H}}$ and $\dot{\F}$ describe the evolution of reversible process. This implies that their value can be controlled and arbitrarily chosen, by carefully tune the condition of an experiment, i.e. tuning boundary and initial conditions. In order for the energy imbalance inequality~(\ref{ineq}) to always hold, and given the constraint~(\ref{temp1}) on $\psi$, this can only happen if the terms highlighted in blue in Equation~(\ref{ineq}) are identically zero. As shown in the Appendix \ref{stateequation}, this leads to the following system of state equations:
+where $\zeta$s represent the thermodynamic forces associate with each flux. On the other hand, the rates $\Lambda =\left\{\dot{C}_s,\dot{C}_i,\mathbf{\dot{H}},\dot{\F}\right\}$ describe the evolution of reversible process\footnote{energy and entropy in reversible processes are state functions; consequently the state of the system does only depend on the value of the thermodynamic variables and not the rate at which they change.} and thus do not belong to the set of constitutive physical variables. As discussed in detail in Appendix \ref{stateequation}, this implies that energy imbalance inequality~(\ref{ineq}) is linear in the variables $\Lambda$, so that for it the terms highlighted in blue in Equation~(\ref{ineq}) must be identically zero. As shown in Appendix \ref{stateequation}, this leads to the hold system of state equations:
 \begin{gather}
 \begin{aligned}
 \mu_s = p v_s + \mu_s^0 + k_BT&\left[\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s}\right.\\
 &\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s v_s)^2}-\sum_i \frac{C_i}{C_s}\right], 
 \end{aligned}\label{gov1}\\[2.5mm]
 \mu_i = \mu^0_i + e\Phi z_i + kT \ln \frac{C_i}{C_s},\label{mu}\\
-\mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, , \qquad -\epsilon J \nabla^2 \Phi = Q\, ,\label{sys2}
+-\epsilon J \nabla^2 \Phi = Q\, ,\label{sys2}
 \end{gather}
 \begin{gather}
 \begin{aligned}
@@ -163,19 +157,19 @@ where $\zeta$s represent the thermodynamic forces associate with each flux. On t
 \end{aligned}
 \label{sys3}
 \end{gather}
-where $T^{max}$ is the component of the stress tensor due to the presence of the electric field. As discussed in Section \ref{secNET}, in the framework of linear non-equilibrium thermodynamics, when considering isothermal transformation, the second law of thermodynamics can be rewrite as Equations~(\ref{eqCIT}). Using the same argument as in Section \ref{sec_ine} and Equation~(\ref{dis}), we can rewrite Equations~(\ref{eqCIT}) in differential form, and substituting Equations~(\ref{gov1})-(\ref{sys3}), we obtain:
+where $\mathbb{T}^{max}$ is the component of the stress tensor due to the presence of the electric field. As discussed in Section \ref{secNET}, in the framework of linear non-equilibrium thermodynamics, when considering isothermal transformation, the second law of thermodynamics can be rewrite as Equations~(\ref{eqCIT}). Using the same argument as in Section \ref{sec_ine} and Equation~(\ref{dis}), we can rewrite Equations~(\ref{eqCIT}) in differential form, and substituting Equations~(\ref{gov1})-(\ref{sys3}), we obtain:
 \begin{equation}
 \begin{aligned}
-\sigma = -  \sum_m \frac{1}{T}\nabla_0 \,\mu_m \cdot \mathbf{J}_m + \frac{1}{T}\left( \F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right):\mathbb{L}_v\label{EQen}
+\sigma = -  \sum_m T^{-1} \nabla_0 \,\mu_m \cdot \mathbf{J}_m + T^{-1}\mathbb{M}_e:\mathbb{L}_v\label{EQen}
 \end{aligned} 
 \end{equation}
 
-Equating Equation~(\ref{EQen}) and~(\ref{dis}), it is evident that the thermodynamics forces are:
+Equating Equation~(\ref{EQen}) and~(\ref{dis}), it is natural to identify that the thermodynamics forces as:
 \begin{gather}
 \zeta_m = \frac{1}{T} \nabla_0 \,\mu_m, \label{vflow1}\\
-\zeta_v = \frac{1}{T} \left( \F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right) = \frac{1}{T} \left[G^A_2(\mathbb{C}_e-\mathbb{I})-p_v\mathbb{I}\right].
+\zeta_v = \frac{1}{T} \text{DEV}[\mathbb{M}_e] = \frac{1}{T} \left[G^A_2(\mathbb{C}_e-\mathbb{I})-p_v\mathbb{I}\right].
 \end{gather}
-Assuming to be in regime of linear non-equilibrium thermodynamics, we can use the identity~(\ref{lin}) to couple fluxes and forces. However, considering the symmetry constraint from \textit{Curie's law}\footnote{Macroscopic causes can not have more element of symmetries than the effect they cause \cite{CIT}} , there can be no coupling between fluxes and forces of different tensorial nature. Consequently, we are left with the following force-flux relation:
+Assuming to be in regime of linear non-equilibrium thermodynamics, we can use the identity~(\ref{lin}) to linearly couple fluxes and forces. However, considering the symmetry constraint imposed by \textit{Curie's law}\footnote{Macroscopic causes can not have more element of symmetries than the effect they cause \cite{CIT}} , there can be no coupling between fluxes and forces of different tensorial nature. Consequently, we are left with the following force-flux relation:
 \begin{gather}
 \LL_v = L_{vv} \zeta_v,\label{vflow2}\\
 \mathbf{J}_m = \sum_{k=s,1,\ldots,N} L_{mk} \zeta_k. \label{dif}
@@ -194,4 +188,90 @@ As described in Appendix \ref{apenergy}, starting from Equations~(\ref{vflow1})-
 \partial_t C_i= \nabla_0\cdot\left[\frac{D_i}{k_B T}C_i\F^{-1}\nabla \mu_i -\frac{D_i}{D^0_i} \frac{C_i}{C_s} \mathbf{J}_s\right],\label{gov3} \\
 \dot{\mathbb{B}}_e =\LL\mathbb{B}_e + \mathbb{B}_e \LL^T - \frac{1}{\tau_R} \,\mathbb{B}_e\text{DEV}[\mathbb{B}_e].\label{Be}
 \end{eqnarray}
-where the parameters (see the Glossary) are macroscopic phenomenological coefficients, that can either be estimated experimentally or derived from the nano/microscopic properties of the different phases \cite{ecm1,ecm2}. To sum up the governing equations for the Model A are Equations~(\ref{gov1})-(\ref{sys3}) together with the flow rules~(\ref{gov2})-(\ref{Be}). The analogous system of equation for model B can be found in Appendix \ref{modelB}. 
+where the parameters (see the Glossary) are macroscopic phenomenological coefficients. To sum up, Table~(\ref{summary}) lists the variables and corresponding governing equation for model A as well as model B, which we recall has been derived in Appendix~(\ref{modelB}). In order to have a close solution, the proper boundary and initial conditions needs also to be assigned but these will be specified depending on the specific problem considered.
+
+\vspace{3mm}
+\begin{table}
+	\centering
+	\begin{tabular}{c|c|c|c|}
+		\hline\addlinespace[2pt]
+		Variable &  \hspace{1pt} Model A \hspace{1pt} & \hspace{1pt} Model B\hspace{1pt} & \hspace{1pt}Equation Type\hspace{1pt}\\
+		\hline
+		\hline\addlinespace[2.5pt]
+		Solvent Concentration &  \multicolumn{2}{c|}{$C_s$~(\ref{long})}& Governing \\[2.5pt]
+		Chemical Potential of & \multicolumn{2}{c|}{ $\mu_s$~(\ref{gov1})}& State \\
+		the solvent &\multicolumn{2}{c|}{}&\\[2pt]
+		Ionic Concentrations & \multicolumn{2}{c|}{$C_i$~(\ref{long2})}& Governing \\[3pt]
+		Chemical Potential of & \multicolumn{2}{c|}{$\mu_i$~(\ref{mu}) }& State \\
+		the ions &\multicolumn{2}{c|}{ }&\\[2pt]
+		\hline\addlinespace[2pt]
+		Local Volumetric Change & \multicolumn{2}{c|}{$J$~(\ref{inc})}& State \\[2.5pt]
+		Cauchy Stress Tensor & 	\multicolumn{2}{c|}{$\mathbb{T}$~(\ref{consmom})}& State \\[2.5pt]
+		Deformation Gradient & $\F$~(\ref{dec1})& $\F$~(\ref{dec2})& State \\[2.5pt]
+		Pore Pressure & $p$~(\ref{sys3}) & $p$~\ref{sys2B})& State \\[2.5pt]
+		Left-Cauchy Tensor& \multirow{2}{*}{$\mathbb{B}_e$~(\ref{Be})} & \multirow{2}{*}{$\mathbb{\bar{B}}_e$~(\ref{BeB})}&\multirow{2}{*}{Governing}\\
+		for spring 2&&&\\
+		Viscous Velocity & \multirow{2}{*}{$\LL_v$~(\ref{Lv1})}&  \multirow{2}{*}{$\bar{\LL}_v$~(\ref{Lv2})}&\multirow{2}{*}{Governing }\\
+		Gradient Tensor&&&\\
+		\hline\addlinespace[2pt]
+		Electric Field & \multicolumn{2}{c|}{$\Phi$~(\ref{sys2})}& State \\
+		\hline 
+		\hline
+	\end{tabular}
+	\vspace{3mm}
+	\caption{List of Variables involved in the problem, with reference to the corresponding governing equations. We denote by state equation, the constitutive equations that defines a variable in terms of the state of the system. On the other hand, governing equations explicitly contain the time variable $t$ as they describe the evolution of a non-reversible process.}
+	\label{summary}
+\end{table}
+
+\section{Summary of the Evolution Equation.}
+
+Having derived the full model for both decomposition of $\F$, we discuss more in details their physical interpretation, with particular interest at the governing equations. We first rewrite the solvent chemical potential, Equation~(\ref{mu}), as:
+\begin{gather}
+\mu_s = \mu^0_s + k_B T \left(\frac{p v_s}{k_BT} +\Pi_{osm}-\sum_i \frac{C_i}{C_s}\right)\label{mu2},\\
+\Pi_{osm}=\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s}+\frac{\chi}{(1+C_s v_s)^2},
+\end{gather}
+where $p$ represents the pore pressure, $\Pi_{osm}$ is the osmotic pressure of the solution. If we now substitute into Equations~(\ref{gov2}) the chemical potentials~(\ref{mu2})-(\ref{mu}), which yields to:
+\begin{equation}
+\begin{aligned}
+\partial_t C_s=\nabla_0 \cdot\left\{K\F^{-1}\left[C_s v_s\nabla p +\sum_i \frac{D_i}{D^0_i} C_i e z_i \nabla \Phi.+ k_B T\color{teal} \left(C_s \nabla \Pi_{osm}+  \right.\right.\right.\\
+\left.\left.\left.\color{teal} \sum_i\left(1-\frac{D_iC_i}{D^0_iC_s}\right) \nabla C_s- \sum_i\left(1-\frac{D_i}{D^0_i}\right) \nabla C_i \right)\color{black}\right]\right\}.\label{long}
+\end{aligned}
+\end{equation}
+
+The above equation shows that the solvent transport is driven by pressure gradient, osmotic pressure gradient (green term in Equation~(\ref{long})) and electric potential gradient. If we consider the limit $v_sC_S\rightarrow\infty$, Equations~(\ref{long}) reduces to Darcy's law for the flow in a porous media. The model for polyelectrolytes proposed by Hong \cite{Reviewpolyel} correspond instead to the limit $D^0_i\rightarrow\infty$, where mobile species can move freely in pure solution and the friction is due only to relative motion with the solid phase.
+
+Similarly we can rewrite Equation~(\ref{gov3}) as:
+\begin{equation}
+\scriptsize
+\partial_t C_i = \nabla_0 \left[D_i\F^{-1}\left(\underbrace{\nabla C_i}_{\text{diffusion}} +\underbrace{\frac{eC_iz_i}{k_B T} \nabla \Phi}_{\text{electric}}\right)-\underbrace{\frac{D_i C_i}{C_s}\F^{-1}\nabla C_s}_{\text{osmotic pressure}}-\underbrace{\frac{D_i C_i}{D^0_iC_s}\mathbf{J}_s}_{\text{advenction}}\right]\label{long2}
+\end{equation}
+
+In the case of ions, the driving forces of transport are the diffusion of ions, the electric field, the osmotic pressure due to the mixing with the solvent and the advection term (due to the relative movement of ions with respect to the solvent). Again in the limit $D^0_i\rightarrow\infty$, we recover the formulation of Hong \cite{Reviewpolyel}, which is commonly used in the description of polyelectrolytes. In the dilute limit, i.e. when the concentration of ions is much smaller than the solvent  concentration $C_i<<C_s$, we can drop both the osmotic and advection term so to recover the well-known Nernst-Planck equation \cite[see Equation (6.67)]{Reviewpolyel}.
+
+As mentioned in the introduction, one the major aspect of interest is the visco-elastic contribution to the evolution of the system. Even though in the transport Equation~(\ref{long})-(\ref{long2}) there is no direct reference to it, the transport is indirectly coupled to the poro-relaxation through the pressure gradient. Taking the divergence of Equation~(\ref{sys3}) and using the conservation of momentum~(\ref{consmom}), we can identify different components of the pressure gradient:
+
+\begin{equation}
+\nabla p= \nabla \cdot \mathbb{T}^{Max} + G_1^A\underbrace{ \nabla \cdot \left[\frac{\B-\mathbb{I}}{1+v_sC_s}\right]}_{\substack{\text{swelling}\\\text{+ deviatoric}\\\text{ deformation}}} + \,\color{red} G_2^A \underbrace{\nabla \cdot\left[\frac{\B_e-\mathbb{I}}{1+v_sC_s}\right]}_{\color{black}\substack{\text{swelling}\\\text{+ deviatoric}\\\text{deformation}\\\text{+ viscous relaxation}}}\color{black}
+\end{equation}
+
+Differently from the standard Neo-Hookean model for polyelectrolytes, we have an additional term highlighted in red, which accounts for the energy stored in the second spring of model A. Its time evolution, as determined by Equation~(\ref{Be}), is driven by both the macroscopic (both volumetric and deviatoric) deformation and the relaxation dynamics which capture the viscous nature of the solid phase:
+
+\begin{equation}
+\dot{\mathbb{B}}_e=\underbrace{\LL\mathbb{B}_e + \mathbb{B}_e \LL^T}_{\substack{\text{swelling}\\\text{+ deviatoric}\\\text{deformation}}} - \underbrace{\frac{1}{\tau_R} \,\mathbb{B}_e\text{DEV}[\mathbb{B}_e]}_{\substack{\text{viscous}\\\text{relaxation}}}\label{Be2}
+\end{equation}
+
+
+Despite the introduction of non-linearities, there is an apparent analogy between the above Equation and the ODE describing the standard linear solid, see Equation~(SLS) in the Introduction. The term $\dot{\epsilon} \leftrightarrow \LL$ is related to the strain experienced by spring 1, while $\epsilon_e  \leftrightarrow \mathbb{B}_e$ is the variable describing the strain on the string in the Maxwell branch. In the limit $\tau_R\rightarrow \infty$, we have that $\mathbb{B}_e\equiv\mathbb{B}$. We thus recover the standard Neo-Hookean hyper-elastic model for hydrogels with shear modulus given by $G^A_1+G^A_2$. Similar result are obtained for model B. The governing equation of Model B is equivalent to~(\ref{Be2}), except that the relaxation is now not influenced by volumetric deformations:
+\begin{equation}
+\dot{\bar{\mathbb{B}}}_e=\underbrace{\bar{\LL}\bar{\mathbb{B}}_e + \bar{\mathbb{B}}_e \bar{\LL}^T}_{\substack{\text{deviatoric}\\\text{deformation}}} - \underbrace{\frac{1}{\tau_R} \,\bar{\mathbb{B}}_e\text{DEV}[\bar{\mathbb{B}}_e]}_{\substack{\text{viscous}\\\text{relaxation}}}.
+\end{equation}
+Looking instead at the pressure gradient, we have that that the volumetric and deviatoric contribution are now decoupled:
+\begin{equation}
+\begin{aligned}
+\nabla p=\nabla \cdot \mathbb{T}^{Max} + G_1^B\underbrace{ \nabla \cdot \left[\frac{\text{DEV}[\bar{\mathbb{B}}]}{1+v_sC_s}\right]}_{\substack{\text{+ deviatoric}\\\text{ deformation}}}+ G_{vol}\underbrace{\nabla \left(\frac{J^{2/3}-1}{J}\right)}_{swelling} \\
++ \,\color{red} G_2^B \underbrace{\nabla \cdot\left[\frac{\text{DEV}[\bar{\mathbb{B}}_e]}{1+v_sC_s}\right]}_{\color{black}\substack{\text{ deviatoric}\\\text{deformation}\\\text{+ viscous relaxation}}}\color{black}.
+\end{aligned}
+\end{equation}
+
+As we will discuss in the next section, when considering instead a purely volumetric, or hydrostatic, deformation, such as for free swelling, i.e. $\F=\F_{vol}=J^{1/3}\mathbb{I}$, we have that the two model are equivalent given that $G_{vol}\equiv G_A +G_B$. However, as we will be discussing in the next section, differences emerge when the deformation gradient has a non-zero deviatoric component. 
+

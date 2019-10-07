@@ -61,6 +61,8 @@
     \put(0.20694073,0.25200808){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\color{blue}{Force}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{images/compression.pdf}}%
     \put(0.08252837,0.39026953){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.07507085\unitlength}\raggedright $Z$\end{minipage}}}%
+    \put(-0.01052837,0.03526953){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.07507085\unitlength}\raggedright \scriptsize$Z=0$\end{minipage}}}%
+    \put(-0.02952837,0.21526953){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.10507085\unitlength}\raggedright  \scriptsize$Z=H_0$\end{minipage}}}%
     \put(0.39396095,0.17561644){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.23549621\unitlength}\raggedright Compression\end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{images/compression.pdf}}%
   \end{picture}%
