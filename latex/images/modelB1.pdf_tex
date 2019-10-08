@@ -54,7 +54,7 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{images/modelB1.pdf}}%
-    \put(0.6344142,1.40223468){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.65504797\unitlength}\raggedright $\kappa,\,\F_{vol}$\end{minipage}}}%
+    \put(0.6344142,1.40223468){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.65504797\unitlength}\raggedright $G_{vol},\,\F_{vol}$\end{minipage}}}%
     \put(-0.06851953,0.84054386){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.71173477\unitlength}\raggedright $G^B_1,\,\bar{\F}$\end{minipage}}}%
     \put(0.78574747,0.60827979){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.9699749\unitlength}\raggedright $\eta^B,\,\bar{\F}_v$\end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{images/modelB1.pdf}}%

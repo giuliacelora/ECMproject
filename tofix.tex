@@ -1,10 +1,10 @@
 \section{Model B: Separating the Volumetric Deformation.}
 \label{modelB}
-The derivation of the governing equation for the second model proposed follow the same steps as model A, with few changes. From the point of view of conservation laws (Section \ref{conslaw}), these are still valid as they do not depend on the specific kinetics model chosen. As discussed in Section \ref{kin}, we use multiplicative decomposition to isolate the different contribution to the strain:
+The derivation of the governing equation for the second model proposed follow the same steps as model A, with only few changes. The conservation laws (Section \ref{conslaw}) are still valid as they do not depend on the specific kinetics model chosen. As discussed in Section \ref{kin}, we use multiplicative decomposition to isolate the different contribution to the strain:
 \begin{equation}
 \F= \bar{\F} \F_{vol}= J^{1/3} \bar{\F}_e \bar{\F}_v,\label{mol2}
 \end{equation}
-where we have used the fact that $\F_{vol}=J^{1/3}\mathbb{I}$, with $J=\det \F$. Where both $\bar{\F}_e$  and $\bar{\F}_v$ needs to preserve the ECM volume. Analogously to Equation~(\ref{Jv}), this can be ensured by imposing the following condition:
+where we have used the fact that $\F_{vol}=J^{1/3}\mathbb{I}$, with $J=\det \F$. Where both $\bar{\F}_e$ and $\bar{\F}_v$ preserve the ECM volume. Consequently, analogously to Equation~(\ref{Jv}), we have that:
 \begin{equation}
 \det \bar{\F}_v = 1.
 \end{equation}
@@ -15,74 +15,106 @@ where we have used the fact that $\F_{vol}=J^{1/3}\mathbb{I}$, with $J=\det \F$.
 	\caption{Multiplicative decomposition of Model B}
 \end{figure}
 
-In this case it is easier to express the kinematics of the ECM in terms $\LL=\dot{\F}\F^{-1}$, instead of $\dot{\F}$ and $\bar{\LL}_v=\dot{\bar{\F}}_v\bar{\F}_v^{-1}$. When we look at the free energy, we now have three decouple mechanical variables that can contribute to it $J$ for the first spring, $\bar{\F}$ and $\bar{\F}_e$ on due to the springs in branch $\mathbf{A}$ and $\mathbf{B}$ respectively. Consequently, Equation~(\ref{temp1}) will now be of the form:
-\begin{equation}
-\psi = \psi (J,\bar{\F}_e, \bar{\F}, C_s, C_i, \nabla_0 \,C_s,\mathbf{H}).\label{aptemp1}
-\end{equation}
+Besides the viscous velocity gradient $\bar{\LL}_v=\dot{\bar{\F}}_v\bar{\F}_v^{-1}$, we also define the total velocity gradient $\LL=\dot{\F}\F^{-1}$. These are the two variables we will be using to describe the kinetics of the solid phase deformation. 
 
-If we differentiate $J$, $\bar{\F}$ and $\bar{\F}_e$, we can reduce the number of variables expressing them in terms of $\LL$ and $\bar{\LL}_v$:
+Focusing on the reversible exchange of energy and mass between the system and the environment, we have that Equation~(\ref{M}) and~(\ref{W}) still hold, so that the energy imbalance inequality can still be written as Equation~(\ref{temp2}). Note however that the constitutive function of the free energy is now of the form:
+\begin{equation}
+\psi=\psi(\bar{\F},\bar{\F}_e, J , C_s,C_i,\mathbf{H}),\label{aptemp1}
+\end{equation}
+where $J$ needs now to be introduced to the list of independent variables. 
+
+If we now take the time derivative of $J$, $\bar{\F}$ and $\bar{\F}_e$, we have that:
 
 \begin{gather}
 \dot{J} = J (\mathbb{I}:\LL),\\
 \dot{\bar{\F}} = J^{-1/3} \LL \F - \frac{1}{3} J^{-1/3} (\mathbb{I}:\LL) \F \\
-\dot{\bar{\F}}_e = \text{DEV}[\LL] \bar{\F}_e -\bar{\F}_e \bar{\LL}_v.\label{aptemp2}
+\dot{\bar{\F}}_e = \text{DEV}[\LL] \bar{\F}_e -\bar{\F}_e \bar{\LL}_v,\label{aptemp2}
 \end{gather}
-If we now combine Equations~(\ref{aptemp1})-(\ref{aptemp2}) with the energy inequality, what we obtain is:
+so that the dynamics of the system can be fully described in terms of $\LL$ and $\bar{\LL}_v$. If we combine Equations~(\ref{aptemp1})-(\ref{aptemp2}) with the energy inequality~(\ref{temp2}), we obtain:
 \begin{equation}
 \begin{aligned}
-\left(\frac{\partial \psi}{\partial \nabla_0 C_s}-\boldsymbol{\xi}\right) \cdot \nabla_0 \dot{C}_s + \left(\frac{\partial \psi}{\partial C_s}-\mu_s-\nabla_0 \cdot \boldsymbol{\xi}+p v\right)\dot{C}_s\\
-+ \sum_i\left(\frac{\partial \psi}{\partial C_i} + e\Phi z_i-\mu_i\right) \dot{C}_i +\left(\frac{\partial \psi}{\partial \mathbf{H}}-\mathbf{E}\right) \cdot \dot{\mathbf{H}}\\
- +\left(\text{DEV}\left[J^{-1/3}\frac{\partial \psi}{\partial \bar{\F}}\F^T + \frac{\partial \psi}{\partial \bar{\F}_e}\bar{\F}_e^{T}\right]- \mathbb{S}\F^T +J\left(\frac{\partial \psi}{\partial J} - p\right)\mathbb{I}\right):\LL\\
- + \sum_m \nabla_0 \,\mu_m \cdot \mathbf{J}_m - \bar{\F}_e^T\frac{\partial \psi}{\partial \bar{\F}_e}:\mathbb{\bar{L}}_v\leq 0 . \label{ineq2}
+\color{blue} \left(\frac{\partial \psi}{\partial C_s}-\mu_s+p v\right)\color{black}\dot{C}_s+ \color{blue}\sum_i\left(\frac{\partial \psi}{\partial C_i} + e\Phi z_i-\mu_i\right)\color{black} \dot{C}_i
++\color{blue}\left(\frac{\partial \psi}{\partial \mathbf{H}}-\mathbf{E}\right) \color{black} \cdot \dot{\mathbf{H}}\\
++\color{blue} \left(\text{DEV}\left[J^{-1/3}\frac{\partial \psi}{\partial \bar{\F}}\F^T + \frac{\partial \psi}{\partial \bar{\F}_e}\bar{\F}_e^{T}\right]- \mathbb{S}\F^T +J\left(\frac{\partial \psi}{\partial J} - p\right)\mathbb{I}\right)\color{black}:\LL\\
++ \sum_m \nabla_0 \,\mu_m \cdot \mathbf{J}_m - \text{DEV}[\mathbb{\bar{M}}_e]:\mathbb{\bar{L}}_v\leq 0 . \label{ineq2}
 \end{aligned}
 \end{equation}
 
-Finally we need to update the constitutive laws for the strain free energy $\psi_6$, which, similarly to the case discussed in Section , can be decompose as the sum of contributions from each spring in Figure \ref{figmode}(b):
+Moving on to the form of the free energy $\psi$ (see Section \ref{freeenergy}), Equations~(\ref{psi1})-(\ref{psi4}) still holds. On the other hand, the last term, i.e. the strain energy $\psi_5$, needs to be update so to have a term explicitly related to the volumetric deformation, which we assume to be perfectly elastic. From a rheological point of view, as illustrated in Figure \ref{fig1B}, this is equivalent to add a spring in series to the \textquotedblleft circuit'' in Figure~\ref{fig1A}.
+
+\begin{figure}
+	\begin{subfigure}{0.32\textwidth}
+		\centering
+		\large
+		\def\svgwidth{0.9\linewidth}
+		\input{latex/images/modelB1.pdf_tex}
+		\caption{}
+		\label{fig1B}
+	\end{subfigure}
+	\hspace{20mm}
+	\begin{subtable}{0.375\textwidth}
+		\hspace{-15mm}
+		\begin{tabular}{|c | c | c|}	
+			\hline
+			\multirow{2}{*}{\textbf{ Element } }& \textbf{ Constitutive } & \multirow{2}{*}{\textbf{ Deformation }} \\
+			& \textbf{Properties} &\\
+			\hline	
+			\multirow{2}{*}{ spring $vol$} & Isotropic  & 	\multirow{2}{*}{  volumetric }\\
+			&Neo-Hookean spring&\\
+			\hline
+			\multirow{2}{*}{ spring 1 } & Isotropic  & 	\multirow{2}{*}{  deviatoric }\\
+			&Neo-Hookean spring&\\
+			\hline
+			\multirow{2}{*}{ spring 2 } & Isotropic  & \multirow{2}{*}{  deviatoric }\\
+			&Neo-Hookean spring &\\ 
+			\hline
+			\multirow{2}{*}{dashpot}  & Isotropic  & 	\multirow{2}{*}{deviatoric}\\
+			& Linear dashpot & \\
+			\hline
+		\end{tabular}
+		\caption{}
+		\label{tabB}
+	\end{subtable}
+	\caption{(a) Schematic representation of the non-linear rheological model for ECM; (b) Table summarizing the major properties of the model components.}
+\end{figure}
+
+As in Section \ref{freeenergy}, we can decompose strain energy as the sum of contributions from each element in the rheological model:
 
 \begin{equation}
-\psi_6 = \psi_1(\bar{\F}) + \psi_2(\bar{\F}_e) + \psi_{vol}(J).
+\psi_5 = \psi_{5.1}(\bar{\F}) + \psi_{5.2}(\bar{\F}_e) + \psi_{vol}(J).
 \end{equation}
 
-Again we assume the ECM to behave as an hyperplastic material:
+which based on the constitutive properties list in Table~(\ref{tabB}) have the form:
+
 \begin{eqnarray}
-\psi_1(\bar{\F}) = \frac{G^B_1}{2} \left(\bar{\F}:\bar{\F} - 3\right),\\
-\psi_2(\bar{\F}_e) = \frac{G^B_2}{2} \left(\bar{\F}_e:\bar{\F}_e - 3 \right).
+\psi_{5.1}(\bar{\F}) = \frac{G^B_1}{2} \left(\bar{\F}:\bar{\F} - 3\right),\\
+\psi_{5.2}(\bar{\F}_e) = \frac{G^B_2}{2} \left(\bar{\F}_e:\bar{\F}_e - 3 \right)\\
+\psi_{vol}(J) = \frac{G_{vol}}{2}\left[3(J^{2/3}-1) -\ln J^2\right].
 \end{eqnarray}
 
-For the volumetric contribution we consider as before a logarithmic term:
-\begin{equation}
-\psi_{vol}(J) = \frac{\kappa}{2} \ln J^2. \label{psivol}
-\end{equation}
-ALTERNATIVE:
-\begin{equation}
-\psi_{vol}(J) = \frac{G_{vol}}{2}\left[3(J^{2/3}-1) -\ln J^2\right].
-\end{equation}
-The above volumetric constitutive assumption is one of the most common in modelling hyper-elastic material. However, as shown in \cite{vol}, this has several limitation in the regime of large deformation, which highlights the need of study more realistic form which can capture the more complex behaviour of real material. From this point of view, being able to decouple the volumetric deformation as in model B allows to investigate this aspect alone [REPHRASE].
-
-When looking at the entropy production, Equation~(\ref{dis}) still holds simply by replacing $\LL_v$ with $\bar{\LL}_v$:
-\begin{equation}
-\LL_v = \frac{G^B_2}{\eta^B}\text{DEV}[\bar{\mathbb{C}}_e]\label{Lv2}
-\end{equation}
- Using the same argument as in Section~(\ref{ent}), we are left with the following system of equations:
+Following the same argument as in Appendix~(\ref{stateequation}), we have that the term highlighted in blue in Equation~(\ref{ineq2}) must be identically zero. This leads to following set of governing equations:
 \begin{gather}
-\boldsymbol{\xi} = \gamma J \,\mathbb{B}^{-1} \,\nabla_0 \,C_s,\label{sys1B}\\[2mm]
 \begin{aligned}
-\mu_s = p v + \mu_s^0 - \gamma J \nabla^2 C_s + kT&\left[\ln \frac{C_s v}{1+C_s v} + \frac{1}{1+C_sv}\right.\\
-&\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s v)^2}-\sum_i \frac{C_i}{C_s}\right], 
+\mu_s = p v + \mu_s^0 + kT&\left[\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s}\right.\\
+&\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s v_s)^2}-\sum_i \frac{C_i}{C_s}\right], 
 \end{aligned}\\[2.5mm]
 \mu_i = \mu^0_i + e\Phi z_i + kT \ln \frac{C_i}{C_s},\\
 \mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, \\[3mm]
 \begin{aligned}
-\mathbb{T}= \left(\frac{\kappa}{1+C_sv_s}-p\right) \mathbb{I} + \frac{G^B_1}{1+C_sv}\text{DEV}[\bar{\B}] + \frac{G^B_2}{1+C_sv}\text{DEV}[\bar{\B}_e]\\
+\mathbb{T}= \left(G_{vol}\dfrac{J^{2/3}-1}{J}-p\right) \mathbb{I} + \frac{G^B_1}{1+C_sv_s}\text{DEV}[\bar{\B}] + \frac{G^B_2}{1+C_sv}\text{DEV}[\bar{\B}_e]\\
 + \gamma \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]+ \epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right],\label{sys2B}
 \end{aligned}
 \end{gather}
+
+When looking at how energy is dissipated, the derivation in Section~(\ref{ent}) and Appendix~(\ref{apenergy}) is still valid, with the only [requirement] of replacing $\LL_v\leftrightarrow \bar{\LL}$ and $\mathbb{B}_e\leftrightarrow\mathbb{\bar{B}}_e$. If we assume that the time of relaxation $\tau_R$ is independent of the model used, this yield to a system of governing equations analogous to the System~(\ref{gov2})- (\ref{Be}):
 coupled to the governing equations:
 \begin{gather}
-\mathbf{j}_s = -K c_s \left(c_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} c_i \nabla \mu_i\right),\\
-\mathbf{j}_i = - \frac{D_i}{k_B T}c_i\nabla \mu_i + \frac{D_i}{D^0_i} \frac{c_i}{c_s} \mathbf{j}_s, \\
+\partial_t C_s=\nabla_0 \cdot\left[K C_s \F^{-1}\left(c_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} c_i \nabla \mu_i\right)\right],\\
+\partial_t C_i= \nabla_0\cdot\left[\frac{D_i}{k_B T}C_i\F^{-1}\nabla \mu_i -\frac{D_i}{D^0_i} \frac{C_i}{C_s} \mathbf{J}_s\right],\\
 \dot{\bar{\B}}_e = \bar{\B}_e \bar{\LL}^T +\bar{\LL} \bar{\B}_e -\frac{1}{\tau_R} \bar{\B}_e \text{DEV}\left[\bar{\B}_e\right]\label{BeB}
 \end{gather}
+
+To sum up, model A and model B are similar with only exception of the state equation for the Cauchy stress $\mathbb{T}$ and the governing equation of the dashpot.
 \section{Simulation Parameter.}
 \label{para}
 Throughout the work, unless differently specified, we will use the parameters in Table \ref{Tab1} will be considered to be constant so to reflect the condition in the experiment by Netti et~al. \cite{Netti,ecm2}.

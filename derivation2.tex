@@ -3,13 +3,13 @@
 
 As mentioned in Section \ref{secNET}, in a thermodynamically consistent model, the free energy, $\psi$, can not be chosen arbitrarily but needs to satisfy the energy imbalance inequality,~(\ref{energyin}). In this section, we focus on the right-hand side of the inequality which specifies how the system exchanges energy and mass with the environment. Considering a control volume $R$ in the reference configuration $\mathcal{B}_0$, the system exchanges mass due to the diffusion of each mobile species, so that $M(R)$ is given by:
 \begin{equation}
-M(R)= \sum\limits_{m=s,1,\ldots,N} - \int_{\partial R} \mu_m \,\mathbf{J}_m \cdot \mathbf{n} 
+M(R)= \sum\limits_{m=s,1,\ldots,N} - \int_{\partial R} \mu_m \,\mathbf{J}_m \cdot \mathbf{n} \label{M}
 \end{equation}
 where $\mathbf{n}$ is the unit normal vector to the surface $\partial R$ and $\mu_m$ is the chemical potential associated with each species. Widely used in the thermodynamics of mixtures, the chemical potential is a measure of the rate of change in free energy associated with adding one more molecule to a unit volume.
 
 Following \cite{DROZDOVph}, the term $W(R)$, i.e. the rate of work done on the system, is decomposed into two contributions:
 \begin{equation}
-W(R) = -\int_{\partial R} \Phi\, \dot{\mathbf{H}}\cdot \mathbf{n} +  \int_{\partial R}\mathbb{S}\mathbf{n} \cdot \dot{\mathbf{u}}
+W(R) = -\int_{\partial R} \Phi\, \dot{\mathbf{H}}\cdot \mathbf{n} +  \int_{\partial R}\mathbb{S}\mathbf{n} \cdot \dot{\mathbf{u}}\label{W}
 \end{equation}
 which stands for the rate of electrical and mechanical work respectively. Substituting this result back into the formula~(\ref{energyin}) and applying the divergence theorem we obtain the following inequality:
 \begin{equation}
@@ -24,8 +24,8 @@ Further accounting for Equations~(\ref{consmass})-(\ref{consmom}), we obtain tha
 \begin{equation}
 \begin{aligned}
 \dot{\psi} - \mathbf{E}\cdot \dot{\mathbf{H}} \, + \, \sum\limits_{i=1}^{N} \left[e \Phi  z_i - \mu_i\right] \dot{C}_i - \mu_s \,\dot{C}_s -\mathbb{S}:\dot{\F}+ \sum\limits_{m} \nabla_0 \, \mu_m \cdot \mathbf{J}_m \leq 0.
-\label{temp2}
-\end{aligned} 
+\end{aligned}
+\label{temp2} 
 \end{equation}
 
 As exhaustively discussed in previous studies \cite{Plasto,GURTIN}, the energy inequality imposes restrictions on the constitutive equation of the free energy $\psi$. Adapting their results to our specific problem, we have that:
@@ -62,7 +62,7 @@ Having the general form of $\psi$, Equation~(\ref{temp1}), it remains to constru
 
 Assuming the solid phase to be an ideal and linear dielectric material, with constant permittivity $\epsilon$, the free energy of polarization reads \cite{DROZDOV+,Reviewpolyel}:
 \begin{gather}
-\psi_1 = \frac{1}{2\epsilon J} \mathbf{H}\F^T \cdot \F \mathbf{H}.
+\psi_1 = \frac{1}{2\epsilon J} \mathbf{H}\F^T \cdot \F \mathbf{H}.\label{psi1}
 \end{gather}
 
 The specific energy density $\psi_2$ has the standard form:
@@ -78,7 +78,7 @@ where $k_B$ is the Boltzmann's constant, $T$ is the temperature and $\chi$ is th
 As the interstitial fluid is well approximated by a dilute solution, the contribution $\psi_4$ reads \cite{Reviewpolyel,ecm1,ecm2}:
 
 \begin{equation}
-\psi_4 = k_B T \sum\limits_{i=1}^{N} C_i \left(\ln \frac{C_i}{ C_s}-1\right).
+\psi_4 = k_B T \sum\limits_{i=1}^{N} C_i \left(\ln \frac{C_i}{ C_s}-1\right).\label{psi4}
 \end{equation}
 
 Finally, we need to specify the strain energy $\psi_5$. As mentioned in the introduction, the Standard Linear Solid (SLS), see Figure \ref{SLS}, is commonly used to describe soft material in the regime of small deformations. However, when account for large deformation, as in the case of swelling, soft material exhibit a non-linear behaviour \cite{floryprinciples}. For this reason we consider the model in Figure \ref{fig1A}, which is a generalization of the 1D SLS to 3D problems with non-linear elastic response. 
