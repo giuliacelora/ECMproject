@@ -102,7 +102,7 @@ Following the same argument as in Appendix~(\ref{stateequation}), we have that t
 \mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, \\[3mm]
 \begin{aligned}
 \mathbb{T}= \left(G_{vol}\dfrac{J^{2/3}-1}{J}-p\right) \mathbb{I} + \frac{G^B_1}{1+C_sv_s}\text{DEV}[\bar{\B}] + \frac{G^B_2}{1+C_sv}\text{DEV}[\bar{\B}_e]\\
-+ \gamma \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]+ \epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right],\label{sys2B}
++ \epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right],\label{sys2B}
 \end{aligned}
 \end{gather}
 
@@ -117,30 +117,35 @@ coupled to the governing equations:
 To sum up, model A and model B are similar with only exception of the state equation for the Cauchy stress $\mathbb{T}$ and the governing equation of the dashpot.
 \section{Simulation Parameter.}
 \label{para}
-Throughout the work, unless differently specified, we will use the parameters in Table \ref{Tab1} will be considered to be constant so to reflect the condition in the experiment by Netti et~al. \cite{Netti,ecm2}.
+Throughout this work, unless differently specified, we will be using the parameters listed in Table \ref{Tab1}. This are from \cite{ecm2}, and refer to the experiment by Netti et~al. \cite{Netti,ecm2}.
 \begin{table}[h!]
 	\vspace{4mm}
 	\centering
-	\begin{tabular}{||c c c||}
+	\begin{tabular}{|c| c| c|}
 		\hline\addlinespace[2pt]
 		Symbol  & Value& Unit\\
-		\hline\addlinespace[5pt]
-		$\qquad C_f\qquad$  & $3.947\times 10^{23}$& $\qquad\text{m}^{-3}\quad$\\
-		$\qquad v_s\qquad$  & $3\times 10^{-29}$& $\qquad\text{m}^3\quad$ \\
+		\hline\addlinespace[3pt]
+		$\qquad C_f\qquad$  & $\quad3.947\times 10^{23}\quad$& $\qquad\text{m}^{-3}\quad$\\
+		$\qquad v_s\qquad$  & $\quad3\times 10^{-29}\quad$& $\qquad\text{m}^3\quad$ \\
 		$\qquad z_f\qquad$ & $-4$& -\\
 		$\qquad k_B\qquad$ & $1.38 \times 10^{-23}$& $\qquad\text{J}/\text{K}\quad$\\
 		$\qquad T\qquad$ &$295$ &K\\
 		$\qquad c^i_0\qquad$ & $9.27\times 10^{25}$& $\qquad\text{m}^{-3}\quad$\\
 		\hline
 	\end{tabular}
-	\vspace{2mm}
+	\vspace{4mm}
 	\caption{Parameters adopted in the simulations as estimated in \cite{ecm2} in reference to the experiment by Netti et~al. \cite{Netti}.}
 	\label{Tab1}
 \end{table}
 
 \section{Free Swelling}
 \label{apfree}
-In the case of free swelling, due to the symmetry of $\F$, the tensors $\F_e$ and $\bar{F}_e$ is of the similar form, $\F_e=\lambda_e \mathbb{I}$. Consequently, based on Equation~(\ref{apBe}) in Appendix \ref{apenergy}, we have that the viscous contribution vanish so that $\B_e=\B= \lambda^2 \mathbb{I}$. Substituting this result and the boundary condition~(\ref{free1})-(\ref{free2}) into Equations (\ref{sys1})-(\ref{sys2}) and (\ref{sys3}), setting to zero all spatial derivative, we obtain:
+In the case of free swelling, we have that the tensors $\F_e$ and $\mathbf{\bar{F}}_e$ have diagonal form: 
+\begin{equation}
+\F_e=\lambda_e \mathbb{I},\quad \bar{\F}_e=\bar{\lambda}_e \mathbb{I}.
+\end{equation}
+
+Based on Equation~(\ref{apBe}) in Appendix \ref{apenergy}, we have that the viscous contribution vanish so that $\B_e=\B= \lambda^2 \mathbb{I}$. Substituting this result and the boundary condition~(\ref{free1})-(\ref{free2}) into Equations (\ref{sys1})-(\ref{sys2}) and (\ref{sys3}), setting to zero all spatial derivative, we obtain:
 \begin{gather}
 p_A = \frac{G^A_1+G^A_2}{1+C_sv_s}(\lambda^2-1),\label{presA}\\
 \Pi^{n}_A = \frac{k_BT}{v_s} \left[\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s} +\frac{\chi}{(1+C_s v_s)^2}\right],\\
