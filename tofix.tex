@@ -1,0 +1,122 @@
+\section{Model B: Separating the Volumetric Deformation.}
+\label{modelB}
+The derivation of the governing equation for the second model proposed follow the same steps as model A, with few changes. From the point of view of conservation laws (Section \ref{conslaw}), these are still valid as they do not depend on the specific kinetics model chosen. As discussed in Section \ref{kin}, we use multiplicative decomposition to isolate the different contribution to the strain:
+\begin{equation}
+\F= \bar{\F} \F_{vol}= J^{1/3} \bar{\F}_e \bar{\F}_v,\label{mol2}
+\end{equation}
+where we have used the fact that $\F_{vol}=J^{1/3}\mathbb{I}$, with $J=\det \F$. Where both $\bar{\F}_e$  and $\bar{\F}_v$ needs to preserve the ECM volume. Analogously to Equation~(\ref{Jv}), this can be ensured by imposing the following condition:
+\begin{equation}
+\det \bar{\F}_v = 1.
+\end{equation}
+\begin{figure}
+	\Large
+	\def\svgwidth{1\linewidth}
+	\input{latex/images/modelB2.pdf_tex}
+	\caption{Multiplicative decomposition of Model B}
+\end{figure}
+
+In this case it is easier to express the kinematics of the ECM in terms $\LL=\dot{\F}\F^{-1}$, instead of $\dot{\F}$ and $\bar{\LL}_v=\dot{\bar{\F}}_v\bar{\F}_v^{-1}$. When we look at the free energy, we now have three decouple mechanical variables that can contribute to it $J$ for the first spring, $\bar{\F}$ and $\bar{\F}_e$ on due to the springs in branch $\mathbf{A}$ and $\mathbf{B}$ respectively. Consequently, Equation~(\ref{temp1}) will now be of the form:
+\begin{equation}
+\psi = \psi (J,\bar{\F}_e, \bar{\F}, C_s, C_i, \nabla_0 \,C_s,\mathbf{H}).\label{aptemp1}
+\end{equation}
+
+If we differentiate $J$, $\bar{\F}$ and $\bar{\F}_e$, we can reduce the number of variables expressing them in terms of $\LL$ and $\bar{\LL}_v$:
+
+\begin{gather}
+\dot{J} = J (\mathbb{I}:\LL),\\
+\dot{\bar{\F}} = J^{-1/3} \LL \F - \frac{1}{3} J^{-1/3} (\mathbb{I}:\LL) \F \\
+\dot{\bar{\F}}_e = \text{DEV}[\LL] \bar{\F}_e -\bar{\F}_e \bar{\LL}_v.\label{aptemp2}
+\end{gather}
+If we now combine Equations~(\ref{aptemp1})-(\ref{aptemp2}) with the energy inequality, what we obtain is:
+\begin{equation}
+\begin{aligned}
+\left(\frac{\partial \psi}{\partial \nabla_0 C_s}-\boldsymbol{\xi}\right) \cdot \nabla_0 \dot{C}_s + \left(\frac{\partial \psi}{\partial C_s}-\mu_s-\nabla_0 \cdot \boldsymbol{\xi}+p v\right)\dot{C}_s\\
++ \sum_i\left(\frac{\partial \psi}{\partial C_i} + e\Phi z_i-\mu_i\right) \dot{C}_i +\left(\frac{\partial \psi}{\partial \mathbf{H}}-\mathbf{E}\right) \cdot \dot{\mathbf{H}}\\
+ +\left(\text{DEV}\left[J^{-1/3}\frac{\partial \psi}{\partial \bar{\F}}\F^T + \frac{\partial \psi}{\partial \bar{\F}_e}\bar{\F}_e^{T}\right]- \mathbb{S}\F^T +J\left(\frac{\partial \psi}{\partial J} - p\right)\mathbb{I}\right):\LL\\
+ + \sum_m \nabla_0 \,\mu_m \cdot \mathbf{J}_m - \bar{\F}_e^T\frac{\partial \psi}{\partial \bar{\F}_e}:\mathbb{\bar{L}}_v\leq 0 . \label{ineq2}
+\end{aligned}
+\end{equation}
+
+Finally we need to update the constitutive laws for the strain free energy $\psi_6$, which, similarly to the case discussed in Section , can be decompose as the sum of contributions from each spring in Figure \ref{figmode}(b):
+
+\begin{equation}
+\psi_6 = \psi_1(\bar{\F}) + \psi_2(\bar{\F}_e) + \psi_{vol}(J).
+\end{equation}
+
+Again we assume the ECM to behave as an hyperplastic material:
+\begin{eqnarray}
+\psi_1(\bar{\F}) = \frac{G^B_1}{2} \left(\bar{\F}:\bar{\F} - 3\right),\\
+\psi_2(\bar{\F}_e) = \frac{G^B_2}{2} \left(\bar{\F}_e:\bar{\F}_e - 3 \right).
+\end{eqnarray}
+
+For the volumetric contribution we consider as before a logarithmic term:
+\begin{equation}
+\psi_{vol}(J) = \frac{\kappa}{2} \ln J^2. \label{psivol}
+\end{equation}
+ALTERNATIVE:
+\begin{equation}
+\psi_{vol}(J) = \frac{G_{vol}}{2}\left[3(J^{2/3}-1) -\ln J^2\right].
+\end{equation}
+The above volumetric constitutive assumption is one of the most common in modelling hyper-elastic material. However, as shown in \cite{vol}, this has several limitation in the regime of large deformation, which highlights the need of study more realistic form which can capture the more complex behaviour of real material. From this point of view, being able to decouple the volumetric deformation as in model B allows to investigate this aspect alone [REPHRASE].
+
+When looking at the entropy production, Equation~(\ref{dis}) still holds simply by replacing $\LL_v$ with $\bar{\LL}_v$:
+\begin{equation}
+\LL_v = \frac{G^B_2}{\eta^B}\text{DEV}[\bar{\mathbb{C}}_e]\label{Lv2}
+\end{equation}
+ Using the same argument as in Section~(\ref{ent}), we are left with the following system of equations:
+\begin{gather}
+\boldsymbol{\xi} = \gamma J \,\mathbb{B}^{-1} \,\nabla_0 \,C_s,\label{sys1B}\\[2mm]
+\begin{aligned}
+\mu_s = p v + \mu_s^0 - \gamma J \nabla^2 C_s + kT&\left[\ln \frac{C_s v}{1+C_s v} + \frac{1}{1+C_sv}\right.\\
+&\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s v)^2}-\sum_i \frac{C_i}{C_s}\right], 
+\end{aligned}\\[2.5mm]
+\mu_i = \mu^0_i + e\Phi z_i + kT \ln \frac{C_i}{C_s},\\
+\mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, \\[3mm]
+\begin{aligned}
+\mathbb{T}= \left(\frac{\kappa}{1+C_sv_s}-p\right) \mathbb{I} + \frac{G^B_1}{1+C_sv}\text{DEV}[\bar{\B}] + \frac{G^B_2}{1+C_sv}\text{DEV}[\bar{\B}_e]\\
++ \gamma \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]+ \epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right],\label{sys2B}
+\end{aligned}
+\end{gather}
+coupled to the governing equations:
+\begin{gather}
+\mathbf{j}_s = -K c_s \left(c_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} c_i \nabla \mu_i\right),\\
+\mathbf{j}_i = - \frac{D_i}{k_B T}c_i\nabla \mu_i + \frac{D_i}{D^0_i} \frac{c_i}{c_s} \mathbf{j}_s, \\
+\dot{\bar{\B}}_e = \bar{\B}_e \bar{\LL}^T +\bar{\LL} \bar{\B}_e -\frac{1}{\tau_R} \bar{\B}_e \text{DEV}\left[\bar{\B}_e\right]\label{BeB}
+\end{gather}
+\section{Simulation Parameter.}
+\label{para}
+Throughout the work, unless differently specified, we will use the parameters in Table \ref{Tab1} will be considered to be constant so to reflect the condition in the experiment by Netti et~al. \cite{Netti,ecm2}.
+\begin{table}[h!]
+	\vspace{4mm}
+	\centering
+	\begin{tabular}{||c c c||}
+		\hline\addlinespace[2pt]
+		Symbol  & Value& Unit\\
+		\hline\addlinespace[5pt]
+		$\qquad C_f\qquad$  & $3.947\times 10^{23}$& $\qquad\text{m}^{-3}\quad$\\
+		$\qquad v_s\qquad$  & $3\times 10^{-29}$& $\qquad\text{m}^3\quad$ \\
+		$\qquad z_f\qquad$ & $-4$& -\\
+		$\qquad k_B\qquad$ & $1.38 \times 10^{-23}$& $\qquad\text{J}/\text{K}\quad$\\
+		$\qquad T\qquad$ &$295$ &K\\
+		$\qquad c^i_0\qquad$ & $9.27\times 10^{25}$& $\qquad\text{m}^{-3}\quad$\\
+		\hline
+	\end{tabular}
+	\vspace{2mm}
+	\caption{Parameters adopted in the simulations as estimated in \cite{ecm2} in reference to the experiment by Netti et~al. \cite{Netti}.}
+	\label{Tab1}
+\end{table}
+
+\section{Free Swelling}
+\label{apfree}
+In the case of free swelling, due to the symmetry of $\F$, the tensors $\F_e$ and $\bar{F}_e$ is of the similar form, $\F_e=\lambda_e \mathbb{I}$. Consequently, based on Equation~(\ref{apBe}) in Appendix \ref{apenergy}, we have that the viscous contribution vanish so that $\B_e=\B= \lambda^2 \mathbb{I}$. Substituting this result and the boundary condition~(\ref{free1})-(\ref{free2}) into Equations (\ref{sys1})-(\ref{sys2}) and (\ref{sys3}), setting to zero all spatial derivative, we obtain:
+\begin{gather}
+p_A = \frac{G^A_1+G^A_2}{1+C_sv_s}(\lambda^2-1),\label{presA}\\
+\Pi^{n}_A = \frac{k_BT}{v_s} \left[\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s} +\frac{\chi}{(1+C_s v_s)^2}\right],\\
+\Pi^{ion}_A = k_B T \sum_i \left(\frac{C_i}{v_sC_s}-c^0\right),\\
+0 = \frac{v_s}{k_BT} (p_A+\Pi^{n}_A-\Pi^{ion}_A), \\[2mm]
+0 = \pm\frac{e}{k_B T} \phi  + \ln \frac{C_\pm}{C_s v_s c_\pm^0},\qquad i=1,\ldots,N,\\[2.5mm]
+Q = e\left(C_+-C_-+z_f C_{f}\right)=0.\label{electron}
+\end{gather}
+where $\Pi^{n}$ and $\Pi^{ion}_A$ are the osmotic pressures due to the mixing of the polymer network with the solvent and the imbalance of ions inside and outside the ECM. 
+Note that at equilibrium the system reaches a balance between the mechanical pressure $p_A$ and the osmotic pressures. Moreover, the electro-neutrality condition is naturally imposed, Equation~(\ref{electron}). 
+Note that Equation~(\ref{eqion}) corresponds to the well known Donnan Equilibrium \cite{DROZDOVph}. Equation~(\ref{eqF}) instead implicitly defines the concentration $C_s$ and thus the final swelling volume. As expected, the latter can be controlled by changing the concentration of ions in the bath. We also notice that, free swelling experiment, are not sufficient to differentiate the elastic properties of the two branches as the two behave equivalently.

@@ -1,6 +1,6 @@
 \section{Confined Compression Test.}
 \label{excomp}
-We now consider to perform a compression test on a previously swollen slice of ECM, for which the parameters $\chi$ and $G^A_{eq}\equiv G_{vol}$ have been previously estimated with a free swelling experiment. As illustrated in Figure \ref{confcomp}, a porous platen is used so that the fluids is free to flow and the chemical equilibrium with the external bath is restored after the transient relaxation phase. After compression of the tissue in ramps, the system is allowed to relax while the strain $\epsilon$ is maintained constant \cite{Netti}. In this case we are interested in the equilibrium, i.e. relaxed, behaviour. 
+We now consider to perform a compression test on a previously swollen slice of ECM, for which the parameters $\chi$ and $G^A_{eq}\equiv G_{vol}$ have been previously estimated with a free swelling experiment. As illustrated in Figure \ref{confcomp}, a porous plate is used so that the fluid is free to flow and the chemical equilibrium with the external bath is restored after the transient relaxation phase. After compression of the tissue in ramps, the system is allowed to relax while the strain $\epsilon$ is maintained constant \cite{Netti}. In this case we are interested in the equilibrium, i.e. relaxed, behaviour. 
 
 \begin{figure}[h]
 	\centering
@@ -30,7 +30,7 @@ J_m = u= 0, &\qquad& Z=0\, ,\\
 \frac{\d \phi}{\d Z}=0 &\qquad& Z=0,H_0\,.
 \end{eqnarray}
 
-At equilibrium, the conditions~1 and 2 listed in Section \ref{free} still hold. On the other hand, due to the external force $\mathbf{F}= -F_z \mathbf{e}_z$ which is exerted on the platen of area $A$, we have that condition 3 now reads:
+At equilibrium, the conditions~1 and 2 listed in Section \ref{free} still hold. On the other hand, due to the external force $\mathbf{F}= -F_z \mathbf{e}_z$ which is exerted on the plate of area $A$, condition 3 now reads:
 
 \begin{equation}
 T_{zz}=\sigma = -\frac{F_z}{A}.
@@ -63,7 +63,7 @@ Similarly, we also have that the tensors $\bar{\B}$ and $\bar{\B}_e$ in model B 
 0&0& \bar{b}_1
 \end{bmatrix}
 \end{equation}
-with the $\bar{b}=\bar{b}_1$ at equilibrium, with $\bar{b}=1$. Consequently, we find that the second spring does not contribute to the stress. Using the boundary condition, we can now compute the pressure and the equilibrium condition:
+with the $\bar{b}=\bar{b}_1=1$ at equilibrium. Consequently, we find that the second spring does not contribute to the stress. Using the boundary condition, we can now compute the pressure and the equilibrium condition:
 \begin{gather}
 p = \begin{cases}
 \displaystyle
@@ -76,7 +76,7 @@ p = \begin{cases}
 \end{aligned}\label{compA}
 \end{gather}
 
-Unlike the case of unconstrained swelling, we now have that the model $A$ and $B$ are substantially different. There is indeed no choice of parameters value for which the models are equivalent. 
+Unlike the case of unconstrained swelling, we now have that the model $A$ and $B$ are substantially different. There is indeed no choice of parameter values for which the models are equivalent. 
 
 \begin{figure}[h!]
 	\begin{subfigure}{0.49\textwidth}
@@ -96,11 +96,11 @@ Unlike the case of unconstrained swelling, we now have that the model $A$ and $B
 		\includegraphics[scale=0.4]{images/comp4}
 		\caption{}
 	\end{subfigure}
-	\caption{Sensitivity Analysis. As expected the mismatch between the two model grows with the strain: (a) Comparison of stress-strain curve predicted by model A (dotted line) and model B (full line) for different value of the parameter $G^A_1$; (b) as $G_1^A$ increase also the discrepancy $\delta\sigma$ grows; (c) $\delta\sigma$ is also particularly sensitive to changes in the mixing parameter $\chi$, in particular we see that there is a relevant jump when the ECM is the \textit{collapsed} phase; (d) on the other hand, only large changes in $G^A_2$ have a relevant impact on $\delta\sigma$.}
+	\caption{Sensitivity Analysis. As expected the mismatch between the two models grows with the strain: (a) Comparison of stress-strain curve predicted by model A (dotted line) and model B (full line) for different values of the parameter $G^A_1$; (b) as $G_1^A$ increases so does the discrepancy $\delta\sigma$; (c) $\delta\sigma$ is also particularly sensitive to changes in the mixing parameter $\chi$, in particular we see that there is a relevant jump when the ECM is in the \textit{collapsed} phase; (d) on the other hand, only large changes in $G^A_2$ have a relevant impact on $\delta\sigma$.}
 	\label{comp3}
 \end{figure}
 
-As mentioned previously, we first compare the models $A$ and $B$, assuming that the parameter $\chi$ and $G_{vol}=G^A_{eq}$ are fixed so that the equilibrium volume $J_0$ is known. If we now take the difference between the compression stress predicted by the two models, i.e. $\delta \sigma= \sigma_{B}-\sigma_{A}$, we obtain:
+As mentioned previously, we first compare the models $A$ and $B$, assuming that the parameters $\chi$ and $G_{vol}=G^A_{eq}$ are fixed so that the equilibrium volume $J_0$ is known. If we now take the difference between the compression stress predicted by the two models, i.e. $\delta \sigma= \sigma_{B}-\sigma_{A}$, we obtain:
 \begin{equation}
 \delta \sigma = \frac{2 G_1^{B}}{3} \frac{\lambda_1^2-1}{J_0\lambda_1^{5/3}} - \frac{G_1^A}{J_0^{1/3}}(\lambda_1-\lambda_1^{-1/3}).\label{err}
 \end{equation}
@@ -108,19 +108,19 @@ As there is no constant value of $G^{B}_1$ for which the difference $\delta \sig
 \begin{equation}
 \left.\delta \sigma\right|_{\lambda_1=1}=0 \qquad \left.\frac{\d \delta \sigma}{\d \lambda_1}\right|_{\lambda_1=1}=0 \quad\Rightarrow \quad G_1^{B} = J_0^{2/3}G_1^A.
 \end{equation}
-Under such condition we can rewrite the Equation~(\ref{err}) as:
+Under such conditions we can rewrite Equation~(\ref{err}) as:
 \begin{equation}
 \delta \sigma(\lambda_1;G^A_1,J_0) = \frac{G_1^A}{J^{1/3}_0\lambda_1^{5/3}} \left(\frac{2}{3}\lambda^2_1-\frac{2}{3}-\lambda_1^{5/3}+\lambda_1^{4/3}\right), 
 \end{equation}
-which is unbounded for large deformation, i.e. $\lambda_1\rightarrow0$. Note that $J_0$ is implicitly defined by Equation~(\ref{eqF}), where $J_0=\lambda^3$, so that the variation $\delta\sigma$ depends indirectly on all model parameters. As shown in Figure \ref{comp3}, $\chi$ and $G_1^A$ are the two parameters that have impact on $\delta\sigma$ the most. While $G_1^A$ depends only on the properties of the material, $\chi$ can be tuned by changing the temperature $T$ of the experiment. Based on our analysis, we suggest that confined compression experiments can be used to compare the two models and choose the most appropriate. This however when the parameter $\chi$ and $G_{vol}$ are known. 
+which is unbounded for large deformations, i.e. $\lambda_1\rightarrow0$. Note that $J_0$ is implicitly defined by Equation~(\ref{eqF}), where $J_0=\lambda^3$, so that the variation $\delta\sigma$ depends indirectly on all model parameters. As shown in Figure \ref{comp3}, $\chi$ and $G_1^A$ are the two parameters that have impact on $\delta\sigma$ the most. While $G_1^A$ depends only on the properties of the material, $\chi$ can be tuned by changing the temperature $T$ of the experiment. Based on our analysis, we suggest that confined compression experiments can be used to compare the two models and choose the most appropriate. This however when the parameter $\chi$ and $G_{vol}$ are known. 
 
 In real experiment on soft tissue, this is not usually the case. As the slices are naturally swollen, unconstrained swelling experiments are usually not performed and model validation only relies on compression test. However, we suggest that such approach does not provide enough information and can consequently lead to misleading quantitative predictions. As an example, we follow the work of Xue et al. \cite{ecm2}, where the authors validate their poro-hyperelastic model on the data collected by Netti et~al. \cite{Netti} under compression of HSTS 26T sarcoma slices. Fitting both our models to the same data, we show that more rigorous testing is necessary to test constitutive model of soft tissues.
 %We here consider another standardd
 \subsection{Test on Experimental Data.}
 \label{data}
-Using the data collected by Netti et~al. \cite{Netti} on HSTS 26T sarcoma slices, we show that the standard compression test is not alone sufficient to validate a model. Besides the compressive test, Netti et~al. have also measured the composition of the tumour slice, so that the parameters $C_f$ and $c_0$ are known (see Table \ref{Tab1}). The other constant values listed in Table \ref{Tab1} have been taken from the literature. 
+Using the data collected by Netti et~al. \cite{Netti} on HSTS 26T sarcoma slices, we show that the standard compression test is not sufficient on its own to validate a model. Besides the compressive test, Netti et~al. have also measured the composition of the tumour slice, so that the parameters $C_f$ and $c_0$ are known (see Table \ref{Tab1}). The other constant values listed in Table \ref{Tab1} have been taken from the literature. 
 
-Despite our model has been built to describe decellularized ECM, cells can be included in the model simply as part of the solid phase \cite{ecm2}. As we are interested in the tissue scale, this is a good approximation. However, as suggested also by Xue et~al.\cite{ecm2}, more accurate models incorporate also the cellular activities. However, this goes beyond the purpose of our study. 
+Despite our model being built to describe decellularized ECM, cells can be included in the model simply as part of the solid phase \cite{ecm2}. As we are interested in the tissue scale, this is a good approximation. However, as suggested also by Xue et~al.\cite{ecm2}, more accurate models also incorporate the cellular activities. However, this goes beyond the purpose of our study. 
 
 \begin{figure}[h]
 	\hspace{-8mm}
@@ -144,10 +144,10 @@ Despite our model has been built to describe decellularized ECM, cells can be in
 		\caption{Estimated Parameters}
 		\label{param}
 	\end{subtable}
-\caption{Comparison of the two model in fitting real experimental data from \cite{Netti}.}		
+\caption{Comparison of the two models in fitting real experimental data from \cite{Netti}.}		
 \end{figure}
 
-Following \cite{ecm2}, we fit both models at the experimental data, where $C_f$ and $c_0$ are as estimated in \cite{Netti} and the other constants listed in Table \ref{Tab1} have been taken from the literature. Consequently the set of unknown parameters are $\left\{\chi, G^A_1, G^A_2\right\}$ and  $\left\{\chi, G_{vol}, G^B_1\right\}$ for model A and model B respectively. This are estimated using the \texttt{fmincon} function in MATLAB, which implements the non-linear least square method. As shown in Figure \ref{fit}, both models are able to capture the qualitative behaviour of the data. However they largely disagree in their quantitative predictions, see Table \ref{param}. Let us for example compute the initial pressures in the tissue slice, i.e. $p$ at $\lambda_1=1$:  
+Following \cite{ecm2}, we fit both models to the experimental data, where $C_f$ and $c_0$ are as estimated in \cite{Netti} and the other constants listed in Table \ref{Tab1} have been taken from the literature. Consequently the set of unknown parameters are $\left\{\chi, G^A_1, G^A_2\right\}$ and  $\left\{\chi, G_{vol}, G^B_1\right\}$ for model A and model B respectively. This are estimated using the \texttt{fmincon} function in MATLAB, which implements the non-linear least squares method. As shown in Figure \ref{fit}, both models are able to capture the qualitative behaviour of the data. However they largely disagree in their quantitative predictions, see Table \ref{param}. Let us for example compute the initial pressures in the tissue slice, i.e. $p$ at $\lambda_1=1$:  
 \begin{gather}
 p_A = \frac{G^A_1+G^A_2}{J_0}(J_0^{2/3}-1) = \frac{24.2 \text{ kPa}}{20.7}(20.7^{2/3}-1) = 7.64 \text{ kPa},\\
 p_B = \frac{G_{vol}}{J_0}(J_0^{2/3}-1) = \frac{0.075 \text{ kPa}}{14.8}(14.8^{2/3}-1) = 25.5 \text{ Pa}.
