@@ -9,6 +9,11 @@ Anand, L.: A thermo-mechanically-coupled theory accounting for hydrogen
   International Journal of Solids and Structures  \textbf{48}(6),  962 -- 971
   (2011)
 
+\bibitem{afmtest}
+Benaglia, S., Gisbert, V.G., Perrino, A., Amo, C.A., Garcia, R.: Fast and
+  high-resolution mapping of elastic properties of biomolecules and polymers
+  with bimodal afm. Nature Protocols  \textbf{13},  2890--2907 (11 2018)
+
 \bibitem{SEA1}
 {Benfenati}, F., {Beretta}, G.P.: {Ergodicity, Maximum Entropy Production, and
   Steepest Entropy Ascent in the Proofs of Onsager's Reciprocal Relations}.
@@ -22,11 +27,6 @@ Beretta, G.P.: The fourth law of thermodynamics: steepest entropy ascent. arXiv
 Bergström, J., Boyce, M.: Constitutive modeling of the large strain
   time-dependent behavior of elastomers. Journal of the Mechanics and Physics
   of Solids  \textbf{46}(5),  931 -- 954 (1998)
-
-\bibitem{ex1}
-Bertet, C., Sulak, L., Lecuit, T.: Myosin-dependent junction remodelling
-  controls planar cell intercalation and axis elongation. Nature  \textbf{429},
-   667--71 (07 2004)
 
 \bibitem{boyce2}
 Boyce, M.C., Arruda, E.M.: Constitutive models of rubber elasticity: A review.
@@ -66,9 +66,6 @@ Cohen~Stuart, M., Huck, W., Genzer, J., Müller, M., Ober, C., Stamm, M.,
 Deligkaris, K., Tadele, T.S., Olthuis, W., Van~den Berg, A.: Hydrogel-based
   devices for biomedical applications. Sensors and Actuators B: Chemical
   \textbf{147},  765--774 (2010)
-
-\bibitem{doi}
-Doi, M.: Soft Matter Physics. OUP Oxford (2013)
 
 \bibitem{DROZDOV+}
 Drozdov, A.: Swelling of ph-responsive cationic gels: Constitutive modeling and
@@ -112,11 +109,6 @@ Hennessy, M.G., M\"{u}nch, A., Wagner, B.: Surface induced phase separation of
 Hong, W.: Continuum Models of Stimuli-responsive Gels, pp. 165--196. Springer
   Berlin Heidelberg, Berlin, Heidelberg (2012)
 
-\bibitem{Interface}
-Hong, W., Wang, X.: A phase-field model for systems with coupled large
-  deformation and mass transport. Journal of the Mechanics and Physics of
-  Solids  \textbf{61}(6),  1281 -- 1294 (2013)
-
 \bibitem{viscoporo}
 Hu, Y., Suo, Z.: Viscoelasticity and poroelasticity in elastomeric gels. Acta
   Mechanica Solida Sinica  \textbf{25}(5),  441 -- 458 (2012)
@@ -124,6 +116,10 @@ Hu, Y., Suo, Z.: Viscoelasticity and poroelasticity in elastomeric gels. Acta
 \bibitem{hug}
 Huggins, M.L.: Some properties of solutions of long-chain compounds. The
   Journal of Physical Chemistry  \textbf{46}(1),  151--158 (1942)
+
+\bibitem{bookbiophys}
+Katzir-Katchalsky, A., Curran, P.: Nonequilibrium thermodynamics in biophysics.
+  Books in Biophysics, Harvard University Press (1965)
 
 \bibitem{NET}
 Kondepudi, D., Prigogine, I.: Modern Thermodynamics: From Heat Engines to
@@ -133,10 +129,6 @@ Kondepudi, D., Prigogine, I.: Modern Thermodynamics: From Heat Engines to
 {Kr{\"o}ner}, E.: {Allgemeine Kontinuumstheorie der Versetzungen und
   Eigenspannungen}. Archive for Rational Mechanics and Analysis  \textbf{4},
   273--334 (1959)
-
-\bibitem{microstress}
-Larché, F., Cahn, J.: The interactions of composition and stress in
-  crystalline solids. Acta Metallurgica  \textbf{33}(3),  331 -- 357 (1985)
 
 \bibitem{CIT}
 Lebon, G., Jou, D., José, C.V.: Understanding Non-Equilibrium Thermodynamics.
@@ -151,17 +143,13 @@ Li, J., Mooney, D.: Designing hydrogels for controlled drug delivery. Nature
   Reviews Materials  \textbf{1},  16071 (2016)
 
 \bibitem{multdec}
-Lubarda, V.A.: {Constitutive theories based on the multiplicative decomposition
-  of deformation gradient: Thermoelasticity, elastoplasticity, and biomechanics
-  }. Applied Mechanics Reviews  \textbf{57}(2),  95--108 (04 2004)
+Lubarda, V.A.: Constitutive theories based on the multiplicative decomposition
+  of deformation gradient: Thermoelasticity, elastoplasticity, and
+  biomechanics. Applied Mechanics Reviews  \textbf{57}(2),  95--108 (04 2004)
 
 \bibitem{JeremyEngland}
 Marsland, R., England, J.: Limits of predictions in thermodynamic systems: a
   review. Reports on Progress in Physics  \textbf{81}(1) (2017)
-
-\bibitem{vol}
-Moerman, K.M., Fereidoonnezhad, B., McGarry, P.: Novel hyperelastic models for
-  large volumetric deformations (Feb 2019)
 
 \bibitem{Netti}
 Netti, P.A., Berk, D.A., Swartz, M.A., Grodzinsky, A.J., Jain, R.K.: Role of
@@ -186,11 +174,6 @@ Paszek, M.J., Zahir, N., Johnson, K.R., Lakins, J.N., Rozenberg, G.I., Gefen,
 \bibitem{prigogine}
 Prigogine, I.: Introduction to thermodynamics of irreversible processes.
   Interscience Publishers (1968)
-
-\bibitem{ex2}
-Rauzi, M., V{\'e}rant, P., Lecuit, T., Lenne, P.F.: Nature and anisotropy of
-  cortical forces orienting drosophila tissue morphogenesis. Nature Cell
-  Biology  \textbf{10},  1401--1410 (2008)
 
 \bibitem{pictureECM}
 Sun, D.N., Gu, W.Y., Guo, X.E., Lai, W.M., Mow, V.C.: A mixed finite element
@@ -217,10 +200,5 @@ Xue, S.L., Lin, S.Z., Li, B., Feng, X.Q.: A nonlinear poroelastic theory of
 Yu, Y., Landis, C.M., Huang, R.: {Salt-Induced Swelling and Volume Phase
   Transition of Polyelectrolyte Gels}. Journal of Applied Mechanics
   \textbf{84}(5) (03 2017)
-
-\bibitem{Salt}
-Yu, Y., Landis, C.M., Huang, R.: {Salt-Induced Swelling and Volume Phase
-  Transition of Polyelectrolyte Gels}. Journal of Applied Mechanics
-  \textbf{84}(5) (03 2017). \doi{10.1115/1.4036113}, 051005
 
 \end{thebibliography}

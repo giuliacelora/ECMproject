@@ -42,7 +42,7 @@ v_s\dot{C_s} - J \F^{-T}:\dot{\F} =0, \label{temp3}\\
 If we now substitute~(\ref{temp1}) and~(\ref{lv}) into~(\ref{temp2}), and include the constraint~(\ref{temp3})-(\ref{temp4}) using as Lagrange multipliers $p$ and $p_v$ respectively, we are left with the augmented form of the energy imbalance inequality:
 \begin{equation}
 \begin{aligned}
- \color{blue}{\left(\frac{\partial \psi}{\partial C_s}-\mu_s+p v\right)}\color{black}\dot{C}_s+\color{blue}\left(\frac{\partial \psi}{\partial \mathbf{H}}-\mathbf{E}\right) \cdot \color{black}\dot{\mathbf{H}}+ \sum_i\color{blue}\left(\frac{\partial \psi}{\partial C_i} + e\Phi z_i-\mu_i\right) \color{black}\dot{C}_i \\
+ \color{blue}{\left(\frac{\partial \psi}{\partial C_s}-\mu_s+p v_s\right)}\color{black}\dot{C}_s+\color{blue}\left(\frac{\partial \psi}{\partial \mathbf{H}}-\mathbf{E}\right) \cdot \color{black}\dot{\mathbf{H}}+ \sum_i\color{blue}\left(\frac{\partial \psi}{\partial C_i} + e\Phi z_i-\mu_i\right) \color{black}\dot{C}_i \\
 + \color{blue} \left(\frac{\partial \psi}{\partial \F} + \frac{\partial \psi}{\partial\F_e}\F_v^{-1}- \mathbb{S} - p J \F^{-T}\right): \color{black}\dot{\F}+ \sum_m \nabla_0 \,\mu_m \cdot \mathbf{J}_m \\
 - \underbrace{\left(\F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right)}_{\text{DEV}[\mathbb{M}_e]}:\mathbb{L}_v\leq 0 . \label{ineq}
 \end{aligned}
@@ -138,7 +138,7 @@ Having specified how the system interacts with its environment, we can now discu
 \sigma = \sum_m \zeta_m \cdot \mathbf{J}_m + \zeta_v : \LL_v,
 \label{dis}
 \end{equation}
-where $\zeta$s represent the thermodynamic forces associated with each flux. On the other hand, the rates $\Lambda =\left\{\dot{C}_s,\dot{C}_i,\mathbf{\dot{H}},\dot{\F}\right\}$ describe the evolution of reversible process\footnote{energy and entropy in reversible processes are state functions; consequently the state of the system does only depend on the value of the thermodynamic variables and not the rate at which they change.} and thus do not belong to the set of constitutive physical variables. As discussed in detail in Appendix \ref{stateequation}, this implies that energy imbalance inequality~(\ref{ineq}) is linear in the variables $\Lambda$, so that for it the terms highlighted in blue in Equation~(\ref{ineq}) must be identically zero. As shown in Appendix \ref{stateequation}, this leads to the hold system of state equations:
+where $\zeta$s represent the thermodynamic forces associated with each flux. On the other hand, the rates $\Lambda =\left\{\dot{C}_s,\dot{C}_i,\mathbf{\dot{H}},\dot{\F}\right\}$ describe the evolution of reversible process\footnote{energy and entropy in reversible processes are state functions; consequently the state of the system does only depend on the value of the thermodynamic variables and not the rate at which they change.} and thus do not belong to the set of constitutive physical variables\footnote{see Appendix \ref{stateequation}}. As discussed in detail in Appendix \ref{stateequation}, this implies that energy imbalance inequality~(\ref{ineq}) is linear in the variables $\Lambda$, so that the terms highlighted in blue in Equation~(\ref{ineq}) must be identically zero. This leads to the hold system of state equations (see Appendix \ref{stateequation}):
 \begin{gather}
 \begin{aligned}
 \mu_s = p v_s + \mu_s^0 + k_BT&\left[\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s}\right.\\
@@ -164,7 +164,7 @@ where $\mathbb{T}^{max}$ is the component of the stress tensor due to the presen
 Equating Equation~(\ref{EQen}) and~(\ref{dis}), it is natural to identify that the thermodynamics forces as:
 \begin{gather}
 \zeta_m = \frac{1}{T} \nabla_0 \,\mu_m, \label{vflow1}\\
-\zeta_v = \frac{1}{T} \text{DEV}[\mathbb{M}_e] = \frac{1}{T} \left[G^A_2(\mathbb{C}_e-\mathbb{I})-p_v\mathbb{I}\right].
+\zeta_v = \frac{1}{T} \text{DEV}[\mathbb{M}_e] = \frac{G^A_2}{T} \text{DEV}[\mathbb{C}_e].
 \end{gather}
 Assuming to be in a regime of linear non-equilibrium thermodynamics, we can use the identity~(\ref{lin}) to linearly couple fluxes and forces. However, considering the symmetry constraint imposed by \textit{Curie's law}\footnote{Macroscopic causes can not have more elements of symmetry than the effect they cause \cite{CIT}} , there can be no coupling between fluxes and forces of a different tensorial nature. Consequently, we are left with the following force-flux relation:
 \begin{gather}
@@ -185,14 +185,14 @@ As described in Appendix \ref{apenergy}, starting from Equations~(\ref{vflow1})-
 \partial_t C_i= \nabla_0\cdot\left[\frac{D_i}{k_B T}C_i\F^{-1}\nabla \mu_i -\frac{D_i}{D^0_i} \frac{C_i}{C_s} \mathbf{J}_s\right],\label{gov3} \\
 \dot{\mathbb{B}}_e =\LL\mathbb{B}_e + \mathbb{B}_e \LL^T - \frac{1}{\tau_R} \,\mathbb{B}_e\text{DEV}[\mathbb{B}_e].\label{Be}
 \end{eqnarray}
-where the parameters (see the Glossary) are macroscopic phenomenological coefficients. To sum up, Table~(\ref{summary}) lists the variables and corresponding governing equation for model A as well as model B, which we recall has been derived in Appendix~(\ref{modelB}). In order to have a close solution, the proper boundary and initial conditions needs also to be assigned but these will be specified depending on the specific problem considered.
+where the parameters (see the Glossary) are macroscopic phenomenological coefficients. To sum up, Table~(\ref{summary}) lists the variables and corresponding governing equation for model A as well as model B, which we recall has been derived in Appendix \ref{modelB}. In order to have a close solution, the proper boundary and initial conditions needs also to be assigned but these will be specified depending on the specific problem considered.
 
 \vspace{3mm}
 \begin{table}
 	\centering
-	\begin{tabular}{c|c|c|c|}
+	\begin{tabular}{c|c|c|c}
 		\hline\addlinespace[2pt]
-		Variable &  \hspace{1pt} Model A \hspace{1pt} & \hspace{1pt} Model B\hspace{1pt} & \hspace{1pt}Equation Type\hspace{1pt}\\
+		Variable &  \hspace{1pt} Model A \hspace{1pt} & \hspace{1pt} Model B\hspace{1pt} & \hspace{4pt}Equation Type\hspace{4pt}\\
 		\hline
 		\hline\addlinespace[2.5pt]
 		Solvent Concentration &  \multicolumn{2}{c|}{$C_s$~(\ref{long})}& Governing \\[2.5pt]
@@ -235,7 +235,7 @@ where $p$ represents the pore pressure and $\Pi_{osm}$ is the osmotic pressure o
 \end{aligned}
 \end{equation}
 
-The above equation shows that the solvent transport is driven by a pressure gradient, an osmotic pressure gradient (green term in Equation~(\ref{long})) and an electric potential gradient. If we consider the limit $v_sC_S\rightarrow\infty$, Equation~(\ref{long}) reduces to Darcy's law for the flow in a porous media. The model for polyelectrolytes proposed by Hong \cite{Reviewpolyel} corresponds instead to the limit $D^0_i\rightarrow\infty$, where mobile species can move freely in pure solution and the friction is due only to relative motion with the solid phase.
+The above equation shows that the solvent transport is driven by the hydrostatic pressure gradient, the osmotic pressure gradient (blue term in Equation~(\ref{long})) and the electric potential gradient\footnote{equivalent to the electric field.}. If we consider the limit $v_sC_s\rightarrow\infty$, Equation~(\ref{long}) reduces to Darcy's law for the flow in a porous media. The model for polyelectrolytes proposed by Hong \cite{Reviewpolyel} corresponds instead to the limit $D^0_i\rightarrow\infty$, where mobile species can move freely in pure solution and the friction is due only to relative motion with the solid phase.
 
 Similarly we can rewrite Equation~(\ref{gov3}) as:
 \begin{equation}
@@ -245,7 +245,7 @@ Similarly we can rewrite Equation~(\ref{gov3}) as:
 
 In the case of ions, the driving forces of transport are the diffusion of ions, the electric field, the osmotic pressure due to the mixing with the solvent and the advection term (due to the relative movement of ions with respect to the solvent). Again in the limit $D^0_i\rightarrow\infty$, we recover the well-known model proposed by Hong \cite{Reviewpolyel} for polyelectrolytes. In the dilute limit, i.e. when the concentration of ions is much smaller than the solvent  concentration $C_i<<C_s$, we can drop both the osmotic and advection term so as to recover the well-known Nernst-Planck equation \cite[see Equation (6.67)]{Reviewpolyel}.
 
-As mentioned in the introduction, one of the major aspects of interest is the visco-elastic contribution to the evolution of the system. Even though in the transport Equation~(\ref{long})-(\ref{long2}) there is no direct reference to it, the transport is indirectly coupled to the poro-relaxation through the pressure gradient. Taking the divergence of Equation~(\ref{sys3}) and using the conservation of momentum~(\ref{consmom}), we can identify different components of the pressure gradient:
+As mentioned in the introduction, we are particularly interested in the visco-elastic contribution to the system kinetics. Even though in the transport Equation~(\ref{long})-(\ref{long2}) there is no direct reference to it, the transport is indirectly coupled to the poro-relaxation through the pressure gradient. Taking the divergence of Equation~(\ref{sys3}) and using the conservation of momentum~(\ref{consmom}), we can identify different components of the pressure gradient:
 
 \begin{equation}
 \nabla p= \nabla \cdot \mathbb{T}^{Max} + G_1^A\underbrace{ \nabla \cdot \left[\frac{\B-\mathbb{I}}{1+v_sC_s}\right]}_{\substack{\text{swelling}\\\text{+ deviatoric}\\\text{ deformation}}} + \,\color{red} G_2^A \underbrace{\nabla \cdot\left[\frac{\B_e-\mathbb{I}}{1+v_sC_s}\right]}_{\color{black}\substack{\text{swelling}\\\text{+ deviatoric}\\\text{deformation}\\\text{+ viscous relaxation}}}\color{black}

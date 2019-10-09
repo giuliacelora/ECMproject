@@ -2,57 +2,47 @@ This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: samplepaper.aux
 The style file: splncs04.bst
-Database file #1: latex/ref.bib
-I was expecting a `,' or a `}'---line 50 of file latex/ref.bib
- : 
- : @InBook{Reviewpolyel,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 532 of file latex/ref.bib
- : @misc{vol
- :          ,
-I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for ""
-Warning--I didn't find a database entry for "biophysics"
-You've used 47 entries,
+Database file #1: ref.bib
+Warning--I didn't find a database entry for "doi"
+You've used 42 entries,
             2850 wiz_defined-function locations,
-            901 strings with 12206 characters,
-and the built_in function-call counts, 28256 in all, are:
-= -- 2334
-> -- 768
-< -- 75
-+ -- 325
-- -- 269
-* -- 1805
-:= -- 3452
-add.period$ -- 47
-call.type$ -- 47
-change.case$ -- 273
+            876 strings with 11725 characters,
+and the built_in function-call counts, 25457 in all, are:
+= -- 2100
+> -- 703
+< -- 68
++ -- 296
+- -- 247
+* -- 1627
+:= -- 3116
+add.period$ -- 42
+call.type$ -- 42
+change.case$ -- 246
 chr.to.int$ -- 0
-cite$ -- 47
-duplicate$ -- 2551
-empty$ -- 2537
-format.name$ -- 301
-if$ -- 6303
+cite$ -- 42
+duplicate$ -- 2291
+empty$ -- 2276
+format.name$ -- 275
+if$ -- 5678
 int.to.chr$ -- 0
-int.to.str$ -- 47
-missing$ -- 491
-newline$ -- 147
-num.names$ -- 96
-pop$ -- 808
+int.to.str$ -- 42
+missing$ -- 444
+newline$ -- 132
+num.names$ -- 86
+pop$ -- 727
 preamble$ -- 1
-purify$ -- 228
+purify$ -- 207
 quote$ -- 0
-skip$ -- 897
+skip$ -- 811
 stack$ -- 0
-substring$ -- 1843
-swap$ -- 1576
-text.length$ -- 75
+substring$ -- 1655
+swap$ -- 1417
+text.length$ -- 68
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 176
+type$ -- 156
 warning$ -- 0
-while$ -- 217
-width$ -- 49
-write$ -- 471
-(There were 2 error messages)
+while$ -- 196
+width$ -- 44
+write$ -- 422
+(There was 1 warning)

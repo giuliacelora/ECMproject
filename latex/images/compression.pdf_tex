@@ -54,7 +54,7 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{images/compression.pdf}}%
-    \put(0.12691732,0.31003702){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.13974301\unitlength}\raggedright Solvent\end{minipage}}}%
+    \put(0.12691732,0.31003702){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.13974301\unitlength}\raggedright Bath\end{minipage}}}%
     \put(0.20504471,0.1354649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.12111062\unitlength}\raggedright ECM\end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{images/compression.pdf}}%
     \put(0.13151652,0.18187021){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1407757\unitlength}\raggedright \end{minipage}}}%

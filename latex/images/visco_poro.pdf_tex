@@ -50,7 +50,7 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.48768014)%
+  \begin{picture}(1,0.4768014)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0.01,0){\includegraphics[width=\unitlength,page=1]{images/visco_poro.pdf}}%

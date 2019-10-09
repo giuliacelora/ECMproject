@@ -7,8 +7,8 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{booktabs} % For pretty tables
-\usepackage[labelfont=bf,font=scriptsize]{caption}
-\usepackage[font=scriptsize]{subcaption}
+\usepackage[labelfont=bf,font=footnotesize]{caption}
+\usepackage[font=footnotesize]{subcaption}
 \usepackage{graphicx}
 \usepackage{pgfplots}
 \usepackage[all]{nowidow}
@@ -53,15 +53,14 @@
 
 
 \begin{document}
-%
-\title{A thermodynamically consistent poro-visco-elastic model of the Extracellular Matrix}
+\title{A thermodynamically consistent poro-visco-elastic model of the Extracellular Matrix.}
 %
 \titlerunning{Mechanical Properties of ECM}
 % If the paper title is too long for the running head, you can set
 % an abbreviated paper title here
 %
 %\author{Giulia Laura Celora}
-\author{\\[0.2cm] Giulia Laura Celora\inst{1} \\[0.5cm]{\normalfont Supervised by:} Sarah Waters\inst{1}  \and Sonia Antoranz Contera\inst{2}. }
+\author{Giulia Laura Celora\inst{1} \\[0.5cm]{\normalfont Supervised by:} Sarah Waters\inst{1}  \and Sonia Antoranz Contera\inst{2}}
 %
 \authorrunning{Giulia Laura Celora}
 % First names are abbreviated in the running head.
@@ -69,14 +68,13 @@
 %
 \institute{ Mathematical Institute, University of Oxford\and Clarendon Laboratory, Department of Physics, University of Oxford}
 %\text{Supervised by: Sarah Water and Sonia Antoranz Contera.}
-\maketitle              % typeset the header of the contribution
-%
+\maketitle 
+             % typeset the header of the contribution
 \begin{abstract}
 In tissues, cells are mainly surrounded by an extracellular matrix (ECM), a soft porous media mixed with interstitial fluid and made up of networks of polymer chains and charged protein. It is known that the physical and biochemical properties of the ECM play a role in determining cell behaviour. While many studies have focused on linking the elastic properties of the ECM, less effort has been put in understanding the effect of its viscous properties on cell response. In this work, a non-equilibrium thermodynamic theory is developed to describe the chemo-mechanical behaviour of the ECM, which is modelled as a poro-visco-elastic polyelectrolyte. By using classical non-equilibrium thermodynamics we derive a set of governing equations for the transport of interstitial fluid and the time-dependent deformation of the ECM. Two different constitutive models are proposed which differ in how elastic and viscous deformation are coupled. An experimental protocol is then proposed with the aim of validating and selecting the proper model for the ECM.
 \end{abstract}
 %
-%
-%
+
 \input{introduction}
 
 \section{Composition of Extracellular Matrix.}
@@ -130,17 +128,17 @@ and the local entropy production:
 \sigma \equiv \frac{\d_i s}{\d t} \geq 0.
 \end{equation}
 
-Another central aspect of the theory is the introduction of \textit{thermodynamic forces} \footnote{Not to be intended in the mechanical sense} $F_m$ (causes) and \textit{thermodynamic fluxes} $J_m$ (effects) to describe the time evolution of the system during an irreversible transformation. These are related to $\sigma$ as follows:
+Another central aspect of the theory is the introduction of \textit{thermodynamic forces} \footnote{Not to be intended in the mechanical sense} $\zeta_m$ (causes) and \textit{thermodynamic fluxes} $J_m$ (effects) to describe the time evolution of the system during an irreversible transformation. These are related to $\sigma$ as follows:
 \begin{equation}
-\sigma = \sum_m F_m J_m\geq 0.
+\sigma = \sum_m \zeta_m J_m\geq 0.
 \label{2law}
 \end{equation}
 
 While the local equilibrium hypothesis is at the basis of most theories of non-equilibrium thermodynamics, the following two hypotheses uniquely identify CIT:
 \begin{itemize}
-	\item[1.] \textit{Linear Relation between forces $F$ and fluxes $J$}:
+	\item[1.] \textit{Linear Relation between forces $\zeta$ and fluxes $J$}:
 	\begin{equation}
-	J_m = \sum_k L_{mk} F_k,\label{lin}
+	J_m = \sum_k L_{mk} \zeta_k,\label{lin}
 	\end{equation}
 	where the constant $L_{mk}$ are referred to as \textbf{phenomenological coefficients};
 	\item[2.] \textit{Microscopic Reversibility}: time reversibility of processes at the micro-scale. 
@@ -240,7 +238,7 @@ where $\mathbf{h}$ is the electric displacement in the current configuration.
 \subsection{Kinematics.}
 \label{kin}
 
-As mentioned in the introduction, we model the ECM as a poro-visco-elastic material, with particular interest in the viscous aspect of the material. As shown in Figure \ref{deformation}, there are two molecular processes that give rise to the macroscopic time-dependent response of the system: 
+As mentioned in the introduction, we model the ECM as a poro-visco-elastic material. As shown in Figure \ref{deformation}, there are two molecular processes that give rise to the macroscopic time-dependent response of the system: 
 \begin{itemize}
 	\item [1.] the rearrangements of molecules at the micro-scale,  which has entropic origin and results in a volume-preserving viscous deformation;
 	\item[2.] the long range transport of fluid that leads to swelling, i.e. changes in the ECM's size, and give rise to frictional forces between phases. 
@@ -252,9 +250,8 @@ As mentioned in the introduction, we model the ECM as a poro-visco-elastic mater
 	\caption{Illustration of the molecular processes which account for the macroscopic deformation of ECM: viscosity is related to changes in the conformation of the network which preserve the volume of the network.}
 	\label{deformation}
 \end{figure}
-As illustrated in Figure \ref{deformation}, at the microscopic level this results in a visco-elastic and poro-elastic behaviour respectively.
 
-In order to capture both phenomena, as common in the large-deformation theory \cite{Article1,CACCAVO2,Plasto,magneto,NGUYEN,growthtum} and first proposed by Kr\"{o}ner in 1960 \cite{kro}, we consider a multiplicative decomposition of the deformation tensor $\F$. As this can be chosen arbitrary, different decomposition have been proposed in the literature. We will here consider the two most commonly used, which will be here denoted as model A \cite{Article1,CACCAVO2,Plasto} and model B \cite{magneto,NGUYEN,Jeru}:
+In order to capture both phenomena, as common in the large-deformation theory \cite{Article1,CACCAVO2,Plasto,magneto,NGUYEN,growthtum} and first proposed by Kr\"{o}ner in 1960 \cite{kro}, we consider a multiplicative decomposition of the deformation tensor $\F$. As this can be chosen arbitrary, different decomposition have been proposed in the literature. These corresponds to different constitutive assumptions on the time-dependent response of the material to deformation. For the purpose of this study, we consider the two most commonly used, which will be here denoted as model A \cite{Article1,CACCAVO2,Plasto} and model B \cite{magneto,NGUYEN,Jeru}:
 
 \begin{gather}
 \text{MODEL A} \Rightarrow\begin{cases}
@@ -262,14 +259,14 @@ In order to capture both phenomena, as common in the large-deformation theory \c
 \det\F_v=1, \quad \det\F_e=\det\F
 \end{cases} \label{dec1}\tag{A}\\[4pt]
 \text{MODEL B} \Rightarrow\begin{cases}
-\F= \F_{vol}\bar{\F}=\F_{vol}\bar{\F}_e\bar{\F}_v\\
+\F= \bar{\F}\F_{vol}=\bar{\F}_e\bar{\F}_v\F_{vol}\\
 \det\F=\det\F_{vol},\quad \det\bar{\F}=\det\bar{\F}_e=\det\bar{\F}_v=1.\label{dec2}
 \end{cases}\tag{B}
 \end{gather}
 
-To the best of our knowledge, there is no previous systematic study in the literature that compares these two approaches. While the two model are identical in the case of iso-volumetric deformation, i.e. $\det \F=J=1$, this is not always the case when a tissue swells. Despite previous studies have chosen between the two arbitrarily, we here treat it as a constitutive relation and thus being material dependent.
+To the best of our knowledge, there is no previous systematic study in the literature that compares these two approaches. While the two model are identical in the case of iso-volumetric deformation, i.e. $\det \F=J=1$, this is not always the case when a tissue swells, as it will be shown in Section~(\ref{data}).
 
-As an explicative example on how mathematical models can be derived in the non-equilibrium thermodynamics framework, we will fully derive the governing equation for model A. The derivation of model B can instead be found in Appendix \ref{modelB}. 
+For the purpose of the model derivation, we will derive in the main text only the governing equations for model A. The derivation of model B is analogous provided just minor changes, which are discussed in Appendix \ref{modelB}. 
 
 %	\centering
 %	\begin{subfigure}{0.32\textwidth}
@@ -293,7 +290,7 @@ As an explicative example on how mathematical models can be derived in the non-e
 	\centering
 	\hspace{20mm}
 	\Large
-	\def\svgwidth{0.6\linewidth}
+	\def\svgwidth{0.5\linewidth}
 	\input{latex/images/modelA2.pdf_tex}\caption{multiplicative decomposition corresponding to model A, Equation~(\ref{dec1}).}
 \label{Model2}
 \end{figure}
@@ -319,49 +316,62 @@ J_v=\det \F_v= 1.\label{Jv}
 \input{derivation2}
 \section{Elasticity: Equilibrium Behaviour.}
 \label{eqtest}
-In this section, we will be focusing on the equilibrium behaviour of the two models proposed under free and compressed swelling. Given the large number of parameters in the models, such experiments allow us to estimate a subset of them and they are usually used in the literature to validate models. As we will see also in this simplified setting where the dynamics is neglected important differences emerges between the two model presented, which result in relevant quantitative discrepancy in the predictions. Our aim is thus to understand under which information is necessary in order to discern which one better describe the material studied. 
+As common in the literature of polyelectrolytes modelling, we study our models in two different settings: free and compressed swelling. Despite considering equilibrium conditions, these experiments allow us to estimate a subset of the many parameter in the model. As we will see also in this simplified setting where the dynamics is neglected important differences emerges between the two model presented, which result in relevant quantitative discrepancy in the predictions. Our aim is thus to understand which experiments are necessary in order the most appropriate model to describe a soft material.
 
-Our results suggest that the decomposition of the deformation gradient $\F$ is equivalent to a constitutive equation and thus should be tested experimentally. This is in contrast with the standard approach followed in the literature, where the decomposition is chosen arbitrarily by the authors. 
 Throughout this section, unless specified otherwise, we will be using the parameters listed in Table \ref{Tab1} in Appendix \ref{para}.
 
 \subsection{Unconstrained Free Swelling.} 
 \label{free}
+
+First of all, we study the unconstrained free swelling of a cuboid slice of ECM when immersed in a bath of interstitial fluid. For simplicity we consider that the latter contains only two species of free ions: a positive $C_+$ and a negative $C_-$ one. We further assume the bath to be well-mixed and stress-free with both pressure and electric potential identically zero. Given $2c_0$ to be the total concentration of free ions in the neutral bath, $c_0$ denotes the concentration of each ionic species. As the system evolves, proper boundary conditions require the  continuity of chemical potentials and stresses across the boundary:
+\begin{equation}
+\left[\mu_s\right]^+_-=\left[\mu_+\right]^+_-=\left[\mu_-\right]^+_-=0, \quad \left[\mathbf{n} \mathbb{T}\mathbf{n}\right]^+_-=0.
+\end{equation}
+with $[\cdot]^+_-$ denoting the change in the value of a variable across the tissue boundary.
+
 \begin{figure}
 	\centering
-	\def\svgwidth{0.95\linewidth}
+	\def\svgwidth{0.9\linewidth}
 	\input{latex/images/freeswell.pdf_tex}
 	\caption{Schematic representation of a free swelling. Since we are considering an isotropic mixture, the ECM maintains its shape while all dimension are stretched of the same amount $\lambda$. So that the relative volume change is $\delta V = \lambda^3-1$. }
 \end{figure}
 
-First of all, we study the unconstrained free swelling of a cuboid slice of ECM immersed in a bath of interstitial fluid. For simplicity we consider that the latter contains only two species of free ions, which carry a positive $C_+$ and a negative $C_-$ charge respectively. We further assume the bath to be well-mixed and stress-free with both pressure and electric potential identically zero. We denote by $2c_0$ the total concentration of free ions in the bath. Since this is neutral, we have that $c_0$ is the concentration of each ionic species. As the system evolves, the ECM increases in size until it reaches a steady state which is characterised by the continuity of chemical potentials and stresses across the boundary:
+An additional boundary condition is necessary due to the second-order derivatives in $\Phi$ in Equation~(\ref{sys2}). Unlike the other variables, the electrostatic potential in the ECM rapidly change near the boundary. This creates a thin charged interface \cite{swell2}. Since its thickness is negligible compared to the size of the ECM, we consider $\Phi$ to be discontinuous at the interface, while the associated stress $\mathbb{T}^{Max}$ vanishes on the boundary:
 \begin{equation}
-\left[\mu_s\right]^+_-=\left[\mu_+\right]^+_-=\left[\mu_-\right]^+_-=0, \quad \left[\mathbf{n} \mathbb{T}\mathbf{n}\right]^+_-=0.
+\left.\nabla \Phi \cdot \mathbf{n}\right|_-= 0.
 \end{equation}
 
-A further boundary condition is necessary due to the second-order derivatives in $\phi$ in Equation~(\ref{sys2}). Unlike the other variables, the electrostatic potential in the ECM rapidly change near the boundary, thus creating a thin charged interface at the boundary. Since its thickness is negligible compared to the size of the ECM, we consider $\phi$ to be discontinuous at the interface, while the associated stress $\mathbb{T}^{Max}$ vanishes on the boundary:
+As the tissue is assumed to be isotropic and homogeneous, the deformation gradient tensor $\F$ reads:
 \begin{equation}
-\nabla \phi \cdot \mathbf{n}= 0.
+\F= \lambda \mathbb{I},\label{deffree}                                                                
 \end{equation}
-
-As in \cite{DROZDOVph}, we consider that at equilibrium the following conditions also hold:
+with the stretch $\lambda=(1+C_s v_s)^{1/3}$. Following \cite{DROZDOVph}, the equilibrium state is characterized by the following conditions:
 \begin{itemize}
-	\item[1.] chemical potentials of solvent and solutes is homogeneous and equal in the bath and in the tissue:
+	\item[1.] chemical potentials of solvent and solutes are homogeneous and equal in the bath and in the tissue:
 	\begin{eqnarray}
 	\mu_s=\mu^{ext}_s = \mu^0_s - vkT \sum_i c^i_0 ,\\\label{free1}
 	\mu_i=\mu^{ext}_i = \mu^0_i +kT\ln(v_sc^i_0).\label{freeend}
 	\end{eqnarray} 
-	\item[2.] $\phi$ is constant in the gel as $\nabla \phi \equiv \mathbf{0}$ everywhere.
-	\item[3.] The Cauchy stress tensor is constant in the ECM and equal to the value in the bath:
+	\item[2.] $\Phi$ is constant in the tissue so that $\nabla \Phi \equiv \mathbf{0}$ in the interior of the domain.
+	\item[3.] The stress tensor $\mathbb{T}$ is constant and equal to the value in the bath:
 	\begin{equation}
 	\mathbb{T}=0.\label{free2}
 	\end{equation} 
 \end{itemize}
 
-Under unconstrained swelling, the deformation gradient tensor $\F$ reads:
+As shown in Appendix \ref{apfree}, imposing the equilibrium conditions, we obtain that for both models the equilibrium stretch $\lambda$ is implicitly defined by the following algebraic equation:
+\begin{gather}
+\textstyle 
+F(\lambda)=\dfrac{\lambda^3+\chi}{\lambda^6}+\dfrac{p v_s}{k_BT}+\ln \dfrac{\lambda^3-1}{\lambda^3} +2c_0v_s-\sqrt{\left(\frac{z_fC_fv_s}{\lambda^3-1}\right)^2+4v_s^2c^2_0} =0, \label{eqF}
+\end{gather}
+where the pressure $p$ is defined depending on the model considered as:
 \begin{equation}
-\F= \lambda \mathbb{I},\label{deffree}                                                                
+p = \begin{cases}
+\dfrac{G^A_{eq}}{\lambda^3}(\lambda^2-1)\qquad \text{MODEL A}\\[10pt]
+\dfrac{G^B_{vol}}{\lambda^3}(\lambda^2-1)\qquad \text{MODEL B}.
+\end{cases}
 \end{equation}
-with $\lambda=(1+C_s v_s)^{1/3}$. 
+with $G^A_{eq}=G^A_1+G^A_2$. In this case, both models reduce to the standard hyper-elastic model for polyelectrolytes proposed by Hong \cite{Reviewpolyel}. As this has been previously discussed in the literature, we only present its most important features. As illustrated in Figure \ref{analysis}, the ion concentration $c_0$ affects the degree of swelling. However it is the mixing parameter $\chi$ which defined the tissue phase. This can either be in a highly swollen or a collapsed phase, where the latter is characterised by low absorption of fluid \cite{swell2}.  
 
 \begin{figure}[h!]
 	\begin{subfigure}{0.53\textwidth}
@@ -376,26 +386,10 @@ with $\lambda=(1+C_s v_s)^{1/3}$.
 	\end{subfigure}
 	\caption{Free Swelling: (a) Manifold implicitly defined by Equation~(\ref{eqF}) where $G^A_{eq}=10^3$ is fixed, while $c_0$ and $\chi$ are varied. On the vertical axis is $\lambda$ as defined by~(\ref{deffree}). The red plane corresponds to $\chi=\chi_{crit}$ and splits the parameter space into the region of high swelling and collapse for the material \cite{swell2}. (b) Section of the manifold in Figure (a) for different values of $\chi$.}
 	\label{analysis}
+	\vspace{2mm}
 \end{figure}
 
-As shown in Appendix \ref{apfree}, imposing the equilibrium condition to both models A and B, we obtain that the nominal concentration of oxygen in the gel at equilibrium is implicitly defined by the algebraic equation:
-
-\begin{gather}
-\begin{aligned}
-F(\lambda)=&\frac{\lambda^3+\chi}{\lambda^6}+\frac{p v_s}{k_BT}+\ln \frac{\lambda^3-1}{\lambda^3} +2c_0v_s\\[1.5mm]
-&-\sqrt{\left(\frac{z_fC_fv_s}{\lambda^3-1}\right)^2+4v_s^2c^2_0} =0 \label{eqF}
-\end{aligned}
-\end{gather}
-where the pressure $p$ is defined according to the model considered as:
-\begin{equation}
-p = \begin{cases}
-\dfrac{G^A_{eq}}{\lambda^3}(\lambda^2-1)\qquad \text{MODEL A}\\[10pt]
-\dfrac{G^B_{vol}}{\lambda^3}(\lambda^2-1)\qquad \text{MODEL B}.
-\end{cases}
-\end{equation}
-with $G^A_{eq}=G^A_1+G^A_2$. In this case, both models reduce to the standard hyper-elastic model for polyelectrolytes proposed by Hong \cite{Reviewpolyel}. As this has been previously discussed in the literature, we only present its most important features. As illustrated in Figure \ref{analysis}, the ion concentration $c_0$ affects the degree of swelling. The behaviour is also sensitive to the value of the mixing parameter $\chi$, which can be manipulated to change the tissue phase. Depending on the $\chi$, the ECM can be either in a highly swollen or collapsed phase, which is characterised by low absorption of fluid \cite{Salt}. 
-
-As the two models are equivalent, we conclude that common unconstrained swelling experiments are not sufficient to discern between them. On the other hand, fitting Equation~(\ref{eqF}) to the data collected is useful to estimate some of the parameters in the model.
+%As the two models are equivalent, we conclude that common unconstrained swelling experiments are not sufficient to discern between them. On the other hand, fitting Equation~(\ref{eqF}) to the data collected is useful to estimate some of the parameters in the model.
 
 %\input{compression2}
 \input{compression1}
@@ -409,18 +403,22 @@ As the two models are equivalent, we conclude that common unconstrained swelling
 	$\psi\qquad $ & Helmholtz free energy per unit volume in the initial configuration,\\
 	$\mathbf{u}\qquad$ & Displacement vector,\\
 	$\F\qquad$ & Deformation gradient tensor $\F=\mathbb{I}-\nabla_0\mathbf{u}$,\\
-	$C_f\qquad$ & Concentration of fixed charges in the network,\\
-	$z_f\qquad$ & Charge of a GAG chain,\\
-	$v_m\qquad$ & Characteristic molecular volume of the species $m$,\\
-	$\mathbf{u}\qquad$ & Displacement vector,\\
-	$\F\qquad$ & Deformation gradient tensor $\F=\mathbb{I}-\nabla_0\mathbf{u}$,\\	
 	$\mathbb{C}\qquad$ & Right Cauchy-Green Tensor $\mathbb{C}=\F^T\F$,\\
 	$\mathbb{B}\qquad$ & Left Cauchy-Green Tensor $\mathbb{B}=\F\F^T$,\\
 	$\LL\qquad$ & Velocity Gradient Tensor $\LL=\dot{\F}\F^{-1}$,\\
-	$J\qquad$ & Determinant of the deformation gradient tensor $J=\det \F$,\\
+	$\mathbf{H}\qquad$ & Nominal Electric Displacement,\\
+	$\mathbf{E}\qquad$ & Nominal Electric Field,\\
+	$Q\qquad$ & Local net charge considering solid and ionic phases,\\
+	$\Phi\qquad$ & Electric Potential,\\
+	$e\qquad$ & Elementary Charge,\\
+	$J\qquad$ & Determinant of the deformation gradient tensor $J=\det \F$,\\	
+	$C_f\qquad$ & Concentration of fixed charges in the network,\\
+	$z_f\qquad$ & Charge of a GAG chain,\\
+	$v_m\qquad$ & Characteristic molecular volume of the species $m$,\\
 	$\eta^A\qquad $ & Viscosity of the collagen network in model A,\\
-	$G^A_1\qquad$ & Shear modulus related to spring $1$ in model A\\
-	$G^A_2\qquad$ & Shear modulus related to spring $2$ in model A\\
+	$G^A_1\qquad$ & Shear modulus related to spring $1$ in model A,\\
+	$G^A_2\qquad$ & Shear modulus related to spring $2$ in model A,\\
+	$G_{vol}\quad$ & Shear modulus for the volumetric spring in model B,\\
 	$G^B_1\qquad$ & Shear modulus related to spring $1$ in model B\\
 	$G^B_2\qquad$ & Shear modulus related to spring $2$ in model B\\
 	$\eta^B\qquad$ & Viscosity of the collagen network in model A,\\
@@ -429,12 +427,15 @@ As the two models are equivalent, we conclude that common unconstrained swelling
 	$D_i\qquad$ & Diffusion coefficient for the $i$-th solute species in ECM,\\
 	$K\qquad$ &  Hydraulic permeability of the ECM to the interstitial fluid (solvent+solute),\\
 	$k\qquad$ &  Hydraulic  permeability  to  pure  solvent (water),\\
-	$\kappa\qquad$ & Bulk modulus\\
-	$\mathbb{T}^{Kort}\quad$ & Korteweg stress due to the ideal interface\\
-	$\mathbb{T}^{Max}\quad$ & Maxwell stress due to the electric displacement\\
-	$k_B\qquad$ & Boltzmann constant\\
-	$T\qquad$ & Absolute Temperature \\
-	$\text{DEV}\left[\cdot\right]\quad$ & Deviatoric part of the tensor $\text{DEV}\left[\cdot\right] = \cdot-1/3\, \text{tr}(\cdot)$
+	$\mathbb{S}\qquad$ & First Piola-Kirchoff tensor,\\
+	$\mathbb{T}\qquad$ & Cauchy stress tensor, $\mathbb{T}=J^{-1}\mathbb{S}\F^T$,\\
+	$p\qquad$ & Hydrostatic pressure,\\
+	$\mathbb{T}^{Max}\quad$ & Maxwell stress due to the electric displacement,\\
+	$\mathbb{M}_e\qquad$ & Mandel stress,\\
+	$k_B\qquad$ & Boltzmann constant,\\
+	$T\qquad$ & Absolute Temperature, \\
+	$\text{DEV}\left[\cdot\right]\quad$ & Deviatoric part of the tensor $\text{DEV}\left[\cdot\right] = \cdot-1/3\, \text{tr}(\cdot)$,\\[2pt]
+	$\left[\cdot\right]^+_-$ &  Change in the value of a variable across the tissue boundary.
 \end{tabular}	
 \end{table}
 %\section{f}
@@ -447,6 +448,7 @@ As the two models are equivalent, we conclude that common unconstrained swelling
 %\zeta_m =-T^{-1} \nabla_0 \,\mu_m,\\
 %\zeta_v = T^{-1} \F_e^T\frac{\partial \psi}{\partial \F_e}.
 %\end{gather}
+\newpage
 \section{State Equation for Model A.}
 \label{stateequation}
 Thermodynamics theory describe the state of a system in terms of primitive physical quantities \cite{GURTIN}. As shown in Table~(\ref{ind}), this can be divided into independent and dependent variables. While the fist are the variables of the model, the second are uniquely defined as a function of the independent variables, i.e. a \textit{state equation}. This are of the form: 
@@ -464,7 +466,7 @@ where $\mathbf{E}$ can be replaced by any dependent variable. The split between 
 	Reversible & Irreversible&\\[3pt]
 	\hline\addlinespace[2pt]
 \multirow{2}{*}{$\quad C_m,\ \F,\  \mathbf{H}, \F_e\quad$} & \multirow{2}{*}{$\quad\mu_m,\mathbb{M}_e,\nabla \mu_m\quad$} &	$\quad\mathbf{E}, \mathbb{S}, p\quad$ \\
-&& $\quad\phi, \mathbf{J}_m,\LL_v\quad$\\[2pt]
+&& $\quad\Phi, \mathbf{J}_m,\LL_v\quad$\\[2pt]
 \hline
 \end{tabular}
 \vspace{3mm}
@@ -475,28 +477,28 @@ where $\mathbf{E}$ can be replaced by any dependent variable. The split between 
 When considering independent variables, this can be further split into the one that describe a reversible and an irreversible process. Depending on the system properties the latter can be associated with thermodynamic force (see Section \ref{secNET}). Note that, the rate of change, i.e. time derivative, of reversible variables does not appear in the list of constitutive variables. This is because the state of a system during a reversible (ideal) transformation depend only on the current value of the thermodynamic variable and not at the rate at which they change\cite{NET}.
 This has two main consequence: the value of the rate variables $\Gamma$ (see Glossary or Section \ref{ent}) can be chosen arbitrarily by setting the proper experimental condition, and the energy imbalance inequality~(\ref{ineq}) is linear in this terms. Consequently, we have that in order for the energy imbalance inequality to hold for any arbitrary choice of $\Gamma$, the term in the blue brackets of Equation~(\ref{ineq}) must be identically zero: 
 \begin{eqnarray}
-\mu &=& \frac{\partial \psi}{\partial C}+ p v,\\[2mm]
+\mu &=& \frac{\partial \psi}{\partial C}+ p v_s,\\[2mm]
 \mathbf{E} &=& \frac{\partial \psi}{\partial \mathbf{H}},\\[2mm]
-\mu_i &=& e\phi z_i + \frac{\partial \psi}{\partial C_i},\\[2mm]
+\mu_i &=& e\Phi z_i + \frac{\partial \psi}{\partial C_i},\\[2mm]
 \mathbb{S} &=&  \dfrac{\partial \psi}{\partial \F} + \dfrac{\partial \psi}{\partial \F_e}\F_v^{-T}- p J \F^{-T}.
 \end{eqnarray}
 
 Using the explicit form of the free-energy $\psi$ discussed in Section~(\ref{freeenergy}) and the definition of the stress tensor~(\ref{TS}), we obtain:
 \begin{gather}
 \begin{aligned}
-\mu_s = p v + \mu_s^0+ kT&\left[\ln \frac{C_s v}{1+C_s v} + \frac{1}{1+C_sv}\right.
+\mu_s = p v_s + \mu_s^0+ kT&\left[\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s}\right.
 \\&\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s v)^2}-\sum_i \frac{C_i}{C_s}\right], 
 \end{aligned}\label{temp8}\\
 \mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H},\label{temp6}\\[2mm]
-\mu_i = \mu^0_i + e\phi z_i + kT \ln \frac{C_i}{ C_s},\\[2mm]
+\mu_i = \mu^0_i + e\Phi z_i + kT \ln \frac{C_i}{ C_s},\\[2mm]
 \begin{aligned}
-\mathbb{T}= -p \mathbb{I} + \frac{G_1}{1+C_sv}\left(\mathbb{B}-\mathbb{I}\right) &+ \frac{G_2}{1+C_sv}\left(\mathbb{B}_e-\mathbb{I}\right)\\ &- \frac{1}{\epsilon} \left(\frac{1}{2} \,\mathbf{h}\cdot  \mathbf{h} \mathbb{I} -\mathbf{h} \otimes \mathbf{h}\right).\label{temp7}
+\mathbb{T}= -p \mathbb{I} + \frac{G^A_1}{1+C_sv_s}\left(\mathbb{B}-\mathbb{I}\right) &+ \frac{G^A_2}{1+C_sv_s}\left(\mathbb{B}_e-\mathbb{I}\right)\\ &- \frac{1}{\epsilon} \left(\frac{1}{2} \,\mathbf{h}\cdot  \mathbf{h} \mathbb{I} -\mathbf{h} \otimes \mathbf{h}\right).\label{temp7}
 \end{aligned}
 \end{gather}
 
 Rewriting Equation~(\ref{temp6}) in terms of variables in the current configuration and using the definition of the electrical potential, Equation~(\ref{Phi}), we obtain:
 \begin{equation}
-\mathbf{h}=\epsilon \mathbf{e}=-\epsilon \nabla \phi.
+\mathbf{h}=\epsilon \mathbf{e}=-\epsilon \nabla \Phi.
 \end{equation}
 Substituting the above equation into Gauss law~(\ref{gauss}) and~(\ref{temp7}), we can rewrite the System~(\ref{temp8})-(\ref{temp7}) as:
 \begin{gather}
@@ -515,17 +517,15 @@ Substituting the above equation into Gauss law~(\ref{gauss}) and~(\ref{temp7}), 
 \end{gather}
 \section{Energy Dissipation.}
 \label{apenergy}
-Combining Equations~(\ref{vflow1}) and (\ref{vflow2}), and imposing that condition~(\ref{Jv}) is satisfied, we can characterise the viscous flow by the following relation:
+In this section, we expose the details of the derivation of the governing equations~(\ref{gov2})-(\ref{Be}) presented in Section~(\ref{ent}).
+
+Combining Equations~(\ref{vflow1}) and (\ref{vflow2}), we can characterise the viscous flow by the following relation:
 \begin{equation}
-\LL_v = L_{vv}T^{-1}\left[\F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right] \stackrel{(\ast)}{=} \frac{G^A_2}{\eta^A}\text{DEV}\left[\mathbb{C}_e\right] ,\label{Lv1}
+\LL_v = \frac{L_{vv}}{T}\text{DEV}[\mathbb{M}_e]= \frac{L_{vv}}{T}\text{DEV}\left[\F_e^T\frac{\partial \psi}{\partial \F_e}\right] = \frac{G^A_2}{\eta^A}\text{DEV}\left[\mathbb{C}_e\right] ,\label{Lv1}
 \end{equation}
-where $\eta^A$ represents the viscosity of the material and the equality $(\ast)$ follows from Equation~(\ref{temp4}):
+where $\eta^A$ represents the viscosity of the material. If we denote by $\tau_R$ the time-scale of the viscous relaxation this is define as:
 \begin{equation}
-\eta^A tr(\LL_v)= tr\left(\F_e^T\frac{\partial \psi}{\partial \F_e}\right) -  3 p_v=0 \Longrightarrow  p_v = \frac{tr\left(\F_e^T\frac{\partial \psi}{\partial \F_e}\right)}{3}.
-\end{equation}
-Using Equation~(\ref{hyp}), we obtain:
-\begin{equation}
-\LL_v = \frac{G^A_2 }{\eta^A}\text{DEV}[\mathbb{C}_e] = \frac{\text{DEV}[\mathbb{C}_e]}{2\tau_R}.\label{apBe}
+\tau_R = \frac{\eta^A}{2G^A_2}.\label{tau}
 \end{equation}
 
 If we now consider the left elastic Cauchy Green tensor $\mathbb{B}_e=\F_e \F^T_e$, we can relate its time derivative to $\LL_v$:
@@ -569,6 +569,6 @@ and the coefficient $K$ is defined as:
 %\include{kort}
 \newpage
 \bibliographystyle{splncs04}
-\bibliography{latex/ref}
+\bibliography{ref}
 %
 \end{document}

@@ -11,27 +11,6 @@
   publisher = {The Royal Society of Chemistry},
 }
 
-@Article{salt,
-    author = {Yu, Yalin and Landis, Chad M. and Huang, Rui},
-    title = {Salt-Induced Swelling and Volume Phase Transition of Polyelectrolyte Gels},
-    journal = {Journal of Applied Mechanics},
-    volume = {84},
-    number = {5},
-    year = {2017},
-    month = {03},
-    note = {051005},
-}
-
-@Article{wang,
-author = {Wang, Xiao  and Hong, Wei },
-title = {A visco-poroelastic theory for polymeric gels},
-journal = {Proceedings of the Royal Society A: Mathematical, physical and Engineering Sciences},
-volume = {468},
-number = {2148},
-pages = {3824-3841},
-year = {2012},
-}
-
 @Article{chargedensity,
   author  = {Mesquida, Patrick and Kohl, Dominik and Andriotis, Orestis and Thurner, Philipp and Duer, Melinda and Bansode, Sneha and Schitter, Georg},
   title   = {Evaluation of surface charge shift of collagen fibrils exposed to glutaraldehyde},
@@ -40,29 +19,23 @@ year = {2012},
   volume  = {8},
   month   = {12},
 }
-@Unpublished{sarah,
-author= {Hennessy, Matthew G. and M\"{u}nch, Andreas and Wagner, Barbara},
-title = {Surface induced phase separation of a swelling hydrogel},
-year = {2018},
-note = {preprint on webpage \url{http://www.wias-berlin.de/preprint/2562/wias_preprints_2562.pdf}},
+
+@InBook{Reviewpolyel,
+  title     = {Continuum Models of Stimuli-responsive Gels},
+  publisher = {Springer Berlin Heidelberg},
+  year      = {2012},
+  author    = {Hong, Wei},
+  address   = {Berlin, Heidelberg},
+  isbn      = {978-3-642-19373-6},
+  booktitle = {Advances in Soft Matter Mechanics},
+ pages     = {165--196},
 }
 
-@InBook{Reviewpolyel,  
-author    = {Hong, Wei},
-title     = {Continuum Models of Stimuli-responsive Gels},
-publisher = {Springer Berlin Heidelberg},
-year      = {2012},
-address   = {Berlin, Heidelberg},
-isbn      = {978-3-642-19373-6},
-booktitle = {Advances in Soft Matter Mechanics},
-pages     = {165--196},
-}
-
-@Book{bookbiophys,  
-  author    = {Katzir-Katchalsky, A. and Curran, P.F.},
+@Book{bookbiophys,
   title     = {Nonequilibrium thermodynamics in biophysics},
   publisher = {Harvard University Press},
   year      = {1965},
+  author    = {Katzir-Katchalsky, A. and Curran, P.F.},
   series    = {Books in Biophysics},
 }
 
@@ -86,7 +59,7 @@ pages     = {165--196},
 
 @Article{multdec,
   author  = {Lubarda , Vlado A},
-  title   = {Constitutive theories based on the multiplicative decomposition of deformation gradient: Thermoelasticity, elastoplasticity, and biomechanics },
+  title   = {{Constitutive theories based on the multiplicative decomposition of deformation gradient: Thermoelasticity, elastoplasticity, and biomechanics }},
   journal = {Applied Mechanics Reviews},
   year    = {2004},
   volume  = {57},
@@ -105,7 +78,7 @@ pages     = {165--196},
   number    = {8},
   pages     = {085020},
   month     = {jul},
-  publisher = {IOP Publishing},
+  publisher = {{IOP} Publishing},
 }
 @article{ex1,
 author = {Bertet, Claire and Sulak, Lawrence and Lecuit, Thomas},
@@ -118,7 +91,7 @@ journal = {Nature},
 }
 @article{ex2,
   title={Nature and anisotropy of cortical forces orienting Drosophila tissue morphogenesis},
-  author={Matteo Rauzi and Pascale V\'erant and Thomas Lecuit and Pierre-François Lenne},
+  author={Matteo Rauzi and Pascale V{\'e}rant and Thomas Lecuit and Pierre-François Lenne},
   journal={Nature Cell Biology},
   year={2008},
   volume={10},
@@ -157,13 +130,13 @@ publisher  ="The Royal Society of Chemistry",
 }
 
 @article{JeremyEngland,
-author = {Robert Marsland and Jeremy England},
-title = {Limits of predictions in thermodynamic systems: a review},
-journal = {Reports on Progress in Physics},
-year = {2017},
-publisher = {IOP Publishing},
-volume = {81},
-number = {1},
+	author = {Robert Marsland and Jeremy England},
+	title = {Limits of predictions in thermodynamic systems: a review},
+	journal = {Reports on Progress in Physics},
+	year = 2017,
+	publisher = {{IOP} Publishing},
+	volume = {81},
+	number = {1},
 }
 @ARTICLE{SEA1,
    author = {{Benfenati}, F. and {Beretta}, G.~P.},
@@ -212,21 +185,11 @@ year = "2012",
 issn = "0079-6700",
 }
 
-@article{afmtest,
-	author = {Benaglia, Simone and Gisbert, Victor G. and Perrino, Alma and Amo, Carlos A. and Garcia, Ricardo},
-	title = {Fast and high-resolution mapping of elastic properties of biomolecules and polymers with bimodal AFM},
-	journal = {Nature Protocols},
-	year = {2018},
-	month = {11},
-	volume  = {13},
-	pages   = {2890-2907},
-}
-
 @article{hydroex4,
 author = {Li, Jianyu and Mooney, David},
-title = {Designing hydrogels for controlled drug delivery},
 year = {2016},
 pages = {16071},
+title = {Designing hydrogels for controlled drug delivery},
 volume = {1},
 journal = {Nature Reviews Materials},
 }
@@ -243,8 +206,8 @@ year = {1941},
 
 
 @Article{viscocell,
-author ={Chaudhuri, Ovijit},
-title  ={Viscoelastic hydrogels for 3D cell culture},
+author ="Chaudhuri, Ovijit",
+title  ="Viscoelastic hydrogels for 3D cell culture",
 journal  ="Biomater. Sci.",
 year  ="2017",
 volume  ="5",
@@ -264,8 +227,6 @@ publisher  ="The Royal Society of Chemistry",
   issn     = {0022-5096},
   keywords = {hysteresis, constitutive behavior, finite strain, rubber material, mechanical testing},
 }
-
-
 
 @Article{kro,
   author  = {{Kr{\"o}ner}, E.},
@@ -406,6 +367,7 @@ publisher  ="The Royal Society of Chemistry",
   issn     = {0022-5096},
   keywords = {Solid tumor, Nonlinear poroelasticity, Mechano-chemo-biological coupling, Stress-modulated growth, Nutrient transport},
 }
+
 @Article{DROZDOVph,
   author   = {Aleksey D. Drozdov and Jesper deClaville Christiansen and Catalina-Gabriela Sanporean},
   title    = {Inhomogeneous swelling of pH-responsive gels},
@@ -513,7 +475,7 @@ publisher  ="The Royal Society of Chemistry",
   pages   = {504-523},
 }
 
-@Book{doibook,
+@Book{doi,
   title     = {Soft Matter Physics},
   publisher = {OUP Oxford},
   year      = {2013},
@@ -532,22 +494,6 @@ publisher  ="The Royal Society of Chemistry",
   pages     = {2497--2503},
   issn      = {0008-5472},
   publisher = {American Association for Cancer Research},
-}
-@article{pressure,
-author = {Dolega, Monika and Delarue, Morgan and Ingremeau, F. and Prost, Jacques and Delon, A. and Cappello, G.},
-title = {Cell-like pressure sensors reveal increase of mechanical stress towards the core of multicellular spheroids under compression},
-year = {2017},
-pages = {14056},
-volume = {8},
-journal = {Nature Communications},
-}
-@misc{vol,
- author={Moerman, Kevin M and Fereidoonnezhad, Behrooz and McGarry, Patrick},
- title={Novel Hyperelastic Models for Large Volumetric Deformations},
- publisher={engrXiv},
- author={Moerman, Kevin M and Fereidoonnezhad, Behrooz and McGarry, Patrick},
- year={2019},
- month={Feb}
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
