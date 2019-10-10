@@ -543,12 +543,12 @@ For what concern the dissipation due to transport phenomena, the forces $\zeta_m
 \end{equation}
 where the coefficient $\ell_{mk}$ are now constant, i.e. they are independent of the deformation. These can be correlated to drag coefficients, which are commonly used in the theory of mixtures \cite{ecm1,ecm2}. Let us first rewrite the fluxes as $\mathbf{j}_m = c_m (\mathbf{v}_m-\mathbf{v}_n)= c_m \bar{\mathbf{v}}_{m}$, where $\mathbf{v}_m$ is the velocity of the $m$-th component in the current configuration, $\mathbf{v}_n$ is the velocity of the network also in the current configuration and  $\bar{\mathbf{v}}_{m}$ is the relative velocity of the $m$-th component with respect to the network. If now invert Equations~(\ref{dif2}), we obtain the following linear system:
 \begin{eqnarray}
--c_j \nabla \mu_j = \sum_b h_{jb} \bar{\mathbf{v}}_j= \sum_{i\neq j} f_{ji} \left(\bar{\mathbf{v}}_i-\bar{\mathbf{v}}_j\right) + f_{js} (\bar{\mathbf{v}}_s-\bar{\mathbf{v}}_j) + f_{jn} \bar{\mathbf{v}}_j,\label{drag1}\\
--c_s \nabla \mu_s = \sum_i f_{si} \left(\bar{\mathbf{v}}_i-\bar{\mathbf{v}}_s\right)+ f_{sn} \bar{\mathbf{v}}_s,
+-c_j \nabla \mu_j = \sum_{m} h_{jm} \bar{\mathbf{v}}_m= \sum_{i\neq j} f_{ji} \left(\bar{\mathbf{v}}_j-\bar{\mathbf{v}}_i\right) + f_{js} (\bar{\mathbf{v}}_j-\bar{\mathbf{v}}_s) + f_{jn} \bar{\mathbf{v}}_j,\label{drag1}\\
+-c_s \nabla \mu_s = \sum_i f_{si} \left(\bar{\mathbf{v}}_s-\bar{\mathbf{v}}_i\right)+ f_{sn} \bar{\mathbf{v}}_s,
 \end{eqnarray}
-where $f_{mi}$ and $h_{mn}$ are the drag coefficients related to the interaction between fluid constituents and the polymer network respectively. Based on the Onsanger's reciprocal relation we have that:
+where $j=1\ldots N$, $f_{mb}$ are the drag coefficients related to the interaction between the phase $m=s,1,\cdots,N$ and the phase $b=n,s,1,\cdots,N$. Based on the Onsanger's reciprocal relation we have that:
 \begin{equation}
-f_{mb}=f_{bm}.
+f_{mb}=f_{bm} \qquad m,b\, \in\, \left\{s,1,\cdots,N\right\}.
 \end{equation}
 A common assumption in the study of mixture theory is that the solute-solute drag can be neglected so that $f_{ij}=0$ for $i,j=1,\ldots,N$ \cite{ecm1,bookbiophys}. The remaining drag coefficient are instead defined by:
 \begin{equation}
@@ -558,7 +558,7 @@ where $k$ is the hydraulic permeability of the solvent in the network, $D^0_j$ i
 
 Using~(\ref{drag1})-(\ref{drag2}), the relative velocities are of the form:
 \begin{eqnarray}
-\bar{\mathbf{v}}_s = -K J \left(\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} \frac{C_i}{C_s} \nabla \mu_i\right),\label{vbar2}\\
+\bar{\mathbf{v}}_s = -K  \left(\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} \frac{C_i}{C_s} \nabla \mu_i\right),\label{vbar2}\\
 \bar{\mathbf{v}}_j = - \frac{D_j}{k_B T}\nabla \mu_j + \frac{D_j}{D^0_j} \bar{\mathbf{v}}_s, \label{vbar}
 \end{eqnarray}
 and the coefficient $K$ is defined as:
