@@ -127,7 +127,7 @@ As in \cite{ecm2}, we consider the spring to be isotropic and hyper-elastic (Neo
 \psi_{5.1}(\F) = \frac{G^A_1}{2} \left(\F:\F - 3 -2 \ln J\right)\\
 \psi_{5.2}(\F_e) = \frac{G^A_2}{2} \left(\F_e:\F_e - 3 -2 \ln J_{e}\right)\label{hyp}
 \end{eqnarray}
-where $G_{1,2}$ stands for the shear modulus associated with each spring, $J_e= \det \F_e$. As derived in \cite{floryprinciples}, the hyper-elastic model~(\ref{hyp}) can be derived in the framework of statistical mechanics based on the microscopic properties of a polymer network. This assumes the network to consist of Gaussian chains and affine deformation. Other thermodynamically consistent forms of the stretching energy have been proposed in the literature \cite{BERGSTROM1998931,boyce2,doi} using different network models.
+where $G_{1,2}$ stands for the shear modulus associated with each spring, $J_e= \det \F_e$. As derived in \cite{floryprinciples}, the hyper-elastic model~(\ref{hyp}) can be derived in the framework of statistical mechanics based on the microscopic properties of a polymer network. This assumes the network to consist of Gaussian chains and affine deformation. Other thermodynamically consistent forms of the stretching energy have been proposed in the literature \cite{BERGSTROM1998931,boyce2,doibook} using different network models.
 
 \subsection{Entropy Production $\sigma$.}
 \label{ent}
@@ -163,13 +163,13 @@ where $\mathbb{T}^{max}$ is the component of the stress tensor due to the presen
 
 Equating Equation~(\ref{EQen}) and~(\ref{dis}), it is natural to identify that the thermodynamics forces as:
 \begin{gather}
-\zeta_m = \frac{1}{T} \nabla_0 \,\mu_m, \label{vflow1}\\
+\zeta_m = -\frac{1}{T} \nabla_0 \,\mu_m, \label{vflow1}\\
 \zeta_v = \frac{1}{T} \text{DEV}[\mathbb{M}_e] = \frac{G^A_2}{T} \text{DEV}[\mathbb{C}_e].
 \end{gather}
 Assuming to be in a regime of linear non-equilibrium thermodynamics, we can use the identity~(\ref{lin}) to linearly couple fluxes and forces. However, considering the symmetry constraint imposed by \textit{Curie's law}\footnote{Macroscopic causes can not have more elements of symmetry than the effect they cause \cite{CIT}} , there can be no coupling between fluxes and forces of a different tensorial nature. Consequently, we are left with the following force-flux relation:
 \begin{gather}
-\LL_v = L_{vv} \zeta_v,\label{vflow2}\\
-\mathbf{J}_m = \sum_{k=s,1,\ldots,N} L_{mk} \zeta_k. \label{dif}
+\LL_v = L_{vv} \zeta_v=\frac{L_{vv} G^A_2}{T} \text{DEV}[\mathbb{C}_e],\label{vflow2}\\
+\mathbf{J}_m = \sum_{k=s,1,\ldots,N} L_{mk}\zeta_k= -\sum_{k=s,1,\ldots,N} \frac{L_{mk}}{T} \nabla_0 \,\mu_k. \label{dif}
 \end{gather}
 
 %Combining Equation~(\ref{vflow1}) and (\ref{vflow2}), and imposing that condition~(\ref{Jv}) is satisfied, we can characterise the viscous flow by the following relation:
@@ -181,7 +181,7 @@ Assuming to be in a regime of linear non-equilibrium thermodynamics, we can use 
 %The dissipative contribution due to the relative movement of phases has been largely studied in the literature \cite{ecm1,ecm2}. Starting from Equation~(\ref{dif}) and standard arguments we can get to the following definition for the fluxes:
 As described in Appendix \ref{apenergy}, starting from Equations~(\ref{vflow1})-(\ref{dif}) and with common consideration from the theory of mixture, we can derive the following system of time dependent equations:
 \begin{eqnarray}
-\partial_t C_s=\nabla_0 \cdot\left[K C_s \F^{-1}\left(c_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} c_i \nabla \mu_i\right)\right],\label{gov2}\\
+\partial_t C_s=\nabla_0 \cdot\left[K \F^{-1}\left(C_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} C_i \nabla \mu_i\right)\right],\label{gov2}\\
 \partial_t C_i= \nabla_0\cdot\left[\frac{D_i}{k_B T}C_i\F^{-1}\nabla \mu_i -\frac{D_i}{D^0_i} \frac{C_i}{C_s} \mathbf{J}_s\right],\label{gov3} \\
 \dot{\mathbb{B}}_e =\LL\mathbb{B}_e + \mathbb{B}_e \LL^T - \frac{1}{\tau_R} \,\mathbb{B}_e\text{DEV}[\mathbb{B}_e].\label{Be}
 \end{eqnarray}
@@ -212,6 +212,7 @@ where the parameters (see the Glossary) are macroscopic phenomenological coeffic
 		Gradient Tensor&&&\\
 		\hline\addlinespace[2pt]
 		Electric Field & \multicolumn{2}{c|}{$\Phi$~(\ref{sys2})}& State \\
+		Local charge & \multicolumn{2}{c|}{$Q$~(\ref{Q})}& State\\
 		\hline 
 		\hline
 	\end{tabular}
@@ -235,12 +236,12 @@ where $p$ represents the pore pressure and $\Pi_{osm}$ is the osmotic pressure o
 \end{aligned}
 \end{equation}
 
-The above equation shows that the solvent transport is driven by the hydrostatic pressure gradient, the osmotic pressure gradient (blue term in Equation~(\ref{long})) and the electric potential gradient\footnote{equivalent to the electric field.}. If we consider the limit $v_sC_s\rightarrow\infty$, Equation~(\ref{long}) reduces to Darcy's law for the flow in a porous media. The model for polyelectrolytes proposed by Hong \cite{Reviewpolyel} corresponds instead to the limit $D^0_i\rightarrow\infty$, where mobile species can move freely in pure solution and the friction is due only to relative motion with the solid phase.
+The above equation shows that the solvent transport is driven by the hydrostatic pressure gradient, the osmotic pressure gradient (blue-green term in Equation~(\ref{long})) and the electric potential gradient\footnote{equivalent to the electric field.}. If we consider the limit $v_sC_s\rightarrow\infty$, Equation~(\ref{long}) reduces to Darcy's law for the flow in a porous media. The model for polyelectrolytes proposed by Hong \cite{Reviewpolyel} corresponds instead to the limit $D^0_i\rightarrow\infty$, where mobile species can move freely in pure solution and the friction is due only to relative motion with the solid phase.
 
 Similarly we can rewrite Equation~(\ref{gov3}) as:
 \begin{equation}
 \scriptsize
-\partial_t C_i = \nabla_0 \left[D_i\F^{-1}\left(\underbrace{\nabla C_i}_{\text{diffusion}} +\underbrace{\frac{eC_iz_i}{k_B T} \nabla \Phi}_{\text{electric}}\right)-\underbrace{\frac{D_i C_i}{C_s}\F^{-1}\nabla C_s}_{\text{osmotic pressure}}-\underbrace{\frac{D_i C_i}{D^0_iC_s}\mathbf{J}_s}_{\text{advenction}}\right]\label{long2}
+\partial_t C_i = \nabla_0 \cdot\left[D_i\F^{-1}\left(\underbrace{\nabla C_i}_{\text{diffusion}} +\underbrace{\frac{eC_iz_i}{k_B T} \nabla \Phi}_{\text{electric}}\right)-\underbrace{\frac{D_i C_i}{C_s}\F^{-1}\nabla C_s}_{\text{osmotic pressure}}-\underbrace{\frac{D_i C_i}{D^0_iC_s}\mathbf{J}_s}_{\text{advenction}}\right]\label{long2}
 \end{equation}
 
 In the case of ions, the driving forces of transport are the diffusion of ions, the electric field, the osmotic pressure due to the mixing with the solvent and the advection term (due to the relative movement of ions with respect to the solvent). Again in the limit $D^0_i\rightarrow\infty$, we recover the well-known model proposed by Hong \cite{Reviewpolyel} for polyelectrolytes. In the dilute limit, i.e. when the concentration of ions is much smaller than the solvent  concentration $C_i<<C_s$, we can drop both the osmotic and advection term so as to recover the well-known Nernst-Planck equation \cite[see Equation (6.67)]{Reviewpolyel}.

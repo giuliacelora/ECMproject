@@ -171,7 +171,7 @@ As mentioned in Section \ref{ECMcomp}, we here consider the ECM as a three-phase
 	\label{Above}
 \end{figure}
 
-As the tissue deforms, the material element originally located at $\mathbf{X}$ in the initial configuration $\mathcal{B}_0$ is displaced to the point $\mathbf{x}$ in the current configuration $\mathcal{B}_t$, see Figure \ref{Above}. Such a transformation is described by the deformation gradient tensor $\F= \partial \mathbf{x}/\partial \mathbf{X}$; the information about the change in ECM volume is encoded in $J= \det \F$, while $\mathbf{u}= \mathbf{x}-\mathbf{X}$ is the displacement vector. As in \cite{sarah}, we consider the reference, or initial, state $\mathcal{B}_0$, which is stress free, to be equivalent to the dry stage of the ECM, i.e. only solid phase present. Since we assume the solid phase to be incompressible, any change in the volume can only be related to the migration of solvent and solute molecules, whose nominal \footnote{variable value in the reference configuration.} concentrations will be denoted by $C_s$ and $C_i$ respectively, $i=1,\ldots,N$ with $N$ being the number of free ion species. This lead to the molecular incompressibility condition:
+As the tissue deforms, the material element originally located at $\mathbf{X}$ in the initial configuration $\mathcal{B}_0$ is displaced to the point $\mathbf{x}$ in the current configuration $\mathcal{B}_t$, see Figure \ref{Above}. Such a transformation is described by the deformation gradient tensor $\F= \partial \mathbf{x}/\partial \mathbf{X}$; the information about the change in ECM volume is encoded in $J= \det \F$, while $\mathbf{u}= \mathbf{x}-\mathbf{X}$ is the displacement vector. As in \cite{sarah}, we consider the reference, or initial, state $\mathcal{B}_0$, which is stress free, to be equivalent to the dry state of the ECM, i.e. only solid phase present. Since we assume the solid phase to be incompressible, any change in the volume can only be related to the migration of solvent and solute molecules, whose nominal \footnote{variable value in the reference configuration.} concentrations will be denoted by $C_s$ and $C_i$ respectively, $i=1,\ldots,N$ with $N$ being the number of free ion species. This lead to the molecular incompressibility condition:
 
 \begin{equation}
  J= 1 + v_s C_s +\sum\limits_{i=1}^{N} v_i C_i
@@ -225,7 +225,7 @@ As in \cite{Reviewpolyel}, we consider the matrix to be a dielectric material\fo
 \end{equation}
 where $Q$ is the local total charge, which accounts for both fixed and moving charges:
 \begin{equation}
-Q = e\left(\sum\limits_{i} z_i C_i+z_f C_{f}\right)\, , 
+Q = e\left(\sum\limits_{i} z_i C_i+z_f C_{f}\right)\, , \label{Q}
 \end{equation}
 where $e$ is the elementary charge, $C_f$ is the concentration of fix charges and $z_m$ is the valence of the corresponding charged species. Note that $C_f$ here corresponds to the concentration of GAGs, which is assumed to be a constant a fraction of $C_s$. As for above, we can move from nominal quantities to the corresponding value in the current configuration by applying the following rules:
 
@@ -435,7 +435,7 @@ with $G^A_{eq}=G^A_1+G^A_2$. In this case, both models reduce to the standard hy
 	$k_B\qquad$ & Boltzmann constant,\\
 	$T\qquad$ & Absolute Temperature, \\
 	$\text{DEV}\left[\cdot\right]\quad$ & Deviatoric part of the tensor $\text{DEV}\left[\cdot\right] = \cdot-1/3\, \text{tr}(\cdot)$,\\[2pt]
-	$\left[\cdot\right]^+_-$ &  Change in the value of a variable across the tissue boundary.
+	$\left[\cdot\right]^+_-\quad$ &  Change in the value of a variable across the tissue boundary.
 \end{tabular}	
 \end{table}
 %\section{f}
@@ -528,7 +528,7 @@ where $\eta^A$ represents the viscosity of the material. If we denote by $\tau_R
 \tau_R = \frac{\eta^A}{2G^A_2}.\label{tau}
 \end{equation}
 
-If we now consider the left elastic Cauchy Green tensor $\mathbb{B}_e=\F_e \F^T_e$, we can relate its time derivative to $\LL_v$:
+If we now consider the left elastic Cauchy Green tensor $\mathbb{B}_e=\F_e \F^T_e$, we can relate its time derivative to $\LL_v$ and $\LL=\dot{\F}\F^{-1}$:
 \begin{equation}
 \begin{aligned}
 \dot{\mathbb{B}}_e &= \LL \mathbb{B}_e + \mathbb{B}_e \LL^T - 2 \F_e d_v \F_e^{T} \\
@@ -537,11 +537,13 @@ If we now consider the left elastic Cauchy Green tensor $\mathbb{B}_e=\F_e \F^T_
 \end{aligned}
 \end{equation}
 
-For what concern the dissipation due to transport phenomena, the forces $\varsigma_m$ are dependent on the deformation. For this reason, it is more suitable to move from the Lagrangian to the Eulerian coordinates. In the current configuration we can rewrite the fluxes as $\mathbf{j}_m = c_m (\mathbf{v}_m-\mathbf{v}_n)= c_m \bar{\mathbf{v}}_{m}$, where $\mathbf{v}_m$ is the velocity of the $m$-th component in the current configuration, $\mathbf{v}_n$ is the velocity of the network also in the current configuration and  $\bar{\mathbf{v}}_{m}$ is the relative velocity of the $m$-th component with respect to the network. 
-
-In the framework of linear non-equilibrium thermodynamics, the transport dissipation function is given by:
+For what concern the dissipation due to transport phenomena, the forces $\zeta_m$ are dependent on the deformation. For this reason, it is more suitable to move from the Lagrangian to the Eulerian coordinates. So that Equation~(\ref{dif}) can be rewritten as:
+\begin{equation}
+\mathbf{j}_m = \sum_{k=s,1,\ldots,N} \frac{L_{mk}J^{-1}}{T} \mathbb{B}\nabla \mu_k= \sum_{k=s,1,\ldots,N} \ell_{mk} \nabla \mu_k. \label{dif2}
+\end{equation}
+where the coefficient $\ell_{mk}$ are now constant, i.e. they are independent of the deformation. These can be correlated to drag coefficients, which are commonly used in the theory of mixtures \cite{ecm1,ecm2}. Let us first rewrite the fluxes as $\mathbf{j}_m = c_m (\mathbf{v}_m-\mathbf{v}_n)= c_m \bar{\mathbf{v}}_{m}$, where $\mathbf{v}_m$ is the velocity of the $m$-th component in the current configuration, $\mathbf{v}_n$ is the velocity of the network also in the current configuration and  $\bar{\mathbf{v}}_{m}$ is the relative velocity of the $m$-th component with respect to the network. If now invert Equations~(\ref{dif2}), we obtain the following linear system:
 \begin{eqnarray}
--c_j \nabla \mu_j = \sum_b L_{jb} \bar{\mathbf{v}}_j= \sum_{i\neq j} f_{ji} \left(\bar{\mathbf{v}}_i-\bar{\mathbf{v}}_j\right) + f_{js} (\bar{\mathbf{v}}_s-\bar{\mathbf{v}}_j) + f_{jn} \bar{\mathbf{v}}_j,\label{drag1}\\
+-c_j \nabla \mu_j = \sum_b h_{jb} \bar{\mathbf{v}}_j= \sum_{i\neq j} f_{ji} \left(\bar{\mathbf{v}}_i-\bar{\mathbf{v}}_j\right) + f_{js} (\bar{\mathbf{v}}_s-\bar{\mathbf{v}}_j) + f_{jn} \bar{\mathbf{v}}_j,\label{drag1}\\
 -c_s \nabla \mu_s = \sum_i f_{si} \left(\bar{\mathbf{v}}_i-\bar{\mathbf{v}}_s\right)+ f_{sn} \bar{\mathbf{v}}_s,
 \end{eqnarray}
 where $f_{mi}$ and $h_{mn}$ are the drag coefficients related to the interaction between fluid constituents and the polymer network respectively. Based on the Onsanger's reciprocal relation we have that:
@@ -556,14 +558,18 @@ where $k$ is the hydraulic permeability of the solvent in the network, $D^0_j$ i
 
 Using~(\ref{drag1})-(\ref{drag2}), the relative velocities are of the form:
 \begin{eqnarray}
-\bar{\mathbf{v}}_s = -K J \left(\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} \frac{C_i}{C_s} \nabla \mu_i\right),\\
+\bar{\mathbf{v}}_s = -K J \left(\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} \frac{C_i}{C_s} \nabla \mu_i\right),\label{vbar2}\\
 \bar{\mathbf{v}}_j = - \frac{D_j}{k_B T}\nabla \mu_j + \frac{D_j}{D^0_j} \bar{\mathbf{v}}_s, \label{vbar}
 \end{eqnarray}
 and the coefficient $K$ is defined as:
 \begin{equation}
-\frac{1}{K} = \frac{J}{c_sk} + \sum_i \frac{k_B T}{\phi_w} \left(1-\frac{D_i}{D^0_i}\right) \frac{C_i}{D^0_i}.
+\frac{1}{K} = \frac{1}{c_sk} + \sum_i \frac{k_B T}{D^0_i} \left(1-\frac{D_i}{D^0_i}\right) \frac{C_i}{C_s}.
 \end{equation}
-
+If we now move back to the initial configuration, we have that the fluxes $\mathbf{J}_m$ have the form:
+\begin{eqnarray}
+\mathbf{J}_m = J \F^{-1} \mathbf{j}_m= J \F^{-1} c_m \bar{\mathbf{v}}_s,\label{flux}
+\end{eqnarray}
+where $\bar{\mathbf{v}}_s$ are defined by Equations~(\ref{vbar2})-(\ref{vbar}). Substituting now Equations~(\ref{flux}) into the conservation of mass laws~(\ref{consmass}), we recover the governing equations~(\ref{gov2})-(\ref{gov3}) in Section~(\ref{ent}).
 \input{tofix}
 
 %\include{kort}
