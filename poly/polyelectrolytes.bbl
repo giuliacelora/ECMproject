@@ -1,0 +1,81 @@
+\begin{thebibliography}{10}
+
+\bibitem{Plasto}
+Lallit Anand.
+\newblock A thermo-mechanically-coupled theory accounting for hydrogen
+  diffusion and large elastic–viscoplastic deformations of metals.
+\newblock {\em International Journal of Solids and Structures}, 48(6):962 --
+  971, 2011.
+
+\bibitem{DROZDOV+}
+A.D. Drozdov.
+\newblock Swelling of ph-responsive cationic gels: Constitutive modeling and
+  structure–property relations.
+\newblock {\em International Journal of Solids and Structures}, 64-65:176 --
+  190, 2015.
+
+\bibitem{DROZDOVph}
+Aleksey~D. Drozdov, Jesper deClaville Christiansen, and Catalina-Gabriela
+  Sanporean.
+\newblock Inhomogeneous swelling of ph-responsive gels.
+\newblock {\em International Journal of Solids and Structures}, 87:11 -- 25,
+  2016.
+
+\bibitem{flory}
+Paul~J. Flory.
+\newblock Thermodynamics of high polymer solutions.
+\newblock {\em The Journal of Chemical Physics}, 10(1):51--61, 1942.
+
+\bibitem{GURTIN}
+Morton~E. Gurtin.
+\newblock Generalized ginzburg-landau and cahn-hilliard equations based on a
+  microforce balance.
+\newblock {\em Physica D: Nonlinear Phenomena}, 92(3):178 -- 192, 1996.
+
+\bibitem{sarah}
+Matthew~G. Hennessy, Andreas M\"{u}nch, and Barbara Wagner.
+\newblock Surface induced phase separation of a swelling hydrogel.
+\newblock preprint on webpage
+  \url{http://www.wias-berlin.de/preprint/2562/wias_preprints_2562.pdf}, 2018.
+
+\bibitem{Reviewpolyel}
+Wei Hong.
+\newblock {\em Continuum Models of Stimuli-responsive Gels}, pages 165--196.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2012.
+
+\bibitem{Interface}
+Wei Hong and Xiao Wang.
+\newblock A phase-field model for systems with coupled large deformation and
+  mass transport.
+\newblock {\em Journal of the Mechanics and Physics of Solids}, 61(6):1281 --
+  1294, 2013.
+
+\bibitem{hug}
+Maurice~L. Huggins.
+\newblock Some properties of solutions of long-chain compounds.
+\newblock {\em The Journal of Physical Chemistry}, 46(1):151--158, 1942.
+
+\bibitem{bookbiophys}
+A.~Katzir-Katchalsky and P.F. Curran.
+\newblock {\em Nonequilibrium thermodynamics in biophysics}.
+\newblock Books in Biophysics. Harvard University Press, 1965.
+
+\bibitem{microstress}
+F.C. Larché and J.W. Cahn.
+\newblock The interactions of composition and stress in crystalline solids.
+\newblock {\em Acta Metallurgica}, 33(3):331 -- 357, 1985.
+
+\bibitem{ecm1}
+Shi-Lei Xue, Bo~Li, Xi-Qiao Feng, and Huajian Gao.
+\newblock A non-equilibrium thermodynamic model for tumor extracellular matrix
+  with enzymatic degradation.
+\newblock {\em Journal of the Mechanics and Physics of Solids}, 104:32 -- 56,
+  2017.
+
+\bibitem{ecm2}
+Shi-Lei Xue, Shao-Zhen Lin, Bo~Li, and Xi-Qiao Feng.
+\newblock A nonlinear poroelastic theory of solid tumors with glycosaminoglycan
+  swelling.
+\newblock {\em Journal of Theoretical Biology}, 433:49 -- 56, 2017.
+
+\end{thebibliography}

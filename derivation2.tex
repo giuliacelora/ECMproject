@@ -3,13 +3,13 @@
 
 As mentioned in Section \ref{secNET}, in a thermodynamically consistent model, the free energy, $\psi$, can not be chosen arbitrarily but needs to satisfy the energy imbalance inequality,~(\ref{energyin}). In this section, we focus on the right-hand side of the inequality which specifies how the system exchanges energy and mass with the environment. Considering a control volume $R$ in the reference configuration $\mathcal{B}_0$, the system exchanges mass due to the diffusion of each mobile species, so that $M(R)$ is given by:
 \begin{equation}
-M(R)= \sum\limits_{m=s,1,\ldots,N} - \int_{\partial R} \mu_m \,\mathbf{J}_m \cdot \mathbf{n} \label{M}
+M(R)= \sum\limits_{m=s,1,\ldots,N} - \int_{\partial R} \mu_m \,\mathbf{J}_m \cdot \mathbf{n} \label{M},
 \end{equation}
 where $\mathbf{n}$ is the unit normal vector to the surface $\partial R$ and $\mu_m$ is the chemical potential associated with each species. Widely used in the thermodynamics of mixtures, the chemical potential is a measure of the rate of change in free energy associated with adding one more molecule to a unit volume.
 
 Following \cite{DROZDOVph}, the term $W(R)$, i.e. the rate of work done on the system, is decomposed into two contributions:
 \begin{equation}
-W(R) = -\int_{\partial R} \Phi\, \dot{\mathbf{H}}\cdot \mathbf{n} +  \int_{\partial R}\mathbb{S}\mathbf{n} \cdot \dot{\mathbf{u}}\label{W}
+W(R) = -\int_{\partial R} \Phi\, \dot{\mathbf{H}}\cdot \mathbf{n} +  \int_{\partial R}\mathbb{S}\mathbf{n} \cdot \dot{\mathbf{u}},\label{W}
 \end{equation}
 which stands for the rate of electrical and mechanical work respectively. Substituting this result back into the formula~(\ref{energyin}) and applying the divergence theorem we obtain the following inequality:
 \begin{equation}
@@ -44,7 +44,7 @@ If we now substitute~(\ref{temp1}) and~(\ref{lv}) into~(\ref{temp2}), and includ
 \begin{aligned}
  \color{blue}{\left(\frac{\partial \psi}{\partial C_s}-\mu_s+p v_s\right)}\color{black}\dot{C}_s+\color{blue}\left(\frac{\partial \psi}{\partial \mathbf{H}}-\mathbf{E}\right) \cdot \color{black}\dot{\mathbf{H}}+ \sum_i\color{blue}\left(\frac{\partial \psi}{\partial C_i} + e\Phi z_i-\mu_i\right) \color{black}\dot{C}_i \\
 + \color{blue} \left(\frac{\partial \psi}{\partial \F} + \frac{\partial \psi}{\partial\F_e}\F_v^{-1}- \mathbb{S} - p J \F^{-T}\right): \color{black}\dot{\F}+ \sum_m \nabla_0 \,\mu_m \cdot \mathbf{J}_m \\
-- \underbrace{\left(\F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right)}_{\text{DEV}[\mathbb{M}_e]}:\mathbb{L}_v\leq 0 . \label{ineq}
+- \underbrace{\left(\F_e^T\frac{\partial \psi}{\partial \F_e}-p_v\mathbb{I}\right)}_{\text{DEV}[\mathbb{M}_e]}:\mathbb{L}_v\leq 0 , \label{ineq}
 \end{aligned}
 \end{equation}
 where $\mathbb{M}_e$ is the effective Mandel stress. 
@@ -67,7 +67,7 @@ Assuming the solid phase to be an ideal and linear dielectric material, with con
 
 The specific energy density $\psi_2$ has the standard form:
 \begin{equation}
-\psi_2 = \sum\limits_{m} \mu^0_m C_m
+\psi_2 = \sum\limits_{m} \mu^0_m C_m,
 \end{equation} 
 where $\mu^0_m$ denotes the chemical potential of non interacting solvent and ions molecules. According to Flory-Huggins theory \cite{flory,hug} of mixtures, the mixing energy is given by:
 \begin{equation}
@@ -124,8 +124,8 @@ The strain energy can thus be decomposed into the sum of the contributions from 
 As in \cite{ecm2}, we consider the spring to be isotropic and hyper-elastic (Neo-Hookean) which are characterised by the following form of the free-energy:
 
 \begin{eqnarray}
-\psi_{5.1}(\F) = \frac{G^A_1}{2} \left(\F:\F - 3 -2 \ln J\right)\\
-\psi_{5.2}(\F_e) = \frac{G^A_2}{2} \left(\F_e:\F_e - 3 -2 \ln J_{e}\right)\label{hyp}
+\psi_{5.1}(\F) = \frac{G^A_1}{2} \left(\F:\F - 3 -2 \ln J\right),\\
+\psi_{5.2}(\F_e) = \frac{G^A_2}{2} \left(\F_e:\F_e - 3 -2 \ln J_{e}\right),\label{hyp}
 \end{eqnarray}
 where $G_{1,2}$ stands for the shear modulus associated with each spring, $J_e= \det \F_e$. As derived in \cite{floryprinciples}, the hyper-elastic model~(\ref{hyp}) can be derived in the framework of statistical mechanics based on the microscopic properties of a polymer network. This assumes the network to consist of Gaussian chains and affine deformation. Other thermodynamically consistent forms of the stretching energy have been proposed in the literature \cite{BERGSTROM1998931,boyce2,doibook} using different network models.
 
@@ -157,7 +157,7 @@ where $\zeta$s represent the thermodynamic forces associated with each flux. On 
 where $\mathbb{T}^{max}$ is the component of the stress tensor due to the presence of the electric field. As discussed in Section \ref{secNET}, in the framework of linear non-equilibrium thermodynamics, when considering isothermal transformations, the second law of thermodynamics can be rewritten as Equations~(\ref{eqCIT}). Using the same argument as in Section \ref{sec_ine}, we can rewrite Equations~(\ref{eqCIT}) in differential form, and substituting Equations~(\ref{gov1})-(\ref{sys3}), we obtain:
 \begin{equation}
 \begin{aligned}
-\sigma = -  \sum_m T^{-1} \nabla_0 \,\mu_m \cdot \mathbf{J}_m + T^{-1}\mathbb{M}_e:\mathbb{L}_v\label{EQen}
+\sigma = -  \sum_m T^{-1} \nabla_0 \,\mu_m \cdot \mathbf{J}_m + T^{-1}\mathbb{M}_e:\mathbb{L}_v.\label{EQen}
 \end{aligned} 
 \end{equation}
 
@@ -241,7 +241,7 @@ The above equation shows that the solvent transport is driven by the hydrostatic
 Similarly we can rewrite Equation~(\ref{gov3}) as:
 \begin{equation}
 \scriptsize
-\partial_t C_i = \nabla_0 \cdot\left[D_i\F^{-1}\left(\underbrace{\nabla C_i}_{\text{diffusion}} +\underbrace{\frac{eC_iz_i}{k_B T} \nabla \Phi}_{\text{electric}}\right)-\underbrace{\frac{D_i C_i}{C_s}\F^{-1}\nabla C_s}_{\text{osmotic pressure}}-\underbrace{\frac{D_i C_i}{D^0_iC_s}\mathbf{J}_s}_{\text{advenction}}\right]\label{long2}
+\partial_t C_i = \nabla_0 \cdot\left[D_i\F^{-1}\left(\underbrace{\nabla C_i}_{\text{diffusion}} +\underbrace{\frac{eC_iz_i}{k_B T} \nabla \Phi}_{\text{electric}}\right)-\underbrace{\frac{D_i C_i}{C_s}\F^{-1}\nabla C_s}_{\text{osmotic pressure}}-\underbrace{\frac{D_i C_i}{D^0_iC_s}\mathbf{J}_s}_{\text{advection}}\right].\label{long2}
 \end{equation}
 
 In the case of ions, the driving forces of transport are the diffusion of ions, the electric field, the osmotic pressure due to the mixing with the solvent and the advection term (due to the relative movement of ions with respect to the solvent). Again in the limit $D^0_i\rightarrow\infty$, we recover the well-known model proposed by Hong \cite{Reviewpolyel} for polyelectrolytes. In the dilute limit, i.e. when the concentration of ions is much smaller than the solvent  concentration $C_i<<C_s$, we can drop both the osmotic and advection term so as to recover the well-known Nernst-Planck equation \cite[see Equation (6.67)]{Reviewpolyel}.
@@ -249,13 +249,13 @@ In the case of ions, the driving forces of transport are the diffusion of ions, 
 As mentioned in the introduction, we are particularly interested in the visco-elastic contribution to the system kinetics. Even though in the transport Equation~(\ref{long})-(\ref{long2}) there is no direct reference to it, the transport is indirectly coupled to the poro-relaxation through the pressure gradient. Taking the divergence of Equation~(\ref{sys3}) and using the conservation of momentum~(\ref{consmom}), we can identify different components of the pressure gradient:
 
 \begin{equation}
-\nabla p= \nabla \cdot \mathbb{T}^{Max} + G_1^A\underbrace{ \nabla \cdot \left[\frac{\B-\mathbb{I}}{1+v_sC_s}\right]}_{\substack{\text{swelling}\\\text{+ deviatoric}\\\text{ deformation}}} + \,\color{red} G_2^A \underbrace{\nabla \cdot\left[\frac{\B_e-\mathbb{I}}{1+v_sC_s}\right]}_{\color{black}\substack{\text{swelling}\\\text{+ deviatoric}\\\text{deformation}\\\text{+ viscous relaxation}}}\color{black}
+\nabla p= \nabla \cdot \mathbb{T}^{Max} + G_1^A\underbrace{ \nabla \cdot \left[\frac{\B-\mathbb{I}}{1+v_sC_s}\right]}_{\substack{\text{swelling}\\\text{+ deviatoric}\\\text{ deformation}}} + \,\color{red} G_2^A \underbrace{\nabla \cdot\left[\frac{\B_e-\mathbb{I}}{1+v_sC_s}\right]}_{\color{black}\substack{\text{swelling}\\\text{+ deviatoric}\\\text{deformation}\\\text{+ viscous relaxation}}}\color{black}.
 \end{equation}
 
 Unlike the standard Neo-Hookean model for polyelectrolytes, we have an additional term highlighted in red, which accounts for the energy stored in the second spring of model A. Its time evolution, as determined by Equation~(\ref{Be}), is driven by both the macroscopic (both volumetric and deviatoric) deformation and the relaxation dynamics which captures the viscous nature of the solid phase:
 
 \begin{equation}
-\dot{\mathbb{B}}_e=\underbrace{\LL\mathbb{B}_e + \mathbb{B}_e \LL^T}_{\substack{\text{swelling}\\\text{+ deviatoric}\\\text{deformation}}} - \underbrace{\frac{1}{\tau_R} \,\mathbb{B}_e\text{DEV}[\mathbb{B}_e]}_{\substack{\text{viscous}\\\text{relaxation}}}\label{Be2}
+\dot{\mathbb{B}}_e=\underbrace{\LL\mathbb{B}_e + \mathbb{B}_e \LL^T}_{\substack{\text{swelling}\\\text{+ deviatoric}\\\text{deformation}}} - \underbrace{\frac{1}{\tau_R} \,\mathbb{B}_e\text{DEV}[\mathbb{B}_e]}_{\substack{\text{viscous}\\\text{relaxation}}}.\label{Be2}
 \end{equation}
 
 

@@ -1,0 +1,69 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'visco_poro.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1482.5961568bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.4768014)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0.01,0){\includegraphics[width=\unitlength,page=1]{images/visco_poro.pdf}}%
+    \put(0.75144419,0.15987683){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21706706\unitlength}\raggedright Poro-visco-elasticity\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{images/visco_poro.pdf}}%
+    \put(0.22526674,0.44508347){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.20763046\unitlength}\raggedright \centering\textbf{Molecular \\process}\\ \end{minipage}}}%
+    \put(0.24451996,0.37653798){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17451702\unitlength}\raggedright\centering Conformational change of the polymer network\end{minipage}}}%
+    \put(0.25241433,0.15805808){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.15451702\unitlength}\raggedright \centering Migration of solvent molecules\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{images/visco_poro.pdf}}%
+    \put(0.52007595,0.29298826){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17451702\unitlength}\raggedright Visco-elasticity\end{minipage}}}%
+    \put(0.52007595,0.07483581){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17451702\unitlength}\raggedright Poro-elasticity\end{minipage}}}%
+    \put(0.6055141,0.19675295){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.19949776\unitlength}\raggedright \end{minipage}}}%
+    \put(0.48017938,0.44472087){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.20763046\unitlength}\raggedright \centering\textbf{Macroscopic \\behaviour}\\ \end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{images/visco_poro.pdf}}%
+  \end{picture}%
+\endgroup%

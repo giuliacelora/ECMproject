@@ -27,7 +27,7 @@ If we now take the time derivative of $J$, $\bar{\F}$ and $\bar{\F}_e$, we have 
 
 \begin{gather}
 \dot{J} = J (\mathbb{I}:\LL),\\
-\dot{\bar{\F}} = J^{-1/3} \LL \F - \frac{1}{3} J^{-1/3} (\mathbb{I}:\LL) \F \\
+\dot{\bar{\F}} = J^{-1/3} \LL \F - \frac{1}{3} J^{-1/3} (\mathbb{I}:\LL) \F, \\
 \dot{\bar{\F}}_e = \text{DEV}[\LL] \bar{\F}_e -\bar{\F}_e \bar{\LL}_v,\label{aptemp2}
 \end{gather}
 so that the dynamics of the system can be fully described in terms of $\LL$ and $\bar{\LL}_v$. If we combine Equations~(\ref{aptemp1})-(\ref{aptemp2}) with the energy inequality~(\ref{temp2}), we obtain:
@@ -88,7 +88,7 @@ which based on the constitutive properties list in Table~(\ref{tabB}) have the f
 
 \begin{eqnarray}
 \psi_{5.1}(\bar{\F}) = \frac{G^B_1}{2} \left(\bar{\F}:\bar{\F} - 3\right),\\
-\psi_{5.2}(\bar{\F}_e) = \frac{G^B_2}{2} \left(\bar{\F}_e:\bar{\F}_e - 3 \right)\\
+\psi_{5.2}(\bar{\F}_e) = \frac{G^B_2}{2} \left(\bar{\F}_e:\bar{\F}_e - 3 \right),\\
 \psi_{vol}(J) = \frac{G_{vol}}{2}\left[3(J^{2/3}-1) -\ln J^2\right].
 \end{eqnarray}
 
@@ -99,7 +99,7 @@ Following the same argument as in Appendix~(\ref{stateequation}), we have that t
 &\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s v_s)^2}-\sum_i \frac{C_i}{C_s}\right], 
 \end{aligned}\\[2.5mm]
 \mu_i = \mu^0_i + e\Phi z_i + kT \ln \frac{C_i}{C_s},\\
-\mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, \\[3mm]
+\mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\,, \\[3mm]
 \begin{aligned}
 \mathbb{T}= \left(G_{vol}\dfrac{J^{2/3}-1}{J}-p\right) \mathbb{I} + \frac{G^B_1}{1+C_sv_s}\text{DEV}[\bar{\B}] + \frac{G^B_2}{1+C_sv_s}\text{DEV}[\bar{\B}_e]\\
 + \epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right],\label{sys2B}
@@ -114,7 +114,7 @@ If we assume that the time of relaxation $\tau_R$ is independent of the model us
 \begin{gather}
 \partial_t C_s=\nabla_0 \cdot\left[K \F^{-1}\left(C_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} C_i \nabla \mu_i\right)\right],\\
 \partial_t C_i= \nabla_0\cdot\left[\frac{D_i}{k_B T}C_i\F^{-1}\nabla \mu_i -\frac{D_i}{D^0_i} \frac{C_i}{C_s} \mathbf{J}_s\right],\\
-\dot{\bar{\B}}_e = \bar{\B}_e \bar{\LL}^T +\bar{\LL} \bar{\B}_e -\frac{1}{\tau_R} \bar{\B}_e \text{DEV}\left[\bar{\B}_e\right]\label{BeB}
+\dot{\bar{\B}}_e = \bar{\B}_e \bar{\LL}^T +\bar{\LL} \bar{\B}_e -\frac{1}{\tau_R} \bar{\B}_e \text{DEV}\left[\bar{\B}_e\right].\label{BeB}
 \end{gather}
 
 To sum up, model A and model B are similar with only exception of the state equation for the Cauchy stress $\mathbb{T}$ and the governing equation of the dashpot.
@@ -151,14 +151,14 @@ We here derive the equilibrium equation for free swelling. In this case, we have
 Based on Equation~(\ref{Lv1}) in Appendix \ref{apenergy}, we have that the viscous contribution vanish so that $\B_e=\B= \lambda^2 \mathbb{I}$, while $\bar{\mathbb{B}}_e=\mathbb{I}$. Substituting these results and the equilibrium condition~(\ref{free1})-(\ref{free2}) into the model equations (see Table \ref{summary} in Section \ref{ent} for the full list) and setting all spatial derivatives to zero, we have that:
 \begin{gather}
 p = \begin{cases}
-\dfrac{G^A_{1}+G^A_2}{1+C_s v_s}(\lambda^2-1)\qquad \text{MODEL A}\\[10pt]
+\dfrac{G^A_{1}+G^A_2}{1+C_s v_s}(\lambda^2-1)\qquad \text{MODEL A},\\[10pt]
 \dfrac{G_{vol}}{1+C_s v_s}(\lambda^2-1)\qquad \text{MODEL B},
 \end{cases}\label{presA}\\[5pt]
 \Pi_{osm} = \frac{k_BT}{v_s} \left[\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s} +\frac{\chi}{(1+C_s v_s)^2}\right],\label{temp13}\\
 \Pi_{ion} = k_B T \left(\frac{C_+}{v_sC_s}+\frac{C_-}{v_sC_s}-2c^0\right),\label{temp10}\\
 0 = \frac{v_s}{k_BT} (p+\Pi_{osm}-\Pi_{ion}),\label{temp12}\\[2mm]
 0 = \pm\frac{e}{k_B T} \phi  + \ln \frac{C_\pm}{C_s v_s c_\pm^0},\qquad i=1,\ldots,N,\label{temp9}\\[2.5mm]
-Q = e\left(C_+-C_-+z_f C_{f}\right)=0.\label{electron}
+Q = e\left(C_+-C_-+z_f C_{f}\right)=0,\label{electron}
 \end{gather}
 where $\Pi^{n}$ and $\Pi^{ion}_A$ are the osmotic pressures due to the mixing of the polymer network with the solvent and the imbalance of ions inside and outside the ECM. 
 Note that at equilibrium the system reaches a balance between the mechanical pressure $p_A$ and the osmotic pressures. Moreover, the electro-neutrality condition is naturally imposed, Equation~(\ref{electron}). 

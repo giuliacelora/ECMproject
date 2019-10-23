@@ -113,7 +113,7 @@ According to the second law of thermodynamics, which applies universally to any 
 
 In this study, we will focus on isothermal processes, i.e. $T=const$, as this well approximates physiological conditions well. Under this assumption, as derived by Gurtin in \cite{GURTIN}, the second law of thermodynamics is equivalent to the following \textit{energy imbalance inequality}:
 \begin{equation}
-\frac{\d}{\d t} \left\{\int_R \psi \right\}\leq W(R) + M(R) \label{energyin}
+\frac{\d}{\d t} \left\{\int_R \psi \right\}\leq W(R) + M(R), \label{energyin}
 \end{equation}
 where $R$ is an arbitrary control volume of the system, $\psi$ is the Helmholtz free energy, $W(R)$ is the rate at which the environment does work on $R$ and $M(R)$ is the inflow of mass due to transport. It is important to note that, as long as the quantities involved are well defined, the energy inequality~(\ref{energyin}) holds for any isothermal process independently of the specific physical system considered. This imposes a constraint on the form of the function $\psi$ and its dependence on the other thermodynamic variables, such as temperature or pressure, which are used to describe the system. 
 
@@ -174,7 +174,7 @@ As mentioned in Section \ref{ECMcomp}, we here consider the ECM as a three-phase
 As the tissue deforms, the material element originally located at $\mathbf{X}$ in the initial configuration $\mathcal{B}_0$ is displaced to the point $\mathbf{x}$ in the current configuration $\mathcal{B}_t$, see Figure \ref{Above}. Such a transformation is described by the deformation gradient tensor $\F= \partial \mathbf{x}/\partial \mathbf{X}$; the information about the change in ECM volume is encoded in $J= \det \F$, while $\mathbf{u}= \mathbf{x}-\mathbf{X}$ is the displacement vector. As in \cite{sarah}, we consider the reference, or initial, state $\mathcal{B}_0$, which is stress free, to be equivalent to the dry state of the ECM, i.e. only solid phase present. Since we assume the solid phase to be incompressible, any change in the volume can only be related to the migration of solvent and solute molecules, whose nominal \footnote{variable value in the reference configuration.} concentrations will be denoted by $C_s$ and $C_i$ respectively, $i=1,\ldots,N$ with $N$ being the number of free ion species. This lead to the molecular incompressibility condition:
 
 \begin{equation}
- J= 1 + v_s C_s +\sum\limits_{i=1}^{N} v_i C_i
+ J= 1 + v_s C_s +\sum\limits_{i=1}^{N} v_i C_i,
  \label{comp}
 \end{equation}
 where $v_m$ are the characteristic molecular volume of each species in the solution. When considering the interstitial fluid, the contribution of ions to the volume can be neglected \cite{ecm1,ecm2} so that Equation~(\ref{comp}) reduces to:
@@ -251,15 +251,15 @@ As mentioned in the introduction, we model the ECM as a poro-visco-elastic mater
 	\label{deformation}
 \end{figure}
 
-In order to capture both phenomena, as common in the large-deformation theory \cite{Article1,CACCAVO2,Plasto,magneto,NGUYEN,growthtum} and first proposed by Kr\"{o}ner in 1960 \cite{kro}, we consider a multiplicative decomposition of the deformation tensor $\F$. As this can be chosen arbitrary, different decomposition have been proposed in the literature. These corresponds to different constitutive assumptions on the time-dependent response of the material to deformation. For the purpose of this study, we consider the two most commonly used, which will be here denoted as model A \cite{Article1,CACCAVO2,Plasto} and model B \cite{magneto,NGUYEN,Jeru}:
+In order to capture both phenomena, as common in the large-deformation theory \cite{Plasto,Article1,CACCAVO2,magneto,NGUYEN,growthtum} and first proposed by Kr\"{o}ner in 1960 \cite{kro}, we consider a multiplicative decomposition of the deformation tensor $\F$. As this can be chosen arbitrary, different decomposition have been proposed in the literature. These corresponds to different constitutive assumptions on the time-dependent response of the material to deformation. For the purpose of this study, we consider the two most commonly used, which will be here denoted as model A \cite{Plasto,Article1,CACCAVO2} and model B \cite{Jeru,magneto,NGUYEN}:
 
 \begin{gather}
 \text{MODEL A} \Rightarrow\begin{cases}
 \F=\F_e\F_v,\\
-\det\F_v=1, \quad \det\F_e=\det\F
+\det\F_v=1, \quad \det\F_e=\det\F,
 \end{cases} \label{dec1}\tag{A}\\[4pt]
 \text{MODEL B} \Rightarrow\begin{cases}
-\F= \bar{\F}\F_{vol}=\bar{\F}_e\bar{\F}_v\F_{vol}\\
+\F= \bar{\F}\F_{vol}=\bar{\F}_e\bar{\F}_v\F_{vol},\\
 \det\F=\det\F_{vol},\quad \det\bar{\F}=\det\bar{\F}_e=\det\bar{\F}_v=1.\label{dec2}
 \end{cases}\tag{B}
 \end{gather}
@@ -367,8 +367,8 @@ F(\lambda)=\dfrac{\lambda^3+\chi}{\lambda^6}+\dfrac{p v_s}{k_BT}+\ln \dfrac{\lam
 where the pressure $p$ is defined depending on the model considered as:
 \begin{equation}
 p = \begin{cases}
-\dfrac{G^A_{eq}}{\lambda^3}(\lambda^2-1)\qquad \text{MODEL A}\\[10pt]
-\dfrac{G^B_{vol}}{\lambda^3}(\lambda^2-1)\qquad \text{MODEL B}.
+\dfrac{G^A_{eq}}{\lambda^3}(\lambda^2-1)\qquad \text{MODEL A},\\[10pt]
+\dfrac{G^B_{vol}}{\lambda^3}(\lambda^2-1)\qquad \text{MODEL B},
 \end{cases}
 \end{equation}
 with $G^A_{eq}=G^A_1+G^A_2$. In this case, both models reduce to the standard hyper-elastic model for polyelectrolytes proposed by Hong \cite{Reviewpolyel}. As this has been previously discussed in the literature, we only present its most important features. As illustrated in Figure \ref{analysis}, the ion concentration $c_0$ affects the degree of swelling. However it is the mixing parameter $\chi$ which defined the tissue phase. This can either be in a highly swollen or a collapsed phase, where the latter is characterised by low absorption of fluid \cite{swell2}.  
@@ -434,6 +434,8 @@ with $G^A_{eq}=G^A_1+G^A_2$. In this case, both models reduce to the standard hy
 	$\mathbb{M}_e\qquad$ & Mandel stress,\\
 	$k_B\qquad$ & Boltzmann constant,\\
 	$T\qquad$ & Absolute Temperature, \\
+	$\mathbf{n}\qquad$ & Normal Vector,\\
+	$\mathbf{e}_{x,y,z}$& Canonical Basis in Cartesian Coordinates,\\
 	$\text{DEV}\left[\cdot\right]\quad$ & Deviatoric part of the tensor $\text{DEV}\left[\cdot\right] = \cdot-1/3\, \text{tr}(\cdot)$,\\[2pt]
 	$\left[\cdot\right]^+_-\quad$ &  Change in the value of a variable across the tissue boundary.
 \end{tabular}	
@@ -550,7 +552,7 @@ where $j=1\ldots N$, $f_{mb}$ are the drag coefficients related to the interacti
 \begin{equation}
 f_{mb}=f_{bm} \qquad m,b\, \in\, \left\{s,1,\cdots,N\right\}.
 \end{equation}
-A common assumption in the study of mixture theory is that the solute-solute drag can be neglected so that $f_{ij}=0$ for $i,j=1,\ldots,N$ \cite{ecm1,bookbiophys}. The remaining drag coefficient are instead defined by:
+A common assumption in the study of mixture theory is that the solute-solute drag can be neglected so that $f_{ij}=0$ for $i,j=1,\ldots,N$ \cite{bookbiophys,ecm1}. The remaining drag coefficient are instead defined by:
 \begin{equation}
 f_{sn} = \frac{1}{k}, \ \ f_{js}=\frac{k_BT c_j}{D^0_{j}},\ \  f_{js}+f_{jn}= \frac{k_BT c_j}{D_j}, \label{drag2}
 \end{equation}

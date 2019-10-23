@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: polyelectrolytes.aux
+The style file: plain.bst
+Database file #1: ref.bib
+You've used 13 entries,
+            2118 wiz_defined-function locations,
+            588 strings with 6080 characters,
+and the built_in function-call counts, 4218 in all, are:
+= -- 419
+> -- 163
+< -- 1
++ -- 70
+- -- 52
+* -- 301
+:= -- 713
+add.period$ -- 40
+call.type$ -- 13
+change.case$ -- 63
+chr.to.int$ -- 0
+cite$ -- 13
+duplicate$ -- 150
+empty$ -- 348
+format.name$ -- 52
+if$ -- 886
+int.to.chr$ -- 0
+int.to.str$ -- 13
+missing$ -- 14
+newline$ -- 68
+num.names$ -- 26
+pop$ -- 48
+preamble$ -- 1
+purify$ -- 52
+quote$ -- 0
+skip$ -- 101
+stack$ -- 0
+substring$ -- 342
+swap$ -- 21
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 48
+warning$ -- 0
+while$ -- 39
+width$ -- 15
+write$ -- 145

@@ -1,0 +1,110 @@
+\documentclass[12pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{er,positioning,bayesnet}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{algpseudocode,algorithm,algorithmicx}
+\usepackage{hyperref}
+\usepackage[inline]{enumitem} % Horizontal lists
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[labelfont=bf,font=scriptsize]{caption}
+\usepackage[font=scriptsize]{subcaption}
+\usepackage{mhchem}
+\newcommand{\indentitem}{\setlength\itemindent{20pt}}
+\newcommand{\F}{\ensuremath{\mathbb{F}}}
+\newcommand{\B}{\ensuremath{\mathbb{B}}}
+\newcommand{\LL}{\ensuremath{\mathbb{L}}}
+\renewcommand{\d}{\ensuremath{\text{d}}}
+\title{Polyelectrolytes Model Derivation}
+\author{}
+
+\begin{document}
+\section{Polyelectrolytes Gel Model Derivation.}
+\label{modeldev}
+\subsection{Conservation Law.}
+\label{conslaw}
+We here consider the gel as a three-phase medium composed of a solid polymer network with fixed charges, a solvent (i.e. water molecules, interstitial fluid) and solutes (freely moving charges). 
+\begin{figure}[h!]
+	\centering
+	\def\svgwidth{0.9\linewidth}
+	\input{images/deformation.pdf_tex}
+	\caption{Sketch of the dry and current state of the gel.}
+	\label{Above}
+\end{figure}
+
+As the tissue deforms, the material element originally located at $\mathbf{X}$ in the initial configuration $\mathcal{B}_0$ is displaced to the point $\mathbf{x}$ in the current configuration $\mathcal{B}_t$, see Figure \ref{Above}. Such a transformation is described by the deformation gradient tensor $\F= \partial \mathbf{x}/\partial \mathbf{X}$; the information about the change in volume is encoded in $J= \det \F$, while $\mathbf{u}= \mathbf{x}-\mathbf{X}$ is the displacement vector. As in \cite{sarah}, we consider the reference, or initial, state $\mathcal{B}_0$, which is stress free, to be equivalent to the dry state of the gel, i.e. only solid phase present. Since we assume the solid phase to be incompressible, any change in the volume can only be related to the migration of solvent and solute molecules, whose nominal \footnote{variable value in the reference configuration.} concentrations will be denoted by $C_s$ and $C_i$ respectively, $i=1,\ldots,N$ with $N$ being the number of free ion species. This lead to the molecular incompressibility condition:
+
+\begin{equation}
+ J= 1 + v_s C_s +\sum\limits_{i=1}^{N} v_i C_i
+ \label{comp}
+\end{equation}
+where $v_m$ are the characteristic molecular volume of each species in the solution. When considering the interstitial fluid, the contribution of ions to the volume can be neglected \cite{ecm1,ecm2} so that Equation~(\ref{comp}) reduces to:
+
+\begin{equation}
+J=1+v_s C_s.
+\label{inc}
+\end{equation} 
+
+Consequently, the volume fractions of fluid $\phi_f$ and solid $\phi_n$ phases in the swollen gel are defined as:
+\begin{equation}
+\phi_f = \frac{v_sC_s}{1+v_sC_s}, \qquad \phi_n = \frac{1}{1+v_sC_s}.
+\end{equation}
+where again we are neglecting the contribution of ions to the total volume.
+While $C_m$ denotes the number of each molecule per unit volume in the initial configuration for the $m$-th species in the solution, the actual concentration in the current state is denoted by $c_m=C_m/J$. Throughout the derivation of the model, we will be using the index $i=1,\ldots,N$ to denote the ionic species only, while $m\in\left\{s,1,\ldots,N\right\}$ refers to all mobile species, i.e. both the solvent and solutes.
+
+Mass conservation must apply to all mobile species and in the initial configuration this reads:
+\begin{equation}
+\dot{C}_m + \nabla_0 \cdot \mathbf{J}_m = 0, \label{consmass}
+\end{equation}
+where $\mathbf{J}_m$ is the nominal flux per unit area in the dry state, $\dot{C}_m$ is the derivative of $C_m$ with respect to time, i.e.  $\dot{C}_m\equiv\partial_t C_m$ and $\nabla_0$ denotes the gradient in the Lagrangian coordinates $\mathbf{X}$. Their counterparts in the actual configuration are denoted by $\mathbf{j}_m$ and $\nabla$ and are defined according to the following rules:
+\begin{equation}
+\mathbf{J}_m = J \F^{-1} \mathbf{j}_m, \qquad \nabla_0 (\cdot) = \F^{T} \nabla(\cdot).
+\end{equation}
+
+When considering tissues or hydrogels, inertial and gravitational effects are commonly neglected, so that the conservation of momentum for the gel reads:
+
+\begin{gather}
+\nabla_0 \cdot \mathbb{S}=0\label{consmom},
+\end{gather}
+
+where $\mathbb{S}$ is the first Piola-Kirchoff tensor, which represents the stress state of the gel in the initial configuration. The counterpart in the current configuration is the Cauchy stress tensor $\mathbb{T}$, which is related to $\mathbb{S}$ as follows:
+
+\begin{equation}
+\mathbb{T} = J^{-1}\mathbb{S}\F^T.\label{TS}
+\end{equation}
+
+The presence of free moving ions generates an electric field which is denoted by $\mathbf{E}$ and $\mathbf{e}$ in the initial and current configuration respectively. Introducing the electrostatic potential $\Phi$, we have that:
+\begin{equation}
+\mathbf{E}= -\nabla_0 \, \Phi, \hspace{8mm} \mathbf{e}= - \nabla \, \Phi.
+\label{Phi}
+\end{equation}
+
+As in \cite{Reviewpolyel}, we consider the gel to be a dielectric material\footnote{a material that does not conduct electricity but can be polarized in the presence of an electric field.}. Consequently, the presence of the electric field generates an electric displacement $\mathbf{H}$\footnote{the vector field that accounts for both the electric field and the polarization of the dielectric material.}, which must obey Gauss law of electrostatics:
+\begin{equation}
+\nabla_0 \cdot \mathbf{H}= Q,
+\label{gauss}
+\end{equation}
+where $Q$ is the local total charge, which accounts for both fixed and moving charges:
+\begin{equation}
+Q = e\left(\sum\limits_{i} z_i C_i+z_f C_{f}\right)\, , 
+\end{equation}
+where $e$ is the elementary charge, $C_f$ is the concentration of fix charges and $z_m$ is the valence of the corresponding charged species. As for above, we can move from nominal quantities to the corresponding value in the current configuration by applying the following rules:
+
+\begin{eqnarray}
+\mathbf{H} = J \F^{-1}\mathbf{h},\\
+\mathbf{E} = \F^T \mathbf{e},
+\end{eqnarray}
+where $\mathbf{h}$ is the electric displacement in the current configuration.
+\input{derivatin1}
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{ref}
+\end{document}
