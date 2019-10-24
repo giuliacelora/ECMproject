@@ -245,7 +245,7 @@ The governing equation thus reduces to:
 \end{aligned}\label{A}
 \end{eqnarray}
 \begin{eqnarray}
-\partial_t C_i = \nabla_0 \cdot\left[D_i\F^{-1}\left(\nabla C_i +\frac{eC_iz_i}{k_B T} \nabla \Phi\right)-\frac{D_i C_i}{C_s}\F^{-1}\nabla C_s-\frac{C_i}{C_s}\mathbf{J}_s}\right]\label{B}
+\partial_t C_i = \nabla_0 \cdot\left[D_i\F^{-1}\left(\nabla C_i +\frac{eC_iz_i}{k_B T} \nabla \Phi\right)-\frac{D_i C_i}{C_s}\F^{-1}\nabla C_s-\frac{C_i}{C_s}\mathbf{J}_s\right]\label{B}
 \end{eqnarray}
 
 \section{1D full model}
@@ -258,20 +258,21 @@ Considering a 1D constrained swelling, the deformation gradient tensor is of the
 0 & 0 &J(t,Z)\\
 \end{bmatrix}.\label{deffree}                                                                
 \end{equation}
-
+where in the dilute case we have $J=1+v_sC_s$.
 Similarly all the variables will just depend on the time $t$ and the $Z$ coordinates, the tensor will preserve the same diagonal form, identify by the index $1,2,3$. Given that the set of state and governing equation for the model are given by:
 
 \begin{gather}
-\partial_Z S_3 = 0\\
-S_z = -p - \frac{\gamma}{2} \frac{(\partial_Z C)^2}{J^2} - \frac{\epsilon}{2} \frac{(\partial_Z \Phi)^2}{J^2}+ \frac{G}{J}\left(J^2-1\right),\\[2mm]
+\partial_Z S_3 = 0,\\
+S_3 = -p - \frac{\gamma}{2} \frac{(\partial_Z C)^2}{J^2} - \frac{\epsilon}{2} \frac{(\partial_Z \Phi)^2}{J^2}+ \frac{G}{J}\left(J^2-1\right),\\[2mm]
 -\epsilon \partial_Z \left(J^{-1} \partial_Z \Phi\right)= Q,\\[2mm]
-Q= e\left(\sum\limits_{i} z_i C_i + z_fC_f\right),\\[2mm]
+Q= e\left(\sum\limits_{i} z_i C_i + z_fC_f\right)\, ,\\[2mm]
 \begin{aligned}
-J_s=-\frac{D_0(1+v_sC_s)^\beta}{J^2 k_B T}\left[ - \gamma C_s \partial^2_Z  \left(\frac{\partial_Z C_s}{J}\right)+\sum_i C_i e z_i \partial_Z \Phi\right.\\[2mm]
-\left.+ C_s v_s\partial_Z p+ k_B T \left(C_s \partial_Z \Pi_{osm} + \sum_i \left(1-\frac{C_i}{C_s}\right) \partial_Z C_s \right)\right],
+J_s=-\frac{D_0J^{\beta-2}}{k_B T}\left[ - \gamma C_s \partial^2_Z  \left(\frac{\partial_Z C_s}{J}\right)+\sum_i C_i e z_i \partial_Z \Phi+ C_s v_s\partial_Z p\right.\\[2mm]
+\left.+ k_B T \left(C_s \partial_Z \Pi_{osm} + \sum_i \left(1-\frac{C_i}{C_s}\right) \partial_Z C_s \right)\right]\, ,
 \end{aligned}\\[2mm]
-\partial_t C_s = -\partial_Z J_s\\[2mm]
-\partial_t C_i = \partial_Z \left[\frac{D_i}{J^2}\left(\partial_Z C_i +\frac{eC_iz_i}{k_B T} \partial_Z \Phi\right)-\frac{D_i C_i}{J^2C_s}\partial_Z C_s-\frac{C_i}{C_s}J_s\right]
+\Pi_{osm}=\ln \frac{C_s v_s}{J} + \frac{1}{J}+\frac{\chi}{J^2},\\[2mm]
+\partial_t C_s = -\partial_Z J_s\,,\\[2mm]
+\partial_t C_i = \partial_Z \left[\frac{D_i}{J^2}\left(\partial_Z C_i +\frac{eC_iz_i}{k_B T} \partial_Z \Phi\right)-\frac{D_i C_i}{J^2C_s}\partial_Z C_s-\frac{C_i}{C_s}J_s\right]\, .
 \end{gather}
  
  
