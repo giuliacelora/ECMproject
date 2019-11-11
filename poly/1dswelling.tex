@@ -1,0 +1,72 @@
+
+\subsection{Evolution Equation.}
+
+In order to get a better physical insight into the behaviour, we first rewrite the solvent chemical potential as:
+\begin{gather}
+\mu_s = \mu^0_s + k_B T \left(\frac{p v_s}{k_BT} +\Pi_{osm}-\sum_i \frac{C_i}{C_s} -\frac{\gamma J}{k_B T}\Pi_{grad}\right)\label{mu2},\\
+\Pi_{osm}=\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s}+\frac{\chi}{(1+C_s v_s)^2},\\
+\Pi_{grad} = \nabla^2 C_s,
+\end{gather}
+where $p$ represents the pore pressure, $\Pi_{osm}$ is the osmotic pressure of the solution and $\Pi_{grad}$ is the pressure due to interface energy. If we now substitute into Equations~(\ref{gov2}) the chemical potentials~(\ref{mu2})-(\ref{mu}), which yields to:
+\begin{equation}
+\begin{aligned}
+\partial_t C_s=\nabla_0 \cdot\left\{K\F^{-1}\left[C_s v_s\nabla p - \color{red}\gamma C_s \nabla J\Pi_{grad}\color{black}+\sum_i \frac{D_i}{D^0_i} C_i e z_i \nabla \Phi\right.\right.\\
+\left.\left.+ k_B T\color{teal} \left(C_s \nabla \Pi_{osm}+ \sum_i\left(1-\frac{D_iC_i}{D^0_iC_s}\right) \nabla C_s - \sum_i\left(1-\frac{D_i}{D^0_i}\right) \nabla C_i \right)\color{black}\right]\right\}.\label{long}
+\end{aligned}
+\end{equation}
+
+The above equation shows that the solvent transport is driven by pressure gradient, osmotic pressure gradient (light-blue term in Equation~(\ref{long})), electric potential gradient and the additional composition gradient (red term in Equation~(\ref{long})), which is here first introduced in the context of polyelectrolytes. In the absence of solutes ($C_i\equiv 0$), we recover the same model presented by Hennessy et. al~\cite{sarah}. 
+Similarly we can rewrite Equation~(\ref{gov3}) as:
+\begin{equation}
+\scriptsize
+\partial_t C_i = \nabla_0 \cdot \left[D_i\F^{-1}\left(\underbrace{\nabla C_i}_{\text{diffusion}} +\underbrace{\frac{eC_iz_i}{k_B T} \nabla \Phi}_{\text{electric}}\right)-\underbrace{\frac{D_i C_i}{C_s}\F^{-1}\nabla C_s}_{\text{osmotic pressure}}-\underbrace{\frac{D_i C_i}{D^0_iC_s}\mathbf{J}_s}_{\text{advenction}}\right]\label{long2}
+\end{equation}
+
+\subsection{Possible simplification of the model.}
+
+If we consider  the case of small ions, when we can neglect the friction between the ions and the polymer chains, i.e. $D_{i}=D^0_i$. Under this assumption the system of equation simplifies as $K=c_sk$. Following the work of Hennesy et al., we consider the hydraulic permeability $k$ to be:
+
+\begin{equation}
+k = \frac{D_0(1+v_sC_s)^\beta}{k_B T c_s} \Rightarrow K=  \frac{D_0(1+v_sC_s)^\beta}{k_B T}.
+\end{equation}
+
+The governing equation thus reduces to:
+\begin{eqnarray}
+\begin{aligned}
+\partial_t C_s=\nabla_0 \cdot\left\{\frac{D_0(1+v_sC_s)^\beta}{k_B T}\F^{-1}\left[C_s v_s\nabla p - \gamma C_s \nabla  \left(J\nabla^2 C\right)\right.\right.\\
+\left.\left.+\sum_i C_i e z_i \nabla \Phi+ k_B T \left(C_s \nabla \Pi_{osm}+ \sum_i\left(1-\frac{C_i}{C_s}\right) \nabla C_s \right)\right]\right\}.
+\end{aligned}\label{A}
+\end{eqnarray}
+\begin{eqnarray}
+\partial_t C_i = \nabla_0 \cdot\left[D_i\F^{-1}\left(\nabla C_i +\frac{eC_iz_i}{k_B T} \nabla \Phi\right)-\frac{D_i C_i}{C_s}\F^{-1}\nabla C_s-\frac{C_i}{C_s}\mathbf{J}_s\right]\label{B}
+\end{eqnarray}
+
+\section{1D full model}
+
+Considering a 1D constrained swelling, the deformation gradient tensor is of the form:
+\begin{equation}
+\F= \begin{bmatrix}
+1 & 0 &0\\
+0 & 1 &0\\
+0 & 0 &J(t,Z)\\
+\end{bmatrix}.\label{deffree}                                                                
+\end{equation}
+where in the dilute case we have $J=1+v_sC_s$.
+Similarly all the variables will just depend on the time $t$ and the $Z$ coordinates, the tensor will preserve the same diagonal form, identify by the index $1,2,3$. Given that the set of state and governing equation for the model are given by:
+
+\begin{gather}
+\partial_Z S_3 = 0,\\
+S_3 = -p - \frac{\gamma}{2} \frac{(\partial_Z C)^2}{J^2} - \frac{\epsilon}{2} \frac{(\partial_Z \Phi)^2}{J^2}+ \frac{G}{J}\left(J^2-1\right),\\[2mm]
+-\epsilon \partial_Z \left(J^{-1} \partial_Z \Phi\right)= Q,\\[2mm]
+Q= e\left(\sum\limits_{i} z_i C_i + z_fC_f\right)\, ,\\[2mm]
+\begin{aligned}
+J_s=-\frac{D_0J^{\beta-2}}{k_B T}\left[ - \gamma C_s \partial^2_Z  \left(\frac{\partial_Z C_s}{J}\right)+\sum_i C_i e z_i \partial_Z \Phi+ C_s v_s\partial_Z p\right.\\[2mm]
+\left.+ k_B T \left(C_s \partial_Z \Pi_{osm} + \sum_i \left(1-\frac{C_i}{C_s}\right) \partial_Z C_s \right)\right]\, ,
+\end{aligned}\\[2mm]
+\Pi_{osm}=\ln \frac{C_s v_s}{J} + \frac{1}{J}+\frac{\chi}{J^2},\\[2mm]
+\partial_t C_s = -\partial_Z J_s\,,\\[2mm]
+\partial_t C_i = \partial_Z \left[\frac{D_i}{J^2}\left(\partial_Z C_i +\frac{eC_iz_i}{k_B T} \partial_Z \Phi\right)-\frac{D_i C_i}{J^2C_s}\partial_Z C_s-\frac{C_i}{C_s}J_s\right]\, .
+\end{gather}
+ 
+In the limit of $v_sC_s$
+ 
