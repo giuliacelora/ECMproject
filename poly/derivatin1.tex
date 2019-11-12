@@ -284,3 +284,52 @@ Finally substituting the definition of $p$ into Equation~(\ref{temp1}),we have:
 
 Note that the two conditions~(\ref{cond1}) and (\ref{cond2}) uniquely define the equilibrium swelling ration for any value of $c_0$. Fixing the values of the other parameter to match with the work of Yu and varying $vc_0$ and $\chi$, we obtained the manifold showed in Figure \ref{manifold}.
 
+\section{Non-dimensional formulation of the model}
+\begin{equation}
+D_i=D_i^0,\quad k = \frac{D_0(1+v_sC_s)^\beta}{k_B T c_s} \Rightarrow K=  \frac{D_0(1+v_sC_s)^\beta}{k_B T}.
+\end{equation}
+
+Variables rescaling:
+\begin{equation*}
+\begin{aligned}
+k_BT\hat{\mu} + \mu_0 -k_BT= \mu, \qquad \hat{C}_i = vC_i, \qquad \hat{\Phi} = \frac{\Phi e}{k_B T}, \qquad  G_1\hat{p}= p\\
+G_1\hat{\mathbb{T}}=\mathbb{T}, \qquad\hat{\mathbf{x}} L =\mathbf{x}, \qquad \hat{t}\tau=t, \qquad e\hat{Q} =v Q
+\end{aligned}
+\end{equation*}
+
+So that the a-dimensional set of equation is:
+\begin{gather}
+\begin{aligned}
+\mu_s = p \frac{G_1v_s}{k_BT} - \frac{\gamma}{vk_BT L^2} J \nabla^2 C_s + \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}\right.\\
+\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{\sum_m C_m} \right], 
+\end{aligned}\\[2.5mm]
+\mu_i = p \frac{G_1v_i}{k_BT} + \Phi z_i + \ln \frac{C_i}{\sum_m C_m} ,\\
+-\frac{\epsilon k_B Tv}{L^2e^2} J \nabla^2 \Phi = Q\, \\
+\begin{aligned}
+\mathbb{T}= -p \mathbb{I} +\frac{\gamma }{G_1v^2L^2} \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]+ J^{-1}\left(\mathbb{B}-\mathbb{I}\right)\\
++ \frac{\epsilon k_BT}{L^2e^2} \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right],
+\end{aligned}\\
+\partial_t C_s=\nabla_0 \cdot\left[\frac{K k_B T\tau}{L^2}  \F^{-1}\left(C_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} C_i \nabla \mu_i\right)\right],\\
+\partial_t C_i= \nabla_0\cdot\left[\frac{D_i\tau}{L^2}C_i\F^{-1}\nabla \mu_i -\frac{D_i}{D^0_i} \frac{C_i}{C_s} \frac{\tau}{L}\mathbf{J}_s\right].
+\end{gather}
+
+We consider as a spatial scale the one of the electric potential:
+\begin{equation}
+L_d=\sqrt{\frac{k_BTv}{e^2}}
+\end{equation}
+
+\begin{gather}
+\begin{aligned}
+\mu_s = p \frac{G_1v_s}{k_BT} - \frac{\gamma e^2}{(vk_BT)^2} J \nabla^2 C_s + \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}\right.\\
+\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{\sum_m C_m} \right], 
+\end{aligned}\\[2.5mm]
+\mu_i = p \frac{G_1v_i}{k_BT} + \Phi z_i + \ln \frac{C_i}{\sum_m C_m} ,\\
+-\epsilon J \nabla^2 \Phi = Q\, \\
+\begin{aligned}
+\mathbb{T}= -p \mathbb{I} +\frac{\gamma e^2}{G_1v^4(k_BT)^2} \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]+ J^{-1}\left(\mathbb{B}-\mathbb{I}\right)\\
++ \epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right],
+\end{aligned}\\
+\partial_t C_s=\nabla_0 \cdot\left[\frac{K e^2\tau}{v}  \F^{-1}\left(C_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} C_i \nabla \mu_i\right)\right],\\
+\partial_t C_i= \nabla_0\cdot\left[\frac{D_ie^2\tau}{k_BTv}C_i\F^{-1}\nabla \mu_i -\frac{D_i}{D^0_i} \frac{C_i}{C_s} \mathbf{J}_s\right].
+\end{gather}
+where we have redefined $\mathbf{J}_s$ so that $\partial_tC_s=\nabla_0 \cdot \mathbf{J}_s$
