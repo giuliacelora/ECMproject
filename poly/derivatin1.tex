@@ -293,7 +293,7 @@ Variables rescaling:
 \begin{equation*}
 \begin{aligned}
 k_BT\hat{\mu} + \mu_0 -k_BT= \mu, \qquad \hat{C}_i = vC_i, \qquad \hat{\Phi} = \frac{\Phi e}{k_B T}, \qquad  G_1\hat{p}= p\\
-G_1\hat{\mathbb{T}}=\mathbb{T}, \qquad\hat{\mathbf{x}} L =\mathbf{x}, \qquad \hat{t}\tau=t, \qquad e\hat{Q} =v Q
+G_1\hat{\mathbb{T}}=\mathbb{T}, \qquad\hat{\mathbf{x}} L =\mathbf{x}, \qquad \hat{t}\tau=t, \qquad e\hat{Q} =v Q, \qquad \hat{K} = \frac{k_BT}{D_0}K
 \end{aligned}
 \end{equation*}
 
@@ -309,27 +309,93 @@ So that the a-dimensional set of equation is:
 \mathbb{T}= -p \mathbb{I} +\frac{\gamma }{G_1v^2L^2} \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]+ J^{-1}\left(\mathbb{B}-\mathbb{I}\right)\\
 + \frac{\epsilon k_BT}{L^2e^2} \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right],
 \end{aligned}\\
-\partial_t C_s=\nabla_0 \cdot\left[\frac{K k_B T\tau}{L^2}  \F^{-1}\left(C_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} C_i \nabla \mu_i\right)\right],\\
+\partial_t C_s=\nabla_0 \cdot\left[\frac{K D_0\tau}{L^2}  \F^{-1}\left(C_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} C_i \nabla \mu_i\right)\right],\\
 \partial_t C_i= \nabla_0\cdot\left[\frac{D_i\tau}{L^2}C_i\F^{-1}\nabla \mu_i -\frac{D_i}{D^0_i} \frac{C_i}{C_s} \frac{\tau}{L}\mathbf{J}_s\right].
 \end{gather}
 
-We consider as a spatial scale the one of the electric potential:
+We consider a 1D problem of constrained swelling, so that the problem simplifies:
 \begin{equation}
-L_d=\sqrt{\frac{k_BTv}{e^2}}
+L_d=\sqrt{\frac{\epsilon k_BTv}{e^2}}<<L \Rightarrow \beta=\frac{L^2_d}{L^2} <<1
 \end{equation}
-
+We also assume that:
+\begin{equation}
+L_{int} = \frac{\gamma}{vk_BT}>L_d
+\end{equation}
 \begin{gather}
 \begin{aligned}
-\mu_s = p \frac{G_1v_s}{k_BT} - \frac{\gamma e^2}{(vk_BT)^2} J \nabla^2 C_s + \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}\right.\\
+\mu_s = p \mathcal{G} - \frac{L^2_{int}}{L^2}  \partial_Z (J^{-1} \partial_Z C_s) + \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}\right.\\
 \left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{\sum_m C_m} \right], 
 \end{aligned}\\[2.5mm]
-\mu_i = p \frac{G_1v_i}{k_BT} + \Phi z_i + \ln \frac{C_i}{\sum_m C_m} ,\\
--\epsilon J \nabla^2 \Phi = Q\, \\
-\begin{aligned}
-\mathbb{T}= -p \mathbb{I} +\frac{\gamma e^2}{G_1v^4(k_BT)^2} \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]+ J^{-1}\left(\mathbb{B}-\mathbb{I}\right)\\
-+ \epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right],
-\end{aligned}\\
-\partial_t C_s=\nabla_0 \cdot\left[\frac{K e^2\tau}{v}  \F^{-1}\left(C_s\nabla \mu_s +\sum_i \frac{D_i}{D^0_i} C_i \nabla \mu_i\right)\right],\\
-\partial_t C_i= \nabla_0\cdot\left[\frac{D_ie^2\tau}{k_BTv}C_i\F^{-1}\nabla \mu_i -\frac{D_i}{D^0_i} \frac{C_i}{C_s} \mathbf{J}_s\right].
+\mu_i = p \mathcal{G}+ \Phi z_i + \ln \frac{C_i}{\sum_m C_m} ,\\
+-\beta^2 \partial_Z (J^{-1}\partial_Z\Phi) = Q\, \\[2.5mm]
+T_z= -p - \frac{L^2_i}{2\mathcal{G}L^2} \frac{(\partial_Z C)^2}{J^2}+ J^{-1}\left(J^2-1\right)-\frac{\beta^2}{2v}\frac{(\partial_Z \Phi)^2}{J^2},\\
+\partial_t C_s=\partial_Z \cdot\left[\frac{K D_0\tau}{L^2J^2} \left(C_s\partial_Z \mu_s +\sum_i  C_i \partial_Z \mu_i\right)\right],\\
+\partial_t C_i= \partial_Z \cdot\left[ \frac{\tau D_0}{L^2J^2} \left(\frac{D_i}{D_0}C_i\partial_Z \mu_i + K C_i \partial_Z\mu_s + K \sum_j \frac{C_jC_i}{C_s}\partial_Z\mu_j\right)\right].
 \end{gather}
-where we have redefined $\mathbf{J}_s$ so that $\partial_tC_s=\nabla_0 \cdot \mathbf{J}_s$
+
+The time $\tau$ can now be defined as $\tau=L^2/V_0$, where $L$ is the original size of the gel so that $Z=1$ at the boundary. So that:
+\begin{gather}
+\partial_t C_s=\partial_Z \cdot\left[\frac{K}{J^2} \left(C_s\partial_Z \mu_s +\sum_i  C_i \partial_Z \mu_i\right)\right],\\
+\partial_t C_i= \partial_Z \cdot\left[ J^{-2} \left(\frac{D_i}{D_0}C_i\partial_Z \mu_i + K C_i \partial_Z\mu_s + K \sum_j \frac{C_jC_i}{C_s}\partial_Z\mu_j\right)\right].
+\end{gather}
+We does have that in the external layer, electro neutrality must hold. By expanding the solution in terms of $\beta$ we have at the leading order:
+\begin{equation}
+Q^0=0 \Longrightarrow \begin{cases}
+C_f+\sum_i \left(\sum_m C^0_m\right)c^0_i z_i=0,&\qquad gel\\
+\sum_i c^0_i z_i = 0, &\qquad bath
+\end{cases}
+\end{equation}
+which implies the concentration of the ion in the solution $c^0_i$ can not be continuous across the layer. That is why, instead of continuity of the concentration we have continuity of chemical potential.
+If we now rescale the space with respect to $\beta$, we have:
+\begin{gather}
+\begin{aligned}
+\mu_s = p \mathcal{G} - \frac{L^2_{int}}{L_d^2}  \partial_Z (J^{-1} \partial_Z C_s) + \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}\right.\\
+\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{\sum_m C_m} \right], 
+\end{aligned}\\[2.5mm]
+\mu_i = p \mathcal{G}+ \Phi z_i + \ln \frac{C_i}{\sum_m C_m} ,\\
+- \partial_Z (J^{-1}\partial_Z\Phi) = Q\, \\[2.5mm]
+T_z= -p - \frac{L^2_i}{2\mathcal{G}L_p^2} \frac{(\partial_Z C)^2}{J^2}+ J^{-1}\left(J^2-1\right)-\frac{1}{2v}\frac{(\partial_Z \Phi)^2}{J^2},\\
+\beta\partial_t C_s=\partial_Z \cdot\left[\frac{K D_0\tau}{L^2J^2} \left(C_s\partial_Z \mu_s +\sum_i  C_i \partial_Z \mu_i\right)\right],\\
+\beta\partial_t C_i= \partial_Z \cdot\left[ \frac{\tau D_0}{L^2J^2} \left(\frac{D_i}{D_0}C_i\partial_Z \mu_i + K C_i \partial_Z\mu_s + K \sum_j \frac{C_jC_i}{C_s}\partial_Z\mu_j\right)\right].
+\end{gather}
+So that at first order:
+\begin{gather}
+0=\partial_Z \cdot\left[\frac{K}{J^2} \left(C_s\partial_Z \mu_s +\sum_i  C_i \partial_Z \mu_i\right)\right],\\
+0= \partial_Z \cdot\left[ J^{-2} \left(\frac{D_i}{D_0}C_i\partial_Z \mu_i + K C_i \partial_Z\mu_s + K \sum_j \frac{C_jC_i}{C_s}\partial_Z\mu_j\right)\right].
+\end{gather}
+Assuming that we are not in the layer where the chemical potential change rapidly because of a change in $C_s$ we have that the derivative of $\mu_m$ needs to tend to zero. So that integrating the above:
+\begin{gather}
+0=C_s\partial_Z \mu_s +\sum_i  C_i \partial_Z \mu_i \Rightarrow \partial_Z \mu_s=-\sum_i  \frac{C_i}{C_s} \partial_Z \mu_i \\
+0=\partial_Z \mu_i \Rightarrow \mu^0_s=const
+\end{gather}
+So that the chemical potential are constant inside and outside the gel, at first order. Consequently we have that:
+\begin{gather}
+\begin{aligned}
+\mu_s = p \mathcal{G} - \frac{L^2_{int}}{L_d^2}  \partial_Z (J^{-1} \partial_Z C_s) + \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}\right.\\
+\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{\sum_m C_m} \right], 
+\end{aligned}\\[2.5mm]
+\mu_i = p \mathcal{G}+ \Phi z_i + \ln \frac{C_i}{\sum_m C_m} ,\\
+- \partial_Z (J^{-1}\partial_Z\Phi) = Q\, \\[2.5mm]
+\end{gather}
+If we also assume that $L_{int}^2/L^2_d>>1$ we must have that at first order:
+\begin{equation}
+\partial_Z(J^{-1}\partial_ZC^0_s)=0 \Rightarrow \partial_Z C^0_s = J const = \alpha J 
+\end{equation}
+while the continuity of the stress tensor is given by:
+\begin{equation}
+-p^{bath}-\frac{\epsilon_r}{2v}\frac{(\partial_Z \Phi)^2}{J^2}=-p - \frac{L^2_i}{2\mathcal{G}L_p^2} \alpha^2 + J^{-1}\left(J^2-1\right)-\frac{1}{2v}\frac{(\partial_Z \Phi)^2}{J^2}
+\end{equation}
+Also at the first order, have continuity of the electrical potential so that:
+\begin{equation}
+C^0_i = c^{bath}_0(J-1) \exp\left[\Delta p\mathcal{G}-z_i\Delta \Phi\right]
+\end{equation}
+where $\Delta=(\cdot)_{bath}-(\cdot)_{gel}$.
+In the bath instead the governing equations are:
+\begin{gather}
+\mu^{b}_s = p^b \mathcal{G} - \frac{L^2_{int,b}}{L^2}  \partial_Z (J^{-1} \partial_Z C_s) + \ln \frac{C_s}{\sum_m C_m}, \\
+\mu^{b}_i = p^b \mathcal{G}+ \Phi z_i + \ln \frac{C_i}{\sum_m C_m} ,\\
+-\beta^2 \tilde{\epsilon} \partial_Z (J_b^{-1}\partial_Z\Phi) = Q_b\, \\[2.5mm]
+T_z= -p - \frac{L^2_{int,b}}{2\mathcal{G}L^2} \frac{(\partial_Z C)^2}{J_{b}^2}-\frac{\beta^2}{2v}\tilde{\epsilon} \frac{(\partial_Z \Phi)^2}{J_b^2},\\
+\partial_t C_s=\partial_Z \cdot\left[\frac{K}{J^2} \left(C_s\partial_Z \mu_s +\sum_i  C_i \partial_Z \mu_i\right)\right],\\
+\partial_t C_i= \partial_Z \cdot\left[ J_{bath}^{-2} \left(\frac{D_i}{D_0}C_i\partial_Z \mu_i\right].
+\end{gather}
