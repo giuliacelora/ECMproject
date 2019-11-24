@@ -355,7 +355,7 @@ C_f+\sum_i C^0_i z_i=0,&\qquad gel\\
 \end{equation}
 which implies the concentration of the ion in the solution $c^0_i$ can not be continuous across the layer. Assuming that there are only two ion species so that $z_i=+1,-1$. If we now differentiate the equation (94), we obtain that:
 \begin{gather}
- \frac{\partial}{\partial Z} \left(j_+-j_-\right)=0,\\
+ \frac{\partial}{\partial z} \left(j_+-j_-\right)=0,\\
  C_+ - C_-=C_f\\
 j_s =-c_sK  \left(\partial_z \mu_s +\sum_i \frac{c_i}{c_s} \partial_z \mu_i\right)\\
 j_i= - \frac{D_ic_i}{D_0}\partial_z \mu_i + \frac{c_i}{c_s}j_s\\
@@ -387,34 +387,63 @@ where the first equation is due to the fact that $c_s+2c_0\equiv1$.
 If we now rescale the space with respect to $\beta$, we have:
 \begin{gather}
 \begin{aligned}
-\mu_s = p \mathcal{G} - \frac{L^2_{int}}{L_d^2}  \partial_Z (J^{-1} \partial_Z C_s) + \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}\right.\\
-\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{\sum_m C_m} \right], 
+\mu_s = p \mathcal{G} - \frac{L^2_{int}J}{L_d^2}\partial_{zz} C_s + \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}\right.\\
+\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{\sum_m C_m} \right], \label{sub1}
 \end{aligned}\\[2.5mm]
 \mu_i = p \mathcal{G}+ \Phi z_i + \ln \frac{C_i}{\sum_m C_m} ,\\
 - J\partial_{zz}\Phi = Q\, \\[2.5mm]
-T_z= -p - \frac{L^2_i}{2\mathcal{G}L_p^2} (\partial_z C)^2+ J^{-1}\left(J^2-1\right)-\frac{1}{2v\mathcal{G}}(\partial_z \Phi)^2,\\
+T_z= -p - \frac{L^2_i}{2\mathcal{G}L_p^2} (\partial_z C_s)^2+ J^{-1}\left(J^2-1\right)-\frac{1}{2\mathcal{G}}(\partial_z \Phi)^2,\label{sub2}\\
 \beta\partial_t c_s + \beta c_s \dot{J}J^{-1}=- \partial_z j_s,\\
 \beta\partial_t c_i + \beta c_i \dot{J}J^{-1}= -\partial_z j_i,\\
 j_s =-c_sK  \left(\partial_z \mu_s +\sum_i \frac{c_i}{c_s} \partial_z \mu_i\right)\\
 j_i= - \frac{D_ic_i}{D_0}\partial_z \mu_i + \frac{c_i}{c_s}j_s
 \end{gather}
-and in the bath:
+where we have the new parameter $\xi=L_d/L_{int}<<1$. If we expand $C_s$ in term of $\beta$ and $\xi$, with $\beta<\xi$:
+\begin{equation}
+C_s = C^{(0,0)}_s+ \xi C_s^{(0,1)}+ \xi^2 C_s^{(0,2)} + \beta C^{(1,0)}_s + \beta\xi C^{(1,1)} + \beta^2 C^{(2,0)}+ h.o.t
+\end{equation}
+
+Substituting into Equation~(\ref{sub1})-(\ref{sub2}) and imposing $\mu_s\sim O(1)$ we have:
+\begin{gather}
+\partial_{zz} C^{(0,0)}=\partial_{zz} C^{(0,1)}=\partial_{zz} C^{(1,0)}=0\\
+\begin{aligned}
+\mu_s = p \mathcal{G} - \partial_{zz} C^{(0,2)}_s - \frac{L_{int}}{L}\partial_{zz} C^{(1,1)}_s+ \frac{L^2_{int}}{L^2}\partial_{zz} C^{(2,0)}_s\\
++\left[\ln \frac{C^{(0,0)}_s}{1+C^{(0,0)}_s}+ \frac{1}{1+C^{(0,0)}_s} +\frac{\chi}{(1+C^{(0,0)}_s)^2} + \ln \frac{C^{(0,0)}_s}{C^{(0,0)}_s+C_++C_-} \right], 
+\end{aligned}\\[2.5mm]
+\partial_z C^{(0,0)}_s=0 \Rightarrow C^{(0,0)}_s= const\\
+\begin{aligned}
+T_z= -p -(\partial_z C^{(0,1)}_s)^2-\frac{L_{int}}{L}\partial_{z} C^{(1,0)}_s\partial_{z} C^{(0,1)}_s-\frac{L_{int}^2}{L^2}(\partial_{z} C^{(1,0)}_s)^2\\
++  J^{-1}\left(J^2-1\right)-\frac{1}{2\mathcal{G}}(\partial_z \Phi)^2,
+\end{aligned}\\[2mm]
+\partial_z T_z = 0 \Rightarrow \partial_z p = \left(\frac{J^2+1}{J^2}\right)\partial_z J + \frac{Q}{\mathcal{G}J}\partial_z \Phi\\
+\partial_z j_s=\partial_z j_+=\partial_z j_- = 0
+\end{gather}
+
+In the bath, we have that:
 
 \begin{gather}
 \mu_s = p \mathcal{G}+\ln c_s ,\\
 \mu_i = p \mathcal{G}+ \Phi z_i + \ln c_i ,\\
 - \epsilon_r\partial_{zz}\Phi = Q\, \\
-\partial_z T=0 \Rightarrow \partial_z p = \frac{Q}{\mathcal{G}}\partial_z \Phi\\
+\partial_z T_z=0 \Rightarrow \partial_z p = \frac{Q}{\mathcal{G}}\partial_z \Phi\\
 T_z= -p -\frac{\epsilon_r}{2\mathcal{G}}(\partial_z \Phi)^2,\\
 \beta\partial_t c_s =- \partial_z j_s,\\
 \beta\partial_t c_i = -\partial_z j_i,
 \end{gather}
 
-So that at first order the fluxes $j_m$ are constant in the layer. In the bath we thus have that:
+So that at first order the fluxes $j_m$ are constant in the layer, as well as the stress $T_z$. In the bath we thus have that:
 \begin{gather}
-j^{bath}_s = - 2Q \partial_z \Phi \\
-j^{bath}_+ = - \frac{D}{D_0} \partial_z c^{bath}_+ - c^{bath}_+\left(\frac{2Q}{c_s}+Q\frac{D}{D_0}+\frac{D}{D_0}\right)\partial_z \Phi \\
-j^{bath}_- = - \frac{D}{D_0} \partial_z c^{bath}_- - c^{bath}_-\left(\frac{2Q}{c_s}+Q\frac{D}{D_0}-\frac{D}{D_0}\right)\partial_z \Phi 
+j^{bath}_s = - 2Q \partial_z \Phi= j^{gel}_s \\
+j^{bath}_+ = - \frac{D}{D_0} \partial_z c^{bath}_+ - c^{bath}_+\left(\frac{2Q}{c_s}+Q\frac{D}{D_0}+\frac{D}{D_0}\right)\partial_z \Phi= j^{gel}_+ \\
+j^{bath}_- = - \frac{D}{D_0} \partial_z c^{bath}_- - c^{bath}_-\left(\frac{2Q}{c_s}+Q\frac{D}{D_0}-\frac{D}{D_0}\right)\partial_z \Phi = j^{gel}_-\\
+-p^{bath}-\frac{\epsilon_r}{2\mathcal{G}}(\partial_z \Phi)^2=T^{gel}_z\label{sub3}
+\end{gather}
+As the stress is zero in the outer region of the bath we have that $T_z$ must be zero everywhere in the layer:
+\begin{gather}
+p^{bath}= -\frac{\epsilon_r}{2\mathcal{G}} (\partial_z \Phi)^2 \\
+\begin{aligned}
+p^{gel}=-(\partial_z C^{(0,1)}_s)^2-\frac{L_{int}}{L}\partial_{z} C^{(1,0)}_s\partial_{z} C^{(0,1)}_s-\frac{L_{int}^2}{L^2}(\partial_{z} C^{(1,0)}_s)^2 \\+ J^{-1}(J^2-1) -\frac{1}{2\mathcal{G}} \left(1-\frac{1}{\epsilon_r}\right)-\frac{1}{2\mathcal{G}} (\partial_z \Phi)^2
+\end{aligned}
 \end{gather}
 So that the chemical potential are constant inside and outside the gel, at first order. Consequently we have that:
 \begin{gather}
