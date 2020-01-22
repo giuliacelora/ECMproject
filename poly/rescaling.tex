@@ -32,6 +32,7 @@ We assume the following form for the diffusion coefficients:
 \begin{equation}
 D_i=D_i^0,\quad k = \frac{D_0(1+v_sC_s)^\beta}{k_B T c_s} \Rightarrow K=  \frac{D_0(1+v_sC_s)^\beta}{k_B T}.
 \end{equation}
+To simplify the notation, we also assume that the interface parameter $\gamma(C_s)=\gamma_0 f(C_s)$, where $f:[0,\infty]\rightarrow[0,\infty]$ is a continuous function and $\gamma_0$ is a constant. 
 Using the following re-scaling for the variables in the model:
 \begin{equation*}
 \begin{aligned}
@@ -42,7 +43,7 @@ G_1\hat{\mathbb{T}}=\mathbb{T}, \qquad\hat{\mathbf{x}} L =\mathbf{x}, \qquad \ha
 \end{equation*}
 where $L$ is the characteristic size of the gel. We identify the following non-dimensional parameter:
 \begin{equation*}
-\beta=\frac{L_d}{L}, \qquad L_d= \sqrt{\frac{\epsilon k_B Tv}{L^2e^2}}, \qquad \omega= \frac{L_{int}}{L}, \qquad L_{int}=\sqrt{\frac{\gamma}{vk_BT}}, \qquad \mathcal{G}=\frac{vG}{k_BT}.
+\beta=\frac{L_d}{L}, \qquad L_d= \sqrt{\frac{\epsilon k_B Tv}{L^2e^2}}, \qquad \omega= \frac{L_{int}}{L}, \qquad L_{int}=\sqrt{\frac{\gamma_0}{vk_BT}}, \qquad \mathcal{G}=\frac{vG}{k_BT}.
 \end{equation*}
 We thus identify three length scales which we consider to be related as follows:
 \begin{equation}
@@ -53,15 +54,16 @@ Using the eulerian framework the model can be thus written as:
 
 \begin{gather}
 \begin{aligned}
-\mu_s = p \mathcal{G} - \omega^2 J \nabla^2 C_s + \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}\right.\\
-\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{J-1} \right], 
+\mu_s = p \mathcal{G} - \omega^2 J \left[f(C_s)\nabla^2 C_s+\frac{f'(C_s)}{2}\left|\nabla C_s\right|^2\right]\\
+ + \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}
+ +\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{J-1} \right], 
 \end{aligned}\\[2.5mm]
 \mu_\pm = p \mathcal{G} \pm \Phi z_i + \ln \frac{C_\pm}{J-1} ,\\
 -\beta^2 \nabla^2 \Phi = c_+-c_-+z_fc_f\, 
 \end{gather}
 \begin{gather}
 \begin{aligned}
-\mathbb{T}= -p \mathbb{I} +\frac{\omega^2 }{\mathcal{G}} \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]+ J^{-1}\left(\mathbb{B}-\mathbb{I}\right)\\
+\mathbb{T}= -p \mathbb{I} +\frac{\omega^2f(C_s) }{\mathcal{G}} \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]+ J^{-1}\left(\mathbb{B}-\mathbb{I}\right)\\
 + \frac{\beta^2}{\mathcal{G}} \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right],
 \end{aligned}\\
 \nabla \cdot \mathbb{T}=\mathbf{0}\\
@@ -90,11 +92,11 @@ we obtain the condition:
 Consequently at the leading order, the 1D problem in the gel we have:
 \begin{gather}
 \begin{aligned}
-\mu_s = p \mathcal{G} - \omega^2 J \partial_{zz} C_s + \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}\right.\\
-\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{J-1} \right], 
+\mu_s = p \mathcal{G}  - \omega^2 J \left[f(C_s)\partial_{zz}^2 C_s+\frac{f'(C_s)}{2}\left(\partial_z C_s\right)^2\right]\\
++ \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}+\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{J-1} \right], 
 \end{aligned}\\[2.5mm]
 \mu_\pm = p \mathcal{G} \pm \Phi z_i + \ln \frac{C_\pm}{J-1} ,\\
-T_z= -p -\frac{\omega^2 }{2\mathcal{G}} (\partial_z C_s)^2+ J^{-1}\left(J-1\right),\\
+T_z= -p -\frac{\omega^2 f(C_s)}{2\mathcal{G}} (\partial_z C_s)^2+ J^{-1}\left(J-1\right),\\
 \partial_z T_z=0\\
 \partial_t c_s + \partial_z (c_s v_n)=- \partial_z j_s,\\
 \partial_t c_+ +\partial_z (c_+ v_n)= -\partial_zj_+,\\
@@ -251,12 +253,12 @@ j_\pm=c^{bath}_\pm\frac{dh}{dt}+ c_0 \frac{dh}{dt}  +\frac{D_\pm}{D_0}\left(\pm 
 Considering instead the gel:
 \begin{gather}
 \begin{aligned}
-\mu_s = p \mathcal{G} - \frac{\omega^2}{\beta^2} J \partial_{\xi\xi} C_s + \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}\right.\\
-\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{J-1} \right], 
+\mu_s = p \mathcal{G} - \frac{\omega^2}{\beta^2} J \left[f(C_s)\partial_{\xi\xi}^2 C_s+\frac{f'(C_s)}{2}\left(\partial_\xi C_s\right)^2\right]\\
++ \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}+\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{J-1} \right], 
 \end{aligned}\label{mus2.2}\\[2.5mm]
 \mu_\pm = p \mathcal{G} \pm \Phi z_i + \ln \frac{C_\pm}{J-1} ,\\
 -\partial_{\xi\xi} \Phi = c_+-c_-+c_f\,\label{Poi2.2} \\
-T_z= -p-\frac{\omega^2 }{2\beta^2\mathcal{G}} (\partial_\xi C_s)^2+ J^{-1}\left(J-1\right)-\frac{1}{2\mathcal{G}} (\partial_\xi \Phi)^2,\label{T2.2}\\
+T_z= -p-\frac{\omega^2 f(C_s)}{2\beta^2\mathcal{G}} (\partial_\xi C_s)^2+ J^{-1}\left(J-1\right)-\frac{1}{2\mathcal{G}} (\partial_\xi \Phi)^2,\label{T2.2}\\
 \partial_\xi T_z=0\\
 \beta \partial_t c_s -\frac{dh}{dt}\frac{\partial c_s}{\partial \xi}+\partial_\xi (c_s v_n)= - \partial_\xi j_s,\label{gov2.2}\\
 \beta \partial_t c_\pm -\frac{dh}{dt}\frac{\partial c_\pm}{\partial \xi}+\partial_\xi (c_\pm v_n)= -\partial_\xi j_\pm,\label{gov2.2_2}\\
@@ -283,7 +285,7 @@ As before, we consider the chemical potential and the fluxes to be $O(1)$ so tha
 \end{gather}
 We also have that the stress tensor is constant so that:
 \begin{equation}
-T_z\equiv T^{bath}_z=0 \Rightarrow p =-\frac{\omega^2 }{2\beta^2\mathcal{G}} (\partial_\xi C_s)^2+ J^{-1}\left(J-1\right)-\frac{1}{2\mathcal{G}} (\partial_\xi \Phi)^2.
+T_z\equiv T^{bath}_z=0 \Rightarrow p =-\frac{\omega^2 f(C_s)}{2\beta^2\mathcal{G}} (\partial_\xi C_s)^2+ J^{-1}\left(J-1\right)-\frac{1}{2\mathcal{G}} (\partial_\xi \Phi)^2.
 \end{equation}
 Using now Equations~(\ref{gov2.2})-(\ref{gov2.2_2}), we obtain:
 \begin{equation}
@@ -302,11 +304,15 @@ We now use the following notation:
 J^{gel}_0=\lim_{z\rightarrow h(t)^-} J^{gel}, \qquad j^{gel}_{m,0}=\lim_{z\rightarrow h(t)^-} j^{gel}_m
 \end{aligned}
 \end{equation}
+Also having that the function \color{red}\textbf{$f\in \mathcal{C}^2$ CHECK the continuity theorem} we have that:\color{black}
+\begin{equation}
+\lim_{z\rightarrow h(t)^-} f(C_s)= f(C^{gel}_{s,o}), \quad \lim_{z\rightarrow h(t)^-} f'(C_s)= f'(C^{gel}_{s,o})
+\end{equation}
 Matching also with the exterior solution in the bulk we have that:
 \begin{gather}
 \begin{aligned}
 &\lim_{\xi\rightarrow -\infty} T_z = T^{gel}_z =0 \\
-p^{gel}_0& = -\frac{\omega^2 }{2\mathcal{G}} (\partial_z C^{gel}_{s,0})^2+ (J^{gel}_0)^{-1}\left(J^{gel}_0-1\right)\label{eq1}
+p^{gel}_0& = -\frac{\omega^2 f(C^{gel}_{s,0})}{2\mathcal{G}} (\partial_z C^{gel}_{s,0})^2+ (J^{gel}_0)^{-1}\left(J^{gel}_0-1\right)\label{eq1}
 \end{aligned}\\
 \lim_{\xi\rightarrow -\infty} c_\pm = c^{gel}_{\pm,0} = \frac{(J^{gel}_0-1)}{J^{gel}_0}c_0\exp[\mp(\Phi^{gel}_0-\Phi_0^{bath})-p_0^{gel}\mathcal{G}].
 \end{gather}
@@ -335,11 +341,11 @@ J^{gel}_0=1+C^{gel}_{s,0}+ 2c_0\exp(-p_0^{gel}\mathcal{G})\cosh[(\Phi^{gel}_0-\P
 and matching also the chemical potential of the solvent $\mu_s$:
 \begin{equation}
 \begin{aligned}
-\omega^2 J^0_{gel} \partial_{zz} C^{gel}_{s,0}= p^0_{gel} \mathcal{G}  + \ln \frac{C^{gel}_{s,0}}{1+C^{gel}_{s,0}} + \frac{1}{1+C^{gel}_{s,0}}\\+\frac{\chi}{(1+C^{gel}_{s,0})^2} + \ln \frac{C^{gel}_{s,0}}{(J^0_{gel}-1)(1-2c_0)}, 
+\omega^2 J^0_{gel} \left[f(C^{gel}_{s,0})\partial_{zz}^2 C^{gel}_{s,0}+\frac{f'(C^{gel}_{s,0})}{2}\left(\partial_z C^{gel}_{s,0}\right)^2\right]= p^0_{gel} \mathcal{G}  + \ln \frac{C^{gel}_{s,0}}{1+C^{gel}_{s,0}} +\\ \frac{1}{1+C^{gel}_{s,0}}+\frac{\chi}{(1+C^{gel}_{s,0})^2} + \ln \frac{C^{gel}_{s,0}}{(J^0_{gel}-1)(1-2c_0)}, 
 \end{aligned}\\[2.5mm]\label{eq4}
 \end{equation}
 
-Given that we have for unknowns $\Phi^{gel}_0$, $p^{gel}_0$, $C^{gel}_{s,0}$ and $J^{gel}_0$, we can solve for them using Equations~(\ref{eq1})-(\ref{eq2})-(\ref{eq3})-(\ref{eq4}). However we need to specify an boundary condition for $C_{s,0}$ since it appears as a second order derivative. The proper condition depends on the relative size of the parameters $\omega$ and $\beta$. Let us assume that $\omega>>\beta$, then balancing Equations~(\ref{mus2.2}) and (\ref{T2.2}), we have that:
+Given that we have for unknowns $\Phi^{gel}_0$, $p^{gel}_0$, $C^{gel}_{s,0}$ and $J^{gel}_0$, we can solve for them using Equations~(\ref{eq1})-(\ref{eq2})-(\ref{eq3})-(\ref{eq4}). However we need to specify an boundary condition for $C_{s,0}$ since it appears as a second order derivative. The proper condition depends on the relative size of the parameters $\omega$ and $\beta$. Let us assume that \color{red}$\omega \sqrt{f(C_s)}>>\beta$ and $\omega \sqrt{f'(C_s)}>>\beta$, then balancing Equations~(\ref{mus2.2}) and (\ref{T2.2}), we have that:\color{black}
 \begin{equation}
 \partial_{\xi}C_s\sim O(\beta) \quad \text{and}\quad \partial_{\xi\xi}C_s\sim O(\beta^2)
 \end{equation}

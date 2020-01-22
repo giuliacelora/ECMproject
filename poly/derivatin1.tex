@@ -104,7 +104,7 @@ For non dilute solution the form proposed by Hong \cite{Reviewpolyel} is:
 
 As proposed by Hong et al. \cite{Interface}, we include in the energy the effect of interface tension. Assuming that the contribution of mobile ions is negligible, only the solid-solvent interface contributes to the energy:
 \begin{equation}
-\psi_5 = \frac{\gamma}{2} J \left|\nabla C_s\right|^2,
+\psi_5 = \frac{\gamma(C_s)}{2} J \left|\nabla C_s\right|^2,
 \end{equation}
 where the constant $\gamma$ plays a role analogous to a surface tension.
 
@@ -126,17 +126,18 @@ Having specified how the system interacts with its environment, we can now discu
 \end{equation}
 where $\zeta$s represent the thermodynamic forces associate with each flux. On the other hand, $\nabla_0 \dot{C}_s$, $\dot{C}_s$, $\dot{C}_i$, $\mathbf{\dot{H}}$ and $\dot{\F}$ are the independent physical variables that describe the evolution of reversible process. In order for the energy imbalance inequality~(\ref{ineq}) to hold for any choice of the these fields and given the constraint~(\ref{temp1}) on $\psi$, we have that the terms highlighted in blue in Equation~(\ref{ineq}) must be identically zero. 
 \begin{gather}
-\boldsymbol{\xi} = \gamma J \,\mathbb{B}^{-1} \,\nabla_0 \,C_s,\label{sys1}\\[2mm]
+\boldsymbol{\xi} = \gamma(C_s) J \,\color{red}{\mathbb{C}^{-1}} \,\nabla_0 \,C_s,\label{sys1}\\[2mm]
 \begin{aligned}
-\mu_s = p v_s + \mu_s^0 - \gamma J \nabla^2 C_s + k_BT\left[\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s}\right.\\
-\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s v_s)^2} + \ln \frac{v_s C_s}{\sum_m v_mC_m} - \frac{v_s \sum_\alpha C_\alpha}{\sum_m C_m v_m} \right], 
+\mu_s = p v_s + \mu_s^0 -\frac{\gamma'(C_s)}{2} J \left|\nabla C_s\right|^2- J\gamma(C_s)\nabla^2 C_s+ k_BT\left[\ln \frac{C_s v_s}{1+C_s v_s} \right.\\
+\left.+ \frac{1}{1+C_sv_s}
+ +\frac{\chi}{(1+C_s v_s)^2} + \ln \frac{v_s C_s}{\sum_m v_mC_m} - \frac{v_s \sum_\alpha C_\alpha}{\sum_m C_m v_m} \right], 
 \end{aligned}\label{gov1}\\[2.5mm]
 \mu_i = p v_i + \mu^0_i + e\Phi z_i + k_BT \ln \frac{v_iC_i}{\sum_m v_m C_m} - k_BT \frac{\sum_a C_a v_i}{\sum_m v_m C_m},\label{mu}\\
 \mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, , \qquad -\epsilon J \nabla^2 \Phi = Q\, ,\label{sys2}
 \end{gather}
 \begin{gather}
 \begin{aligned}
-\mathbb{T}= -p \mathbb{I} + \underbrace{\gamma \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]}_{\mathbb{T}^{kort}}+ \underbrace{\epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right]}_{\mathbb{T}^{Max}}\\
+\mathbb{T}= -p \mathbb{I} + \underbrace{\gamma(C_s) \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]}_{\mathbb{T}^{kort}}+ \underbrace{\epsilon \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right]}_{\mathbb{T}^{Max}}\\
 + \frac{G}{J}\left(\mathbb{B}-\mathbb{I}\right),
 \end{aligned}
 \label{sys3}
