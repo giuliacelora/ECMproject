@@ -1,0 +1,214 @@
+\section{Non-dimensional formulation of the model}
+\begin{equation}
+D_i=D_i^0,\quad k = \frac{D_0(1+v_sC_s)^\beta}{k_B T c_s} \Rightarrow K=  \frac{D_0(1+v_sC_s)^\beta}{k_B T}.
+\end{equation}
+
+Variables rescaling:
+\begin{equation*}
+\begin{aligned}
+k_BT\hat{\mu} + \mu_0 -k_BT= \mu, \qquad \hat{C}_i = vC_i, \qquad \hat{\Phi} = \frac{\Phi e}{k_B T}, \qquad  G_1\hat{p}= p\\
+G_1\hat{\mathbb{T}}=\mathbb{T}, \qquad\hat{\mathbf{x}} L =\mathbf{x}, \qquad \hat{t}\tau=t, \qquad e\hat{Q} =v Q, \qquad \hat{K} = \frac{k_BT}{D_0}K\\
+\hat{\mathbf{j}}=\frac{vL}{D_0}\mathbf{j}, \qquad \hat{\LL}= \tau \LL
+\end{aligned}
+\end{equation*}
+We also need to rewrite the problem in terms of the current configuration, so that the governing equation become:
+\begin{eqnarray}
+\partial_t c_s + c_s tr(\LL)=-\nabla \cdot\mathbf{j}_s,\\
+\partial_t c_i + c_i tr(\LL)= -\nabla\cdot\mathbf{j}_i,\\
+\mathbf{j}_s =-c_sK  \left(\nabla \mu_s +\sum_i \frac{C_i}{C_s} \nabla \mu_i\right)\\
+\mathbf{j}_i= - \frac{D_ic_i}{k_B T}\nabla \mu_i + c_i\bar{\mathbf{v}}_s
+\end{eqnarray}
+So that the a-dimensional set of equation is:
+\begin{gather}
+\begin{aligned}
+\mu_s = p \frac{G_1v_s}{k_BT} - \frac{\gamma}{vk_BT L^2} J \nabla^2 C_s + \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}\right.\\
+\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{\sum_m C_m} \right], 
+\end{aligned}\\[2.5mm]
+\mu_i = p \frac{G_1v_i}{k_BT} + \Phi z_i + \ln \frac{C_i}{\sum_m C_m} ,\\
+-\frac{\epsilon k_B Tv}{L^2e^2} J \nabla^2 \Phi = Q\, \\
+\begin{aligned}
+\mathbb{T}= -p \mathbb{I} +\frac{\gamma }{G_1v^2L^2} \left[\frac{1}{2} |\nabla C_s|^2\mathbb{I} - \nabla C_s \otimes \nabla C_s\right]+ J^{-1}\left(\mathbb{B}-\mathbb{I}\right)\\
++ \frac{\epsilon (k_BT)^2}{G_1L^2e^2} \left[\frac{1}{2} \,|\nabla \Phi|^2\mathbb{I} -\nabla \Phi \otimes \nabla \Phi\right],
+\end{aligned}\\
+\nabla \cdot \mathbb{T}=\mathbf{0}\\
+\partial_t c_s + c_s tr(\LL)=- \frac{\tau D_0}{L^2}\nabla \cdot\mathbf{j}_s,\\
+\partial_t c_i + c_i tr(\LL)= -\frac{\tau D_0}{L^2}\nabla\cdot\mathbf{j}_i,\\
+\mathbf{j}_s =-c_sK  \left(\nabla \mu_s +\sum_i \frac{C_i}{C_s} \nabla \mu_i\right)\\
+\mathbf{j}_i= - \frac{D_ic_i}{D_0}\nabla \mu_i + \frac{c_i}{c_s}\mathbf{j}_s
+\end{gather}
+
+We consider a 1D problem of constrained swelling, so that the problem simplifies:
+\begin{equation}
+L_d=\sqrt{\frac{\epsilon k_BTv}{e^2}}<<L \Rightarrow \beta=\frac{L^2_d}{L^2} <<1
+\end{equation}
+We also assume that:
+\begin{equation}
+L_{int} = \frac{\gamma}{vk_BT}>L_d
+\end{equation}
+\begin{gather}
+\begin{aligned}
+\mu_s = p \mathcal{G} - \frac{L^2_{int}}{L^2} J \partial_{zz} C_s + \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}\right.\\
+\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{\sum_m C_m} \right], 
+\end{aligned}\\[2.5mm]
+\mu_i = p \mathcal{G}+ \Phi z_i + \ln \frac{C_i}{\sum_m C_m} ,\\
+-\beta^2 J \partial_{zz} \Phi = Q\, \\[2.5mm]
+\partial_z T_z=0\\
+T_z= -p - \frac{L^2_i}{2\mathcal{G}L^2} (\partial_z C_s)^2+ J^{-1}\left(J^2-1\right)-\frac{\beta^2}{2\mathcal{G}}(\partial_z \Phi)^2,\\
+\partial_t c_s + c_s tr(\LL)=- \partial_z j_s,\\
+\partial_t c_i + c_i tr(\LL)= -\partial_z j_i,\\
+j_s =-c_sK  \left(\partial_z \mu_s +\sum_i \frac{c_i}{c_s} \partial_z \mu_i\right)\\
+j_i= - \frac{D_ic_i}{D_0}\partial_z \mu_i + \frac{c_i}{c_s}j_s
+\end{gather}
+
+where the time $\tau$ can now be defined as $\tau=L^2/D_0$, where $L$ is the original size of the gel. We thus have that in the external layer, electro neutrality must hold. By expanding the solution in terms of $\beta$ we have at the leading order:
+\begin{equation}
+Q^0=0 \Longrightarrow \begin{cases}
+C_f+\sum_i C^0_i z_i=0,&\qquad gel\\
+\sum_i c^0_i z_i = 0, &\qquad bath
+\end{cases}
+\end{equation}
+which implies the concentration of the ion in the solution $c^0_i$ can not be continuous across the layer. Assuming that there are only two ion species so that $z_i=+1,-1$. If we now differentiate the equation (94), we obtain that:
+\begin{gather}
+ \frac{\partial}{\partial z} \left(j_+-j_-\right)=0,\\
+ C_+ - C_-=C_f\\
+j_s =-c_sK  \left(\partial_z \mu_s +\sum_i \frac{c_i}{c_s} \partial_z \mu_i\right)\\
+j_i= - \frac{D_ic_i}{D_0}\partial_z \mu_i + \frac{c_i}{c_s}j_s\\
+ \begin{aligned}
+ \mu_s = p \mathcal{G} - \frac{L^2_{int}J}{L^2}  \partial_{zz} C_s + \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}\right.\\
+ \left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{\sum_m C_m} \right], 
+ \end{aligned}\\[2.5mm]
+ \mu_i = p \mathcal{G}+ \Phi z_i + \ln \frac{C_i}{\sum_m C_m} ,\\
+ \partial_z T_z=0\\
+ T_z= -p - \frac{L^2_i}{2\mathcal{G}L^2}(\partial_z C_s)^2+ J^{-1}\left(J^2-1\right).
+\end{gather}
+While in the bath we have:
+\begin{gather}
+\frac{\partial}{\partial z} \left(j_+-j_-\right)=0,\label{first}\\
+c_+=c_-=c_0\\
+\mu_s = p \mathcal{G}+ \ln c_s ,\\
+\mu_i = p \mathcal{G}+ \Phi z_i + \ln c_i ,\\
+\partial_z T_z=0 \Rightarrow \partial_z p = 0\\
+j_s =-c_s\partial_z \mu_s +\sum_i c_i \partial_z \mu_i\right)\\
+j_i= - \frac{D_ic_i}{D_0}\partial_z \mu_i - \frac{c_i}{c_s}j_s\label{last}
+\end{gather}
+Substituting~(\ref{last}) into (\ref{first}):
+\begin{gather}
+j_s = -\partial_z c_s - 2\partial_z c_0=0\Rightarrow \partial_t c_s=0,\\
+\partial_z \left( \frac{2D}{D_0}c_0 \partial_z \phi\right) = 0 ,\\
+\partial_t c_0 = \frac{D}{D_0}\partial_{zz}c_0
+\end{gather}
+where the first equation is due to the fact that $c_s+2c_0\equiv1$.
+If we now rescale the space with respect to $\beta$, we have:
+\begin{gather}
+\begin{aligned}
+\mu_s = p \mathcal{G} - \frac{L^2_{int}J}{L_d^2}\partial_{zz} C_s + \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}\right.\\
+\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{\sum_m C_m} \right], \label{sub1}
+\end{aligned}\\[2.5mm]
+\mu_i = p \mathcal{G}+ \Phi z_i + \ln \frac{C_i}{\sum_m C_m} ,\\
+- J\partial_{zz}\Phi = Q\, \\[2.5mm]
+T_z= -p - \frac{L^2_i}{2\mathcal{G}L_p^2} (\partial_z C_s)^2+ J^{-1}\left(J^2-1\right)-\frac{1}{2\mathcal{G}}(\partial_z \Phi)^2,\label{sub2}\\
+\beta\partial_t c_s + \beta c_s \dot{J}J^{-1}=- \partial_z j_s,\\
+\beta\partial_t c_i + \beta c_i \dot{J}J^{-1}= -\partial_z j_i,\\
+j_s =-c_sK  \left(\partial_z \mu_s +\sum_i \frac{c_i}{c_s} \partial_z \mu_i\right)\\
+j_i= - \frac{D_ic_i}{D_0}\partial_z \mu_i + \frac{c_i}{c_s}j_s
+\end{gather}
+where we have the new parameter $\xi=L_d/L_{int}<<1$. If we expand $C_s$ in term of $\beta$ and $\xi$, with $\beta<\xi$:
+\begin{equation}
+C_s = C^{(0,0)}_s+ \xi C_s^{(0,1)}+ \xi^2 C_s^{(0,2)} + \beta C^{(1,0)}_s + \beta\xi C^{(1,1)} + \beta^2 C^{(2,0)}+ h.o.t
+\end{equation}
+
+Substituting into Equation~(\ref{sub1})-(\ref{sub2}) and imposing $\mu_s\sim O(1)$ we have:
+\begin{gather}
+\partial_{zz} C^{(0,0)}=\partial_{zz} C^{(0,1)}=\partial_{zz} C^{(1,0)}=0\\
+\begin{aligned}
+\mu_s = p \mathcal{G} - \partial_{zz} C^{(0,2)}_s - \frac{L_{int}}{L}\partial_{zz} C^{(1,1)}_s- \frac{L^2_{int}}{L^2}\partial_{zz} C^{(2,0)}_s\\
++\left[\ln \frac{C^{(0,0)}_s}{1+C^{(0,0)}_s}+ \frac{1}{1+C^{(0,0)}_s} +\frac{\chi}{(1+C^{(0,0)}_s)^2} + \ln \frac{C^{(0,0)}_s}{J^{(0,0)}-1} \right], 
+\end{aligned}\\[2.5mm]
+\partial_z C^{(0,0)}_s=0 \Rightarrow C^{(0,0)}_s= const\\
+\begin{aligned}
+T^{(0,0)}_z= -p^{(0,0)} -(\partial_z C^{(0,1)}_s)^2-\frac{L_{int}}{L}\partial_{z} C^{(1,0)}_s\partial_{z} C^{(0,1)}_s-\frac{L_{int}^2}{L^2}(\partial_{z} C^{(1,0)}_s)^2\\
++  (J^{(0,0)})^{-1}\left((J^{(0,0)})^2-1\right)-\frac{1}{2\mathcal{G}}(\partial_z \Phi^{(0,0)})^2,
+\end{aligned}\\[2mm]
+\partial_z T^{(0,0)}_z = 0 \Rightarrow \partial_z p^{(0,0)} = \left(\frac{(J^{(0,0)})^2+1}{(J^{(0,0)})^2}\right)\partial_z J^{(0,0)} + \frac{Q}{\mathcal{G}J}\partial_z \Phi^{(0,0)}\\
+\partial_z j_s=\partial_z j_+=\partial_z j_- = 0
+\end{gather}
+
+In the bath, we have that:
+
+\begin{gather}
+\mu_s = p \mathcal{G}+\ln c_s ,\\
+\mu_i = p \mathcal{G}+ \Phi z_i + \ln c_i ,\\
+- \epsilon_r\partial_{zz}\Phi = Q\, \\
+\partial_z T_z=0 \Rightarrow \partial_z p = \frac{Q}{\mathcal{G}}\partial_z \Phi\\
+T_z= -p -\frac{\epsilon_r}{2\mathcal{G}}(\partial_z \Phi)^2,\\
+\beta\partial_t c_s =- \partial_z j_s,\\
+\beta\partial_t c_i = -\partial_z j_i,
+\end{gather}
+
+So that at first order the fluxes $j_m$ are constant in the layer, as well as the stress $T_z$. In the bath we thus have that:
+\begin{gather}
+\begin{aligned}
+j^{bath}_s = - 2Q \partial_z \Phi=\lim\limits_{z\rightarrow \infty} j^{bath}_s=0\\
+\Rightarrow Q=0, \ \partial_z \Phi=const 
+\end{aligned}\\
+j^{bath}_\pm = - \frac{D}{D_0} \partial_z c^{bath}_\pm \pm c^{bath}_\pm\frac{D}{D_0}\partial_z \Phi= j^{gel}_\pm \\
+-p^{bath}-\frac{\epsilon_r}{2\mathcal{G}}(\partial_z \Phi)^2=T^{gel}_z\label{sub3}
+\end{gather}
+while in the gel:
+\begin{gather}
+0 =C^{(0,0)}_s\partial_z \mu^{(0,0)}_s +\sum_i C^{(0,0)}_i \partial_z \mu_i\\
+\begin{aligned}
+\partial_z \mu_s = \mathcal{G}\left(\frac{(J^{(0,0)})^2+1}{(J^{(0,0)})^2}\right)\partial_z J^{(0,0)} + \frac{Q}{J^{(0,0)}}\partial_z \Phi^{(0,0)}-\frac{\partial_z J^{(0,0)}}{J^{(0,0)}-1}\\
+-\partial_z\left(\partial_{zz} C^{(0,2)}_s + \frac{L_{int}}{L}\partial_{zz} C^{(1,1)}_s+ \frac{L^2_{int}}{L^2}\partial_{zz} C^{(2,0)}_s\right)
+\end{aligned}\\
+\begin{aligned}
+\partial_z \mu_\pm = \mathcal{G}\left(\frac{(J^{(0,0)})^2+1}{(J^{(0,0)})^2}\right)\partial_z J^{(0,0)} + \frac{Q\pm J^{(0,0)}}{J^{(0,0)}}\partial_z \Phi^{(0,0)} \\
++ \frac{\partial_z C_\pm^{(0,0)}}{C_\pm^{(0,0)}}-\frac{\partial_z J^{(0,0)}}{J^{(0,0)}-1}
+\end{aligned}\\
+\begin{aligned}
+0 = \mathcal{G}\left(J^{(0,0)}-1\right)\left(\frac{(J^{(0,0)})^2+1}{(J^{(0,0)})^2}\right)\partial_z J^{(0,0)} +\frac{(2Q-C_f)J^{(0,0)}-Q}{J^{(0,0)}}\partial_z \Phi^{(0,0)} \\
+-C_s^{(0,0)}\partial_z\left(\partial_{zz} C^{(0,2)}_s + \frac{L_{int}}{L}\partial_{zz} C^{(1,1)}_s+ \frac{L^2_{int}}{L^2}\partial_{zz} C^{(2,0)}_s\right)
+\end{aligned}\\ 
+\begin{aligned}
+j^{gel}_i= - \frac{Dc^{gel}_i}{D_0}\partial_z \mu^{gel}_i = \frac{D}{D_0}\partial_z c^{bath}_i 
+\end{aligned}
+\end{gather}
+Since we have that in the bulk of the gel $j_+-j_-=0$, we have the additional condition that in the bath $\partial \Phi^{gel}=const=0$.
+If we assume the bath to be of infinite size so that the concentration derivative goes to zero:
+\begin{equation}
+\partial_z c_\pm = const = \lim\limits_{z \rightarrow \infty} c^{bath}_\pm=0, \qquad \mu^{bath}_\pm = \ln c_0.
+\end{equation}
+This implies that the chemical potential is constant in the bath and thus also in the Debye layer. 
+As the stress is zero in the outer region of the bath we have that $T_z$ must be zero everywhere in the layer:
+\begin{gather}
+p^{bath}= -\frac{\epsilon_r}{2\mathcal{G}} (\partial_z \Phi)^2 = 0 \\
+\begin{aligned}
+p^{gel}=-(\partial_z C^{(0,1)}_s)^2-\frac{L_{int}}{L}\partial_{z} C^{(1,0)}_s\partial_{z} C^{(0,1)}_s-\frac{L_{int}^2}{L^2}(\partial_{z} C^{(1,0)}_s)^2 \\+ J^{-1}(J^2-1)-\frac{1}{2\mathcal{G}} (\partial_z \Phi)^2
+\end{aligned}
+\end{gather}
+So that the chemical potential are constant inside and outside the gel, at first order. Consequently we have that:
+\begin{gather}
+\mu^{bath}_\pm = p \mathcal{G}+ \Phi z_i + \ln \frac{C_\pm}{J-1} ,\\
+- \partial_Z (J^{-1}\partial_Z\Phi) = Q\, 
+\end{gather}
+If we also assume that $L_{int}^2/L^2_d>>1$ we must have that at first order:
+\begin{equation}
+\partial_Z(J^{-1}\partial_ZC^0_s)=0 \Rightarrow \partial_Z C^0_s = J const = \alpha J 
+\end{equation}
+while the continuity of the stress tensor is given by:
+\begin{equation}
+-p^{bath}-\frac{\epsilon_r}{2v}\frac{(\partial_Z \Phi)^2}{J^2}=-p - \frac{L^2_i}{2\mathcal{G}L_p^2} \alpha^2 + J^{-1}\left(J^2-1\right)-\frac{1}{2v}\frac{(\partial_Z \Phi)^2}{J^2}
+\end{equation}
+Also at the first order, have continuity of the electrical potential so that:
+\begin{equation}
+C^0_i = c^{bath}_0(J-1) \exp\left[\Delta p\mathcal{G}-z_i\Delta \Phi\right]
+\end{equation}
+where $\Delta=(\cdot)_{bath}-(\cdot)_{gel}$.
+In the bath instead the governing equations are:
+\begin{gather}
+\mu^{b}_s = p^b \mathcal{G} - \frac{L^2_{int,b}}{L^2}  \partial_Z (J^{-1} \partial_Z C_s) + \ln \frac{C_s}{\sum_m C_m}, \\
+\mu^{b}_i = p^b \mathcal{G}+ \Phi z_i + \ln \frac{C_i}{\sum_m C_m} ,\\
+-\beta^2 \tilde{\epsilon} \partial_Z (J_b^{-1}\partial_Z\Phi) = Q_b\, \\[2.5mm]
+T_z= -p - \frac{L^2_{int,b}}{2\mathcal{G}L^2} \frac{(\partial_Z C)^2}{J_{b}^2}-\frac{\beta^2}{2v}\tilde{\epsilon} \frac{(\partial_Z \Phi)^2}{J_b^2},\\
+\partial_t C_s=\partial_Z \cdot\left[\frac{K}{J^2} \left(C_s\partial_Z \mu_s +\sum_i  C_i \partial_Z \mu_i\right)\right],\\
+\partial_t C_i= \partial_Z \cdot\left[ J_{bath}^{-2}
