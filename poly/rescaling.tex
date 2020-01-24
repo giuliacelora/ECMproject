@@ -17,6 +17,8 @@
 \usepackage[labelfont=bf,font=scriptsize]{caption}
 \usepackage[font=scriptsize]{subcaption}
 \usepackage{mhchem}
+\usepackage[makeroom]{cancel}
+
 \newcommand{\indentitem}{\setlength\itemindent{20pt}}
 \newcommand{\F}{\ensuremath{\mathbb{F}}}
 \newcommand{\B}{\ensuremath{\mathbb{B}}}
@@ -81,13 +83,17 @@ Subtracting equations~(\ref{flux1.1}) and using~(\ref{neu1.1}):
 \begin{equation}
 \partial_t c_f +\nabla \cdot(c_f \mathbf{v}_n)= \nabla\cdot(\mathbf{j}_+-\mathbf{j}_-)
 \end{equation}
-Using the fact that $c_f=C_f/J$ with $C_f$ being uniform and constant and the additional equality:
+Using the fact that $c_f=C_f/J$ with $C_f$ being constant and the additional equality:
 \begin{equation}
 \partial_t J + \mathbf{v}_n \nabla J=J\nabla \cdot\mathbf{v}_n
 \end{equation}
 we obtain the condition:
 \begin{equation}
-0= \nabla\cdot(\mathbf{j}_+-\mathbf{j}_-),
+\frac{\nabla C_f}{J}\mathbf{v}_n= \nabla\cdot(\mathbf{j}_+-\mathbf{j}_-).
+\end{equation}
+If we further assume that $C_f$ is uniform then:
+\begin{equation}
+\nabla\cdot(\mathbf{j}_+-\mathbf{j}_-)= 0.
 \end{equation}
 Consequently at the leading order, the 1D problem in the gel we have:
 \begin{gather}
@@ -112,7 +118,7 @@ For the bath we have the following system of equations:
 \begin{aligned}
 \mu_s = p \mathcal{G} + \ln c_s, 
 \end{aligned}\\[2.5mm]
-\mu_\pm = p \mathcal{G} \pm \Phi z_i + \ln c_\pm ,\\
+\mu_\pm = p \mathcal{G} \pm \Phi + \ln c_\pm ,\\
 -\epsilon_r\beta^2\partial_{zz} \Phi = c_+-c_-\, \\
 T_z= -p-\frac{\epsilon_r\beta^2 }{2\mathcal{G}} (\partial_z \Phi)^2,\\
 \partial_z T_z=0\\
@@ -138,19 +144,20 @@ So that the fluxes can be written as:
 \begin{gather}
 j_s =-\frac{D^{bath}}{D_0}  \left(\partial_zc_s + 2 \partial_z c\right)=0\\
 j_+= - \frac{D_+}{D_0}\left(c\partial_z\Phi + \partial_z c\right),\\
-j_-= - \frac{D_-}{D_0}\left(-c\partial_z\Phi + \partial_z c\right)
+j_-= - \frac{D_-}{D_0}\left(-c\partial_z\Phi + \partial_z c\right)\\
+c_s^{bath}=1-2c=m(z) \Rightarrow c(t,z)=c(z) \Rightarrow j_+ = A(t).
 \end{gather}
 where we have used that $c_s+2c_0=1$, i.e. no void condition.
 So that~(\ref{temp1.2}) can be rewritten as:
 \begin{gather}
 \partial_z\left(\frac{c}{D_0}(D_-+D_+)\partial_z\Phi+\frac{1}{D_0}(D_+-D_-)\partial_zc\right)=0\\
-j_+= - \frac{D_+}{D_0}\left(c\partial_z\Phi + \partial_z c\right),\\
-j_-= - \frac{D_-}{D_0}\left(-c\partial_z\Phi + \partial_z c\right)
+j_+(t)= - \frac{D_+}{D_0}\left(c\partial_z\Phi + \partial_z c\right),\\
+j_-(t)= - \frac{D_-}{D_0}\left(-c\partial_z\Phi + \partial_z c\right)
 \end{gather}
 Note that in the simplified case $D_-=D_+$ the above set reduces to:
 \begin{gather}
 \partial_z\left(c^{bath}\partial_z\Phi^{bath}\right)=0\\
-\partial_t c^{bath} = \frac{D}{D_0} \partial_{zz} c^{bath}
+0= \frac{D}{D_0} \partial_{zz} c^{bath}
 \end{gather}
 and we denote $\Phi^{bath}_0=\lim_{z\rightarrow h(t)^+} \Phi^{bath}$, $c^{bath}_0=\lim_{z\rightarrow h(t)^+} c^{bath}$.
 \section{Inner Layer.}
@@ -274,6 +281,7 @@ Summing Equations~(\ref{gov2.2})-(\ref{gov2.2_2}), we have:
 \end{aligned}
 \end{equation}
 so that in the layer the velocity of the network remain constant in space.
+\color{red}
 As before, we consider the chemical potential and the fluxes to be $O(1)$. Under the assumption that:
 \begin{equation}
 \omega^2 f(C_s)>> O(\beta) \text{ and } \omega^2 f'(C_s)>> O(\beta)
@@ -300,6 +308,7 @@ Using now Equation~(\ref{cond2}), we obtain:
 f(\alpha_0)\partial_{\xi\xi}\alpha_1 = 0  \Rightarrow \alpha_1 \equiv a_1(t).
 \end{equation} 
 so that in the Debye layer $C_s= a_0(t) + \beta a_1(t) + O(\beta^2)$.
+\color{black}
 We can now impose the continuity of the chemical potential:
 \begin{gather}
 \mu_s \equiv const = \mu^{bath}_s= \ln(1-2c_0),\\
@@ -341,17 +350,17 @@ p^{gel}_0& = \frac{J^{gel}_0-1}{J^{gel}_0}\label{eq1}
 \lim_{\xi\rightarrow -\infty} c_\pm = c^{gel}_{\pm,0} = \frac{(J^{gel}_0-1)}{J^{gel}_0}c_0\exp[\mp(\Phi^{gel}_0-\Phi_0^{bath})-p_0^{gel}\mathcal{G}].
 \end{gather}
 \begin{gather}
-\lim_{\xi\rightarrow -\infty} c_s v_s - c_s \frac{dh}{dt}= j^{gel}_{s,0} =(1-2c_0)\frac{dh}{dt}\\
+\lim_{\xi\rightarrow -\infty} c_s v_s - c_s \frac{dh}{dt}= j^{gel}_{s,0} =(-1+2c_0)\frac{dh}{dt}\\
 \begin{aligned}
 \lim_{\xi\rightarrow -\infty}c_\pm v_\pm - c_\pm \frac{dh}{dt}=j^{gel}_{\pm,0}\\
-=c_0 \frac{dh}{dt}  +\frac{D_\pm}{D_0}\left(\pm c_0 \partial_z \Phi^{bath}_0+\partial_z c_0\right).
+=-c_0 \frac{dh}{dt}  -\frac{D_\pm}{D_0}\left(\pm c_0 \partial_z \Phi^{bath}_0+\partial_z c_0\right).
 \end{aligned}
 \end{gather}
-As $j^{gel}_{+,0}=j^{gel}_{-,0}$ in the gel we have that:
+In the case of $C_f$ homogeneous, then $j^{gel}_{+,0}=j^{gel}_{-,0}$ in the gel we have that:
 \begin{eqnarray}
 0= - \left(\frac{D_++D_-}{D_0}\right)c_0\partial_z \Phi^{bath}_0 + \left(\frac{D_--D_+}{D_0}\right)\partial_z c_0\label{A}\\
-2 \frac{d h}{dt} =- \left(\frac{D_+-D_-}{D_0}\right)c_0\partial_z \Phi^{bath}_0 - \left(\frac{D_-+D_+}{D_0}\right)\partial_z c_0\label{B}\\
-\frac{d h}{dt} = \frac{j_{s,0}^{gel}}{1-2c_0},
+2\left(j^+_{gel}-\frac{j_{s,0}^{gel}c_0}{1-2c_0}\right) =- \left(\frac{D_+-D_-}{D_0}\right)c_0\partial_z \Phi^{bath}_0 - \left(\frac{D_-+D_+}{D_0}\right)\partial_z c_0\label{B}\\
+\frac{d h}{dt} = -\frac{j_{s,0}^{gel}}{1-2c_0},
 \end{eqnarray}
 where the second is obtained summing all of the above and using the saturation condition plus $c_nv_n=-\sum c_mv_m$. 
 Since in the outer layer electro-neutrality must hold:
@@ -370,21 +379,21 @@ which requires that at the leading order $\partial_z C^{gel}_{s,0} = 0$.
 Consequently matching also the chemical potential of the solvent $\mu_s$:
 \begin{equation}
 \begin{aligned}
-\omega^2 J^0_{gel} f(C^{gel}_{s,0})\partial_{zz}^2 C^{gel}_{s,0}= \frac{J^0_{gel}-1}{J^0_{gel}} \mathcal{G}  + \ln \frac{C^{gel}_{s,0}}{1+C^{gel}_{s,0}} +\\ \frac{1}{1+C^{gel}_{s,0}}+\frac{\chi}{(1+C^{gel}_{s,0})^2} + \ln \frac{C^{gel}_{s,0}}{(J^0_{gel}-1)(1-2c_0)}, 
+\color{red}\omega^2 J^0_{gel} f(C^{gel}_{s,0})\partial_{zz}C^{gel}_{s,0}\color{black}= \frac{J^0_{gel}-1}{J^0_{gel}} \mathcal{G}  + \ln \frac{C^{gel}_{s,0}}{1+C^{gel}_{s,0}} +\\ \frac{1}{1+C^{gel}_{s,0}}+\frac{\chi}{(1+C^{gel}_{s,0})^2} + \ln \frac{C^{gel}_{s,0}}{(J^0_{gel}-1)(1-2c_0)}, 
 \end{aligned}\\[2.5mm]\label{eq4}
 \end{equation}
 
 Given that we have for unknowns $\Phi^{gel}_0$, $p^{gel}_0$, $C^{gel}_{s,0}$ and $J^{gel}_0$, we can solve for them using Equations~(\ref{eq1})-(\ref{eq2})-(\ref{eq3})-(\ref{eq4}). 
 To summarise for the bath we have the following boundary condition at the interface:
-\begin{gather}
-\sinh(\Phi_0^{gel}-\Phi_0^{bath})= \frac{C_f}{2c_0 (J_0^{gel}-1)}\exp\left(\frac{J^{gel}_0-1}{J^{gel}_0}\mathcal{G}\right)\\
-J^{gel}_0=1+C^{gel}_{s,0}+ 2c_0\sqrt{\exp\left(-2\frac{J^{gel}_0-1}{J^{gel}_0}\mathcal{G}\right)+\frac{C^2_f}{4c^2_0 (J_0^{gel}-1)^2}}\\[4mm]
-\partial_z C^{gel}_{s,0}=0,\\[5mm]
-c^{gel}_{+,0} = \frac{(J^{gel}_0-1)}{J^{gel}_0}c_0\exp[-(\Phi^{gel}_0-\Phi_0^{bath})-\frac{(J^{gel}_0-1)}{J^{gel}_0}\mathcal{G}],\\
+\begin{eqnarray}
+\sinh(\Phi-\Phi_0^{bath})= \frac{C_f}{2c_0 (J-1)}\exp\left(\frac{J-1}{J}\mathcal{G}\right), & z(t)=h^-(t)&\\
+J=1+C_{s}+ 2c_0\sqrt{\exp\left(-2\frac{J-1}{J}\mathcal{G}\right)+\frac{C^2_f}{4c^2_0 (J-1)^2}}, & z(t)=h^-(t)&\\[4mm]
+\partial_z C_{s}=0,&  z(t)=h^-(t),&\\[5mm]
+c_{+} = \frac{(J-1)}{J}c_0\exp\left[-(\Phi-\Phi_0^{bath})-\frac{(J-1)}{J}\mathcal{G}\right], &z(t)=h^-(t),&\\
 \begin{aligned}
-\omega^2 J^0_{gel} f(C^{gel}_{s,0})\partial_{zz}^2 C^{gel}_{s,0}= \frac{J^0_{gel}-1}{J^0_{gel}} \mathcal{G}  + \ln \frac{C^{gel}_{s,0}}{1+C^{gel}_{s,0}} +\\ \frac{1}{1+C^{gel}_{s,0}}+\frac{\chi}{(1+C^{gel}_{s,0})^2} + \ln \frac{C^{gel}_{s,0}}{(J^0_{gel}-1)(1-2c_0)}, 
-\end{aligned}
-\end{gather}
+\omega^2 J f(C_s)\partial_{zz} C_s= \frac{J-1}{J} \mathcal{G}  + \ln \frac{C_s}{1+C_{s}} + \frac{1}{1+C_s}\\+\frac{\chi}{(1+C_{s})^2} + \ln \frac{C_s}{(J-1)(1-2c_0)}
+\end{aligned}, & z(t)=h^-(t)&
+\end{eqnarray}
 and the governing equations:
 \begin{gather}
 \begin{aligned}
@@ -396,48 +405,87 @@ p=-\frac{\omega^2 f(C_s)}{2\mathcal{G}} (\partial_z C_s)^2+ \frac{J-1}{J},\\
 C_- = C_+ + z_f C_f,\\
 j_s =-c_sK  \left(\partial_z\mu_s +\sum_i \frac{c_i}{c_s} \partial_z \mu_i\right)\\
 j_+= - \frac{D_+ c_+}{D_0}\partial_z \mu_+ + \frac{c_+}{c_s}j_s\\
+v_n = - \frac{j_s+2j_+}{J},\\
 \partial_t c_s + \partial_z (c_s v_n)=- \partial_z j_s,\\
 \partial_t c_+ +\partial_z (c_+ v_n)= -\partial_zj_+,\\
-\partial_z \Phi = \frac{D_0 j_+}{D_-c_-}- \frac{D_0 j_s}{D_-c_s}j_s + \frac{\partial C_-}{C_-}-\frac{\partial J}{J-1},
+\partial_z \Phi = \frac{D_0 j_+}{D_-c_-}- \frac{D_0 j_s}{D_-c_s} + \frac{\partial_z C_-}{C_-}-\frac{\partial_z J}{J-1}+\mathcal{G}\partial_z p,
 \end{gather}
-with the additional boundary condition at the surface:
+with the additional boundary condition at the substrate:
 \begin{equation}
-j_+= j_s = 0.
+j_+= j_s = 0, \qquad \partial_z C_s=0 \qquad at\  z=0.
 \end{equation}
 Finally $c_0$ and $\Phi^{bath}_0$ can be determined using the outer problem in the bath and the matching condition ~(\ref{A})-(\ref{B}):
+\begin{eqnarray}
+ \partial_z \Phi = \frac{D_--D_+}{D_-+D_+} \frac{\partial_z c}{c}, &z>h(t),&\\
+0 = -\partial_z\left[2\frac{D_+D_-}{D_0(D_++D_-)}  \partial_z c\right], &z>h(t),&\\
+2\left(j^+_{gel}-\frac{j_{s,0}^{gel}c}{1-2c}\right) =- 2 \frac{D_+D_-}{D_0(D_++D_-)}\partial_z c, & z=h^+(t),&\\
+\Phi(\infty,t)=\Phi_\infty=0,\quad c(\infty,t)=c_\infty &\qquad\text{far field condition}.&
+\end{eqnarray}
+If we assume that $D_+=D_-=D$ then in the bath:
 \begin{gather}
-c^{bath} \frac{D_-+D_+}{D_0} \partial_z \Phi^{bath} + \frac{D_--D_+}{D_0} \partial_z c^{bath}=0\\
-\partial_t c^{bath} = -\partial_z\left[\frac{D_+}{D_0} c \partial_z \Phi +\frac{D_+}{D_0} \partial_z c\right]\\
-0= - \left(\frac{D_++D_-}{D_0}\right)c\partial_z \Phi^{bath} + \left(\frac{D_--D_+}{D_0}\right)\partial_z c \qquad \qquad z=h(t)\\
-\frac{2j_{s,0}^{gel}}{1-2c} =- \left(\frac{D_+-D_-}{D_0}\right)c\partial_z \Phi^{bath} - \left(\frac{D_-+D_+}{D_0}\right)\partial_z c \quad z=h(t)\\
-+ \text{boundary condition at the edge of the bath/far field}
+\partial_z \Phi=0 \Rightarrow \Phi^{bath}=\Phi^{bath}_0=0\\
+0 = -\partial_{zz}c\\
+2\left(j^+_{gel}-\frac{j_{s,0}^{gel}c}{1-2c}\right)=-\frac{D}{D_0} \partial_z c \quad z=h^{+}(t),\\
+c(\infty,t)=c_\infty.
 \end{gather}
-If we assume that $D_+=D_-=D$ then:
+In the gel instead, we have:
 \begin{gather}
-\partial_z \Phi^{bath}=0 \Rightarrow \Phi^{bath}=\Phi^{bath}(\infty)=0\\
-\partial_t c_0 = -\frac{D}{D_0} \partial_{zz}c_0\\
-j_{s,0}^{gel}=-(1-2c_0)\frac{D}{D_0} \partial_z c_0 \quad z=h(t)\\
-j_{\pm}^{gel}=-\frac{D}{D_0}c_\pm \partial_z\left(p\mathcal{G}\pm\Phi-\ln(J-1)\right)-\frac{D}{D_0}\partial_z C_\pm+\frac{c_\pm}{c_s}j_s\\ 
-j_+=j_- \Rightarrow  \partial_z \Phi = \frac{c_f}{c_++c_-} \left(\mathcal{G}p-\frac{\partial_z J}{J-1}-\frac{D_0}{Dc_s}j_s\right)\\
 \begin{aligned}
-j_s = - \frac{Kc_s D(2c_++c_f)}{Kc_f^2D_0+Dc_s(2c_++c_f)}\left[\left(c_s+\frac{4c_+(c_++c_f)}{2c_++c_f}\right)\mathcal{G}\partial_z p\right.\\
-\left.+\frac{c_f^2}{2c_++c_f}\frac{\partial_z J}{J-1}-c_s \omega^2 \partial_z(J\partial_{zz}C_s)+\frac{1+C_s-2\chi C_s}{C_s(1+C_s)^3}\partial_z C_s\right]
-\end{aligned}
+\mu_s = p \mathcal{G}  - \omega^2 J \left[f(C_s)\partial_{zz} C_s+\frac{f'(C_s)}{2}\left(\partial_z C_s\right)^2\right]\\
++ \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}+\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{J-1} \right], 
+\end{aligned}\\[2.5mm]
+\mu_\pm = p \mathcal{G} \pm \Phi + \ln \frac{C_\pm}{J-1} ,\\
+p=-\frac{\omega^2 f(C_s)}{2\mathcal{G}} (\partial_z C_s)^2+ \frac{J-1}{J},\\
+C_- = C_+ + z_f C_f,\\
+j_s =-c_sK  \left(\partial_z\mu_s +\sum_i \frac{c_i}{c_s} \partial_z \mu_i\right)\\
+j_+= - \frac{D_+ c_+}{D_0}\partial_z \mu_+ + \frac{c_+}{c_s}j_s\\
+v_n = - \frac{j_s+2j_+}{J},\\
+\partial_t c_s + \partial_z (c_s v_n)=- \partial_z j_s,\\
+\partial_t c_+ +\partial_z (c_+ v_n)= -\partial_zj_+,\\
+\partial_z \Phi = \frac{z_fC_f}{2C_++z_fC_f}\left[\mathcal{G}\partial_zp-\frac{\partial_z J}{J-1}-\frac{D_0j_s}{Dc_s}\right]+\cancelto{0}{\frac{z_f\partial_zC_f}{2C_++z_fC_f}}.
 \end{gather}
-If we now consider the boundary:
-\begin{equation}
+with boundary conditions:
+\begin{eqnarray}
+\Phi= \sinh^{-1}\left[\frac{C_f}{2c_0 (J-1)}\exp\left(\frac{J-1}{J}\mathcal{G}\right)\right], & z=h^-(t)&\\[2mm]
+J=1+C_{s}+ 2c_0\sqrt{\exp\left(-2\frac{J-1}{J}\mathcal{G}\right)+\frac{C^2_f}{4c^2_0 (J-1)^2}}, & z=h^-(t)&\\[4mm]
+\partial_z C_{s}=0,&  z=h^-(t),&\\[5mm]
+c_{+} = \frac{(J-1)}{J}c_0\exp\left[-\Phi-\frac{(J-1)}{J}\mathcal{G}\right], &z=h^-(t),&\\
 \begin{aligned}
-j^{gel}_{s,0} = - \frac{2K Dc_s(2c_++c_f)}{Kc_f^2D_0+Dc_s(2c_++c_f)}\left\{\left[\left(-C_s+\frac{4c_+(c_++c_f)}{2c_++c_f}\right)\mathcal{G}\right.\right.\\
-\left.\left.+\frac{C_f^2}{(2c_++c_f)(J-1)}-C_sf(C_s)\right.\right.\\
-\left.\left.+C_ s\ln\left((1-2c_0)(J-1)\right)\right]\frac{\partial_z C_+}{J^2}-\omega^2J\partial_{zzz}C_s\right\}
-\end{aligned}
-\end{equation}
-so that the boundary condition for $c_0$ is:
+\omega^2 J f(C_s)\partial_{zz} C_s= \frac{J-1}{J} \mathcal{G}  + \ln \frac{C_s}{1+C_{s}} + \frac{1}{1+C_s}\\+\frac{\chi}{(1+C_{s})^2} + \ln \frac{C_s}{(J-1)(1-2c_0)}
+\end{aligned}, & z=h^-(t)&\\
+j_+= j_s = 0, \qquad \partial_z C_s=0, &z=0&.
+\end{eqnarray}
+
+\section{Lagrangian Coordinates.}
+In the 1D case the deformation gradients is given by:
 \begin{equation}
-\begin{aligned}
-\partial_z c_0= \frac{2K c_s\frac{(2c_++c_f)}{1-2c_0}}{Kc_f^2+D/D_0c_s(2c_++c_f)}\left\{\left[\left(-C_s+\frac{4c_+(c_++c_f)}{2c_++c_f}\right)\mathcal{G}\right.\right.\\
-\left.\left.+\frac{C_f^2}{(2c_++c_f)(J-1)}-C_sf(C_s)\right.\right.\\
-\left.\left.+C_s\ln\left((1-2c_0)(J-1)\right)\right]\frac{\partial_z C_+}{J^2}-\omega^2J\partial_{zzz}C_s\right\}
-\end{aligned}
+\F=\begin{bmatrix}
+1 & 0&0\\
+0 & 1 & 0 \\
+0 & 0 & J(Z,t)
+\end{bmatrix}
 \end{equation}
+so that $j_m=J_m$ and $\partial_z(\cdot)=J^{-1}\partial_Z(\cdot)$. Using this equalities and Reynolds transport theorem, we have:
+\begin{gather}
+\begin{aligned}
+\mu_s = p \mathcal{G}  - \omega^2\left[f(C_s)\frac{\partial}{\partial Z} \left(\frac{\partial_ZC_s}{J}\right)+\frac{f'(C_s)}{2J}\left(\partial_Z C_s\right)^2\right]\\
++ \left[\ln \frac{C_s}{1+C_s} + \frac{1}{1+C_s}+\frac{\chi}{(1+C_s)^2} + \ln \frac{C_s}{J-1} \right], 
+\end{aligned}\\[2.5mm]
+\mu_\pm = p \mathcal{G} \pm \Phi + \ln \frac{C_\pm}{J-1} ,\\
+p=-\frac{\omega^2 f(C_s)}{2\mathcal{G}J^2} (\partial_Z C_s)^2+ \frac{J-1}{J},\\
+C_- = C_+ + z_f C_f,\\
+J_s =-C_s J^{\beta-2}  \left(\partial_Z\mu_s +\sum_i \frac{C_i}{C_s} \partial_Z \mu_i\right)\\
+J_+= - \frac{D_+ C_+}{J^2D_0}\partial_Z \mu_+ + \frac{C_+}{C_s}J_s\\
+\partial_t C_s =- \partial_Z J_s,\\
+\partial_t C_+ = -\partial_Z J_+,\\
+\partial_Z \Phi = \frac{J^2 D_0 J_+}{D_-C_-}- \frac{J^2 D_0 J_s}{D_-C_s}+ \frac{\partial_Z C_-}{C_-}-\frac{\partial_Z J}{J-1}+\mathcal{G}\partial_Z p,
+\end{gather}
+As shown in Figure \ref{Above}, when considering the bath, we have that this is reducing both in the Eulerian frame and in the reference state. By considering that the size of the bath is larger than the final volume of the gel, we can obtain the set of equation for the bath as  
+\begin{figure}[h]
+	\centering
+	\def\svgwidth{0.7\linewidth}
+	\input{images/Gelchange.pdf_tex}
+	\caption{Evolution of the bath in the Reference and Current state.}
+	\label{Above}
+\end{figure}
 \end{document}
