@@ -71,8 +71,8 @@ Having the general form of $\psi$, Equation~(\ref{temp1}), it remains to constru
 
 \begin{enumerate}
 	{\indentitem\item[\textbullet] the energy of the electric field $\psi_1$;}
-	{\indentitem \item[\textbullet] the energy of solvent and solutes' molecules not interacting with the solid phase $\psi_2$;}
-	{\indentitem\item[\textbullet] the energy of mixing the solid phase with the solution, $\psi_3$;}
+	{\indentitem \item[\textbullet] the mixing energy of the solvent and the hydrophobic interaction of the solid phase $\psi_2$;}
+	{\indentitem\item[\textbullet] the energy of mixing for the ions, $\psi_3$;}
 	{\indentitem\item[\textbullet] the energy of mixing the solvent with the solutes in solution, $\psi_4$;}
 	{\indentitem\item[\textbullet] the interfacial energy between dissimilar phases, $\psi_5$;}
 	{\indentitem\item[\textbullet] the energy of the solid phase not interacting with the solution, $\psi_6$.}
@@ -89,25 +89,26 @@ The specific energy density $\psi_2$ has the standard form:
 \end{equation} 
 where $\mu^0_m$ denotes the chemical potential of non interacting solvent and ions molecules. According to Flory-Huggins theory \cite{flory,hug} of mixtures, the mixing energy is given by:
 \begin{equation}
-\psi_3 = \frac{k_B T }{v_s} \left(v_sC_s \ln \frac{v_sC_s}{1+v_sC_s} + \chi \frac{v_sC_s}{1+v_sC_s}\right),\label{mix}
+\psi_3 = \frac{k_B T }{v_s} \left(v_sC_s \ln \frac{v_sC_s}{J} + \chi \frac{v_sC_s}{J}\right),\label{mix}
 \end{equation}
 where $k_B$ is the Boltzmann's constant, $T$ is the temperature and $\chi$ is the Flory-Huggins parameter, which is a measure of the enthalpy of mixing. 
 
 Assuming the solution is dilute, the contribution $\psi_4$ reads \cite{Reviewpolyel,ecm1,ecm2}:
 \begin{equation}
-\psi_4 = k_B T \sum\limits_{i=1}^{N} C_i \left(\ln \frac{C_i}{ C_s}-1\right).
+%\psi_4 = k_B T \sum\limits_{i=1}^{N} C_i \left(\ln \frac{C_i}{ C_s}-1\right).
+\psi_4 = k_B T \sum\limits_{i=1}^{N}C_i \ln \frac{v_iC_i}{J}
 \end{equation}
 
-For non dilute solution the form proposed by Hong \cite{Reviewpolyel} is:
-\begin{equation}
-\psi_4 = k_B T \sum\limits_{m} C_m \left(\ln \frac{C_m}{\sum_i C_i+C_s}-1\right).
-\end{equation}
+%For non dilute solution the form proposed by Hong \cite{Reviewpolyel} is:
+%\begin{equation}
+%\psi_4 = k_B T \sum\limits_{m} C_m \left(\ln \frac{C_m}{\sum_i C_i+C_s}-1\right).
+%\end{equation}
 
 As proposed by Hong et al. \cite{Interface}, we include in the energy the effect of interface tension. Assuming that the contribution of mobile ions is negligible, only the solid-solvent interface contributes to the energy:
 \begin{equation}
 \psi_5 = \frac{\gamma_1(C_s,J)J}{2}\left|\nabla C_s\right|^2+\frac{\gamma_2(C_s,J)} {2}J\left|\nabla J\right|^2-\gamma_3(C_s,J)J\nabla C_s\cdot \nabla J,
 \end{equation}
-where the constant $\gamma_1=J^{-2}$, $\gamma_2=c^2_sJ^{-2}$ and $\gamma_3=c_s/J62$, plays a role analogous to a surface tension.
+where the constant $\gamma_1=\gamma J^{-2}$, $\gamma_2=\gamma c^2_sJ^{-2}$ and $\gamma_3=\gamma c_s/J^2$, plays a role analogous to a surface tension.
 
 For the strain energy we consider the gel to be an hyper-elastic Neo-Hookean material:
 
@@ -132,11 +133,10 @@ where $\zeta$s represent the thermodynamic forces associate with each flux. On t
 \begin{aligned}
 \mu_s = p v_s + \mu_s^0 -J\nabla\cdot\left[\gamma_1(C_s,J) \nabla C_s- \gamma_3(C_s,J)\nabla J\right] \\
 +\frac{\partial \gamma_1}{\partial C_s}\frac{J}{2}\left|\nabla C_s\right|^2+\frac{\partial \gamma_2}{\partial C_s}\frac{J}{2}\left|\nabla J\right|^2-\frac{\partial \gamma_3}{\partial C_s}J\nabla C_s\cdot \nabla J\\
-+ k_BT\left[\ln \frac{C_s v_s}{1+C_s v_s}+ \frac{1}{1+C_sv_s}
- +\frac{\chi}{(1+C_s v_s)^2} \right.\\
- \left.+ \ln \frac{v_s C_s}{\sum_m v_mC_m} - \frac{v_s \sum_\alpha C_\alpha}{\sum_m C_m v_m} \right], 
++ k_BT\left[\ln (c_s v_s) +1 -c_sv_s+
+ \frac{\chi(1-c_sv_s)}{J}-\sum_i c_iv_s\right], 
 \end{aligned}\label{gov1}\\[2.5mm]
-\mu_i = p v_i + \mu^0_i + e\Phi z_i + k_BT \ln \frac{v_iC_i}{\sum_m v_m C_m} - k_BT \frac{\sum_a C_a v_i}{\sum_m v_m C_m},\label{mu}\\
+\mu_i = p v_i + \mu^0_i + e\Phi z_i + k_BT \left[\ln (v_ic_i)+1-\sum_{m=s,1,\ldots,N}v_ic_s -\frac{\chi c_sv_i}{J} \right],\label{mu}\\
 \mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, , \qquad -\epsilon J \nabla^2 \Phi = Q\, ,\label{sys2}
 \end{gather}
 \begin{gather}
@@ -157,11 +157,10 @@ Substituting for the value of gamma's:
 \boldsymbol{\xi}_1 =  J^{-1} \,\mathbb{C}^{-1} \,\nabla_0 \,C_s-\frac{C_s}{J^2}  \,\mathbb{C}^{-1}\,\nabla_0 \,J=\mathbb{C}^{-1}\nabla_0\,c_s,\\[2mm]
 \boldsymbol{\xi}_2 = \frac{C^2_s}{J^3} \,\mathbb{C}^{-1} \,\nabla_0 \,J-\frac{C_s}{J^2}  \,\mathbb{C}^{-1} \,\nabla_0 \,C_s =-c_s\mathbb{C}^{-1}\nabla_0\,c_s,\\[2mm]
 \begin{aligned}
-\mu_s = p v_s + \mu_s^0 - \gamma\nabla^2c_s + k_BT\left[\ln \frac{C_s v_s}{1+C_s v_s}+ \frac{1}{1+C_sv_s}
- \right.\\
-\left.+\frac{\chi}{(1+C_s v_s)^2}+ \ln \frac{v_s C_s}{\sum_m v_mC_m} - \frac{v_s \sum_\alpha C_\alpha}{\sum_m C_m v_m} \right], 
+\mu_s = p v_s + \mu_s^0 - \gamma\nabla^2c_s + k_BT\left[\ln (c_s v_s) +1 -c_sv_s\right.\\
+\left.+ \frac{\chi(1-c_sv_s)}{J}-\sum_i c_iv_s\right], 
 \end{aligned}\\[2.5mm]
-\mu_i = p v_i + \mu^0_i + e\Phi z_i + k_BT \ln \frac{v_iC_i}{\sum_m v_m C_m} - k_BT \frac{\sum_a C_a v_i}{\sum_m v_m C_m},\\
+\mu_i = p v_i + \mu^0_i + e\Phi z_i + k_BT \left[\ln (v_ic_i)+1-\sum_{m=s,1,\ldots,N}v_ic_m -\frac{\chi c_sv_i}{J} \right],\\
 \mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, , \qquad -\epsilon J \nabla^2 \Phi = Q\, ,
 \end{gather}
 \begin{gather}
@@ -239,8 +238,8 @@ In this section we consider the homogeneous equilibrium of a free swelling polye
 \subsubsection{The bath}
 In the bath, the set of Equations~(\ref{sys1})-(\ref{sys3}) reduces to:
 \begin{gather}
-\mu_s = p v_s + \mu_s^0 + k_BT\left[\ln \frac{v_s C_s}{\sum_m v_mC_m} - \frac{v_s \sum_\alpha C_\alpha}{\sum_m C_m v_m} \right],\\[2.5mm]
-\mu_\pm = p v + \mu^0_\pm \pm e\Phi + k_BT \ln \frac{vC_\pm}{\sum_m v_m C_m} - k_BT \frac{\sum_a C_a v}{\sum_m v_m C_m},\\
+\mu_s = p v_s + \mu_s^0 + k_BT\left[\ln v_s c_s+1-v_sc_s -\sum_i c_iv_s \right],\\[2.5mm]
+\mu_\pm = p v_\pm + \mu^0_\pm \pm e\Phi + k_BT \left[\ln (v_\pm c_\pm)+1-\sum_{m=s,+,-}v_\pm c_s \right],\\
 \mathbf{E} = \frac{1}{\epsilon J} \F^T \F\, \mathbf{H}\, , \qquad -\epsilon J \nabla^2 \Phi = C_+-C_-\, ,
 \end{gather}
 \begin{gather}
@@ -249,66 +248,82 @@ In the bath, the set of Equations~(\ref{sys1})-(\ref{sys3}) reduces to:
 As in Yu, we consider the reservoir to be infinite so that the concentration of ions is fixed away from the interface with the gel and equal to $c_0$ in the current configuration. Note that at equilibrium, electro-neutrality imposes that $c_0^+=c_0^-=c_0=C^+/J=C_-/J.$, where $J=\sum_m v_m C_m$. Consequently the set of equations reduces to:
 \begin{gather}
 p=0,\\
-\mu_s = \mu_s^0 + k_BT\left[\ln v_s c_s - v_s c_s -2v_sc_0 \right],\\
-\mu_\pm =\mu^0_\pm \pm e\Phi + k_BT \ln v c_0 - v k_BT (2c_0+c_s).
+\mu_s = \mu_s^0 + k_BT\left[1+\ln v_s c_s - v_s c_s -2v_sc_0 \right],\\
+\mu_\pm =\mu^0_\pm \pm e\Phi + k_BT( \ln v c_0+1) - v k_BT (2c_0+c_s).
 \end{gather} 
 Assuming that in the outer solution $J\sim v_s C_s$, so that $v_s c_s\sim 1$, and that $\Phi=0$, we are left with the conditions:
 \begin{gather}
 p=0,\\
-\mu_s = \mu_s^0 + k_BT\left[-1 -2v_sc_0 \right],\\
-\mu_\pm =\mu^0_\pm + k_BT \ln v c_0 - v k_BT (2c_0+1).
+\mu_s = \mu_s^0 - k_BT2v_sc_0,\\
+\mu_\pm =\mu^0_\pm + k_BT \ln v c_0 -2 v k_BTc_0+k_BT\left(1-\frac{v}{v_s}\right).
 \end{gather} 
 \subsubsection{The gel.}
 We now consider the gel and impose the continuity condition at the interface, so that at equilibrium Equations~(\ref{sys1})-(\ref{sys3}) reduces to:
 \begin{gather}
 \begin{aligned}
-0 = p v_s + k_BT\left[2c_0v_s+\ln \frac{C_s v_s}{1+C_s v_s} + \frac{1}{1+C_sv_s}\right.\\
-\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s v_s)^2} + \ln \frac{v_s C_s}{\sum_m v_mC_m} - \frac{\sum_\alpha (v_s-v_\alpha)C_\alpha}{\sum_m C_m v_m} \right], 
+0 = p v_s + k_BT\left[\ln (c_s v_s) +1 +2c_0v_s-c_sv_s+
+\frac{\chi(1-c_sv_s)}{J}-\sum_i c_iv_s\right], 
 \end{aligned}\\[2.5mm]
 z_fC_f+C_+-C_-=0,\\
-0 = p v \pm e\Phi + 2k_BTc_0+ k_BT \ln \frac{C_\pm}{c_0\sum_m v_m C_m} - k_BT \frac{C_s (v-v_s)}{\sum_m v_m C_m},\\
+0 = p v \pm e\Phi + k_BT \left[\ln \frac{c_\pm}{c_0}+2vc_0+1+\left(1-\frac{v}{v_s}\right)-\sum_{m=s,+,-}vc_m -\frac{\chi c_sv}{J} \right],\\
 0= -p \mathbb{I} + \frac{G}{J}\left(\mathbb{B}-\mathbb{I}\right).
 \end{gather}
 \begin{figure}[h]
-	\includegraphics[scale=0.5]{images/manifold1}
+	\includegraphics[scale=0.5]{images/manifold_new}
 	\caption{Two-parameters bifurcation analysis: equilibrium manifold. The red line corresponds to the section of the manifold for $\chi=0.7$, while the blue line $\chi=0.5$.}
 	\label{manifold}
 \end{figure}
 For the free swelling case the deformation tensor $\F=\lambda\mathbb{I}$ so that $\mathbb{B}=\lambda^2\mathbb{I}$. As in the paper by Yu, we now assume that $v=v_s$ so that the equations further simplify to:
 \begin{gather}
 \begin{aligned}
-0 = p v + k_BT\left[2c_0v+\ln \frac{C_s v}{1+C_s v} + \frac{1}{1+C_sv}\right.\label{temp}\\
-\left.\ \ \ \ \ \ +\frac{\chi}{(1+C_s v)^2} + \ln \frac{v C_s}{\sum_m v_mC_m}\right], 
+0 = p v + k_BT\left[\ln (c_s v) +2c_0v+
+\frac{\chi(1-c_sv)+1}{J}\right], 
 \end{aligned}\\[2.5mm]
-z_fC_f+C_+-C_-=0,\\
-0 = p v \pm e\Phi + 2k_BTc_0+ k_BT \ln \frac{C_\pm}{vc_0\sum_m C_m} ,\\
+z_f\frac{C_f}{J}+c_+-c_-=0,\\
+0 = p v \pm e\Phi + k_BT \left(\ln \frac{c_\pm}{c_0}+2vc_0+\frac{1-\chi c_sv}{J} \right),\label{temp4}\\
 p= \frac{G}{\lambda^3}\left(\lambda^2-1\right).
 \end{gather}
 Using Equations(68), we have that the electric potential has the form:
 \begin{equation}
 \Phi= \frac{k_BT}{2e}\ln\frac{C_-}{C_+}.
 \end{equation}
-while the concentrations $C_+$ and $C_-$, using also Equation~(\ref{temp}):
+while the concentrations $C_+$ and $C_-$, using also Equation~(\ref{temp4}):
 \begin{gather}
-C_- = c_0 \frac{(v C_s)^2}{1+C_sv} \exp\left(\frac{e\Phi}{k_BT}\right) \exp\left(\frac{1+C_sv+\chi}{(1+vC_s)^2}\right),\\
-C_+ = c_0 \frac{(v C_s)^2}{1+C_sv} \exp\left(-\frac{e\Phi}{k_BT}\right) \exp\left(\frac{1+C_sv+\chi}{(1+vC_s)^2}\right),
+C_- = c_0 C_s v \exp\left(\frac{e\Phi}{k_BT}+\frac{\chi}{J}\right),\\
+C_+ = c_0 C_s v \exp\left(-\frac{e\Phi}{k_BT}+\frac{\chi}{J}\right).
 \end{gather}
 which implies that:
 \begin{equation}
-C_+C_-= c^2_0\frac{(v C_s)^4}{(1+C_sv)^2} \exp\left(2\frac{1+C_sv+\chi}{(1+vC_s)^2}\right).\label{mult}
+C_+C_-= c^2_0C^2_sv^2 \exp\left(\frac{2\chi}{J}\right).\label{mult}
 \end{equation}
 Combining~(\ref{mult}) with the electro-neutrality condition, we have:
 \begin{equation}
-C_\pm = \mp \frac{z_fC_f}{2} + \sqrt{\left( \frac{z_fC_f}{2} \right)^2 + c^2_0\frac{(v C_s)^4}{(1+C_sv)^2} \exp\left(2\frac{1+C_sv+\chi}{(1+vC_s)^2}\right)}.
+C_\pm = \mp \frac{z_fC_f}{2} + \sqrt{\left( \frac{z_fC_f}{2} \right)^2 + c^2_0C_s^2 v^2 \exp\left(2\frac{\chi}{J}\right)}.
 \end{equation}
 Using the incompressibility condition, we have that:
 \begin{equation}
-\lambda^3=1+vC_s + 2v  \sqrt{\left( \frac{z_fC_f}{2} \right)^2 + c^2_0\frac{(v C_s)^4}{(1+C_sv)^2} \exp\left(2\frac{1+C_sv+\chi}{(1+vC_s)^2}\right)}\label{cond1}.
+\lambda^3=J=1+vC_s+vC_++vC_-.
 \end{equation}
 Finally substituting the definition of $p$ into Equation~(\ref{temp1}),we have:
-\begin{equation}
-0=\frac{Gv}{k_BT\lambda^3}(\lambda^2-1) + 2c_0v + \ln \frac{C_sv}{1+C_sv} + \frac{1+vC_s+\chi}{(1+C_sv)^2} + \ln \frac{vC_s}{\lambda^3-1}.\label{cond2}
-\end{equation}
+\begin{eqnarray}
+0=\frac{Gv}{k_BT\lambda^3}(\lambda^2-1) + 2c_0v + \ln (c_s v) +2c_0v+
+\frac{\chi(1-c_sv)+1}{\lambda^3}\label{cond1}\\
+\frac{\lambda^3-1}{\lambda^3}=vc_s+2\sqrt{\left( \frac{z_fC_f}{2\lambda^3} \right)^2 + c^2_0c_s^2 v^2 \exp\left(2\frac{\chi}{\lambda^3}\right)}\label{cond2}
+\end{eqnarray}
 
 Note that the two conditions~(\ref{cond1}) and (\ref{cond2}) uniquely define the equilibrium swelling ration for any value of $c_0$. Fixing the values of the other parameter to match with the work of Yu and varying $vc_0$ and $\chi$, we obtained the manifold showed in Figure \ref{manifold}.
 
+When considering the 1D case, the folding of the manifold is less prominent. However there are sets of parameters for which a similar collapse can be observed, as shown in Figure \ref{manifold2}.
+\begin{figure}[h]
+	\begin{subfigure}{0.49\textwidth}
+		\includegraphics[scale=0.4]{images/manifold1D_2}
+		\caption{$C_f=0.02$}
+	\end{subfigure}
+\hspace{5mm}
+	\begin{subfigure}{0.49\textwidth}
+		\includegraphics[scale=0.45]{images/manifold1D_1}
+		\caption{$C_f=0.04$}
+	\end{subfigure}
+	\caption{Two-parameters bifurcation analysis: equilibrium manifold. The purple line corresponds to the section of the manifold for $\chi=0.8$, the green line $\chi=0.65$, while the blue line $\chi=0.5$.}
+	\label{manifold2}
+\end{figure}

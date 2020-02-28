@@ -54,7 +54,7 @@ J=1+v_s C_s.
 
 Consequently, the volume fractions of fluid $\phi_f$ and solid $\phi_n$ phases in the swollen gel are defined as:
 \begin{equation}
-\phi_f = \frac{v_sC_s}{1+v_sC_s}, \qquad \phi_n = \frac{1}{1+v_sC_s}.
+\phi_m = \frac{v_mC_m}{1+\sum_\alpha v_\alpha C_\alpha}, \qquad \phi_n = \frac{1}{1+\sum_\alpha v_\alpha C_\alpha}.
 \end{equation}
 where again we are neglecting the contribution of ions to the total volume.
 While $C_m$ denotes the number of each molecule per unit volume in the initial configuration for the $m$-th species in the solution, the actual concentration in the current state is denoted by $c_m=C_m/J$. Throughout the derivation of the model, we will be using the index $i=1,\ldots,N$ to denote the ionic species only, while $m\in\left\{s,1,\ldots,N\right\}$ refers to all mobile species, i.e. both the solvent and solutes.
@@ -102,7 +102,9 @@ where $e$ is the elementary charge, $C_f$ is the concentration of fix charges an
 \mathbf{E} = \F^T \mathbf{e},
 \end{eqnarray}
 where $\mathbf{h}$ is the electric displacement in the current configuration.
-\input{derivatin1}
+%\input{derivatin1}
+\input{derivatin2}
+
 %\input{1dswelling}
 \newpage
 \bibliographystyle{plain}
