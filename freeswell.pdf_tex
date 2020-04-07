@@ -54,7 +54,7 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{freeswell.pdf}}%
-    \put(0.50516336,0.40454748){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.38342416\unitlength}\raggedright $\Omega(t)$\end{minipage}}}%
-    \put(0.49283428,0.62273929){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.38342416\unitlength}\raggedright $\Gamma(t)$\end{minipage}}}%
+    \put(0.40480407,0.43800057){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.38342416\unitlength}\raggedright $\Omega(t)$\end{minipage}}}%
+    \put(0.49283428,0.68295486){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.38342416\unitlength}\raggedright $\Gamma(t)$\end{minipage}}}%
   \end{picture}%
 \endgroup%
