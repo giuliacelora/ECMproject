@@ -58,5 +58,6 @@
     \put(0.691704,0.70334225){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.5575786\unitlength}\raggedright $B$\end{minipage}}}%
     \put(0.67802111,0.81280552){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.5575786\unitlength}\raggedright $C$\end{minipage}}}%
     \put(0.63273782,0.22786113){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.5575786\unitlength}\raggedright $D$\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{1Aphaseplane.pdf}}%
   \end{picture}%
 \endgroup%
