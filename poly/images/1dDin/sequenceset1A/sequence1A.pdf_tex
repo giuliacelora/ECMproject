@@ -1,0 +1,198 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'sequence1A.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{667.06443787bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.53937005)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{sequence1A.pdf}}%
+    \put(0.26421667,0.43971297){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{sequence1A.pdf}}%
+    \put(0.25930038,0.44815134){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\\0.51\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{sequence1A.pdf}}%
+    \put(0.26271592,0.21863554){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{sequence1A.pdf}}%
+    \put(0.24692028,0.24017619){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.51\\1.52\\2.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{sequence1A.pdf}}%
+    \put(0.27635014,0.30600941){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.2899838,0.31169019){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-6\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{sequence1A.pdf}}%
+    \put(0.45461672,0.25260827){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-9.21\\-9.209\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{sequence1A.pdf}}%
+    \put(0.26271592,0.11410816){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{sequence1A.pdf}}%
+    \put(0.25600983,0.1413526){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}5\\10\\15\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{sequence1A.pdf}}%
+    \put(0.27635014,0.2026176){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.2899838,0.20829838){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-3\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{sequence1A.pdf}}%
+    \put(0.4534819,0.12535895){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-9.2104\\-9.21035\\-9.2103\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{sequence1A.pdf}}%
+    \put(0.26271592,0.01639747){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{sequence1A.pdf}}%
+    \put(0.25600983,0.0276489){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}3456\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{sequence1A.pdf}}%
+    \put(0.26271592,0.32316217){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{sequence1A.pdf}}%
+    \put(0.24692028,0.34140479){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.6\\0.8\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{sequence1A.pdf}}%
+    \put(0.45575304,0.34198794){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-202\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{sequence1A.pdf}}%
+    \put(0.46268041,0.41280868){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.47631465,0.41848947){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-4\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{sequence1A.pdf}}%
+    \put(0.52554316,0.43790216){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{sequence1A.pdf}}%
+    \put(0.52022901,0.4459195){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\\0.51\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{sequence1A.pdf}}%
+    \put(0.527249,0.21843145){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{sequence1A.pdf}}%
+    \put(0.5205429,0.22968373){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}012\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{sequence1A.pdf}}%
+    \put(0.54088321,0.30580681){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.55451687,0.3114876){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-6\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{sequence1A.pdf}}%
+    \put(0.71346968,0.25240567){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-9.21\\-9.209\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{sequence1A.pdf}}%
+    \put(0.527249,0.11276924){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{sequence1A.pdf}}%
+    \put(0.5205429,0.14382171){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}5\\10\\15\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{sequence1A.pdf}}%
+    \put(0.54088321,0.20127868){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.55451687,0.20695947){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-3\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{sequence1A.pdf}}%
+    \put(0.71233336,0.12402003){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-9.2104\\-9.21035\\-9.2103\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{sequence1A.pdf}}%
+    \put(0.527249,0.01392251){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=28]{sequence1A.pdf}}%
+    \put(0.5205429,0.02517396){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}3456\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=29]{sequence1A.pdf}}%
+    \put(0.527249,0.31955061){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=30]{sequence1A.pdf}}%
+    \put(0.51145336,0.3308014){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.6\\0.8\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=31]{sequence1A.pdf}}%
+    \put(0.71801497,0.33939277){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-2\\-101\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=32]{sequence1A.pdf}}%
+    \put(0.72494234,0.41146976){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.738576,0.41715055){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-4\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=33]{sequence1A.pdf}}%
+    \put(0.78739576,0.43930077){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=34]{sequence1A.pdf}}%
+    \put(0.78272961,0.44685319){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\\0.51\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=35]{sequence1A.pdf}}%
+    \put(0.78970723,0.2161603){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=36]{sequence1A.pdf}}%
+    \put(0.78300047,0.22741109){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}012\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=37]{sequence1A.pdf}}%
+    \put(0.80334084,0.30353417){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.81697509,0.30921495){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-6\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=38]{sequence1A.pdf}}%
+    \put(0.96115813,0.25013303){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-9.21\\-9.209\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=39]{sequence1A.pdf}}%
+    \put(0.7931153,0.01733124){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=40]{sequence1A.pdf}}%
+    \put(0.7864092,0.02858218){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}3456\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=41]{sequence1A.pdf}}%
+    \put(0.79084325,0.10822441){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=42]{sequence1A.pdf}}%
+    \put(0.78413651,0.13927703){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}5\\10\\15\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=43]{sequence1A.pdf}}%
+    \put(0.80447747,0.19673489){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.81811113,0.20241568){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-3\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=44]{sequence1A.pdf}}%
+    \put(0.96115813,0.11947534){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-9.2104\\-9.2102\\-9.21\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=45]{sequence1A.pdf}}%
+    \put(0.78970723,0.31955061){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=46]{sequence1A.pdf}}%
+    \put(0.77391156,0.3308014){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.6\\0.8\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=47]{sequence1A.pdf}}%
+    \put(0.96002181,0.33925485){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-2\\-101\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=48]{sequence1A.pdf}}%
+    \put(0.96694917,0.41033344){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.98058283,0.41601423){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-4\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=49]{sequence1A.pdf}}%
+    \put(0.03699184,0.44172575){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=50]{sequence1A.pdf}}%
+    \put(0.03214424,0.44965011){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\\0.51\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=51]{sequence1A.pdf}}%
+    \put(0.04045661,0.32050643){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=52]{sequence1A.pdf}}%
+    \put(0.03374985,0.33175722){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\\0.51\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=53]{sequence1A.pdf}}%
+    \put(0.21190751,0.33175722){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-101\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=54]{sequence1A.pdf}}%
+    \put(0.21883488,0.41015294){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.23246854,0.41583373){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-4\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=55]{sequence1A.pdf}}%
+    \put(0.04045661,0.21938727){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=56]{sequence1A.pdf}}%
+    \put(0.03374985,0.26472022){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}5\\10\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=57]{sequence1A.pdf}}%
+    \put(0.05409023,0.30676263){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.06772447,0.31244342){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-9\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=58]{sequence1A.pdf}}%
+    \put(0.21190751,0.24037774){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-12\\-11\\-10\\-9\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=59]{sequence1A.pdf}}%
+    \put(0.04045661,0.11372477){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=60]{sequence1A.pdf}}%
+    \put(0.03374985,0.14158294){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}246\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=61]{sequence1A.pdf}}%
+    \put(0.05409023,0.2022345){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.06772447,0.20791587){\color[rgb]{0,0.44705882,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-3\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=62]{sequence1A.pdf}}%
+    \put(0.21190751,0.14230206){\color[rgb]{0.63529412,0.07843137,0.18431373}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-12\\-10\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=63]{sequence1A.pdf}}%
+    \put(0.04045661,0.01601472){\color[rgb]{0.14901961,0.14901961,0.14901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}02468\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=64]{sequence1A.pdf}}%
+    \put(0.03374985,0.03787003){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}5\\10\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=65]{sequence1A.pdf}}%
+  \end{picture}%
+\endgroup%
