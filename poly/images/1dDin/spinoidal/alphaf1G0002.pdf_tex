@@ -55,7 +55,7 @@
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{alphaf1G0002.pdf}}%
     \put(0.2063519,0.47718877){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17410943\unitlength}\centering $S>0$\end{minipage}}}%
-    \put(0.48687293,0.69236234){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17410943\unitlength}\centering $S<0$\end{minipage}}}%
+    \put(0.47075169,0.3699375){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17410943\unitlength}\centering $S<0$\end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{alphaf1G0002.pdf}}%
   \end{picture}%
 \endgroup%
