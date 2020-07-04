@@ -52,14 +52,23 @@
   \makeatother%
   \begin{picture}(1,0.8497137)%
     \lineheight{1}%
-    \setlength\tabcolsep{0pt}%
-    \put(0.67679476,0.53378225){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.34097145\unitlength}\centering $\chi=0.78$\end{minipage}}}%
-    \put(0.50017816,0.72308657){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.34097145\unitlength}\centering $\chi=0.4$\end{minipage}}}%
-    \put(0.42184687,0.37750735){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.34097145\unitlength}\centering $\chi=1.4$\end{minipage}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{G1e-3_manifold.pdf}}%
-    \put(0.01021087,0.75802472){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1029059\unitlength}\centering $3$\end{minipage}}}%
-    \put(0.10468179,0.78145631){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1029059\unitlength}\centering $2$\end{minipage}}}%
-    \put(0.19222853,0.80603085){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1029059\unitlength}\centering $1$\end{minipage}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{G1e-3_manifold.pdf}}%
+    \setlength\tabcolsep{0pt}% 
+     \put(0,0){\includegraphics[width=1\unitlength,page=1]{images/1dDin/G1e-3_manifold.pdf}}%
+      \put(0.20679476,0.62378225){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.34097145\unitlength}\centering $\chi=0.78$\end{minipage}}}%
+    \put(0.495017816,0.630308657){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.34097145\unitlength}\centering $ \chi=0.4$\end{minipage}}}%
+    \put(0.42184687,0.37750735){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.34097145\unitlength}\centering $\chi=1.2$\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{images/1dDin/G1e-3_manifold.pdf}}%
+    \put(0.01521087,0.72502472){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1029059\unitlength}\centering $3$\end{minipage}}}%
+    \put(0.11068179,0.75145631){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1029059\unitlength}\centering $2$\end{minipage}}}%
+    \put(0.11068179,0.79645631){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1029059\unitlength}\centering $\chi$\end{minipage}}}%
+    \put(0.20222853,0.77503085){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1029059\unitlength}\centering $1$\end{minipage}}}%
+    \put(0.34022853,0.78503085){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1029059\unitlength}\centering $-6$\end{minipage}}}%
+    \put(0.52522853,0.77503085){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1029059\unitlength}\centering $-4$\end{minipage}}}%
+    \put(0.53222853,0.81503085){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1029059\unitlength}\centering $c_0$\end{minipage}}}%
+    \put(0.75222853,0.75903085){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1029059\unitlength}\centering $-2$\end{minipage}}}%
+    \put(0.86222853,0.70503085){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1029059\unitlength}\centering $1$\end{minipage}}}%
+    \put(0.87222853,0.45503085){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1029059\unitlength}\centering $0.5$\end{minipage}}}%
+    \put(0.92522853,0.45803085){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1029059\unitlength}\centering $\phi_s$\end{minipage}}}%
+    \put(0.86222853,0.21503085){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1029059\unitlength}\centering $0$\end{minipage}}}%
   \end{picture}%
 \endgroup%
