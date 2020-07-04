@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{234.68984985bp}%
+    \setlength{\unitlength}{229.52018738bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,16 +50,17 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.8497137)%
+  \begin{picture}(1,0.81585503)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0.67679476,0.53378225){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.34097145\unitlength}\centering $\chi=0.78$\end{minipage}}}%
-    \put(0.50017816,0.72308657){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.34097145\unitlength}\centering $\chi=0.4$\end{minipage}}}%
-    \put(0.42184687,0.37750735){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.34097145\unitlength}\centering $\chi=1.4$\end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{G1e-3_manifold.pdf}}%
-    \put(0.01021087,0.75802472){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1029059\unitlength}\centering $3$\end{minipage}}}%
-    \put(0.10468179,0.78145631){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1029059\unitlength}\centering $2$\end{minipage}}}%
-    \put(0.19222853,0.80603085){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1029059\unitlength}\centering $1$\end{minipage}}}%
+    \put(-1.81967221,2.31147552){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.4590164\unitlength}\centering 3\end{minipage}}}%
+    \put(-1.55737715,2.36065585){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.70491798\unitlength}\centering \end{minipage}}}%
+    \put(-2.00000007,2.40983619){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{1.91803281\unitlength}\centering \end{minipage}}}%
+    \put(-0.01256809,0.7718587){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14186414\unitlength}\centering $3$\end{minipage}}}%
+    \put(0.09608151,0.79097094){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14186414\unitlength}\centering $2$\end{minipage}}}%
+    \put(0.20362067,0.81314765){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14186414\unitlength}\centering $1$\end{minipage}}}%
+    \put(0.31602193,0.82239099){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14186414\unitlength}\centering $-6$\end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{G1e-3_manifold.pdf}}%
   \end{picture}%
 \endgroup%
