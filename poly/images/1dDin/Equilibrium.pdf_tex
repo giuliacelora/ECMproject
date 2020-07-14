@@ -54,8 +54,8 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{Equilibrium.pdf}}%
-    \put(0.15813252,0.60993975){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27560238\unitlength}\centering $t=0$\end{minipage}}}%
-    \put(0.38630538,0.39949021){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27560238\unitlength}\centering set $1$\end{minipage}}}%
-    \put(0.72731422,0.25189984){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27560238\unitlength}\centering set $2$\end{minipage}}}%
+    \put(0.23222827,0.62437424){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.25725885\unitlength}\centering $t=0$\end{minipage}}}%
+    \put(0.47558127,0.43108244){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.13627766\unitlength}\centering $1$\end{minipage}}}%
+    \put(0.83574368,0.25447768){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.11263764\unitlength}\centering $2$\end{minipage}}}%
   \end{picture}%
 \endgroup%
