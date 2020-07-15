@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{384.75bp}%
+    \setlength{\unitlength}{267bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,10 +50,10 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.78752437)%
+  \begin{picture}(1,0.75)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{equilibrium2.pdf}}%
-    \put(0.58002429,0.56911898){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14585802\unitlength}\centering $\S<0$\end{minipage}}}%
+    \put(0.57861585,0.53560514){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21018305\unitlength}\centering $\S<0$\end{minipage}}}%
   \end{picture}%
 \endgroup%
