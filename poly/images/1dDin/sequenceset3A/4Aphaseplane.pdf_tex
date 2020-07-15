@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{288.75bp}%
+    \setlength{\unitlength}{355.73226929bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,15 +50,14 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.8025974)%
+  \begin{picture}(1,0.81372073)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{4Aphaseplane.pdf}}%
-    \put(0.17124043,0.67084381){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21706382\unitlength}\raggedright $A$\end{minipage}}}%
-    \put(-0.15303764,0.99984593){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.2244552\unitlength}\raggedright \end{minipage}}}%
-    \put(0.66380346,0.65340444){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21706382\unitlength}\raggedright $B$\end{minipage}}}%
-    \put(0.79220741,0.74172529){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21706382\unitlength}\raggedright $C$\end{minipage}}}%
-    \put(0.40088108,0.23796922){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21706382\unitlength}\raggedright $D$\end{minipage}}}%
-    \put(0.48881128,0.36227265){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21706382\unitlength}\raggedright $C$\end{minipage}}}%
+    \put(0.07701753,0.66050112){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21349012\unitlength}\centering A\end{minipage}}}%
+    \put(0.70411352,0.5844639){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18193068\unitlength}\centering B\end{minipage}}}%
+    \put(0.77064889,0.73529164){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18193068\unitlength}\centering C\end{minipage}}}%
+    \put(0.40544704,0.3663125){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.26918318\unitlength}\centering D\end{minipage}}}%
+    \put(0.30881545,0.23454206){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.26918318\unitlength}\centering E\end{minipage}}}%
   \end{picture}%
 \endgroup%

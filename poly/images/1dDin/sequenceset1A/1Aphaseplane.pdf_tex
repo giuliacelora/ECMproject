@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{326.11017609bp}%
+    \setlength{\unitlength}{367.19057465bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,13 +50,13 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.72916796)%
+  \begin{picture}(1,0.7883283)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{1Aphaseplane.pdf}}%
-    \put(0.17123792,0.66067634){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.19398933\unitlength}\centering $t=0$\end{minipage}}}%
-    \put(0.62331739,0.62459616){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.16531262\unitlength}\centering $B$\end{minipage}}}%
-    \put(0.61152114,0.67885463){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.16531262\unitlength}\centering $C$\end{minipage}}}%
-    \put(0.53814135,0.19505359){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.24459523\unitlength}\centering $t_{fin}$\end{minipage}}}%
+    \put(0.16933437,0.70852192){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.20682809\unitlength}\centering A\end{minipage}}}%
+    \put(0.64352744,0.66050662){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17625347\unitlength}\centering B\end{minipage}}}%
+    \put(0.58664794,0.7276458){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17625347\unitlength}\centering C\end{minipage}}}%
+    \put(0.52186993,0.21909878){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.26078323\unitlength}\centering D\end{minipage}}}%
   \end{picture}%
 \endgroup%
