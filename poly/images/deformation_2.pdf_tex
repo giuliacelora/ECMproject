@@ -1,0 +1,74 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'deformation_2.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{999.12213135bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.80914752)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{deformation_2.pdf}}%
+    \put(0.11562618,0.51051366){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09597137\unitlength}\centering $B$\end{minipage}}}%
+    \put(0.13037629,0.57861282){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.12339367\unitlength}\centering Reference State\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{deformation_2.pdf}}%
+    \put(0.17460336,0.38025188){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.04508144\unitlength}\centering X\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{deformation_2.pdf}}%
+    \put(0.61491663,0.08934662){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18432591\unitlength}\centering Current State\end{minipage}}}%
+    \put(0.62783997,0.3243466){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.04612324\unitlength}\centering Bath\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{deformation_2.pdf}}%
+    \put(0.3973378,0.47880705){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.24569388\unitlength}\centering Initial State\end{minipage}}}%
+    \put(0.37621638,0.72305717){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.04612324\unitlength}\centering Bath\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{deformation_2.pdf}}%
+    \put(0.38782925,0.26034033){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.04508144\unitlength}\centering x(t)\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{deformation_2.pdf}}%
+    \put(0.18784799,0.30844918){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.04508144\unitlength}\centering x(0)\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{deformation_2.pdf}}%
+    \put(0.4516829,0.37195975){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08455493\unitlength}\centering u(X,t)\end{minipage}}}%
+  \end{picture}%
+\endgroup%
